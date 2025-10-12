@@ -1,21 +1,23 @@
 project:
   type: website
+  output-dir: docs
 
 website:
-  title: "udd_fdtdeia_clases_website"
+  title: "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA "
   navbar:
     left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+      - text: "Inicio"
+        href: index.qmd
+      - text: "Clases"
+        file: clases/index.qmd
+      - text: "Recursos"
+        href: recursos.qmd
+      - text: "Contacto"
+        href: contacto.qmd
 
 format:
   html:
-    theme:
-      - cosmo
-      - brand
-    css: styles.css
+    theme: cosmo
     toc: true
 
-editor: visual
 

@@ -1,11 +1,13 @@
 ---
-title: "udd_fdtdeia_clases_website"
+title: "DIPLOMADO INTELIGENCIA ARTIFICIAL PARA LA TRANSFORMACIÓN EMPRESARIAL"
+subtitle: "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA"
+date: last-modified
+lang: es
+format:
+  html:
+    toc: true
+    theme: cosmo
+    number-sections: false
 ---
 
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
-
-```{r}
-1 + 1
-```
+Este será el repositorio de los distintos materiales utilizados en el curso.
