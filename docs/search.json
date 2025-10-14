@@ -4,49 +4,21 @@
     "href": "recursos.html",
     "title": "Recursos",
     "section": "",
-    "text": "Vecillas Martin, D., Berruezo Fernández, C., & Gento Municio, A. M. (2025). Systematic Review of Discrete Event Simulation in Healthcare and Statistics Distributions. Applied Sciences, 15(4), 1861. Enlace aquí\nHeins, J., Schoenfelder, J., Heider, S., Heller, A. R., & Brunner, J. O. (2022). A scalable forecasting framework to predict COVID-19 hospital bed occupancy. INFORMS Journal on Applied Analytics, 52(6), 508-523. Enlace aquí\nHarper, P. R., & Shahani, A. K. (2002). Modelling for the planning and management of bed capacities in hospitals. Journal of the Operational research Society, 53(1), 11-18.\nCavalcante, T., Ospina, R., Leiva, V., Cabezas, X., & Martin-Barreiro, C. (2023). Weibull regression and machine learning survival models: Methodology, comparison, and application to biomedical data related to cardiac surgery. Biology, 12(3), 442.\nFenina, S., Jendoubi, S., & Bouchoucha, F. (2023). Failure rate estimation by Weibull distribution in a stochastic environment: application to the hemodialysis machine. Reliability: Theory & Applications, 18(3 (74)), 450-463.\nNketiah, E. A. (2021). Parameter Estimation of the Weibull Distribution; Comparison of the Least-Squares Method and the Maximum Likelihood Estimation. Int. J. Adv. Eng. Res. Sci, 8, 210-224.\n\n\n\n\nWickham, H., & Grolemund, G. (2016). R for data science: import, tidy, transform, visualize, and model data. ” O’Reilly Media, Inc.”. Enlace acá\nGrolemund, G. (2014). Hands-on programming with R: Write your own functions and simulations. ” O’Reilly Media, Inc.”. Enlace acá\nRegenstein Jr, J. K. (2018). Reproducible finance with R: Code flows and shiny apps for portfolio analysis. CRC Press. Enlace acá\nScheuch, C., Voigt, S., & Weiss, P. (2023). Tidy Finance with R (1st ed.). Chapman and Hall/CRC. https://doi.org/10.1201/b23237. Enlace acá\nXie, Y., Allaire, J. J., & Grolemund, G. (2018). R markdown: The definitive guide. CRC Press. Enlace acá\nBryan, J., & Hester, J. (n.d.). Happy Git and GitHub for the useR. Enlace acá\n\n\n\n\n\nUtilización de Renv: Enlace acá\n\n\n\n\n\nhttps://posit.co/resources/cheatsheets/"
-  },
-  {
-    "objectID": "recursos.html#libros",
-    "href": "recursos.html#libros",
-    "title": "Recursos",
-    "section": "",
-    "text": "Wickham, H., & Grolemund, G. (2016). R for data science: import, tidy, transform, visualize, and model data. ” O’Reilly Media, Inc.”. Enlace acá\nGrolemund, G. (2014). Hands-on programming with R: Write your own functions and simulations. ” O’Reilly Media, Inc.”. Enlace acá\nRegenstein Jr, J. K. (2018). Reproducible finance with R: Code flows and shiny apps for portfolio analysis. CRC Press. Enlace acá\nScheuch, C., Voigt, S., & Weiss, P. (2023). Tidy Finance with R (1st ed.). Chapman and Hall/CRC. https://doi.org/10.1201/b23237. Enlace acá\nXie, Y., Allaire, J. J., & Grolemund, G. (2018). R markdown: The definitive guide. CRC Press. Enlace acá\nBryan, J., & Hester, J. (n.d.). Happy Git and GitHub for the useR. Enlace acá"
-  },
-  {
-    "objectID": "recursos.html#section",
-    "href": "recursos.html#section",
-    "title": "Recursos",
-    "section": "",
-    "text": "Utilización de Renv: Enlace acá"
-  },
-  {
-    "objectID": "recursos.html#cheatsheets",
-    "href": "recursos.html#cheatsheets",
-    "title": "Recursos",
-    "section": "",
-    "text": "https://posit.co/resources/cheatsheets/"
+    "text": "Articles\n\nMcKinsey & Company. (30 de abril de 2024). What is deep learning? Recuperado de https://www.mckinsey.com/featured-insights/mckinsey-explainers/what-is-deep-learning\n\n\n\nVideos\n\nDeep Learning | What is Deep Learning? | Deep Learning Tutorial For Beginners | 2023 | Simplilearn. Enlace aquí\n\n\n\nResources\n\nAlzubaidi, L., et al. (2021). Review of deep learning: concepts, CNN architectures, challenges, applications, future directions. Journal of big Data, 8(1), 53. Enlace aquí"
   },
   {
     "objectID": "contacto.html",
     "href": "contacto.html",
     "title": "Contacto",
     "section": "",
-    "text": "Contacto\nSebastián Egaña Santibáñez\nDocente del curso\n\n📧 segana@fen.uchile.cl\n\n💼 LinkedIn\n💻Página Web\n🐈Github"
+    "text": "Contacto\nSebastián Egaña Santibáñez\nDocente del curso\n\n📧 sebastian.egana@udd.cl\n\n💼 LinkedIn\n💻Página Web\n🐈Github"
   },
   {
     "objectID": "clases/index.html",
     "href": "clases/index.html",
     "title": "Clases",
     "section": "",
-    "text": "Clases del curso\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nClase 01\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1 + 1\n\n[1] 3"
+    "text": "Clases del curso\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFundamentos de Datos para la Toma de Decisiones Estratégicas con IA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "clases/clases.html",
@@ -63,9 +35,79 @@
     "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org.\n\n1 + 1\n\n[1] 2"
   },
   {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1 + 1\n\n[1] 3"
+  },
+  {
+    "objectID": "clases/diapo_01.html#contexto-actual",
+    "href": "clases/diapo_01.html#contexto-actual",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Contexto actual",
+    "text": "Contexto actual\n\nVolumen de datos global crece &gt;40% anual (IDC, 2024).\n\nSolo ~30% de las empresas se considera realmente data-driven (McKinsey, 2023).\n\nEl valor no está en acumular datos, sino en estructurarlos, analizarlos e interpretarlos."
+  },
+  {
+    "objectID": "clases/diapo_01.html#rol-de-la-ia",
+    "href": "clases/diapo_01.html#rol-de-la-ia",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Rol de la IA",
+    "text": "Rol de la IA\n\nIA = capacidad de extraer patrones y predicciones\n\nIntegra datos estructurados y no estructurados (texto, imágenes, audio, video, documentos) y los convierte en información utilizable; arquitecturas empresariales actuales permiten extraer y mapear contenido no estructurado y combinarlo con recuperación + generación (RAG)\nPermite reducir incertidumbre y mejorar la velocidad y calidad de la decisión"
+  },
+  {
+    "objectID": "clases/diapo_01.html#diferencia-entre-decisiones-intuitivas-vs.-basadas-en-datos.",
+    "href": "clases/diapo_01.html#diferencia-entre-decisiones-intuitivas-vs.-basadas-en-datos.",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Diferencia entre decisiones intuitivas vs. basadas en datos.",
+    "text": "Diferencia entre decisiones intuitivas vs. basadas en datos.\nPor ejemplo, en el ámbito personal, ¿cómo decidir entre una oferta de trabajo que implica un mayor salario pero requiere re localizarse o una oferta con menor salario pero un mejor equilibrio entre la vida laboral y personal?\nLa dualidad acá está entre tomar una decisión en base a nuestro instinto o en base a un sistematización de puntos a favor o puntos en contra. Esto independiente del método o metodología."
+  },
+  {
+    "objectID": "clases/diapo_01.html#utilización-de-datos",
+    "href": "clases/diapo_01.html#utilización-de-datos",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Utilización de datos",
+    "text": "Utilización de datos"
+  },
+  {
+    "objectID": "clases/diapo_01.html#concepto-de-data-driven-organization.",
+    "href": "clases/diapo_01.html#concepto-de-data-driven-organization.",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Concepto de Data-Driven Organization.",
+    "text": "Concepto de Data-Driven Organization.\nEs algo que al parecer todos tenemos claros, pero cuáles son las carácteristicas de estas empresas (ESE, 2021 y Castro, 2023):\n\n\nEstrategia y gobierno de datos: en el centro debe estar la mejora en la toma de decisiones\nDemocratizar el acceso a los datos: tanto como el acceso, como las herramientas\nPromover la colaboración entre equipos multidisciplinarios\nCrear programas sólidos de calidad de datos\nImpulsar la innovación continua para integrar el cambio\nFomentar la cultura Data-Driven en todos los niveles de la organización"
+  },
+  {
+    "objectID": "clases/diapo_01.html#decisiones-con-o-sin-datos",
+    "href": "clases/diapo_01.html#decisiones-con-o-sin-datos",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "“Decisiones con o sin datos”",
+    "text": "“Decisiones con o sin datos”\n\nDuración: 15–20 minutos Objetivo: Reconocer cómo se suelen tomar decisiones (intuición vs. evidencia).\nInstrucciones:\n\nGrupos aleatorios entre 3 - 4 personas.\nCada equipo comparte un ejemplo de una decisión importante tomada en su trabajo.\n\nDeben responder:\n\n¿Qué datos se usaron (si los hubo)?\n¿Qué sesgos pudieron influir?\n¿Cómo habría cambiado la decisión si se hubiesen considerado más datos?\nCada grupo elige un caso para comentar brevemente al curso"
+  },
+  {
+    "objectID": "clases/diapo_01.html#medidas-de-éxito",
+    "href": "clases/diapo_01.html#medidas-de-éxito",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Medidas de éxito",
+    "text": "Medidas de éxito\n\nDesempeño: exactitud (accuracy), precisión u otros indicadores técnicos\nTiempo: entrega en plazo\nCosto: relación con presupuesto\nCalidad: Claridad en el código, documentación y reproducibilidad\nImpacto en stakeholders: satisfacción, comunicación, etc."
+  },
+  {
+    "objectID": "clases/diapo_01.html#conceptos-clave-promedio-varianza-correlación-causalidad.",
+    "href": "clases/diapo_01.html#conceptos-clave-promedio-varianza-correlación-causalidad.",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Conceptos clave: promedio, varianza, correlación, causalidad.",
+    "text": "Conceptos clave: promedio, varianza, correlación, causalidad.\nPodemos partir por lo más conocidos, como las medidas de tendencia central y de dispersión y correlación\n\nMedia, mediana, moda\nVarianza y desviación estándar\nCorrelación"
+  },
+  {
+    "objectID": "clases/diapo_01.html#incertidumbre-y-confianza-en-la-interpretación-de-resultados.",
+    "href": "clases/diapo_01.html#incertidumbre-y-confianza-en-la-interpretación-de-resultados.",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Incertidumbre y confianza en la interpretación de resultados.",
+    "text": "Incertidumbre y confianza en la interpretación de resultados.\nSe debe tener en cuenta que la incertidumbre siempre va a existir y se debe convivir con eso. Esto no implica que no la interioricemos dentro de nuestra toma de decisiones o que no la intentemos medir.\nUna buena técnica es generar ejercicios que añaden incertidumbre a los modelos calculados.\n\n\nEn el análisis de datos, la incertidumbre no se elimina, se cuantifica. Por eso usamos intervalos de confianza, desviaciones estándar o bandas de predicción. Estas herramientas nos permiten comunicar no solo qué esperamos que ocurra, sino cuán seguros estamos de ello.\nLa clave no es eliminar la incertidumbre, sino tomar decisiones que sean robustas frente a ella. En un entorno data-driven, la confianza no proviene de la certeza, sino de la capacidad de medir y comunicar el riesgo asociado a cada decisión."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "DIPLOMADO INTELIGENCIA ARTIFICIAL PARA LA TRANSFORMACIÓN EMPRESARIAL",
+    "title": "Diplomado Inteligencia Artificial para la Transformación de Negocios",
     "section": "",
     "text": "Este será el repositorio de los distintos materiales utilizados en el curso."
   }

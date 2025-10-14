@@ -1,7 +1,8 @@
 ---
 title: "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA"
 subtitle: "Clase 01 – El valor estratégico de los datos y fundamentos para entender la IA"
-institute: "Diplomado Inteligencia Artificial para la Transformación de Negocios"
+institution: 'Diplomado Inteligencia Artificial para la Transformación de Negocios'
+lang: es
 date: today
 format:
   revealjs:
@@ -14,7 +15,6 @@ format:
 editor: visual
 ---
 
-
 ```{=html}
 <style>
 .smaller { font-size: 85%; }
@@ -22,24 +22,13 @@ editor: visual
 </style>
 ```
 
-------------------------------------------------------------------------
-
-# Enlaces del profesor
-
-[{{< fa brands link >}}](https://segana.netlify.app) https://segana.netlify.app
-
-[{{< fa brands github >}}](https://github.com/sebaegana) https://github.com/sebaegana
-
-[{{< fa brands linkedin >}}](https://www.linkedin.com/in/sebastian-egana-santibanez/) https://www.linkedin.com/in/sebastian-egana-santibanez/
-
-------------------------------------------------------------------------
-
 ```{r load_packages, message=FALSE, warning=FALSE, include=FALSE}
 library(fontawesome)
 library(knitr)
 library(tidyverse)
 library(kableExtra)
 ```
+---
 
 # Sobre el docente
 
@@ -49,14 +38,30 @@ Experiencia, educación, etc.
 
 -   `r fa("message", fill = "steelblue")` sebastian.egana\@udd.cl
 -   `r fa("computer", fill = "steelblue")` <https://segana.netlify.app>
--   `r fa("linkedin", fill = "steelblue")` <https://www.linkedin.com/in/sebastian-egana-santibanez>
+-   `r fa("linkedin", fill = "steelblue")` <https://www.linkedin.com/in/sebastian-egana-santibanez/> 
+- `r fa("github", fill = "steelblue")` <https://github.com/sebaegana>
+
+---
 
 # Clase 01
 
--   Contexto actual: datos como activo estratégico.
--   Rol de la IA en la toma de decisiones.
+## Contexto actual
 
-# Estrategia basada en datos (45 min)
+- Volumen de datos global crece >40% anual (IDC, 2024).  
+- Solo ~30% de las empresas se considera realmente *data-driven* (McKinsey, 2023).  
+- El valor no está en acumular datos, sino en **estructurarlos, analizarlos e interpretarlos**.  
+
+---
+
+## Rol de la IA
+
+- IA = capacidad de **extraer patrones y predicciones**  
+- Integra datos estructurados y no estructurados (texto, imágenes, audio, video, documentos) y los convierte en información utilizable; arquitecturas empresariales actuales permiten extraer y mapear contenido no estructurado y combinarlo con recuperación + generación (RAG) 
+- Permite **reducir incertidumbre** y **mejorar la velocidad y calidad** de la decisión
+
+---
+
+# Estrategia basada en datos
 
 ## Diferencia entre decisiones intuitivas vs. basadas en datos.
 
@@ -330,8 +335,11 @@ NASA versus Space X `r fa("rocket", fill = "red")`
 
 ----
 
-# Actividad de reflexión guiada: “Decisiones con o sin datos”
+# Actividad 
 
+## “Decisiones con o sin datos”
+
+:::tiny
 Duración: 15–20 minutos
 Objetivo: Reconocer cómo se suelen tomar decisiones (intuición vs. evidencia).
 
@@ -345,9 +353,10 @@ Deben responder:
 1. ¿Qué datos se usaron (si los hubo)?
 2. ¿Qué sesgos pudieron influir?
 3. ¿Cómo habría cambiado la decisión si se hubiesen considerado más datos?
-4. Cada grupo elige un caso para comentar brevemente al curso.
+4. Cada grupo elige un caso para comentar brevemente al curso
+:::
 
-------------------------------------------------------------------------
+---
 
 # Fundamentos estadísticos esenciales
 
