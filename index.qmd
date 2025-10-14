@@ -1,5 +1,5 @@
 ---
-title: "DIPLOMADO INTELIGENCIA ARTIFICIAL PARA LA TRANSFORMACIÓN EMPRESARIAL"
+title: "Diplomado Inteligencia Artificial para la Transformación de Negocios""
 subtitle: "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA"
 date: last-modified
 lang: es

@@ -1,0 +1,687 @@
+---
+title: "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA"
+subtitle: "Clase 01 – El valor estratégico de los datos y fundamentos para entender la IA"
+institute: "Diplomado Inteligencia Artificial para la Transformación de Negocios"
+date: today
+format:
+  revealjs:
+    theme: simple
+    slide-number: true
+    incremental: true
+    transition: slide
+    logo: "Imagen1.png"
+    footer: "© Sebastián Egaña Santibáñez"
+editor: visual
+---
+
+
+```{=html}
+<style>
+.smaller { font-size: 85%; }
+.tiny { font-size: 70%; }
+</style>
+```
+
+------------------------------------------------------------------------
+
+# Enlaces del profesor
+
+[{{< fa brands link >}}](https://segana.netlify.app) https://segana.netlify.app
+
+[{{< fa brands github >}}](https://github.com/sebaegana) https://github.com/sebaegana
+
+[{{< fa brands linkedin >}}](https://www.linkedin.com/in/sebastian-egana-santibanez/) https://www.linkedin.com/in/sebastian-egana-santibanez/
+
+------------------------------------------------------------------------
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE}
+library(fontawesome)
+library(knitr)
+library(tidyverse)
+library(kableExtra)
+```
+
+# Sobre el docente
+
+Experiencia, educación, etc.
+
+# Enlaces
+
+-   `r fa("message", fill = "steelblue")` sebastian.egana\@udd.cl
+-   `r fa("computer", fill = "steelblue")` <https://segana.netlify.app>
+-   `r fa("linkedin", fill = "steelblue")` <https://www.linkedin.com/in/sebastian-egana-santibanez>
+
+# Clase 01
+
+-   Contexto actual: datos como activo estratégico.
+-   Rol de la IA en la toma de decisiones.
+
+# Estrategia basada en datos (45 min)
+
+## Diferencia entre decisiones intuitivas vs. basadas en datos.
+
+Por ejemplo, en el ámbito personal, ¿cómo decidir entre una oferta de trabajo que implica un mayor salario pero requiere re localizarse o una oferta con menor salario pero un mejor equilibrio entre la vida laboral y personal?
+
+La dualidad acá está entre tomar una decisión en base a nuestro instinto o en base a un sistematización de puntos a favor o puntos en contra. Esto independiente del **método** o **metodología**.
+
+------------------------------------------------------------------------
+
+Para esto, debemos desarrollar un framework orientado a la toma de decisiones; en la actualidad se habla de **decision science**, como el campo multipdisciplinario orientado a desarrollar un enfoque sistemático y orientado en datos (data-driven) para resolver problemas y optimizar desempeño y resulados.
+
+Como áreas relacionadas se encuentran las matemáticas, estadística, psicología, economía, ciencias de la computación, etc.
+
+El punto principal se basa en tomar decisiones informadas; una herramienta común a las ciencias es el método científico.
+
+------------------------------------------------------------------------
+
+### Método científico
+
+Corresponde a la metodología aplicada en ciencias orientada a enteder la realidad y generar nuevos conocimientos en base a la observación sistemática, medición y experimentación en base al análisis y formulación de hipótesis. Se puede desconmponer en las siguiente etapas:
+
+1.  Observación
+2.  Planteamiento de hipótesis
+3.  Experimentación / Medición
+4.  Análisis de resultados
+5.  Conclusión
+
+En este sentido, **desicion science** busca tomar los aspectos positivos del conocimiento científico en el ambito de la toma de decisiones para organizaciones.
+
+------------------------------------------------------------------------
+
+Podemos afirmar lo siguiente: "Cada decisión en salud, finanzas o negocios se basa en una predicción — explícita o implícita. El valor/desafío está en hacerla con evidencia".
+
+-   Decisiones: independiente del tipo de institución, es necesario tomar decisiones de gestión
+-   Predicción: visión del futuro en base a la información del pasado
+-   Evidencia: relación con el método científico y **decision science**
+
+------------------------------------------------------------------------
+
+### Framework de trabajo
+
+El enfoque de **decision science** plantea el siguiente framework:
+
+1.  Definir el problema
+2.  Reunir y analizar datos
+3.  Desarrollar y evaluar alternativas
+4.  Seleccionar e implementar soluciones
+
+---
+
+Se debe tener claridad en la toma de decisiones (no desarrollar/invertir en nada que no tenga sustento en datos), identificar tendencias y generar predicciones para reducir/interiorizar la incertidumbre.
+
+-   Por ejemplo: generar una gestión correcta de camas dentro de un recinto hospitalario para aumentar la rentabilidad/bienestar de maximizar la ocupación del recinto.
+
+---
+
+### Sesgos más allá de los datos
+
+`r fa("warning", fill = "red")` Un warning relevante es la necesidad de estar siempre atentos a los posibles sesgos inconscientes dentro den la toma de decisiones:
+
+:::smaller
+-   Confirmation bias: busca información que confirma mis creencias (contratación: cv versus entrevista)
+-   Anchoring bias: sobre confianza en la información inicial (precios del cyber)
+-   Loss aversion: preferencia hacia evadir pérdidas sobre (perder un 10% de descuento versus ganar un 10% de descuento)
+-   Available heuristic: sobre estimar la frecuencia de un evento en base a lo fácil que son de recordar (caída de aviones)
+:::
+
+---
+
+### Ejemplo
+
+¿Qué se prefiere?
+
+-   Situación A: Ganar 500 USD con seguridad
+-   Situación B: 50% de probabilidad de ganar 1.000 USD y 50% de no ganar nada
+
+Resultado:
+
+-   La mayoría elige A, pero ¿es correcto eso?
+
+---
+
+### Sobre la racionalidad
+
+Se asume que siempre estamos en un contexto de racionalidad perfecta, lo que implica la existencia de información completa y la no existencia de sesgos ni emociones. A pesar de esto, en la realidad, se toman decisiones en racionalidad incompleta o limitada:
+
+1. Los seres humanos tenemos límites cognitivos
+2. Tiempo e información limitados
+3. Estamos sujetos a emociones y sesgos
+
+---
+
+## Utilización de datos
+
+---
+
+### Jack Maple y COMPSTAT Center
+
+![Recuperada en: https://www.nydailynews.com/2013/09/16/hamill-bill-de-blasio-says-bill-bratton-on-short-list-to-be-police-commissioner](imagenes/maple_01.jpg)
+
+---
+
+### Tiempo promedio de hospitalización:
+
+En un caso simple, podriamos pensar en el promedio de días que pasa cada paciente por alguna patología en particular.
+
+Tenamos los siguientes datos de altas pacientes con neumonía y queremos predecir el tiempo promedio de hospitalización en días:
+
+```{r message=FALSE, warning=FALSE}
+#| eval: false
+#| include: true
+#| echo: true
+
+
+tiempo <- c(2,3,1,5,7,8,9,3,4,6,2,10,11,7,5,4,12,8,9,6)
+alta   <- c(1,1,1,1,1,0,0,1,1,1,1,0,0,1,1,1,0,1,1,1)
+
+```
+
+Acá la censura corresponde a los pacientes que no han sido dados de alta (alta = 0).
+
+---
+
+```{r message=FALSE, warning=FALSE}
+#| eval: true
+#| include: true
+#| echo: false
+
+tiempo <- c(2,3,1,5,7,8,9,3,4,6,2,10,11,7,5,4,12,8,9,6)
+alta   <- c(1,1,1,1,1,0,0,1,1,1,1,0,0,1,1,1,0,1,1,1)
+
+df <- tibble(TCC = tiempo, DELTA = alta)
+
+units_label <- "días"
+
+# --- Conteos clave ---
+n_total    <- nrow(df)
+n_event    <- sum(df$DELTA == 1)
+n_censored <- sum(df$DELTA == 0)
+event_rate <- n_event / n_total
+
+kable(
+  data.frame(
+    Total = n_total,
+    Eventos_DELTA1 = n_event,
+    Censuras_DELTA0 = n_censored,
+    Proporcion_evento = round(event_rate, 3)
+  ),
+  caption = "Conteos: total, eventos (DELTA=1), censuras (DELTA=0)"
+)
+
+# --- Resumen estadístico (global y por estado) ---
+quant_levels <- c(0, .1, .25, .5, .75, .9, 1)
+qnames <- paste0("q", quant_levels*100)
+
+resumen_global <- df %>%
+  summarise(
+    n     = n(),
+    min   = min(TCC),
+    mean  = mean(TCC),
+    mean_obs = mean(TCC[DELTA == 1]),  # promedio solo con casos observados
+    sd    = sd(TCC),
+    median= median(TCC),
+    max   = max(TCC),
+  )
+
+
+kable(resumen_global, digits = 3,
+      caption = paste("Resumen global de TCC (", units_label, ")", sep=""))
+
+```
+
+---
+
+Veamos el análisis de Weibull para estos datos:
+
+```{r message=FALSE, warning=FALSE}
+#| eval: true
+#| include: true
+#| echo: false
+
+library(dplyr)
+library(survival)
+library(fitdistrplus)
+library(knitr)
+
+# -----------------------------
+# Ajuste CON censura (único caso)
+# -----------------------------
+ajuste <- survreg(Surv(TCC, DELTA) ~ 1, dist = "weibull", data = df)
+
+mu_hat <- as.numeric(coef(ajuste))  # intercepto en la escala log-tiempo
+sig    <- ajuste$scale              # σ (escala AFT)
+
+# Conversión a Weibull 2P "clásico": f(t) = (k/λ) (t/λ)^{k-1} exp(-(t/λ)^k)
+k_c   <- 1 / sig                    # shape
+lam_c <- exp(mu_hat)                # scale
+
+# -----------------------------
+# Funciones resumen Weibull
+# -----------------------------
+w_tp   <- function(p, k, lam) lam * (-log(1 - p))^(1 / k)
+w_med  <- function(k, lam)   lam * (log(2))^(1 / k)
+w_mean <- function(k, lam)   lam * gamma(1 + 1 / k)
+
+# -----------------------------
+# Tablas (solo kable)
+# -----------------------------
+params_tbl <- tibble::tibble(
+  Caso       = "Con censura",
+  `shape (k)` = round(k_c, 4),
+  `scale (λ)` = round(lam_c, 4)
+)
+
+summ_tbl <- tibble::tibble(
+  Caso    = "Con censura",
+  Mediana = w_med(k_c, lam_c),
+  Media   = w_mean(k_c, lam_c),
+  `p=0.1` = w_tp(0.1, k_c, lam_c),
+  `p=0.5` = w_tp(0.5, k_c, lam_c),
+  `p=0.9` = w_tp(0.9, k_c, lam_c)
+) |> dplyr::mutate(dplyr::across(where(is.numeric), ~ round(., 4)))
+
+kable(params_tbl, booktabs = TRUE,
+      caption = "Parámetros Weibull 2P (ajuste con censura)")
+
+kable(summ_tbl, booktabs = TRUE,
+      caption = "Mediana, media y percentiles t_p (p=0.1, 0.5, 0.9) con censura")
+
+```
+
+---
+
+## Concepto de Data-Driven Organization.
+
+Es algo que **al parecer** todos tenemos claros, pero cuáles son las carácteristicas de estas empresas (ESE, 2021 y Castro, 2023):
+
+:::tiny
+-   Estrategia y gobierno de datos: en el centro debe estar la mejora en la toma de decisiones
+-   Democratizar el acceso a los datos: tanto como el acceso, como las herramientas
+-   Promover la colaboración entre equipos multidisciplinarios
+-   Crear programas sólidos de calidad de datos
+-   Impulsar la innovación continua para integrar el cambio
+-   Fomentar la cultura Data-Driven en todos los niveles de la organización
+:::
+
+---
+
+### Experimentación
+
+Dentro del contexto de **decision science** hablamos de la conexión con el método científico; elemento clave es la experimentación. 
+
+- Debemos pasar de intuir a medir: [The Surprising Power of Online Experiments](https://hbr.org/2017/09/the-surprising-power-of-online-experiments?utm_source=chatgpt.com)
+- Si no experimentas, adivinas: [Great Strategy Starts with Experimentation](https://hbr.org/podcast/2025/04/great-strategy-starts-with-experimentation?utm_source=chatgpt.com)
+- Cultura de experimentación: [Democratizing online controlled experiments at
+Booking.com](https://arxiv.org/pdf/1710.08217)
+
+---
+
+#### Algunos ejemplos
+
+Epigenética y la utilización de ratones `r fa("mouse", fill = "green")`
+
+- Experimentación en ratones, ¿por qué?
+- No mutaciones del ADN, pero que pueden ser heredables.
+
+NASA versus Space X `r fa("rocket", fill = "red")`
+
+- “Disminuir infinitamente el riesgo aumenta infinitamente el costo”
+- Space X con un costo de 67 million por lanzamiento para el Falcon 9; Nasa SLS sobre los $4 billion USD ([más info](https://patentpc.com/blog/nasa-vs-spacex-vs-blue-origin-whos-leading-the-space-race-market-share-stats))
+
+----
+
+# Actividad de reflexión guiada: “Decisiones con o sin datos”
+
+Duración: 15–20 minutos
+Objetivo: Reconocer cómo se suelen tomar decisiones (intuición vs. evidencia).
+
+Instrucciones:
+
+- Grupos aleatorios entre 3 - 4 personas.
+- Cada equipo comparte un ejemplo de una decisión importante tomada en su trabajo.
+
+Deben responder:
+
+1. ¿Qué datos se usaron (si los hubo)?
+2. ¿Qué sesgos pudieron influir?
+3. ¿Cómo habría cambiado la decisión si se hubiesen considerado más datos?
+4. Cada grupo elige un caso para comentar brevemente al curso.
+
+------------------------------------------------------------------------
+
+# Fundamentos estadísticos esenciales
+
+Como conceptos iniciales, en relación a los modelos debemos recordar lo siguiente:
+
+- Buenos modelos no son suficientes sin impacto
+- La indefición de lo que consideramos exito, conlleva a la pérdida de tiempo
+- Lo que consideramos exito debe ser acordado de antemano
+
+---
+
+## Medidas de éxito
+
+- Desempeño: exactitud (accuracy), precisión u otros indicadores técnicos
+- Tiempo: entrega en plazo
+- Costo: relación con presupuesto
+- Calidad: Claridad en el código, documentación y reproducibilidad
+- Impacto en stakeholders: satisfacción, comunicación, etc.
+
+---
+
+## Conceptos clave: promedio, varianza, correlación, causalidad.
+
+Podemos partir por lo más conocidos, como las medidas de tendencia central y de dispersión y correlación
+
+- Media, mediana, moda
+- Varianza y desviación estándar
+- Correlación
+
+---
+
+Precio de acción de LATAM:
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+
+# install.packages(c("tidyquant", "scales"))  # si no los tienes
+library(tidyquant)
+library(tidyverse)
+library(scales)
+library(ggplot2)
+
+ticker <- "LTM.SN"          
+desde  <- "2018-01-01"
+
+# 1) Descargar precios diarios (OHLC)
+precios <- tq_get(ticker, from = desde, to = Sys.Date())
+
+# 2) Último dato disponible
+ultimo <- precios |> 
+  slice_tail(n = 1) |> 
+  pull(adjusted)
+
+# 3) Promedio del precio ajustado
+promedio <- mean(precios$adjusted, na.rm = TRUE)
+
+# 4) Gráfico con línea de promedio
+ggplot(precios, aes(date, adjusted)) +
+  geom_line(linewidth = 0.8, color = "steelblue") +
+  geom_hline(yintercept = promedio, linetype = "dashed", color = "red") +
+  annotate("text", x = min(precios$date), y = promedio,
+           label = paste0("Promedio: $", round(promedio, 0)),
+           hjust = 0, vjust = -1, color = "red", size = 3.5) +
+  labs(
+    title = "LATAM Airlines Group",
+    subtitle = paste0("Último cierre: ",
+                      label_dollar(prefix = "$", big.mark = ".", decimal.mark = ",")(ultimo),
+                      " CLP (", max(precios$date), ")"),
+    x = "Fecha", 
+    y = "Precio ajustado (CLP)",
+    caption = "Fuente: Yahoo Finance via tidyquant"
+  ) +
+  theme_minimal()
+
+```
+
+---
+
+Veamos una ventana de tiempo distinta:
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+
+ticker <- "LTM.SN"
+desde  <- "2020-01-01"
+hasta  <- "2021-12-31"
+
+# 1) Descargar precios diarios (OHLC)
+precios <- tq_get(ticker, from = desde, to = Sys.Date())
+
+# 2) Último dato disponible
+ultimo <- precios |> 
+  slice_tail(n = 1) |> 
+  pull(adjusted)
+
+# 3) Promedio del precio ajustado
+promedio <- mean(precios$adjusted, na.rm = TRUE)
+
+# 4) Gráfico con línea de promedio
+ggplot(precios, aes(date, adjusted)) +
+  geom_line(linewidth = 0.8, color = "steelblue") +
+  geom_hline(yintercept = promedio, linetype = "dashed", color = "red") +
+  annotate("text", x = min(precios$date), y = promedio,
+           label = paste0("Promedio: $", round(promedio, 0)),
+           hjust = 0, vjust = -1, color = "red", size = 3.5) +
+  labs(
+    title = "LATAM Airlines Group",
+    subtitle = paste0("Último cierre: ",
+                      label_dollar(prefix = "$", big.mark = ".", decimal.mark = ",")(ultimo),
+                      " CLP (", max(precios$date), ")"),
+    x = "Fecha", 
+    y = "Precio ajustado (CLP)",
+    caption = "Fuente: Yahoo Finance via tidyquant"
+  ) +
+  theme_minimal()
+
+```
+
+---
+
+Por último:
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+
+ticker <- "LTM.SN"
+desde  <- "2024-01-01"
+hasta  <- "2025-09-26"
+
+# 1) Descargar precios diarios (OHLC)
+precios <- tq_get(ticker, from = desde, to = Sys.Date())
+
+# 2) Último dato disponible
+ultimo <- precios |> 
+  slice_tail(n = 1) |> 
+  pull(adjusted)
+
+# 3) Promedio del precio ajustado
+promedio <- mean(precios$adjusted, na.rm = TRUE)
+
+# 4) Gráfico con línea de promedio
+ggplot(precios, aes(date, adjusted)) +
+  geom_line(linewidth = 0.8, color = "steelblue") +
+  geom_hline(yintercept = promedio, linetype = "dashed", color = "red") +
+  annotate("text", x = min(precios$date), y = promedio,
+           label = paste0("Promedio: $", round(promedio, 0)),
+           hjust = 0, vjust = -1, color = "red", size = 3.5) +
+  labs(
+    title = "LATAM Airlines Group",
+    subtitle = paste0("Último cierre: ",
+                      label_dollar(prefix = "$", big.mark = ".", decimal.mark = ",")(ultimo),
+                      " CLP (", max(precios$date), ")"),
+    x = "Fecha", 
+    y = "Precio ajustado (CLP)",
+    caption = "Fuente: Yahoo Finance via tidyquant"
+  ) +
+  theme_minimal()
+```
+
+---
+
+### Tipos de modelos
+
+Por lo general, se habla de dos tipos de modelos:
+
+- Modelos de regresión: variable objetivo es numérica o continua
+- Modelos de clasificación: variable objetivo es categórica o discreta
+
+Otros modelos relacionados con la clasificación:
+
+- Clustering: buscan descubrir patrones dentro de los datos
+
+Dependiento el tipo de aprendizaje se puede hablar de supervisados y no supervisados.
+
+---
+
+### Métricas de modelos
+
+Algunas de las métricas más utilizadas son:
+
+- Accuracy: medición general de exito
+- Precision: cuántos predichos positivos fueron efectivamente correctos
+_ Recall: cuán bien el modelo predice a los que efectivamente eran positivos
+- F1 Score: es la media armónica entre ambas
+- Mean absolute error (MAE): tamaño promedio de la predicción de errores
+- Mean percentage error (MAPE): cuán lejos están las predicciones en porcentaje
+
+---
+
+### Matriz de confusión
+
+![Recuperada en: https://www.innovatiana.com/es/post/understand-confusion-matrix-in-ai](imagenes/Confusion-matrix-and-evaluation-metrics.png)
+
+---
+
+### Precision
+
+Quieres evitar falsos positivos: es decir, no marcar algo como positivo si no lo es
+
+
+:::tiny
+| Ejemplo                                                                              | Por qué importa más la *precision*                                                                                          |
+| ------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------- |
+| **Filtros de spam en correo electrónico**                                            | Es mejor dejar pasar un correo spam que bloquear uno legítimo. Un falso positivo (bloquear un correo válido) es más dañino. |
+| **Sistemas de detección de fraude en tarjetas**                                      | Acusar erróneamente una transacción legítima como fraude genera molestia y pérdida de confianza del cliente.                |
+| **Diagnóstico automático de enfermedades raras** (como soporte, no reemplazo médico) | Un falso positivo puede causar ansiedad y exámenes innecesarios costosos.                                                   |
+:::
+
+---
+
+### Recall
+
+Quieres evitar falsos negativos: es decir, no dejar pasar algo que sí era positivo.
+
+:::tiny
+| Ejemplo                                                  | Por qué importa más el *recall*                                                                              |
+| -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| **Detección de cáncer o enfermedades graves**            | Es más grave no detectar un caso real (falso negativo) que generar una alarma falsa que luego se descarte.   |
+| **Detección de fraude bancario**                         | Prefieres marcar más casos sospechosos (aunque algunos sean falsos) para revisar todos los posibles fraudes. |
+| **Sistemas de seguridad o vigilancia**                   | Mejor analizar más alertas que dejar pasar una amenaza real.                                                 |
+:::
+
+---
+
+## Incertidumbre y confianza en la interpretación de resultados.
+
+Se debe tener en cuenta que la incertidumbre siempre va a existir y se debe convivir con eso. Esto no implica que no la interioricemos dentro de nuestra toma de decisiones o que no la intentemos medir. 
+
+Una buena técnica es generar ejercicios que añaden incertidumbre a los modelos calculados. 
+
+
+:::tiny
+- En el análisis de datos, la incertidumbre no se elimina, se cuantifica.
+Por eso usamos intervalos de confianza, desviaciones estándar o bandas de predicción. Estas herramientas nos permiten comunicar no solo qué esperamos que ocurra, sino cuán seguros estamos de ello.
+
+- La clave no es eliminar la incertidumbre, sino tomar decisiones que sean robustas frente a ella. En un entorno data-driven, la confianza no proviene de la certeza, sino de la capacidad de medir y comunicar el riesgo asociado a cada decisión.
+:::
+
+---
+
+### Simulaciones de Monte Carlo
+
+Una simulación corresponde a imitar en un entorno controlado para experimentar posibles comportamientos futuros de un sistema particular. En este caso lo que se simula es el valor futuro de la serie de tiempo que estamos intentando predecir.
+
+El concepto de **Monte Carlo** corresponde al muestreo aleatorio repetido de múltiples valores futuro para poder incorporar incertidumbre dentro de nuestras predicciones.
+
+---
+
+### Aplicación en evaluación de proyectos
+
+En el caso de proyectos, podemos realizar un análisis de carácter estocástico, lo que implica asumir que alguna de las variables no es conocida pero si que puede estar situada dentro de algunos parámetros.
+
+Veamos el siguiente ejemplo:
+
+Una empresa está evaluando la introducción de un nuevo producto y desea conocer la probabilidad que obtenga pérdidas. Para cumplir dicho propósito lo contrata a usted para construir un modelo financiero del negocio.
+
+---
+
+Después de realizar la debida investigación, usted decide construir una simulación de Monte Carlo que le permita generar la distribución de probabilidad de las utilidades del negocio, modelando separadamente los ingresos y los costos totales, considerando los siguientes elementos:
+
+:::tiny
+Por el lado de los ingresos totales, se considerarán tres escenarios (A, B y C) para el precio y la cantidad, los cuales aparecen descritos en la siguiente tabla:
+
+| Variable     | A   | B   | C   |
+|---------------|-----|-----|-----|
+| **Precio**    | 12  | 13  | 16  |
+| **Cantidad**  | 110 | 100 | 80  |
+| **Probabilidad** | 1/4 | 1/2 | 1/4 |
+:::
+
+---
+
+En el caso de los costos totales, los costos fijos son iguales a \$150 y los costos variables unitarios son constantes y son modelados usando una distribución triangular con los siguientes parámetros:
+
+| Parámetro     | Valores |
+|----------------|----------|
+| **Valor mínimo** | 9 |
+| **Valor máximo** | 13 |
+| **Moda**          | 11 |
+
+---
+
+A. ¿Cuál es la probabilidad que el negocio tenga pérdidas?
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+library(tidyverse)
+library(triangle)
+#set.seed(1234567)
+
+reps = 10000
+utilidad = matrix(NA, nrow = reps, ncol = 1)
+for (i in 1:reps) {
+  x = sample(c("A","B","C"), 1, replace = TRUE, prob = c(1/4, 1/2, 1/4))
+  if (x == "A") {
+    precio = 12
+    cantidad = 110
+  }
+  else if (x == "B") {
+    precio = 13
+    cantidad = 100
+  }
+  else {
+    precio = 16
+    cantidad = 80
+  }
+  costo_variable_unitario = rtriangle(1, 9, 13, 11)
+  costo_fijo = 150
+  utilidad[i] = (precio - costo_variable_unitario)*cantidad - costo_fijo
+}
+
+utilidad <- data.frame(utilidad)
+
+ggplot(utilidad) +
+  geom_histogram(aes(x = utilidad, y=after_stat(density)), col="black", bins = 35) +
+  labs(x = "Utilidad", y = "Densidad") +
+  theme(
+    panel.background = element_blank(),
+    axis.line = element_line()
+  )
+paste0("Prob(utilidad<0) = ", round(mean(utilidad$utilidad<0),2))
+```
+
+B. Calcule el valor esperado de las utilidades del negocio
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+paste0("Valor esperado utilidad = ", round(mean(utilidad$utilidad),2))
+
+```
+
+---
+
+# Referencias
+
+-   ESE. (2021). Data-Driven Organization: ¿Qué es una organización dirigida por datos? Resumen Transformación Digital Nº 23. ESE. Recuperado de <https://www.ese.cl/ese/site/artic/20210518/asocfile/20210518180050/data_driven_organization__que_es_una_organizaci__n_dirigida_por_datos.pdf>
+
+Castro Reyes, D. A. (2023). ¿Qué pueden hacer las organizaciones para convertirse en Data-Driven? EY Colombia. Recuperado de <https://www.ey.com/es_co/insights/consulting/analytics-consulting-services/organizaciones-convertirse-data-driven>
+
+-   Vecillas Martin, D., Berruezo Fernández, C., & Gento Municio, A. M. (2025). Systematic Review of Discrete Event Simulation in Healthcare and Statistics Distributions. Applied Sciences, 15(4), 1861. [Enlace aquí](https://www.mdpi.com/2076-3417/15/4/1861#:~:text=53,CrossRef)
+
+-   Heins, J., Schoenfelder, J., Heider, S., Heller, A. R., & Brunner, J. O. (2022). A scalable forecasting framework to predict COVID-19 hospital bed occupancy. INFORMS Journal on Applied Analytics, 52(6), 508-523. [Enlace aquí](https://opus.bibliothek.uni-augsburg.de/opus4/frontdoor/deliver/index/docId/92025/file/92025.pdf#:~:text=jens.brunner%40uni,care%20units%20and%20regular%20wards)
