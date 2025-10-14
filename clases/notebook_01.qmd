@@ -1,8 +1,8 @@
 ---
-listing_title: "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA"
+listing_title: "Notebook 01"
 title: |
   | \includegraphics[width=5cm]{Imagen1.png}  
-  | Diplomado Inteligencia Artificial para la Transformación de Negocios 
+  | Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA 
 subtitle: Clase 01 - El valor estratégico de los datos y fundamentos para entender la IA
 format: pdf
 editor: visual

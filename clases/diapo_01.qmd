@@ -1,4 +1,5 @@
 ---
+listing_title: "Diapositiva 01"
 title: "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA"
 subtitle: "Clase 01 – El valor estratégico de los datos y fundamentos para entender la IA"
 institution: 'Diplomado Inteligencia Artificial para la Transformación de Negocios'
