@@ -72,7 +72,7 @@ La dualidad acá está entre tomar una decisión en base a nuestro instinto o en
 
 ------------------------------------------------------------------------
 
-Para esto, debemos desarrollar un framework orientado a la toma de decisiones; en la actualidad se habla de **decision science**, como el campo multipdisciplinario orientado a desarrollar un enfoque sistemático y orientado en datos (data-driven) para resolver problemas y optimizar desempeño y resulados.
+Para esto, debemos desarrollar un framework orientado a la toma de decisiones; en la actualidad se habla de **decision science**, como el campo multipdisciplinario orientado a desarrollar un enfoque sistemático y orientado en datos (data-driven) para resolver problemas, optimizar desempeño y resultados.
 
 Como áreas relacionadas se encuentran las matemáticas, estadística, psicología, economía, ciencias de la computación, etc.
 
@@ -82,15 +82,17 @@ El punto principal se basa en tomar decisiones informadas; una herramienta comú
 
 ### Método científico
 
-Corresponde a la metodología aplicada en ciencias orientada a enteder la realidad y generar nuevos conocimientos en base a la observación sistemática, medición y experimentación en base al análisis y formulación de hipótesis. Se puede desconmponer en las siguiente etapas:
+Corresponde a la metodología aplicada en ciencias orientada a enteder la realidad y generar nuevos conocimientos en base a la observación sistemática, medición y experimentación en base al análisis y formulación de hipótesis. Se puede dividir en las siguiente etapas:
 
+:::tiny
 1.  Observación
 2.  Planteamiento de hipótesis
-3.  Experimentación / Medición
+3.  **Experimentación / Medición**
 4.  Análisis de resultados
 5.  Conclusión
 
 En este sentido, **desicion science** busca tomar los aspectos positivos del conocimiento científico en el ambito de la toma de decisiones para organizaciones.
+:::
 
 ------------------------------------------------------------------------
 
@@ -121,10 +123,10 @@ Se debe tener claridad en la toma de decisiones (no desarrollar/invertir en nada
 
 ### Sesgos más allá de los datos
 
-`r fa("warning", fill = "red")` Un warning relevante es la necesidad de estar siempre atentos a los posibles sesgos inconscientes dentro den la toma de decisiones:
+`r fa("warning", fill = "red")` Un warning relevante es la necesidad de estar siempre atentos a los posibles sesgos inconscientes dentro de la toma de decisiones:
 
 :::smaller
--   Confirmation bias: busca información que confirma mis creencias (contratación: cv versus entrevista)
+-   Confirmation bias: buscar información que confirma mis creencias (contratación: cv versus entrevista)
 -   Anchoring bias: sobre confianza en la información inicial (precios del cyber)
 -   Loss aversion: preferencia hacia evadir pérdidas sobre (perder un 10% de descuento versus ganar un 10% de descuento)
 -   Available heuristic: sobre estimar la frecuencia de un evento en base a lo fácil que son de recordar (caída de aviones)
@@ -186,6 +188,7 @@ Acá la censura corresponde a los pacientes que no han sido dados de alta (alta 
 
 ---
 
+:::smaller
 ```{r message=FALSE, warning=FALSE}
 #| eval: true
 #| include: true
@@ -234,11 +237,12 @@ kable(resumen_global, digits = 3,
       caption = paste("Resumen global de TCC (", units_label, ")", sep=""))
 
 ```
-
+:::
 ---
 
 Veamos el análisis de Weibull para estos datos:
 
+:::smaller
 ```{r message=FALSE, warning=FALSE}
 #| eval: true
 #| include: true
@@ -287,12 +291,13 @@ summ_tbl <- tibble::tibble(
 ) |> dplyr::mutate(dplyr::across(where(is.numeric), ~ round(., 4)))
 
 kable(params_tbl, booktabs = TRUE,
-      caption = "Parámetros Weibull 2P (ajuste con censura)")
+      caption = "Parámetros Weibull 2P")
 
 kable(summ_tbl, booktabs = TRUE,
-      caption = "Mediana, media y percentiles t_p (p=0.1, 0.5, 0.9) con censura")
+      caption = "Mediana, media y percentiles t_p (p=0.1, 0.5, 0.9)")
 
 ```
+:::
 
 ---
 
@@ -327,7 +332,7 @@ Booking.com](https://arxiv.org/pdf/1710.08217)
 Epigenética y la utilización de ratones `r fa("mouse", fill = "green")`
 
 - Experimentación en ratones, ¿por qué?
-- No mutaciones del ADN, pero que pueden ser heredables.
+- No mutaciones del ADN, pero que pueden ser heredables
 
 NASA versus Space X `r fa("rocket", fill = "red")`
 
@@ -527,7 +532,7 @@ Otros modelos relacionados con la clasificación:
 
 - Clustering: buscan descubrir patrones dentro de los datos
 
-Dependiento el tipo de aprendizaje se puede hablar de supervisados y no supervisados.
+Dependiendo el tipo de aprendizaje se puede hablar de supervisados y no supervisados.
 
 ---
 
@@ -560,7 +565,6 @@ Quieres evitar falsos positivos: es decir, no marcar algo como positivo si no lo
 | ------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------- |
 | **Filtros de spam en correo electrónico**                                            | Es mejor dejar pasar un correo spam que bloquear uno legítimo. Un falso positivo (bloquear un correo válido) es más dañino. |
 | **Sistemas de detección de fraude en tarjetas**                                      | Acusar erróneamente una transacción legítima como fraude genera molestia y pérdida de confianza del cliente.                |
-| **Diagnóstico automático de enfermedades raras** (como soporte, no reemplazo médico) | Un falso positivo puede causar ansiedad y exámenes innecesarios costosos.                                                   |
 :::
 
 ---
@@ -573,7 +577,6 @@ Quieres evitar falsos negativos: es decir, no dejar pasar algo que sí era posit
 | Ejemplo                                                  | Por qué importa más el *recall*                                                                              |
 | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
 | **Detección de cáncer o enfermedades graves**            | Es más grave no detectar un caso real (falso negativo) que generar una alarma falsa que luego se descarte.   |
-| **Detección de fraude bancario**                         | Prefieres marcar más casos sospechosos (aunque algunos sean falsos) para revisar todos los posibles fraudes. |
 | **Sistemas de seguridad o vigilancia**                   | Mejor analizar más alertas que dejar pasar una amenaza real.                                                 |
 :::
 
@@ -581,12 +584,11 @@ Quieres evitar falsos negativos: es decir, no dejar pasar algo que sí era posit
 
 ## Incertidumbre y confianza en la interpretación de resultados.
 
+:::tiny
 Se debe tener en cuenta que la incertidumbre siempre va a existir y se debe convivir con eso. Esto no implica que no la interioricemos dentro de nuestra toma de decisiones o que no la intentemos medir. 
 
 Una buena técnica es generar ejercicios que añaden incertidumbre a los modelos calculados. 
 
-
-:::tiny
 - En el análisis de datos, la incertidumbre no se elimina, se cuantifica.
 Por eso usamos intervalos de confianza, desviaciones estándar o bandas de predicción. Estas herramientas nos permiten comunicar no solo qué esperamos que ocurra, sino cuán seguros estamos de ello.
 
@@ -688,10 +690,13 @@ paste0("Valor esperado utilidad = ", round(mean(utilidad$utilidad),2))
 
 # Referencias
 
--   ESE. (2021). Data-Driven Organization: ¿Qué es una organización dirigida por datos? Resumen Transformación Digital Nº 23. ESE. Recuperado de <https://www.ese.cl/ese/site/artic/20210518/asocfile/20210518180050/data_driven_organization__que_es_una_organizaci__n_dirigida_por_datos.pdf>
+:::tiny
+
+ESE. (2021). Data-Driven Organization: ¿Qué es una organización dirigida por datos? Resumen Transformación Digital Nº 23. ESE. Recuperado de <https://www.ese.cl/ese/site/artic/20210518/asocfile/20210518180050/data_driven_organization__que_es_una_organizaci__n_dirigida_por_datos.pdf>
 
 Castro Reyes, D. A. (2023). ¿Qué pueden hacer las organizaciones para convertirse en Data-Driven? EY Colombia. Recuperado de <https://www.ey.com/es_co/insights/consulting/analytics-consulting-services/organizaciones-convertirse-data-driven>
 
--   Vecillas Martin, D., Berruezo Fernández, C., & Gento Municio, A. M. (2025). Systematic Review of Discrete Event Simulation in Healthcare and Statistics Distributions. Applied Sciences, 15(4), 1861. [Enlace aquí](https://www.mdpi.com/2076-3417/15/4/1861#:~:text=53,CrossRef)
+Vecillas Martin, D., Berruezo Fernández, C., & Gento Municio, A. M. (2025). Systematic Review of Discrete Event Simulation in Healthcare and Statistics Distributions. Applied Sciences, 15(4), 1861. [Enlace aquí](https://www.mdpi.com/2076-3417/15/4/1861#:~:text=53,CrossRef)
 
--   Heins, J., Schoenfelder, J., Heider, S., Heller, A. R., & Brunner, J. O. (2022). A scalable forecasting framework to predict COVID-19 hospital bed occupancy. INFORMS Journal on Applied Analytics, 52(6), 508-523. [Enlace aquí](https://opus.bibliothek.uni-augsburg.de/opus4/frontdoor/deliver/index/docId/92025/file/92025.pdf#:~:text=jens.brunner%40uni,care%20units%20and%20regular%20wards)
+Heins, J., Schoenfelder, J., Heider, S., Heller, A. R., & Brunner, J. O. (2022). A scalable forecasting framework to predict COVID-19 hospital bed occupancy. INFORMS Journal on Applied Analytics, 52(6), 508-523. [Enlace aquí](https://opus.bibliothek.uni-augsburg.de/opus4/frontdoor/deliver/index/docId/92025/file/92025.pdf#:~:text=jens.brunner%40uni,care%20units%20and%20regular%20wards)
+:::

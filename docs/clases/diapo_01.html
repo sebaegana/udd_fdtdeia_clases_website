@@ -268,22 +268,24 @@
 </section>
 <section class="slide level2">
 
-<p>Para esto, debemos desarrollar un framework orientado a la toma de decisiones; en la actualidad se habla de <strong>decision science</strong>, como el campo multipdisciplinario orientado a desarrollar un enfoque sistemático y orientado en datos (data-driven) para resolver problemas y optimizar desempeño y resulados.</p>
+<p>Para esto, debemos desarrollar un framework orientado a la toma de decisiones; en la actualidad se habla de <strong>decision science</strong>, como el campo multipdisciplinario orientado a desarrollar un enfoque sistemático y orientado en datos (data-driven) para resolver problemas, optimizar desempeño y resultados.</p>
 <p>Como áreas relacionadas se encuentran las matemáticas, estadística, psicología, economía, ciencias de la computación, etc.</p>
 <p>El punto principal se basa en tomar decisiones informadas; una herramienta común a las ciencias es el método científico.</p>
 </section>
 <section class="slide level2">
 
 <h3 id="método-científico">Método científico</h3>
-<p>Corresponde a la metodología aplicada en ciencias orientada a enteder la realidad y generar nuevos conocimientos en base a la observación sistemática, medición y experimentación en base al análisis y formulación de hipótesis. Se puede desconmponer en las siguiente etapas:</p>
+<p>Corresponde a la metodología aplicada en ciencias orientada a enteder la realidad y generar nuevos conocimientos en base a la observación sistemática, medición y experimentación en base al análisis y formulación de hipótesis. Se puede dividir en las siguiente etapas:</p>
+<div class="tiny">
 <ol type="1">
 <li class="fragment">Observación</li>
 <li class="fragment">Planteamiento de hipótesis</li>
-<li class="fragment">Experimentación / Medición</li>
+<li class="fragment"><strong>Experimentación / Medición</strong></li>
 <li class="fragment">Análisis de resultados</li>
 <li class="fragment">Conclusión</li>
 </ol>
 <p>En este sentido, <strong>desicion science</strong> busca tomar los aspectos positivos del conocimiento científico en el ambito de la toma de decisiones para organizaciones.</p>
+</div>
 </section>
 <section class="slide level2">
 
@@ -315,10 +317,10 @@
 <section class="slide level2">
 
 <h3 id="sesgos-más-allá-de-los-datos">Sesgos más allá de los datos</h3>
-<p><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:red;overflow:visible;position:relative;"><path d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7 .2 40.1S486.3 480 472 480H40c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8 .2-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24V296c0 13.3 10.7 24 24 24s24-10.7 24-24V184c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"></path></svg> Un warning relevante es la necesidad de estar siempre atentos a los posibles sesgos inconscientes dentro den la toma de decisiones:</p>
+<p><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:red;overflow:visible;position:relative;"><path d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7 .2 40.1S486.3 480 472 480H40c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8 .2-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24V296c0 13.3 10.7 24 24 24s24-10.7 24-24V184c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"></path></svg> Un warning relevante es la necesidad de estar siempre atentos a los posibles sesgos inconscientes dentro de la toma de decisiones:</p>
 <div class="smaller">
 <ul>
-<li class="fragment">Confirmation bias: busca información que confirma mis creencias (contratación: cv versus entrevista)</li>
+<li class="fragment">Confirmation bias: buscar información que confirma mis creencias (contratación: cv versus entrevista)</li>
 <li class="fragment">Anchoring bias: sobre confianza en la información inicial (precios del cyber)</li>
 <li class="fragment">Loss aversion: preferencia hacia evadir pérdidas sobre (perder un 10% de descuento versus ganar un 10% de descuento)</li>
 <li class="fragment">Available heuristic: sobre estimar la frecuencia de un evento en base a lo fácil que son de recordar (caída de aviones)</li>
@@ -369,6 +371,7 @@
 </section>
 <section class="slide level2">
 
+<div class="smaller">
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top">
@@ -419,14 +422,16 @@
 </table>
 </div>
 </div>
+</div>
 </section>
 <section class="slide level2">
 
 <p>Veamos el análisis de Weibull para estos datos:</p>
+<div class="smaller">
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top">
-<caption>Parámetros Weibull 2P (ajuste con censura)</caption>
+<caption>Parámetros Weibull 2P</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Caso</th>
@@ -445,7 +450,7 @@
 </div>
 <div class="cell-output-display">
 <table class="caption-top">
-<caption>Mediana, media y percentiles t_p (p=0.1, 0.5, 0.9) con censura</caption>
+<caption>Mediana, media y percentiles t_p (p=0.1, 0.5, 0.9)</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Caso</th>
@@ -467,6 +472,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 </div>
 </div>
 </section>
@@ -500,7 +506,7 @@
 <p>Epigenética y la utilización de ratones <svg aria-hidden="true" role="img" viewbox="0 0 384 512" style="height:1em;width:0.75em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:green;overflow:visible;position:relative;"><path d="M0 192H176V0H160C71.6 0 0 71.6 0 160v32zm0 32V352c0 88.4 71.6 160 160 160h64c88.4 0 160-71.6 160-160V224H192 0zm384-32V160C384 71.6 312.4 0 224 0H208V192H384z"></path></svg></p>
 <ul>
 <li class="fragment">Experimentación en ratones, ¿por qué?</li>
-<li class="fragment">No mutaciones del ADN, pero que pueden ser heredables.</li>
+<li class="fragment">No mutaciones del ADN, pero que pueden ser heredables</li>
 </ul>
 <p>NASA versus Space X <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:red;overflow:visible;position:relative;"><path d="M156.6 384.9L125.7 354c-8.5-8.5-11.5-20.8-7.7-32.2c3-8.9 7-20.5 11.8-33.8L24 288c-8.6 0-16.6-4.6-20.9-12.1s-4.2-16.7 .2-24.1l52.5-88.5c13-21.9 36.5-35.3 61.9-35.3l82.3 0c2.4-4 4.8-7.7 7.2-11.3C289.1-4.1 411.1-8.1 483.9 5.3c11.6 2.1 20.6 11.2 22.8 22.8c13.4 72.9 9.3 194.8-111.4 276.7c-3.5 2.4-7.3 4.8-11.3 7.2v82.3c0 25.4-13.4 49-35.3 61.9l-88.5 52.5c-7.4 4.4-16.6 4.5-24.1 .2s-12.1-12.2-12.1-20.9V380.8c-14.1 4.9-26.4 8.9-35.7 11.9c-11.2 3.6-23.4 .5-31.8-7.8zM384 168a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"></path></svg></p>
 <ul>
@@ -593,7 +599,7 @@
 <ul>
 <li class="fragment">Clustering: buscan descubrir patrones dentro de los datos</li>
 </ul>
-<p>Dependiento el tipo de aprendizaje se puede hablar de supervisados y no supervisados.</p>
+<p>Dependiendo el tipo de aprendizaje se puede hablar de supervisados y no supervisados.</p>
 </section>
 <section class="slide level2">
 
@@ -637,10 +643,6 @@
 <td><strong>Sistemas de detección de fraude en tarjetas</strong></td>
 <td>Acusar erróneamente una transacción legítima como fraude genera molestia y pérdida de confianza del cliente.</td>
 </tr>
-<tr class="odd">
-<td><strong>Diagnóstico automático de enfermedades raras</strong> (como soporte, no reemplazo médico)</td>
-<td>Un falso positivo puede causar ansiedad y exámenes innecesarios costosos.</td>
-</tr>
 </tbody>
 </table>
 </div>
@@ -667,10 +669,6 @@
 <td>Es más grave no detectar un caso real (falso negativo) que generar una alarma falsa que luego se descarte.</td>
 </tr>
 <tr class="even">
-<td><strong>Detección de fraude bancario</strong></td>
-<td>Prefieres marcar más casos sospechosos (aunque algunos sean falsos) para revisar todos los posibles fraudes.</td>
-</tr>
-<tr class="odd">
 <td><strong>Sistemas de seguridad o vigilancia</strong></td>
 <td>Mejor analizar más alertas que dejar pasar una amenaza real.</td>
 </tr>
@@ -680,9 +678,9 @@
 </section>
 <section id="incertidumbre-y-confianza-en-la-interpretación-de-resultados." class="slide level2">
 <h2>Incertidumbre y confianza en la interpretación de resultados.</h2>
+<div class="tiny">
 <p>Se debe tener en cuenta que la incertidumbre siempre va a existir y se debe convivir con eso. Esto no implica que no la interioricemos dentro de nuestra toma de decisiones o que no la intentemos medir.</p>
 <p>Una buena técnica es generar ejercicios que añaden incertidumbre a los modelos calculados.</p>
-<div class="tiny">
 <ul>
 <li class="fragment"><p>En el análisis de datos, la incertidumbre no se elimina, se cuantifica. Por eso usamos intervalos de confianza, desviaciones estándar o bandas de predicción. Estas herramientas nos permiten comunicar no solo qué esperamos que ocurra, sino cuán seguros estamos de ello.</p></li>
 <li class="fragment"><p>La clave no es eliminar la incertidumbre, sino tomar decisiones que sean robustas frente a ella. En un entorno data-driven, la confianza no proviene de la certeza, sino de la capacidad de medir y comunicar el riesgo asociado a cada decisión.</p></li>
@@ -771,13 +769,13 @@
 <div class="cell">
 
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "Prob(utilidad&lt;0) = 0.3"</code></pre>
+<pre><code>[1] "Prob(utilidad&lt;0) = 0.31"</code></pre>
 </div>
 </div>
 <img data-src="diapo_01_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"><p>B. Calcule el valor esperado de las utilidades del negocio</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "Valor esperado utilidad = 78.03"</code></pre>
+<pre><code>[1] "Valor esperado utilidad = 76.27"</code></pre>
 </div>
 </div>
 </section>
@@ -786,14 +784,12 @@
 </section></section>
 <section id="referencias" class="title-slide slide level1 center">
 <h1>Referencias</h1>
-<ul>
-<li class="fragment">ESE. (2021). Data-Driven Organization: ¿Qué es una organización dirigida por datos? Resumen Transformación Digital Nº 23. ESE. Recuperado de <a href="https://www.ese.cl/ese/site/artic/20210518/asocfile/20210518180050/data_driven_organization__que_es_una_organizaci__n_dirigida_por_datos.pdf" class="uri">https://www.ese.cl/ese/site/artic/20210518/asocfile/20210518180050/data_driven_organization__que_es_una_organizaci__n_dirigida_por_datos.pdf</a></li>
-</ul>
+<div class="tiny">
+<p>ESE. (2021). Data-Driven Organization: ¿Qué es una organización dirigida por datos? Resumen Transformación Digital Nº 23. ESE. Recuperado de <a href="https://www.ese.cl/ese/site/artic/20210518/asocfile/20210518180050/data_driven_organization__que_es_una_organizaci__n_dirigida_por_datos.pdf" class="uri">https://www.ese.cl/ese/site/artic/20210518/asocfile/20210518180050/data_driven_organization__que_es_una_organizaci__n_dirigida_por_datos.pdf</a></p>
 <p>Castro Reyes, D. A. (2023). ¿Qué pueden hacer las organizaciones para convertirse en Data-Driven? EY Colombia. Recuperado de <a href="https://www.ey.com/es_co/insights/consulting/analytics-consulting-services/organizaciones-convertirse-data-driven" class="uri">https://www.ey.com/es_co/insights/consulting/analytics-consulting-services/organizaciones-convertirse-data-driven</a></p>
-<ul>
-<li class="fragment"><p>Vecillas Martin, D., Berruezo Fernández, C., &amp; Gento Municio, A. M. (2025). Systematic Review of Discrete Event Simulation in Healthcare and Statistics Distributions. Applied Sciences, 15(4), 1861. <a href="https://www.mdpi.com/2076-3417/15/4/1861#:~:text=53,CrossRef">Enlace aquí</a></p></li>
-<li class="fragment"><p>Heins, J., Schoenfelder, J., Heider, S., Heller, A. R., &amp; Brunner, J. O. (2022). A scalable forecasting framework to predict COVID-19 hospital bed occupancy. INFORMS Journal on Applied Analytics, 52(6), 508-523. <a href="https://opus.bibliothek.uni-augsburg.de/opus4/frontdoor/deliver/index/docId/92025/file/92025.pdf#:~:text=jens.brunner%40uni,care%20units%20and%20regular%20wards">Enlace aquí</a></p></li>
-</ul>
+<p>Vecillas Martin, D., Berruezo Fernández, C., &amp; Gento Municio, A. M. (2025). Systematic Review of Discrete Event Simulation in Healthcare and Statistics Distributions. Applied Sciences, 15(4), 1861. <a href="https://www.mdpi.com/2076-3417/15/4/1861#:~:text=53,CrossRef">Enlace aquí</a></p>
+<p>Heins, J., Schoenfelder, J., Heider, S., Heller, A. R., &amp; Brunner, J. O. (2022). A scalable forecasting framework to predict COVID-19 hospital bed occupancy. INFORMS Journal on Applied Analytics, 52(6), 508-523. <a href="https://opus.bibliothek.uni-augsburg.de/opus4/frontdoor/deliver/index/docId/92025/file/92025.pdf#:~:text=jens.brunner%40uni,care%20units%20and%20regular%20wards">Enlace aquí</a></p>
+</div>
 
 
 </section>
