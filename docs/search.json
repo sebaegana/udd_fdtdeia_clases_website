@@ -18,28 +18,7 @@
     "href": "clases/index.html",
     "title": "Clases",
     "section": "",
-    "text": "Clases del curso\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDiapositiva 01\n\n\n\n\n\n\n\n\n\n\n\nNotebook 01\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "clases/clases.html",
-    "href": "clases/clases.html",
-    "title": "clases",
-    "section": "",
-    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org.\n\n1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "clases/clases.html#quarto",
-    "href": "clases/clases.html#quarto",
-    "title": "clases",
-    "section": "",
-    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org.\n\n1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1 + 1\n\n[1] 3"
+    "text": "Clases del curso\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDiapositiva 01\n\n\n\n\n\n\n\n\n\n\n\nDiapositiva 01\n\n\n\n\n\n\n\n\n\n\n\nNotebook 01\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "clases/diapo_01.html#contexto-actual",
@@ -103,6 +82,160 @@
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "Incertidumbre y confianza en la interpretación de resultados.",
     "text": "Incertidumbre y confianza en la interpretación de resultados.\n\nSe debe tener en cuenta que la incertidumbre siempre va a existir y se debe convivir con eso. Esto no implica que no la interioricemos dentro de nuestra toma de decisiones o que no la intentemos medir.\nUna buena técnica es generar ejercicios que añaden incertidumbre a los modelos calculados.\n\nEn el análisis de datos, la incertidumbre no se elimina, se cuantifica. Por eso usamos intervalos de confianza, desviaciones estándar o bandas de predicción. Estas herramientas nos permiten comunicar no solo qué esperamos que ocurra, sino cuán seguros estamos de ello.\nLa clave no es eliminar la incertidumbre, sino tomar decisiones que sean robustas frente a ella. En un entorno data-driven, la confianza no proviene de la certeza, sino de la capacidad de medir y comunicar el riesgo asociado a cada decisión."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1 + 1\n\n[1] 3"
+  },
+  {
+    "objectID": "clases/clases.html",
+    "href": "clases/clases.html",
+    "title": "clases",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "clases/clases.html#quarto",
+    "href": "clases/clases.html#quarto",
+    "title": "clases",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "clases/diapo_02.html#por-qué-importa-la-calidad-de-los-datos",
+    "href": "clases/diapo_02.html#por-qué-importa-la-calidad-de-los-datos",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "¿Por qué importa la calidad de los datos?",
+    "text": "¿Por qué importa la calidad de los datos?\n\nEl valor estratégico de la información depende de su calidad y gobernanza\nDecisiones erróneas → modelos ineficientes → pérdida de confianza.\n“Garbage in, garbage out” – ningún algoritmo corrige datos defectuosos"
+  },
+  {
+    "objectID": "clases/diapo_02.html#dimensiones-de-la-calidad-de-datos",
+    "href": "clases/diapo_02.html#dimensiones-de-la-calidad-de-datos",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Dimensiones de la calidad de datos",
+    "text": "Dimensiones de la calidad de datos\n\n\n\n\n\n\n\n\n\nDimensión\nDescripción breve\nEjemplo\n\n\n\n\nCompletitud\nAusencia de valores faltantes\n% de clientes sin RUT o correo\n\n\nExactitud\nConcordancia con la realidad\nDirección o edad correcta\n\n\nConsistencia\nCoherencia entre sistemas\nFecha nacimiento &lt;&gt; fecha afiliación\n\n\nActualización\nVigencia de la información\nCliente activo con contacto obsoleto\n\n\n\n\nPregunta: identificar un caso de baja calidad en datos internos o de clientes, por ejemplo, en la industria financiera."
+  },
+  {
+    "objectID": "clases/diapo_02.html#riesgos-de-decisiones-con-datos-de-mala-calidad",
+    "href": "clases/diapo_02.html#riesgos-de-decisiones-con-datos-de-mala-calidad",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Riesgos de decisiones con datos de mala calidad",
+    "text": "Riesgos de decisiones con datos de mala calidad\n\nOperativos: reprocesos, errores en informes, baja productividad\n\nFinancieros: decisiones de inversión o riesgo erradas\nReputacionales: pérdida de confianza del cliente o del regulador\n\nAnalíticos: modelos con sesgos o predicciones inconsistentes"
+  },
+  {
+    "objectID": "clases/diapo_02.html#gobernanza-de-datos",
+    "href": "clases/diapo_02.html#gobernanza-de-datos",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Gobernanza de datos",
+    "text": "Gobernanza de datos\nConjunto de políticas, roles y procesos que aseguran el uso responsable de los datos.\n\nDefine roles claros: propietario, custodio, analista, consumidor\nEstablece procesos de validación, trazabilidad y acceso\nImpulsa alineamiento con estrategia organizacional\n\n🔗 Ejemplo: catálogo de datos, control de acceso y políticas de retención."
+  },
+  {
+    "objectID": "clases/diapo_02.html#ética-y-compliance-en-el-uso-de-datos",
+    "href": "clases/diapo_02.html#ética-y-compliance-en-el-uso-de-datos",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Ética y compliance en el uso de datos",
+    "text": "Ética y compliance en el uso de datos\n\nResponsabilidad: tratar los datos como un activo compartido\n\nPrivacidad: cumplir normativas (LGPD, GDPR, Ley 19.628 en Chile)\n\nTransparencia: explicar decisiones automatizadas\nEquidad: evitar sesgos en IA o analítica predictiva"
+  },
+  {
+    "objectID": "clases/diapo_02.html#cierre-y-reflexión",
+    "href": "clases/diapo_02.html#cierre-y-reflexión",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "🚀 Cierre y reflexión",
+    "text": "🚀 Cierre y reflexión\n\nLa calidad asegura decisiones confiables.\n\nLa gobernanza garantiza responsabilidad y cumplimiento.\n\nLa ética construye confianza con clientes y sociedad."
+  },
+  {
+    "objectID": "clases/diapo_02.html#qué-es-y-qué-no-es-inteligencia-artificial",
+    "href": "clases/diapo_02.html#qué-es-y-qué-no-es-inteligencia-artificial",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "¿Qué es (y qué no es) Inteligencia Artificial?",
+    "text": "¿Qué es (y qué no es) Inteligencia Artificial?\n\nIA: capacidad de sistemas para aprender patrones y tomar decisiones basadas en datos\nNo es: magia ni conciencia, sino algoritmos que aprenden de ejemplos\n\nSe basa en estadística, aprendizaje automático y automatización\n\nEjemplo: un modelo que predice abandono de clientes no “piensa”, solo identifica patrones históricos."
+  },
+  {
+    "objectID": "clases/diapo_02.html#la-ia-no-es-un-modelo-es-un-ecosistema-de-componentes",
+    "href": "clases/diapo_02.html#la-ia-no-es-un-modelo-es-un-ecosistema-de-componentes",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "🤖 La IA no es un modelo — es un ecosistema de componentes",
+    "text": "🤖 La IA no es un modelo — es un ecosistema de componentes\nUn LLM (Large Language Model) como GPT o Claude es solo una parte del sistema.\nPara responder una consulta compleja, se articulan varios segmentos de IA:\n\n\nComputer Vision → detecta y analiza imágenes (objetos, rostros, escenas).\n\nOCR (Reconocimiento Óptico de Caracteres) → extrae texto de imágenes o PDFs.\n\nSpeech Recognition / TTS → convierte audio en texto y viceversa.\n\nLLM → interpreta, contextualiza y genera una respuesta en lenguaje natural.\n\nReasoning / Orchestration Layer → decide qué componentes usar y en qué orden."
+  },
+  {
+    "objectID": "clases/diapo_02.html#ejemplo",
+    "href": "clases/diapo_02.html#ejemplo",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Ejemplo",
+    "text": "Ejemplo\n\n“Subo una foto de un contrato y pregunto de qué trata”\n\n\n\n\n\n\n\n\n\nEtapa\nSegmento de IA\nFunción\nEjemplo de salida\n\n\n\n\n1\nComputer Vision\nDetecta texto y no una persona o paisaje.\n“Documento detectado”\n\n\n2\nOCR\nExtrae texto\n“Contrato de prestación de servicios…”\n\n\n3\nLLM\nInterpreta, resume cláusulas, responde preguntas.\n“Este contrato regula la relación entre la empresa y un proveedor.”\n\n\n4\nOrquestador\nCoordina\nDecide usar OCR → LLM"
+  },
+  {
+    "objectID": "clases/diapo_02.html#modelos-descriptivos-vs.-predictivos",
+    "href": "clases/diapo_02.html#modelos-descriptivos-vs.-predictivos",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Modelos descriptivos vs. predictivos",
+    "text": "Modelos descriptivos vs. predictivos\n\n\n\n\n\n\n\n\nTipo de modelo\nObjetivo\nEjemplo ejecutivo\n\n\n\n\nDescriptivo\nExplica qué ocurrió\nSegmentación de clientes por comportamiento\n\n\nPredictivo\nAnticipa qué ocurrirá\nPredicción de egreso o mora\n\n\nPrescriptivo\nRecomienda acciones\nSugerir la mejor oferta según propensión"
+  },
+  {
+    "objectID": "clases/diapo_02.html#qué-significa-un-resultado-confiable",
+    "href": "clases/diapo_02.html#qué-significa-un-resultado-confiable",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Qué significa un “resultado confiable”",
+    "text": "Qué significa un “resultado confiable”\n\nUn modelo no entrega certezas, entrega probabilidades\nLa confiabilidad depende de calidad de datos, validación del model, comparación entre predicciones y realidad\nEjemplo: modelo de churn predice 80% → no dice “renunciará”, sino “probabilidad alta de egreso”"
+  },
+  {
+    "objectID": "clases/diapo_02.html#predicción-y-margen-de-error",
+    "href": "clases/diapo_02.html#predicción-y-margen-de-error",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Predicción y margen de error",
+    "text": "Predicción y margen de error\n\nTodo modelo tiene un grado de error aceptable según su propósito.\n\n\nSe mide con indicadores: precisión, recall, etc.\nEn contexto ejecutivo → “¿Cuánto confío en este resultado para tomar una decisión?”\n\nPor ejemplo un 90% de precisión puede ser excelente en marketing, pero insuficiente en salud."
+  },
+  {
+    "objectID": "clases/diapo_02.html#overfitting-explicado-de-forma-ejecutiva",
+    "href": "clases/diapo_02.html#overfitting-explicado-de-forma-ejecutiva",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Overfitting explicado de forma ejecutiva",
+    "text": "Overfitting explicado de forma ejecutiva\n\n“Cuando el modelo aprende de memoria el pasado y no sabe generalizar al futuro.”\n\n\n\nSe ajusta tanto a los datos históricos que pierde capacidad predictiva\nSíntomas: Resultados casi perfectos en entrenamiento y mal desempeño con nuevos datos\nSolución: validación cruzada, regularización, simplicidad del modelo\n\n📉 Ejemplo: modelo que predice bien a clientes antiguos pero falla en nuevos afiliados."
+  },
+  {
+    "objectID": "clases/diapo_02.html#tipos-de-sesgos",
+    "href": "clases/diapo_02.html#tipos-de-sesgos",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Tipos de sesgos",
+    "text": "Tipos de sesgos\n\n\n\n\n\n\n\n\nTipo\nDescripción\nEjemplo\n\n\n\n\nMuestreo\nDatos no representan la población\nSolo clientes activos\n\n\nHistórico\nRefleja desigualdades pasadas\nSesgos en género o edad\n\n\nDe medición\nError en cómo se capturan datos\nEncuestas incompletas"
+  },
+  {
+    "objectID": "clases/diapo_02.html#ejemplos-de-sesgos-y-consecuencias",
+    "href": "clases/diapo_02.html#ejemplos-de-sesgos-y-consecuencias",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Ejemplos de sesgos y consecuencias",
+    "text": "Ejemplos de sesgos y consecuencias\n\nReclutamiento automatizado: modelos que excluyen perfiles femeninos por datos históricos\nCrédito: mayor probabilidad de rechazo en comunas con bajo historial financiero\nSalud: subrepresentación de grupos etarios o regiones\n\nImpacto estratégico: decisiones injustas → daño reputacional → pérdida de confianza → riesgo legal."
+  },
+  {
+    "objectID": "clases/diapo_02.html#cómo-mitigar-sesgos-desde-la-gestión",
+    "href": "clases/diapo_02.html#cómo-mitigar-sesgos-desde-la-gestión",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Cómo mitigar sesgos desde la gestión",
+    "text": "Cómo mitigar sesgos desde la gestión\n\nDiversificar fuentes de datos\nMonitorear resultados por grupo o segmento\nRevisar métricas éticas además de métricas de performance\nIncluir equipos interdisciplinarios en revisión de modelos"
+  },
+  {
+    "objectID": "clases/diapo_02.html#actividad-grupal-interpretando-resultados-de-ia",
+    "href": "clases/diapo_02.html#actividad-grupal-interpretando-resultados-de-ia",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Actividad grupal – Interpretando resultados de IA",
+    "text": "Actividad grupal – Interpretando resultados de IA\nCaso:\n\n\nUna AFP aplica un modelo de IA para predecir egresos de afiliados. El modelo entrega una probabilidad de egreso del 75% para un cliente de alto saldo. Los costos de retención estimados: $20.000 CLP por cliente. Los costos de pérdida si egresa: $250.000 CLP.\n\n\nInstrucciones (20 min)\nEn grupos, respondan:\n\n¿Vale la pena intervenir al cliente?\n¿Qué información adicional pedirían antes de decidir?\n¿Qué riesgo asumen si el modelo se equivoca?\n\nCompartir sus reflexiones."
+  },
+  {
+    "objectID": "clases/diapo_02.html#checklist-ejecutivo-para-líderes",
+    "href": "clases/diapo_02.html#checklist-ejecutivo-para-líderes",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Checklist ejecutivo para líderes",
+    "text": "Checklist ejecutivo para líderes\n\n✅ Validar calidad de los datos usados.\n✅ Exigir interpretación comprensible de los resultados.\n✅ Evaluar sesgos potenciales y su impacto.\n✅ Considerar el costo del error (falso positivo/negativo).\n✅ Promover decisiones basadas en evidencia, no en intuición."
+  },
+  {
+    "objectID": "clases/diapo_02.html#cierre",
+    "href": "clases/diapo_02.html#cierre",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "🧭 Cierre",
+    "text": "🧭 Cierre\n\nLa Inteligencia Artificial no reemplaza el juicio humano, lo potencia.\n\n\nEntender sus principios, límites y sesgos es clave para liderar con responsabilidad."
   },
   {
     "objectID": "index.html",

@@ -9,11 +9,16 @@ format:
   revealjs:
     theme: simple
     slide-number: true
+    self-contained: true
     incremental: true
     transition: slide
     logo: "Imagen1.png"
     footer: "© Sebastián Egaña Santibáñez"
-editor: visual
+  pdf:
+    toc: false
+    papersize: a4
+    geometry: margin=1in
+
 ---
 
 ```{=html}
@@ -238,6 +243,7 @@ kable(resumen_global, digits = 3,
 
 ```
 :::
+
 ---
 
 Veamos el análisis de Weibull para estos datos:
@@ -540,12 +546,14 @@ Dependiendo el tipo de aprendizaje se puede hablar de supervisados y no supervis
 
 Algunas de las métricas más utilizadas son:
 
+:::tiny
 - Accuracy: medición general de exito
 - Precision: cuántos predichos positivos fueron efectivamente correctos
-_ Recall: cuán bien el modelo predice a los que efectivamente eran positivos
+- Recall: cuán bien el modelo predice a los que efectivamente eran positivos
 - F1 Score: es la media armónica entre ambas
 - Mean absolute error (MAE): tamaño promedio de la predicción de errores
 - Mean percentage error (MAPE): cuán lejos están las predicciones en porcentaje
+:::
 
 ---
 
