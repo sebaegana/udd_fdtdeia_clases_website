@@ -1,0 +1,526 @@
+---
+listing_title: "Diapositiva 01"
+title: "Fundamentos de Datos para la IA"
+subtitle: "Clase 01 – Calidad, Gobernanza, Pipelines y MLOps"
+institution: 'Diplomado Inteligencia Artificial para la Transformación de Negocios'
+lang: es
+date: today
+format:
+  revealjs:
+    theme: simple
+    slide-number: true
+    self-contained: true
+    incremental: true
+    transition: slide
+    logo: "Imagen1.png"
+    footer: "© Sebastián Egaña Santibáñez"
+  pdf:
+    toc: false
+    papersize: a4
+    geometry: margin=1in
+---
+
+```{=html}
+<style>
+.smaller { font-size: 85%; }
+.tiny { font-size: 70%; }
+</style>
+```
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE}
+library(fontawesome)
+library(knitr)
+```
+
+---
+
+# Sobre el docente
+
+Experiencia, educación, etc.
+
+# Enlaces
+
+-   `r fa("message", fill = "steelblue")` sebastian.egana\@udd.cl
+-   `r fa("computer", fill = "steelblue")` <https://segana.netlify.app>
+-   `r fa("linkedin", fill = "steelblue")` <https://www.linkedin.com/in/sebastian-egana-santibanez/>
+-   `r fa("github", fill = "steelblue")` <https://github.com/sebaegana>
+
+---
+
+# Estructura de la clase
+
+::: smaller
+| Bloque | Contenido | Duración |
+|--------|-----------|----------|
+| **1** | Datos como insumo crítico de la IA | ~55 min |
+| **2** | Data Pipelines para IA | ~70 min |
+| *Break* | — | 15 min |
+| **3** | MLOps: pipelines en producción | ~40 min |
+:::
+
+---
+
+# Parte 1: El valor estratégico de los datos
+
+---
+
+## Contexto actual
+
+- Se generan más de **328 millones de TB** de datos diariamente (Statista, 2023).
+- Solo ~30% de las empresas se consideran realmente *data-driven* (McKinsey, 2023).
+- El cuello de botella no es la IA — es la **calidad y disponibilidad del dato**.
+
+---
+
+## La pregunta clave
+
+> No es *"¿tenemos datos?"*
+>
+> Es *"¿tenemos los datos correctos, limpios y listos para alimentar nuestros modelos?"*
+
+---
+
+## Tipos de datos para IA
+
+::: smaller
+| Tipo | Descripción | Ejemplos | Desafíos principales |
+|------|-------------|---------|----------------------|
+| **Estructurado** | Tablas con esquema fijo | Transacciones, CRM, ERP | Integración entre sistemas |
+| **Semi-estructurado** | Formato flexible | JSON, logs, XML, emails | Parsing y normalización |
+| **No estructurado** | Sin esquema fijo | Texto, imágenes, audio, video | Requiere modelos especializados |
+:::
+
+---
+
+## ¿Por qué importa el tipo de dato?
+
+- Cada tipo requiere un **pipeline distinto**
+- Imagen → *Computer Vision* → OCR → LLM → respuesta
+- La arquitectura del sistema de IA depende del dato de entrada
+- Mezclar tipos de datos es hoy la norma, no la excepción (multimodal AI)
+
+---
+
+## "Garbage in, garbage out"
+
+- Ningún algoritmo corrige datos defectuosos
+- Un modelo entrenado con datos sesgados o incompletos amplifica esos problemas a escala
+- **La calidad del dato no es un problema de IT — es una responsabilidad de negocio**
+
+---
+
+## Dimensiones de la calidad de datos
+
+::: smaller
+| Dimensión | Descripción | Ejemplo |
+|-----------|-------------|---------|
+| **Completitud** | Ausencia de valores faltantes | % de clientes sin RUT o correo |
+| **Exactitud** | Concordancia con la realidad | Dirección o edad correcta |
+| **Consistencia** | Coherencia entre sistemas | Fecha nacimiento vs. fecha de afiliación |
+| **Actualidad** | Vigencia de la información | Cliente activo con contacto obsoleto |
+| **Unicidad** | Sin registros duplicados | Mismo cliente en dos sistemas distintos |
+:::
+
+---
+
+## Riesgos de decisiones con datos de mala calidad
+
+- **Operativos:** reprocesos, errores en informes, baja productividad
+- **Financieros:** decisiones de inversión o riesgo erradas
+- **Reputacionales:** pérdida de confianza del cliente o del regulador
+- **Analíticos:** modelos con sesgos o predicciones inconsistentes
+
+---
+
+## Gobernanza de datos
+
+Conjunto de políticas, roles y procesos que aseguran el uso responsable y confiable de los datos.
+
+- **Roles claros:** propietario, custodio, analista, consumidor
+- **Catálogo de datos:** inventario de qué dato existe, dónde y qué significa
+- **Linaje de datos:** rastrear de dónde viene un dato y cómo fue transformado
+- **Control de acceso:** quién puede leer, modificar o eliminar cada dato
+
+---
+
+## Ética y compliance en el uso de datos
+
+- **Responsabilidad:** los datos son un activo compartido con impacto real en personas
+- **Privacidad:** cumplir normativas — Ley 19.628 (Chile), GDPR (Europa)
+- **Transparencia:** explicar decisiones automatizadas
+- **Equidad:** auditar y corregir sesgos en modelos de IA
+
+---
+
+## `r fa("users", fill = "steelblue")` Actividad 1 — Calidad de datos (10 min)
+
+::: tiny
+En grupos de 3–4 personas, respondan:
+
+1. ¿Cuál es el mayor problema de calidad de datos que tiene hoy su organización?
+2. ¿Quién es el dueño formal de ese dato?
+3. Si tuvieran que alimentar un modelo de IA con ese dato, ¿qué pasaría?
+
+Un representante por grupo comparte brevemente con el curso.
+:::
+
+---
+
+# Parte 2: Data Pipelines para IA
+
+---
+
+## ¿Qué es un pipeline de datos?
+
+Una **secuencia automatizada de pasos** que mueve, transforma y prepara datos para su uso.
+
+> Analogía: línea de producción industrial.
+> Si falla un paso, el producto final es defectuoso — aunque el resto esté perfecto.
+
+---
+
+## Arquitectura típica de un pipeline para IA
+
+```{=html}
+<pre style="font-size:0.85em; line-height:1.5;">
+┌──────────┐    ┌──────────┐    ┌────────────┐    ┌──────────────┐
+│  Fuentes │───▶│  Ingesta │───▶│Transforma- │───▶│  Validación  │
+│ (CRM, BD,│    │(batch /  │    │  ción y    │    │  de calidad  │
+│ APIs,    │    │streaming)│    │  limpieza  │    │  y esquema   │
+│ archivos)│    └──────────┘    └────────────┘    └──────┬───────┘
+└──────────┘                                             │
+                                                         ▼
+                                               ┌──────────────────┐
+                                               │  Almacenamiento  │
+                                               │ (Data Warehouse, │
+                                               │  Data Lake)      │
+                                               └────────┬─────────┘
+                                                        │
+                                                        ▼
+                                               ┌──────────────────┐    ┌────────┐
+                                               │Feature Engineering│───▶│ Modelo │───▶ Serving
+                                               │  (Feature Store) │    └────────┘
+                                               └──────────────────┘
+</pre>
+```
+
+---
+
+## Ingesta: cómo entra el dato al pipeline
+
+- **Batch:** procesamiento programado (diario, horario) — ideal para datos históricos
+- **Streaming:** procesamiento en tiempo real — ideal para eventos y alertas
+- Fuentes comunes: APIs REST, bases de datos, archivos CSV/Parquet, eventos (Kafka, Pub/Sub)
+
+---
+
+## Transformación y validación
+
+- **Limpieza:** eliminar duplicados, tratar nulos, corregir tipos de dato
+- **Normalización:** escalado, encoding de categorías, manejo de outliers
+- **Validación de esquema:** ¿el dato tiene la estructura esperada?
+- **Validación de calidad:** ¿los rangos son razonables? ¿hay registros faltantes inusuales?
+
+Herramientas: **dbt** (transformación en SQL), **Great Expectations** (validación automática)
+
+---
+
+## ETL vs ELT
+
+::: smaller
+|  | **ETL** | **ELT** |
+|--|---------|---------|
+| Proceso | Transforma *antes* de cargar | Carga primero, transforma *después* |
+| Cuándo usar | Datos sensibles, sistemas legacy | Cloud data warehouses modernos |
+| Ejemplo | Pipeline hacia DW on-premise | **BigQuery + dbt** |
+| Ventaja | Control fino sobre los datos | Escalabilidad y velocidad |
+:::
+
+En contextos de IA con cloud, **ELT** es hoy el enfoque dominante.
+
+---
+
+## Feature Engineering y Feature Stores
+
+- **Feature:** variable transformada y lista para alimentar un modelo (ej. "meses desde última compra")
+- **Problema:** el mismo feature se calcula múltiples veces en distintos equipos, de formas distintas
+- **Feature Store:** repositorio centralizado de features reutilizables y versionadas
+
+Garantiza **consistencia entre entrenamiento y producción** — uno de los errores más comunes en MLOps.
+
+Ejemplos: **Vertex AI Feature Store**, **Feast** (open source)
+
+---
+
+## Herramienta 1: Apache Airflow
+
+- Open source, ampliamente adoptado en la industria
+- Define flujos como **DAGs** (grafos acíclicos dirigidos) en Python
+- Ideal para: pipelines batch, ETL complejos, procesos periódicos
+- Versión managed: **Cloud Composer** (GCP), **MWAA** (AWS)
+
+```{=html}
+<pre style="font-size:0.75em; line-height:1.4;">
+DAG: pipeline_churn_diario
+│
+├── extraer_datos_crm
+├── limpiar_y_transformar
+├── validar_calidad
+├── calcular_features
+└── trigger_entrenamiento_modelo
+</pre>
+```
+
+---
+
+## Herramienta 2: Vertex AI Pipelines
+
+- Basado en **Kubeflow Pipelines**, managed completamente en GCP
+- Cada componente del pipeline es un **contenedor reproducible**
+- Integración nativa con BigQuery, Vertex AI Training y Model Registry
+- Pensado específicamente para **ML workflows** de extremo a extremo
+
+```{=html}
+<pre style="font-size:0.75em; line-height:1.4;">
+[Ingest BigQuery] ──▶ [Preprocess] ──▶ [Train Model] ──▶ [Evaluate]
+                                                               │
+                                           ┌───────────────────┤
+                                           ▼                   ▼
+                                    [Deploy to        [Log to Model
+                                     Endpoint]         Registry]
+</pre>
+```
+
+---
+
+## Herramienta 3: MLflow
+
+Open source (mantenido por Databricks), multicloud, agnóstico al framework de ML.
+
+::: smaller
+| Componente | Función |
+|-----------|---------|
+| **MLflow Tracking** | Registra experimentos: parámetros, métricas, artefactos |
+| **MLflow Projects** | Empaqueta el código para reproducibilidad |
+| **MLflow Models** | Formato estándar de modelo (sklearn, PyTorch, etc.) |
+| **MLflow Registry** | Control de versiones y estado del modelo (Staging / Production) |
+:::
+
+---
+
+## MLflow en la práctica
+
+```{=html}
+<pre style="font-size:0.75em; line-height:1.5;">
+Experimento A (LightGBM)          Experimento B (XGBoost)
+  accuracy: 0.82                    accuracy: 0.87  ◀── ganador
+  precision: 0.79                   precision: 0.84
+  AUC: 0.88                         AUC: 0.91
+         │                                 │
+         └──────────────┬──────────────────┘
+                        ▼
+               MLflow Model Registry
+               modelo: churn_predictor
+               versión: v3 → Production
+</pre>
+```
+
+*El registry permite hacer rollback si una nueva versión falla en producción.*
+
+---
+
+## Comparativa de herramientas
+
+::: smaller
+| Herramienta | Foco principal | Mejor para | ¿Excluyentes? |
+|-------------|----------------|-----------|---------------|
+| **Apache Airflow** | Orquestación de datos | ETL/ELT, workflows batch | No |
+| **Vertex AI Pipelines** | ML workflows en GCP | Training y deployment en nube | No |
+| **MLflow** | Tracking y model registry | Experimentación y governance | No |
+:::
+
+> En equipos maduros se usan los tres juntos: Airflow mueve los datos, Vertex entrena el modelo, MLflow registra los experimentos.
+
+---
+
+## Ejemplo conceptual: pipeline de predicción de churn
+
+::: tiny
+| Paso | Acción | Herramienta |
+|------|--------|------------|
+| 1. Ingesta | Extraer datos del CRM diariamente | Airflow + BigQuery |
+| 2. Transformación | Limpiar, normalizar, tratar nulos | dbt |
+| 3. Validación | Verificar rangos y completitud | Great Expectations |
+| 4. Features | Calcular recencia, frecuencia, saldo promedio | Vertex AI Feature Store |
+| 5. Entrenamiento | Entrenar modelo con los features | Vertex AI Pipelines |
+| 6. Tracking | Registrar métricas y artefactos | MLflow |
+| 7. Deployment | Publicar modelo en endpoint REST | Vertex AI Endpoints |
+| 8. Acción | Alertar a ejecutivo de cuenta | Aplicación de negocio |
+:::
+
+---
+
+# Break — 15 minutos
+
+---
+
+# Parte 3: MLOps — Pipelines en producción
+
+---
+
+## El problema del "modelo en producción"
+
+- Un modelo que funciona en el notebook **no es un producto**
+- La brecha entre *data science* y *software engineering* es real y costosa
+- **MLOps:** prácticas para llevar ML a producción de forma confiable, repetible y auditable
+- Analogía: DevOps para el ciclo de vida del software, adaptado a modelos de ML
+
+---
+
+## Ciclo de vida de un modelo ML
+
+```{=html}
+<pre style="font-size:0.85em; line-height:1.6;">
+  Definición      Datos        Entrenamiento    Evaluación
+  del problema ──▶ & Features ──▶ del modelo ──▶ & Validación
+                                                      │
+                                         ┌────────────┤
+                                         ▼            ▼
+                                    Despliegue    Rechazar /
+                                    en producción  iterar
+                                         │
+                                         ▼
+                                    Monitoreo
+                                         │
+                              ┌──────────┴──────────┐
+                              ▼                     ▼
+                         OK: continuar         Drift detectado:
+                                               Reentrenamiento
+</pre>
+```
+
+---
+
+## Data Drift, Model Drift y Concept Drift
+
+::: smaller
+| Concepto | Definición | Síntoma | Acción |
+|----------|-----------|---------|--------|
+| **Data Drift** | Cambia la distribución de los datos de entrada | Las features tienen rangos distintos a los de entrenamiento | Reingesta y reentrenamiento |
+| **Model Drift** | El modelo pierde precisión en producción | Las métricas bajan vs. el baseline | Reentrenamiento o reemplazo |
+| **Concept Drift** | Cambia la relación entre features y target | El comportamiento del cliente cambió | Replantear el modelo |
+:::
+
+*Ejemplo real: un modelo de riesgo crediticio entrenado antes de la pandemia sufrió concept drift masivo en 2020.*
+
+---
+
+## Monitoreo en producción: tres niveles
+
+::: smaller
+| Nivel | Qué se monitorea | Ejemplo |
+|-------|-----------------|---------|
+| **Técnico** | Latencia, errores, disponibilidad | Endpoint responde en <200ms |
+| **Modelo** | Distribución de predicciones, drift, performance | AUC cae de 0.91 a 0.78 |
+| **Negocio** | Impacto real en el KPI objetivo | Tasa de churn efectiva no baja |
+:::
+
+> Sin monitoreo de los tres niveles, el sistema puede "funcionar" técnicamente mientras falla silenciosamente en el negocio.
+
+---
+
+## El pipeline completo: visión integrada
+
+```{=html}
+<pre style="font-size:0.72em; line-height:1.5;">
+Fuentes de datos
+     │
+     ▼
+[Ingesta] ──▶ [Transformación] ──▶ [Validación calidad]
+                                           │
+                                           ▼
+                               [Feature Engineering / Feature Store]
+                                           │
+                                           ▼
+                                    [Entrenamiento]
+                                    (Vertex Pipelines)
+                                           │
+                                           ▼
+                               [Tracking de experimentos]
+                                      (MLflow)
+                                           │
+                                           ▼
+                               [Model Registry → Production]
+                                      (MLflow)
+                                           │
+                                           ▼
+                               [Deployment en endpoint]
+                                           │
+                                           ▼
+                                    [Monitoreo]
+                                    (Técnico / Modelo / Negocio)
+                                           │
+                              ┌────────────┴────────────┐
+                              ▼                         ▼
+                         Continuar                Alerta de drift
+                                                  → Reentrenamiento
+</pre>
+```
+
+---
+
+## `r fa("users", fill = "steelblue")` Actividad 2 — Diseña un pipeline (20 min)
+
+::: tiny
+En grupos de 3–4 personas, elijan un proceso de su industria que podría mejorarse con IA.
+
+Diseñen el pipeline respondiendo:
+
+1. **Ingesta:** ¿Qué datos necesitan y de dónde vienen? (sistemas, frecuencia, batch o streaming)
+2. **Transformación:** ¿Qué limpieza o cálculos son necesarios?
+3. **Validación:** ¿Cómo garantizarían la calidad antes de que el dato llegue al modelo?
+4. **Monitoreo:** ¿Qué indicaría que el modelo está fallando en producción?
+
+Preparen 3–4 minutos para presentar al curso.
+:::
+
+---
+
+# Cierre
+
+---
+
+## Checklist para líderes
+
+::: smaller
+- `r fa("check", fill = "green")` ¿Tenemos definido quién es el **dueño de cada dato crítico** para IA?
+- `r fa("check", fill = "green")` ¿Nuestros pipelines son **automatizados** o dependemos de procesos manuales?
+- `r fa("check", fill = "green")` ¿Sabemos qué pasa cuando **los datos cambian** inesperadamente?
+- `r fa("check", fill = "green")` ¿Tenemos **visibilidad del desempeño** de nuestros modelos en producción?
+- `r fa("check", fill = "green")` ¿Existe un proceso claro para **reentrenar modelos** cuando sea necesario?
+- `r fa("check", fill = "green")` ¿Auditamos periódicamente los modelos en búsqueda de **sesgos o drift**?
+:::
+
+---
+
+## Idea central
+
+> La IA es tan buena como el pipeline que la alimenta.
+>
+> Un modelo brillante sobre datos sucios es un modelo inútil.
+
+---
+
+# Referencias
+
+::: tiny
+Sculley, D., Holt, G., Golovin, D., Davydov, E., Phillips, T., Ebner, D., ... & Dennison, D. (2015). Hidden technical debt in machine learning systems. *Advances in neural information processing systems*, 28. <https://proceedings.neurips.cc/paper_files/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf>
+
+Breck, E., Cai, S., Nielsen, E., Salib, M., & Sculley, D. (2017). The ML test score: A rubric for ML production readiness and technical debt reduction. *IEEE International Conference on Big Data*. <https://research.google/pubs/the-ml-test-score-a-rubric-for-ml-production-readiness-and-technical-debt-reduction/>
+
+Paleyes, A., Urma, R. G., & Lawrence, N. D. (2022). Challenges in deploying machine learning: a survey of case studies. *ACM computing surveys*, 55(6), 1–29. <https://arxiv.org/abs/2011.09926>
+
+Google Cloud. (2024). *Vertex AI Pipelines documentation*. <https://cloud.google.com/vertex-ai/docs/pipelines/introduction>
+
+MLflow. (2024). *MLflow documentation*. <https://mlflow.org/docs/latest/index.html>
+:::

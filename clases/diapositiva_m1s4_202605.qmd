@@ -1,0 +1,684 @@
+---
+listing_title: "Módulo 1 – Sesión 4"
+title: "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA"
+subtitle: "Diplomado en IA para la Transformación Empresarial"
+institution: 'Universidad del Desarrollo'
+lang: es
+date: today
+format:
+  revealjs:
+    theme: simple
+    slide-number: true
+    self-contained: true
+    incremental: true
+    transition: slide
+    logo: "Imagen1.png"
+    footer: "© Sebastián Egaña Santibáñez"
+  pdf:
+    toc: false
+    papersize: a4
+    geometry: margin=1in
+---
+
+```{=html}
+<style>
+.smaller { font-size: 85%; }
+.tiny    { font-size: 70%; }
+</style>
+```
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE}
+library(fontawesome)
+library(knitr)
+```
+
+# Sobre el docente
+
+Experiencia, educación, etc.
+
+# Enlaces
+
+-   `r fa("message", fill = "steelblue")` sebastian.egana\@udd.cl
+-   `r fa("computer", fill = "steelblue")` <https://segana.netlify.app>
+-   `r fa("linkedin", fill = "steelblue")` <https://www.linkedin.com/in/sebastian-egana-santibanez/>
+-   `r fa("github", fill = "steelblue")` <https://github.com/sebaegana>
+
+------------------------------------------------------------------------
+
+## Descripción General
+
+Este módulo capacita a **líderes no técnicos** para comprender el valor estratégico de los datos, identificar riesgos ocultos y tomar decisiones informadas sobre proyectos de IA.
+
+Sin requerir programación, aprenderán a hacer **preguntas críticas** a sus equipos técnicos y a gobernar responsablemente iniciativas de IA.
+
+------------------------------------------------------------------------
+
+## Objetivos de Aprendizaje
+
+Al finalizar esta sesión podrán:
+
+1.  Entender por qué los datos son el **cimiento crítico** de la IA
+2.  Identificar los **4 enemigos silenciosos** de los datos
+3.  Reconocer **riesgos específicos** en sus industrias
+4.  Formular las **5 preguntas clave** antes de implementar IA
+5.  Diseñar un proceso básico de **auditoría de datos**
+
+------------------------------------------------------------------------
+
+## Estructura de la Sesión
+
+::: smaller
+| Bloque | Duración    | Contenido                                          |
+|--------|-------------|----------------------------------------------------|
+| **1**  | 50 + 10 min | El combustible de la IA: datos como diferenciador  |
+| **2**  | 50 + 10 min | Los enemigos silenciosos: sesgos, calidad, leakage |
+| **3**  | 50 + 10 min | Gobernanza y toma de decisiones informadas         |
+:::
+
+------------------------------------------------------------------------
+
+# Bloque 1: El Combustible de la IA
+
+------------------------------------------------------------------------
+
+## Concepto Central: Datos ≠ Información
+
+**Lo que la mayoría piensa:**
+
+- IA es magia / inteligencia artificial
+- Con suficientes datos, la IA funciona
+
+**La realidad:**
+
+- IA es **estadística + patrones en datos**
+- **Calidad de datos \> cantidad de datos**
+- Los datos son el combustible; el modelo es el motor
+
+------------------------------------------------------------------------
+
+## El Triángulo de Oro de la IA
+
+```{=html}
+<pre style="font-size:0.85em; line-height:1.6; text-align:center;">
+        ┌──────────────────────────┐
+        │       DECISIONES         │
+        │        (Output)          │
+        └────────────┬─────────────┘
+                     ▲
+            ┌────────┴────────┐
+            │                 │
+        ┌───▼───┐         ┌───▼──┐
+        │MODELO │◄────────│ DATA │
+        └───────┘         └──────┘
+            ▲                 ▲
+            │                 │
+       (Algoritmo)       (Combustible)
+        (5% éxito)        (95% éxito)
+</pre>
+```
+
+------------------------------------------------------------------------
+
+## La Fórmula
+
+::: smaller
+| Escenario                                                   | Resultado   |
+|------------------------------------|------------------------------------|
+| **Datos buenos** + features relevantes + modelo simple      | **Éxito**   |
+| **Datos malos** + features complicadas + modelo sofisticado | **Fracaso** |
+:::
+
+> *Puedes tener el algoritmo más avanzado del mundo. Si los datos son malos, el resultado será malo.*
+
+------------------------------------------------------------------------
+
+## Caso: Netflix vs YouTube
+
+::: smaller
+| Aspecto | Netflix | YouTube |
+|------------------------|------------------------|------------------------|
+| **Datos que tienen** | Historial, ratings, tiempo visto, contexto (país, horario) | Billones de vistas, pero datos demográficos limitados |
+| **Calidad de datos** | Etiquetado claro (5 estrellas, visto completamente) | Ruidoso (clickbait, clicks accidentales) |
+| **Resultado** | Recomendaciones precisas | Recomendaciones genéricas |
+:::
+
+**Lección:** Netflix tiene *menos datos* pero mejor **calidad y relevancia**. Por eso gana.
+
+------------------------------------------------------------------------
+
+## Caso: Spotify y los Datos Contextuales
+
+Spotify ganó no por tener más datos, sino por capturar los datos **correctos**:
+
+- Qué escuchas a las 6 AM vs las 10 PM
+- Si repites una canción
+- Si saltas después de 5 segundos
+- Contexto: gym, trabajo, fiesta
+
+**Primer insight:** *Éxito en IA = elegir los datos correctos, no acumular todos los datos.*
+
+------------------------------------------------------------------------
+
+## La Pregunta Clave para Líderes
+
+> **"¿Qué datos tenemos nosotros que nuestros competidores NO tienen?"**
+
+Eso es tu ventaja competitiva en IA.
+
+No es el algoritmo — todos usan los mismos. Es **qué datos únicos capturas de tu negocio.**
+
+------------------------------------------------------------------------
+
+## `r fa("users", fill = "steelblue")` Actividad 1 — Diagnóstico de Datos (10 min)
+
+::: tiny
+Piensa en tu área/empresa y responde:
+
+**1. ¿Qué datos generamos hoy que nunca capturamos?** - Retail: captura punto de venta, pero NO el momento en que el cliente decide NO comprar - HR: captura performance review, pero NO conversaciones 1:1 informales
+
+**2. ¿Qué datos tenemos que podrían revelar algo escondido?** - Bancos: historial de transacciones → ¿cuándo alguien está en riesgo financiero? - Logística: rutas → ¿cuándo el costo de entrega será más alto?
+
+**3. ¿Quién en nuestra organización NO está representado en nuestros datos?** - ¿Solo clientes que compraron? ¿No los que visitaron y no compraron? - ¿Solo empleados en sede? ¿No remotos?
+
+------------------------------------------------------------------------
+:::
+
+# Bloque 2: Los Enemigos Silenciosos
+
+------------------------------------------------------------------------
+
+## Los 4 Enemigos
+
+::: smaller
+| Enemigo | Causa | Red Flag |
+|-------------------------|--------------------|----------------------------|
+| **Representación** | Falta un grupo demográfico | "Funciona bien para el cliente típico" |
+| **Histórico** | Datos reflejan prejuicios del pasado | "Reflejaría cómo siempre lo hemos hecho" |
+| **Leakage** | Información futura en datos de entrenamiento | "99% de precisión" (sospechosamente alto) |
+| **Calidad** | Datos incompletos, incorrectos o viejos | "Nuestros datos están desordenados" |
+:::
+
+------------------------------------------------------------------------
+
+## Enemigo #1: Sesgo de Representación
+
+**Definición:** Tu dataset **no representa** a toda la población que afectará la IA.
+
+------------------------------------------------------------------------
+
+## Caso Real: Reconocimiento Facial
+
+**Problema descubierto (2018):**
+
+- Google, Amazon, Microsoft: **tasa de error del 34% en rostros de mujeres oscuras**
+- Tasa de error del 0.7% en rostros de hombres blancos
+
+**¿Por qué?** Los modelos se entrenaron mayormente con datos de personas blancas.
+
+**Impacto:**
+
+\- Policía usa algoritmo para identificar sospechosos → falla en comunidades afrodescendientes
+
+\- Acceso a edificios por facial → gente con piel oscura queda afuera
+
+------------------------------------------------------------------------
+
+## Caso Real: Modelos de Crédito
+
+**Problema:** 
+- Banco entrena algoritmo con datos históricos de clientes de clase media-alta 
+- Algoritmo rechaza más personas de clase baja, aunque sean buen riesgo crediticio 
+
+**Razón:** no hay suficientes datos de ese grupo en el histórico
+
+**Impacto:** 
+
+- Discriminación indirecta pero efectiva 
+- Mercado perdido (no alcanzas segmentos nuevos) 
+- Regulatorio: Regulador podría penalizar (CMF)
+
+------------------------------------------------------------------------
+
+## Cómo Identificar el Sesgo de Representación
+
+**Red flags:** 
+
+- "Nuestro modelo funciona bien para el cliente típico" 
+- "Estos grupos son muy pequeños en nuestros datos" 
+- "Hay outliers raros que el modelo rechaza"
+
+**Test simple:** 
+
+1. Segmenta tu dataset por: género, edad, geografía, nivel socioeconómico 
+2. ¿El modelo funciona **bien** en **todos** los segmentos? 
+3. Si no → **hay sesgo de representación**
+
+------------------------------------------------------------------------
+
+## Enemigo #2: Sesgo Histórico
+
+**Definición:** Entrenas un modelo con datos del pasado que reflejan injusticias del pasado. El modelo las **perpetúa**.
+
+------------------------------------------------------------------------
+
+## Caso Real: Amazon Hiring Algorithm (2014–2018)
+
+::: smaller
+**¿Qué pasó?** - Amazon creó un algoritmo para filtrar CVs automáticamente - Lo entrenó con 10 años de contrataciones históricas en tech - **Problema:** históricamente contrataban más hombres en tech - **Resultado:** el algoritmo aprendió a rechazar mujeres
+
+**Detalles perturbadores:** - Rechazaba palabras como *"women's chess club"* - Rechazaba CVs de egresadas de colegios para mujeres
+
+**Amazon mató el proyecto en 2018.** No por altruismo: costoso en reputación y legal.
+:::
+
+------------------------------------------------------------------------
+
+## Caso Real: Sistema de Justicia Criminal
+
+::: smaller
+**¿Qué pasó?** - Policía usa el algoritmo COMPAS para predecir reincidencia - Entrenado con datos históricos de quién fue detenido antes - **Problema:** el sistema penal históricamente sobre-arresta a gente negra - **Resultado:** el algoritmo predice más reincidencia en gente negra (lógica circular)
+
+**Preguntas sin respuesta:** - ¿Fue reincidencia… o simplemente los arrestaron otra vez? - ¿El algoritmo predice crimen o predice quién será arrestado?
+:::
+
+------------------------------------------------------------------------
+
+## Cómo Identificar el Sesgo Histórico
+
+**Red flags:** - "Nuestro modelo refleja lo que siempre hemos hecho" - "Usamos datos históricos de evaluaciones / contrataciones / decisiones" - "El modelo mantiene el status quo"
+
+**Test:** 1. ¿Tus datos vienen de decisiones humanas del pasado? 2. ¿Esas decisiones eran justas / objetivas? 3. Si la respuesta no es un "sí" claro → **hay sesgo histórico**
+
+------------------------------------------------------------------------
+
+## Enemigo #3: Data Leakage
+
+**Definición:** El modelo usa información que **no tendría disponible** en producción real. Parece perfecto en pruebas; falla en la realidad.
+
+------------------------------------------------------------------------
+
+## Caso Real: Predicción de Fraude
+
+```{=html}
+<pre style="font-size:0.72em; line-height:1.5;">
+Datos de entrenamiento incluyen:
+  - Monto de transacción
+  - País
+  - Hora
+  - ¿FUE REPORTADO COMO FRAUDE? ← ✗ ERROR
+
+El modelo aprende: "si fue reportado, es fraude"
+KPI en test: 99% de precisión ✓ (falso)
+
+En producción:
+  - Cliente realiza transacción
+  - Necesitamos predecir AHORA si es fraude
+  - Pero "si fue reportado" solo se sabe DESPUÉS
+  - Resultado: modelo rechaza transacciones legítimas
+</pre>
+```
+
+------------------------------------------------------------------------
+
+## Caso Real: Predicción de Mortalidad Hospitalaria
+
+```{=html}
+<pre style="font-size:0.72em; line-height:1.5;">
+Variables incluidas:
+  - Edad, síntomas, historial médico
+  - ¿TUVO CUIDADOS INTENSIVOS? ← ✗ ERROR
+
+Modelo predice: "pacientes en ICU mueren más"
+Conclusión: "invertir menos en ICU reduce muertes"
+
+Realidad: la ICU es lo que SALVA a pacientes críticos.
+El modelo confundió causación con correlación.
+</pre>
+```
+
+------------------------------------------------------------------------
+
+## Data Leakage: Predicción de Deserción Escolar
+
+**Lo que FUNCIONA:** - Datos de hace 2 meses: asistencia, notas, engagement - Predecir: ¿desertor en próximos 3 meses?
+
+**Lo que NO funciona:** - Incluir: *"¿Se retiró del colegio?"* — ¡eso es exactamente lo que predices! - Resultado: 100% de precisión, modelo completamente inútil
+
+> **Si el KPI es demasiado bueno (\>95%), busca leakage.**
+
+------------------------------------------------------------------------
+
+## Cómo Detectar Data Leakage
+
+**Pregunta clave:** \> *"¿Toda la información del modelo estaría disponible en el momento exacto en que necesitamos predecir?"*
+
+**Red flags:** - KPI de precisión \> 99% (sospechosamente perfecto) - El outcome (lo que predices) aparece como variable en el modelo - Datos que solo existen **después** del evento que predices
+
+------------------------------------------------------------------------
+
+## Enemigo #4: Calidad de Datos
+
+**Definición:** Datos incompletos, incorrectos, contradictorios o desactualizados.
+
+::: tiny
+| Problema | Ejemplo | Impacto |
+|---------------------------|------------------------|----------------------|
+| **Incompletos** | 30% de edad faltante en CRM | El modelo rechaza registros o asume mal |
+| **Incorrectos** | Cliente registrado 2 veces con edades distintas | Inconsistencia en decisiones |
+| **Desactualizados** | Dirección de cliente de 2015 | Marketing envía a dirección incorrecta |
+| **Contradictorios** | "Estado: activo" pero "fecha baja: 2020" | Confusión en la lógica de negocio |
+| **Sesgados en entrada** | Solo se registran clientes que compraron | El modelo no ve quién NO compra |
+:::
+
+------------------------------------------------------------------------
+
+## La Realidad Incómoda
+
+> **El 80% del tiempo en un proyecto de IA es limpieza de datos.**
+
+No es atractivo. No es "IA". Pero es **crítico**.
+
+**Test simple de calidad:** 1. Toma 100 registros aleatorios 2. Valídalos manualmente: ¿son correctos? 3. Si \< 95% correcto → **hay problema de calidad**
+
+------------------------------------------------------------------------
+
+## Resumen: Los 4 Enemigos
+
+::: tiny
+| Enemigo | Causa | Impacto | Red Flag |
+|------------------|------------------|------------------|-------------------|
+| **Representación** | Falta un grupo demográfico | Modelo falla para ese grupo | "Funciona bien para el cliente típico" |
+| **Histórico** | Datos reflejan prejuicios del pasado | Perpetúa injusticia a escala | "Refleja cómo siempre lo hicimos" |
+| **Leakage** | Información futura en entrenamiento | KPI falso; falla en producción | "99% de precisión" |
+| **Calidad** | Datos incompletos, incorrectos o viejos | Decisiones inconsistentes | "Nuestros datos están desordenados" |
+:::
+
+------------------------------------------------------------------------
+
+## `r fa("users", fill = "steelblue")` Actividad 2 — Diagnóstico de Riesgos (10 min)
+
+::: tiny
+**Escenario:** tu empresa implementará IA en los próximos 6 meses.
+
+Identifica 1–2 riesgos por categoría:
+
+- **Sesgo de Representación:** ¿hay grupos sub-representados en tus datos?
+  - Ej. Retail: ¿solo tiendas físicas, no web?
+- **Sesgo Histórico:** ¿tus datos vienen de decisiones humanas del pasado? ¿eran justas?
+  - Ej. Hiring: ¿datos de hace 10 años cuando contrataban diferente?
+- **Data Leakage:** ¿hay información que "solo sabrías después"?
+  - Ej. Churn: ¿incluyes si el cliente llamó a cancelar? (¡ya está cancelado!)
+- **Calidad:** ¿qué tan limpia está tu data? ¿hay valores faltantes críticos?
+
+*Elige el caso más interesante para discutir en plenaria.*
+:::
+
+------------------------------------------------------------------------
+
+# Bloque 3: Gobernanza y Toma de Decisiones
+
+------------------------------------------------------------------------
+
+## Las 5 Preguntas que Todo Líder Debe Hacer
+
+Antes de aprobar cualquier proyecto de IA, formula estas preguntas a tu equipo técnico:
+
+1.  ¿Quién está representado en estos datos?
+2.  ¿Estos datos reflejan decisiones justas del pasado?
+3.  ¿Hay información aquí que no tendríamos al momento de decidir?
+4.  ¿Qué tan limpia y confiable es esta data?
+5.  ¿Cómo sabemos si el modelo falla? ¿Quién lo vigila?
+
+------------------------------------------------------------------------
+
+## Pregunta 1: ¿Quién está representado?
+
+**Por qué:** identificar sesgos de representación.
+
+::: smaller
+**Cómo preguntar:** - "¿Todos nuestros clientes / empleados están en estos datos?" - "¿Hay grupos que falten? ¿Qué pasará con ellos?"
+
+**Señales de respuesta:** - `r fa("check", fill = "green")` "80% de nuestros clientes activos, distribuidos así..." - `r fa("xmark", fill = "red")` "Suficientes datos" - `r fa("xmark", fill = "red")` "No es importante"
+
+**Acción si hay riesgo:** - Recolectar datos del grupo faltante - Limitar el scope: "este modelo es solo para clientes premium" - Monitorear sesgo por segmento
+:::
+
+------------------------------------------------------------------------
+
+## Pregunta 2: ¿Los históricos fueron justos?
+
+**Por qué:** identificar sesgo histórico que perpetúa injusticia.
+
+::: smaller
+**Cómo preguntar:** - "¿De dónde vienen estos datos históricos?" - "¿Las decisiones del pasado fueron justas? ¿O reflejan cómo discriminábamos?"
+
+**Señales de respuesta:** - `r fa("check", fill = "green")` "Datos de decisiones que auditamos y validamos" - `r fa("xmark", fill = "red")` "Datos de cómo siempre lo hemos hecho" - `r fa("xmark", fill = "red")` "Asumimos que el histórico es objetivo"
+
+**Acción si hay riesgo:** - Auditar las decisiones históricas - Limpiar datos discriminatorios - Limitar el impacto: recomendación (no decisión automática)
+:::
+
+------------------------------------------------------------------------
+
+## Pregunta 3: ¿Hay data leakage?
+
+**Por qué:** detectar información futura infiltrada en el entrenamiento.
+
+::: smaller
+**Cómo preguntar:** - "¿Cuándo predecimos esto exactamente?" - "¿Toda esta información estaría disponible EN ESE MOMENTO?"
+
+**Ejemplo de conversación:**
+
+*Tú:* "¿Incluyen la variable 'fue reportado como fraude' en entrenamiento?"
+
+*Técnico:* "Sí."
+
+*Tú:* "¿En producción, cuando necesitamos predecir, ya sabremos eso?"
+
+*Técnico:* "Ah… no. Eso se sabe después."
+
+*Tú:* **"Saca esa variable. El modelo está truqueado."**
+:::
+
+------------------------------------------------------------------------
+
+## Pregunta 4: ¿Qué tan limpia es la data?
+
+**Por qué:** calidad de datos = confiabilidad de las decisiones.
+
+::: smaller
+**Cómo preguntar:** - "¿Cuánto tiempo se invirtió en limpieza?" - "¿Qué porcentaje está incompleto? ¿Qué tan actualizado está?"
+
+**Señales de respuesta:** - `r fa("check", fill = "green")` "80% del tiempo fue limpieza. Datos 95%+ correctos. Revisión mensual." - `r fa("xmark", fill = "red")` "Usamos datos como están. Probablemente esté bien."
+
+**Benchmark:**
+
+| Proyecto   | \% tiempo en limpieza |
+|------------|-----------------------|
+| Pequeño    | \~50%                 |
+| Grande     | \~80%                 |
+| Sospechoso | \<30%                 |
+:::
+
+------------------------------------------------------------------------
+
+## Pregunta 5: ¿Quién vigila el modelo?
+
+**Por qué:** datos y modelos cambian; el sesgo puede aparecer con el tiempo.
+
+::: smaller
+**Cómo preguntar:** - "¿Cómo monitorean el desempeño en el mundo real?" - "¿Quién es responsable si falla?" - "¿Qué pasaría si el modelo empieza a favorecer a un grupo?"
+
+**Señales de respuesta:** - `r fa("check", fill = "green")` "Dashboard mensual. Métricas por segmento demográfico. Alertas automáticas." - `r fa("xmark", fill = "red")` "Asumimos que funciona igual que en el test." - `r fa("xmark", fill = "red")` "No lo hemos pensado."
+
+**Acción si hay riesgo:** - Establecer SLAs y alertas - Plan de rollback (cómo parar rápido si falla) - Auditoría trimestral
+:::
+
+------------------------------------------------------------------------
+
+## Cuadro de Decisión: ¿Apruebo Este Proyecto?
+
+::: tiny
+| Pregunta | Sí | No | Con riesgo |
+|-----------------|-----------------|-----------------|---------------------|
+| ¿Todos los grupos están representados? | `r fa("check", fill = "green")` Adelante | `r fa("xmark", fill = "red")` No aprobar | `r fa("triangle-exclamation", fill = "orange")` Limitar scope |
+| ¿Datos históricos fueron justos? | `r fa("check", fill = "green")` Adelante | `r fa("xmark", fill = "red")` No aprobar | `r fa("triangle-exclamation", fill = "orange")` Auditar y limpiar |
+| ¿Sin data leakage? | `r fa("check", fill = "green")` Adelante | `r fa("xmark", fill = "red")` No aprobar | `r fa("triangle-exclamation", fill = "orange")` Remover variables |
+| ¿Datos \>95% limpios? | `r fa("check", fill = "green")` Adelante | `r fa("xmark", fill = "red")` No aprobar | `r fa("triangle-exclamation", fill = "orange")` Invertir en limpieza |
+| ¿Hay monitoreo? | `r fa("check", fill = "green")` Adelante | `r fa("xmark", fill = "red")` No aprobar | `r fa("triangle-exclamation", fill = "orange")` Implementar primero |
+
+**Criterio de aprobación:** al menos 4/5 deben ser "Sí" (o "Con riesgo" + plan concreto).
+:::
+
+------------------------------------------------------------------------
+
+## El Rol del Líder en Gobernanza de Datos
+
+No tienes que ser técnico. Pero tienes que:
+
+1.  **Hacer preguntas incómodas** — sin miedo a parecer ignorante
+2.  **Entender los riesgos** — sesgos, leakage, calidad
+3.  **Establecer estándares** — auditoría, monitoreo, responsabilidad
+4.  **Actuar si hay problemas** — parar, revisar, remediar
+
+> **Si un modelo falla y afecta a clientes o empleados, tú eres responsable.**
+
+------------------------------------------------------------------------
+
+## `r fa("users", fill = "steelblue")` Actividad 3 — Simulación: "Aprobación de Proyecto" (10 min)
+
+::: tiny
+Elige uno de estos proyectos y formula las 5 preguntas. Luego decide: ¿Aprobado? ¿Con riesgos? ¿Rechazado?
+
+| Opción | Propuesta | Datos | Beneficio esperado |
+|-----------------|-----------------|-----------------|----------------------|
+| **A: Fintech** | Créditos automáticos | 10 años de otorgamientos + morosidad | Ahorrar 2 horas por solicitud |
+| **B: Retail** | Recomendador personalizado | Historial de compras online | +15% en ticket promedio |
+| **C: HR** | Identificar candidatos de alto potencial | CVs, desempeño, evaluaciones históricas | Reducir turnover |
+| **D: Manufactura** | Mantenimiento predictivo | Sensores + histórico de fallas | Reducir downtime 40% |
+
+*Ejemplo:* "¿Los datos incluyen todos los estratos socioeconómicos? → No solo clase media-alta → Sesgo de representación → Aprobado CON riesgo: necesitamos datos más amplios + monitoreo por estrato."
+:::
+
+------------------------------------------------------------------------
+
+## Los 3 Pilares de una Gobernanza Responsable
+
+**Pilar 1 — Transparencia** - ¿De dónde vienen los datos? - ¿Quién está representado? - ¿Qué decisiones se tomaron históricamente?
+
+**Pilar 2 — Validación** - ¿Datos están limpios? - ¿Hay sesgos detectables? - ¿El modelo funciona igual para todos los grupos?
+
+**Pilar 3 — Monitoreo** - ¿Vigilamos el modelo en producción? - ¿Detectamos cambios o degradación? - ¿Tenemos plan de rollback?
+
+------------------------------------------------------------------------
+
+## Red Flags: Cuándo Desconfiar
+
+::: tiny
+| Frase | Red Flag | Acción |
+|---------------------|-----------------------------|-----------------------|
+| "Los datos están limpios" (sin explicar cómo) | Falta transparencia | Pide detalles del proceso |
+| "El modelo funciona con 99% de precisión" | Data leakage posible | Valida las variables |
+| "Estos grupos son muy pequeños, no importa" | Sesgo aceptado | Cuestiona y exige representación |
+| "Nuestro histórico es objetivo" (sin auditarlo) | Sesgo histórico oculto | Pide auditoría de decisiones |
+| "No sabemos qué vigilar en producción" | Falta de gobernanza | Exige plan antes de aprobar |
+| "Solo el equipo técnico entiende esto" | Opacidad deliberada | Demanda explicaciones claras |
+:::
+
+------------------------------------------------------------------------
+
+## Checklist para Líderes: Antes de Aprobar
+
+::: tiny
+```         
+□ ¿Representación de datos? ¿Hay grupos sub-representados?
+□ ¿Datos históricos validados como justos / objetivos?
+□ ¿Variables sin data leakage?
+□ ¿Datos >95% limpios? ¿Quién verifica?
+□ ¿Plan de monitoreo y alertas?
+□ ¿Responsabilidades claras (quién es accountable si falla)?
+□ ¿Proceso de rollback si falla?
+□ ¿Testeado con grupos minoritarios?
+□ ¿Documentación clara del dataset?
+□ ¿Auditoría independiente (si el impacto es alto)?
+```
+:::
+
+------------------------------------------------------------------------
+
+## Checklist de Monitoreo Mensual
+
+::: tiny
+```         
+□ ¿El modelo sigue funcionando igual que hace 30 días?
+□ ¿Hay cambios en el desempeño por segmento?
+□ ¿Hay alertas de anomalías activas?
+□ ¿Se actualizó la data? ¿Cómo impactó?
+□ ¿Hay feedback de usuarios sobre errores o sesgos?
+□ ¿Necesitamos reentrenar?
+```
+:::
+
+------------------------------------------------------------------------
+
+## Cierre: La Responsabilidad del Líder
+
+> **"Datos es poder. El poder requiere responsabilidad."**
+
+No necesitas ser Data Scientist para liderar con integridad. Necesitas:
+
+- **Curiosidad** — hacer preguntas
+- **Escepticismo sano** — dudar de resultados perfectos
+- **Empatía** — pensar en quién se ve afectado
+- **Coraje** — parar un proyecto si tiene riesgo
+
+**El 80% de los fracasos en IA no son por tecnología. Son por datos malos, sesgos ocultos y líderes que no hicieron preguntas.**
+
+------------------------------------------------------------------------
+
+# Anexo
+
+------------------------------------------------------------------------
+
+## Glosario para Líderes
+
+::: tiny
+| Término | Definición simple |
+|-------------------------|-----------------------------------------------|
+| **Dataset** | Tabla con filas (ejemplos) y columnas (datos) |
+| **Sesgo** | El modelo favorece o rechaza a un grupo sin razón válida |
+| **Data Leakage** | Información futura "filtrada" en datos de entrenamiento |
+| **Overfitting** | Modelo que memoriza en lugar de aprender patrones generalizables |
+| **Feature** | Una columna de datos: edad, ubicación, historial de compras |
+| **Entrenamiento** | Proceso donde el modelo aprende patrones desde los datos |
+| **Validación** | Testear el modelo en datos nuevos (no usados en entrenamiento) |
+| **Producción** | El modelo en uso real, haciendo predicciones |
+| **KPI** | Métrica de desempeño (ej. "precisión 95%") |
+| **Monitoreo** | Vigilar que el modelo siga funcionando correctamente |
+:::
+
+------------------------------------------------------------------------
+
+## Lecturas Recomendadas
+
+::: smaller
+- **Weapons of Math Destruction** — Cathy O'Neil *(accesible, crítico)*
+- **Fairness and Machine Learning** — Barocas, Hardt & Narayanan *(más técnico pero abordable)*
+
+**Casos de estudio:** - Amazon Hiring Algorithm (2018) — sesgo histórico en contratación - COMPAS (justicia criminal) — sesgo histórico en sistema penal - Gender Shades — Buolamwini & Gebru (MIT, 2018) — sesgo de representación en reconocimiento facial
+:::
+
+------------------------------------------------------------------------
+
+# Referencias
+
+::: tiny
+Buolamwini, J., & Gebru, T. (2018). Gender shades: Intersectional accuracy disparities in commercial gender classification. *Proceedings of the 1st Conference on Fairness, Accountability and Transparency*, 77–91. <http://proceedings.mlr.press/v81/buolamwini18a.html>
+
+Barocas, S., Hardt, M., & Narayanan, A. (2023). *Fairness and Machine Learning: Limitations and Opportunities*. MIT Press. <https://fairmlbook.org>
+
+O'Neil, C. (2016). *Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy*. Crown Publishers.
+
+Angwin, J., Larson, J., Mattu, S., & Kirchner, L. (2016). Machine bias. *ProPublica*. <https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing>
+
+Dastin, J. (2018). Amazon scraps secret AI recruiting tool that showed bias against women. *Reuters*. <https://www.reuters.com/article/us-amazon-com-jobs-automation-insight-idUSKCN1MK08G>
+:::

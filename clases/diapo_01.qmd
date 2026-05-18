@@ -44,7 +44,7 @@ Experiencia, educación, etc.
 
 -   `r fa("message", fill = "steelblue")` sebastian.egana\@udd.cl
 -   `r fa("computer", fill = "steelblue")` <https://segana.netlify.app>
--   `r fa("linkedin", fill = "steelblue")` <https://www.linkedin.com/in/sebastian-egana-santibanez/> 
+-   `r fa("linkedin", fill = "steelblue")` <https://www.linkedin.com/in/sebastian-egana-santibanez/>
 - `r fa("github", fill = "steelblue")` <https://github.com/sebaegana>
 
 ---
@@ -53,16 +53,16 @@ Experiencia, educación, etc.
 
 ## Contexto actual
 
-- Volumen de datos global crece >40% anual (IDC, 2024).  
-- Solo ~30% de las empresas se considera realmente *data-driven* (McKinsey, 2023).  
-- El valor no está en acumular datos, sino en **estructurarlos, analizarlos e interpretarlos**.  
+- Volumen de datos global crece >40% anual (IDC, 2024).
+- Solo ~30% de las empresas se considera realmente *data-driven* (McKinsey, 2023).
+- El valor no está en acumular datos, sino en **estructurarlos, analizarlos e interpretarlos**.
 
 ---
 
 ## Rol de la IA
 
-- IA = capacidad de **extraer patrones y predicciones**  
-- Integra datos estructurados y no estructurados (texto, imágenes, audio, video, documentos) y los convierte en información utilizable; arquitecturas empresariales actuales permiten extraer y mapear contenido no estructurado y combinarlo con recuperación + generación (RAG) 
+- IA = capacidad de **extraer patrones y predicciones**
+- Integra datos estructurados y no estructurados (texto, imágenes, audio, video, documentos) y los convierte en información utilizable; arquitecturas empresariales actuales permiten extraer y mapear contenido no estructurado y combinarlo con recuperación + generación (RAG)
 - Permite **reducir incertidumbre** y **mejorar la velocidad y calidad** de la decisión
 
 ---
@@ -324,7 +324,7 @@ Es algo que **al parecer** todos tenemos claros, pero cuáles son las carácteri
 
 ### Experimentación
 
-Dentro del contexto de **decision science** hablamos de la conexión con el método científico; elemento clave es la experimentación. 
+Dentro del contexto de **decision science** hablamos de la conexión con el método científico; elemento clave es la experimentación.
 
 - Debemos pasar de intuir a medir: [The Surprising Power of Online Experiments](https://hbr.org/2017/09/the-surprising-power-of-online-experiments?utm_source=chatgpt.com)
 - Si no experimentas, adivinas: [Great Strategy Starts with Experimentation](https://hbr.org/podcast/2025/04/great-strategy-starts-with-experimentation?utm_source=chatgpt.com)
@@ -342,14 +342,14 @@ Epigenética y la utilización de ratones `r fa("mouse", fill = "green")`
 
 NASA versus Space X `r fa("rocket", fill = "red")`
 
-- “Disminuir infinitamente el riesgo aumenta infinitamente el costo”
+- "Disminuir infinitamente el riesgo aumenta infinitamente el costo"
 - Space X con un costo de 67 million por lanzamiento para el Falcon 9; Nasa SLS sobre los $4 billion USD ([más info](https://patentpc.com/blog/nasa-vs-spacex-vs-blue-origin-whos-leading-the-space-race-market-share-stats))
 
 ----
 
-# Actividad 
+# Actividad
 
-## “Decisiones con o sin datos”
+## "Decisiones con o sin datos"
 
 :::tiny
 Duración: 15–20 minutos
@@ -410,15 +410,15 @@ library(tidyverse)
 library(scales)
 library(ggplot2)
 
-ticker <- "LTM.SN"          
+ticker <- "LTM.SN"
 desde  <- "2018-01-01"
 
 # 1) Descargar precios diarios (OHLC)
 precios <- tq_get(ticker, from = desde, to = Sys.Date())
 
 # 2) Último dato disponible
-ultimo <- precios |> 
-  slice_tail(n = 1) |> 
+ultimo <- precios |>
+  slice_tail(n = 1) |>
   pull(adjusted)
 
 # 3) Promedio del precio ajustado
@@ -436,7 +436,7 @@ ggplot(precios, aes(date, adjusted)) +
     subtitle = paste0("Último cierre: ",
                       label_dollar(prefix = "$", big.mark = ".", decimal.mark = ",")(ultimo),
                       " CLP (", max(precios$date), ")"),
-    x = "Fecha", 
+    x = "Fecha",
     y = "Precio ajustado (CLP)",
     caption = "Fuente: Yahoo Finance via tidyquant"
   ) +
@@ -458,8 +458,8 @@ hasta  <- "2021-12-31"
 precios <- tq_get(ticker, from = desde, to = Sys.Date())
 
 # 2) Último dato disponible
-ultimo <- precios |> 
-  slice_tail(n = 1) |> 
+ultimo <- precios |>
+  slice_tail(n = 1) |>
   pull(adjusted)
 
 # 3) Promedio del precio ajustado
@@ -477,7 +477,7 @@ ggplot(precios, aes(date, adjusted)) +
     subtitle = paste0("Último cierre: ",
                       label_dollar(prefix = "$", big.mark = ".", decimal.mark = ",")(ultimo),
                       " CLP (", max(precios$date), ")"),
-    x = "Fecha", 
+    x = "Fecha",
     y = "Precio ajustado (CLP)",
     caption = "Fuente: Yahoo Finance via tidyquant"
   ) +
@@ -499,8 +499,8 @@ hasta  <- "2025-09-26"
 precios <- tq_get(ticker, from = desde, to = Sys.Date())
 
 # 2) Último dato disponible
-ultimo <- precios |> 
-  slice_tail(n = 1) |> 
+ultimo <- precios |>
+  slice_tail(n = 1) |>
   pull(adjusted)
 
 # 3) Promedio del precio ajustado
@@ -518,7 +518,7 @@ ggplot(precios, aes(date, adjusted)) +
     subtitle = paste0("Último cierre: ",
                       label_dollar(prefix = "$", big.mark = ".", decimal.mark = ",")(ultimo),
                       " CLP (", max(precios$date), ")"),
-    x = "Fecha", 
+    x = "Fecha",
     y = "Precio ajustado (CLP)",
     caption = "Fuente: Yahoo Finance via tidyquant"
   ) +
@@ -593,9 +593,9 @@ Quieres evitar falsos negativos: es decir, no dejar pasar algo que sí era posit
 ## Incertidumbre y confianza en la interpretación de resultados.
 
 :::tiny
-Se debe tener en cuenta que la incertidumbre siempre va a existir y se debe convivir con eso. Esto no implica que no la interioricemos dentro de nuestra toma de decisiones o que no la intentemos medir. 
+Se debe tener en cuenta que la incertidumbre siempre va a existir y se debe convivir con eso. Esto no implica que no la interioricemos dentro de nuestra toma de decisiones o que no la intentemos medir.
 
-Una buena técnica es generar ejercicios que añaden incertidumbre a los modelos calculados. 
+Una buena técnica es generar ejercicios que añaden incertidumbre a los modelos calculados.
 
 - En el análisis de datos, la incertidumbre no se elimina, se cuantifica.
 Por eso usamos intervalos de confianza, desviaciones estándar o bandas de predicción. Estas herramientas nos permiten comunicar no solo qué esperamos que ocurra, sino cuán seguros estamos de ello.
