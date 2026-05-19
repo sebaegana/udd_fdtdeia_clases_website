@@ -32,7 +32,6 @@ format:
 library(fontawesome)
 library(knitr)
 library(tidyverse)
-library(kableExtra)
 ```
 ---
 

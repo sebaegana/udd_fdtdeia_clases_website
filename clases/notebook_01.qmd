@@ -16,7 +16,6 @@ code-block-border-left: "#FF0000"
 library(fontawesome)
 library(knitr)
 library(tidyverse)
-library(kableExtra)
 ```
 
 # Enlaces del profesor

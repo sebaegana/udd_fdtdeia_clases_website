@@ -10,7 +10,7 @@ format:
     theme: simple
     slide-number: true
     self-contained: true
-    incremental: true
+    incremental: false
     transition: slide
     logo: "Imagen1.png"
     footer: "© Sebastián Egaña Santibáñez"
@@ -34,22 +34,20 @@ library(knitr)
 
 # Sobre el docente
 
-Experiencia, educación, etc.
-
 # Enlaces
 
--   `r fa("message", fill = "steelblue")` sebastian.egana\@udd.cl
--   `r fa("computer", fill = "steelblue")` <https://segana.netlify.app>
--   `r fa("linkedin", fill = "steelblue")` <https://www.linkedin.com/in/sebastian-egana-santibanez/>
--   `r fa("github", fill = "steelblue")` <https://github.com/sebaegana>
+- `r fa("message", fill = "steelblue")` sebastian.egana\@udd.cl
+- `r fa("computer", fill = "steelblue")` <https://segana.netlify.app>
+- `r fa("linkedin", fill = "steelblue")` <https://www.linkedin.com/in/sebastian-egana-santibanez/>
+- `r fa("github", fill = "steelblue")` <https://github.com/sebaegana>
 
 ------------------------------------------------------------------------
 
 ## Descripción General
 
-Este módulo capacita a **líderes no técnicos** para comprender el valor estratégico de los datos, identificar riesgos ocultos y tomar decisiones informadas sobre proyectos de IA.
+Este módulo capacita para comprender el valor estratégico de los datos, identificar riesgos ocultos y tomar decisiones informadas sobre proyectos de IA.
 
-Sin requerir programación, aprenderán a hacer **preguntas críticas** a sus equipos técnicos y a gobernar responsablemente iniciativas de IA.
+Sin requerir programación, aprenderán a hacer **preguntas críticas** dentro de sus equipos y a gobernar responsablemente iniciativas de IA.
 
 ------------------------------------------------------------------------
 
@@ -98,23 +96,16 @@ Al finalizar esta sesión podrán:
 
 ## El Triángulo de Oro de la IA
 
-```{=html}
-<pre style="font-size:0.85em; line-height:1.6; text-align:center;">
-        ┌──────────────────────────┐
-        │       DECISIONES         │
-        │        (Output)          │
-        └────────────┬─────────────┘
-                     ▲
-            ┌────────┴────────┐
-            │                 │
-        ┌───▼───┐         ┌───▼──┐
-        │MODELO │◄────────│ DATA │
-        └───────┘         └──────┘
-            ▲                 ▲
-            │                 │
-       (Algoritmo)       (Combustible)
-        (5% éxito)        (95% éxito)
-</pre>
+```{mermaid}
+%%| fig-align: center
+graph TD
+    D["🎯 DECISIONES<br/>(Output)"]
+    M["⚙️ MODELO<br/>(Algoritmo)<br/><i>5% del éxito</i>"]
+    DA["🗄️ DATA<br/>(Combustible)<br/><i>95% del éxito</i>"]
+
+    M --> D
+    DA --> D
+    DA --> M
 ```
 
 ------------------------------------------------------------------------
@@ -142,7 +133,7 @@ Al finalizar esta sesión podrán:
 | **Resultado** | Recomendaciones precisas | Recomendaciones genéricas |
 :::
 
-**Lección:** Netflix tiene *menos datos* pero mejor **calidad y relevancia**. Por eso gana.
+**Lección:** Netflix tiene *menos datos* pero mejor **calidad y relevancia**.
 
 ------------------------------------------------------------------------
 
@@ -183,13 +174,19 @@ Piensa en tu área/empresa y responde:
 ------------------------------------------------------------------------
 :::
 
+------------------------------------------------------------------------
+
+![](imagenes/1752229938778.jpg){fig-align="center"}
+
+------------------------------------------------------------------------
+
 # Bloque 2: Los Enemigos Silenciosos
 
 ------------------------------------------------------------------------
 
 ## Los 4 Enemigos
 
-::: smaller
+::: tiny
 | Enemigo | Causa | Red Flag |
 |-------------------------|--------------------|----------------------------|
 | **Representación** | Falta un grupo demográfico | "Funciona bien para el cliente típico" |
@@ -215,43 +212,55 @@ Piensa en tu área/empresa y responde:
 
 **¿Por qué?** Los modelos se entrenaron mayormente con datos de personas blancas.
 
+::: smaller
+
 **Impacto:**
 
-\- Policía usa algoritmo para identificar sospechosos → falla en comunidades afrodescendientes
+ - Policía usa algoritmo para identificar sospechosos → falla en comunidades afrodescendientes
+ - Acceso a edificios por facial → gente con piel oscura queda afuera
 
-\- Acceso a edificios por facial → gente con piel oscura queda afuera
+:::
 
 ------------------------------------------------------------------------
 
 ## Caso Real: Modelos de Crédito
 
 **Problema:** 
+
 - Banco entrena algoritmo con datos históricos de clientes de clase media-alta 
-- Algoritmo rechaza más personas de clase baja, aunque sean buen riesgo crediticio 
+- Algoritmo rechaza más personas de clase baja, aunque sean buen riesgo crediticio
 
 **Razón:** no hay suficientes datos de ese grupo en el histórico
 
-**Impacto:** 
+::: smaller
 
-- Discriminación indirecta pero efectiva 
-- Mercado perdido (no alcanzas segmentos nuevos) 
+**Impacto:**
+
+- Discriminación indirecta pero efectiva
+- Mercado perdido (no alcanzas segmentos nuevos)
 - Regulatorio: Regulador podría penalizar (CMF)
+
+:::
 
 ------------------------------------------------------------------------
 
 ## Cómo Identificar el Sesgo de Representación
 
-**Red flags:** 
+**Red flags:**
 
-- "Nuestro modelo funciona bien para el cliente típico" 
-- "Estos grupos son muy pequeños en nuestros datos" 
+- "Nuestro modelo funciona bien para el cliente típico"
+- "Estos grupos son muy pequeños en nuestros datos"
 - "Hay outliers raros que el modelo rechaza"
 
-**Test simple:** 
+::: tiny
 
-1. Segmenta tu dataset por: género, edad, geografía, nivel socioeconómico 
-2. ¿El modelo funciona **bien** en **todos** los segmentos? 
-3. Si no → **hay sesgo de representación**
+**Test simple:**
+
+1.  Segmenta tu dataset por: género, edad, geografía, nivel socioeconómico
+2.  ¿El modelo funciona **bien** en **todos** los segmentos?
+3.  Si no → **hay sesgo de representación**
+
+:::
 
 ------------------------------------------------------------------------
 
@@ -263,31 +272,62 @@ Piensa en tu área/empresa y responde:
 
 ## Caso Real: Amazon Hiring Algorithm (2014–2018)
 
-::: smaller
-**¿Qué pasó?** - Amazon creó un algoritmo para filtrar CVs automáticamente - Lo entrenó con 10 años de contrataciones históricas en tech - **Problema:** históricamente contrataban más hombres en tech - **Resultado:** el algoritmo aprendió a rechazar mujeres
+**¿Qué pasó?** 
 
-**Detalles perturbadores:** - Rechazaba palabras como *"women's chess club"* - Rechazaba CVs de egresadas de colegios para mujeres
+- Amazon creó un algoritmo para filtrar CVs automáticamente 
+- Lo entrenó con 10 años de contrataciones históricas en tech 
+- **Problema:** históricamente contrataban más hombres en tech - **Resultado:** el algoritmo aprendió a rechazar mujeres
+
+::: tiny
+
+**Detalles perturbadores:** 
+
+- Rechazaba palabras como *"women's chess club"* 
+- Rechazaba CVs de egresadas de colegios para mujeres
 
 **Amazon mató el proyecto en 2018.** No por altruismo: costoso en reputación y legal.
+
 :::
 
 ------------------------------------------------------------------------
 
 ## Caso Real: Sistema de Justicia Criminal
 
-::: smaller
-**¿Qué pasó?** - Policía usa el algoritmo COMPAS para predecir reincidencia - Entrenado con datos históricos de quién fue detenido antes - **Problema:** el sistema penal históricamente sobre-arresta a gente negra - **Resultado:** el algoritmo predice más reincidencia en gente negra (lógica circular)
 
-**Preguntas sin respuesta:** - ¿Fue reincidencia… o simplemente los arrestaron otra vez? - ¿El algoritmo predice crimen o predice quién será arrestado?
+**¿Qué pasó?** 
+
+- Policía usa el algoritmo COMPAS para predecir reincidencia 
+- Entrenado con datos históricos de quién fue detenido antes 
+- **Problema:** el sistema penal históricamente sobre-arresta a gente negra 
+- **Resultado:** el algoritmo predice más reincidencia en gente negra (lógica circular)
+
+::: tiny
+
+**Preguntas sin respuesta:** 
+
+- ¿Fue reincidencia… o simplemente los arrestaron otra vez?
+- ¿El algoritmo predice crimen o predice quién será arrestado?
 :::
 
 ------------------------------------------------------------------------
 
 ## Cómo Identificar el Sesgo Histórico
 
-**Red flags:** - "Nuestro modelo refleja lo que siempre hemos hecho" - "Usamos datos históricos de evaluaciones / contrataciones / decisiones" - "El modelo mantiene el status quo"
+**Red flags:** 
 
-**Test:** 1. ¿Tus datos vienen de decisiones humanas del pasado? 2. ¿Esas decisiones eran justas / objetivas? 3. Si la respuesta no es un "sí" claro → **hay sesgo histórico**
+- "Nuestro modelo refleja lo que siempre hemos hecho" 
+- "Usamos datos históricos de evaluaciones / contrataciones / decisiones" 
+- "El modelo mantiene el status quo"
+
+::: smaller
+
+**Test:** 
+
+1. ¿Tus datos vienen de decisiones humanas del pasado? 
+2. ¿Esas decisiones eran justas / objetivas? 
+3. Si la respuesta no es un "sí" claro → **hay sesgo histórico**
+
+:::
 
 ------------------------------------------------------------------------
 
@@ -340,9 +380,20 @@ El modelo confundió causación con correlación.
 
 ## Data Leakage: Predicción de Deserción Escolar
 
-**Lo que FUNCIONA:** - Datos de hace 2 meses: asistencia, notas, engagement - Predecir: ¿desertor en próximos 3 meses?
+**Lo que FUNCIONA:** 
 
-**Lo que NO funciona:** - Incluir: *"¿Se retiró del colegio?"* — ¡eso es exactamente lo que predices! - Resultado: 100% de precisión, modelo completamente inútil
+- Datos de hace 2 meses: asistencia, notas, engagement 
+- Predecir: ¿desertor en próximos 3 meses?
+
+:::smaller
+
+**Lo que NO funciona:** 
+
+- Incluir: *"¿Se retiró del colegio?"* 
+— ¡eso es exactamente lo que predices! 
+- Resultado: 100% de precisión, modelo completamente inútil
+
+:::
 
 > **Si el KPI es demasiado bueno (\>95%), busca leakage.**
 
@@ -350,9 +401,15 @@ El modelo confundió causación con correlación.
 
 ## Cómo Detectar Data Leakage
 
-**Pregunta clave:** \> *"¿Toda la información del modelo estaría disponible en el momento exacto en que necesitamos predecir?"*
+**Pregunta clave:** 
 
-**Red flags:** - KPI de precisión \> 99% (sospechosamente perfecto) - El outcome (lo que predices) aparece como variable en el modelo - Datos que solo existen **después** del evento que predices
+\> *"¿Toda la información del modelo estaría disponible en el momento exacto en que necesitamos predecir?"*
+
+**Red flags:** 
+
+- KPI de precisión \> 99% (sospechosamente perfecto) 
+- El outcome (lo que predices) aparece como variable en el modelo 
+- Datos que solo existen **después** del evento que predices
 
 ------------------------------------------------------------------------
 
@@ -378,7 +435,15 @@ El modelo confundió causación con correlación.
 
 No es atractivo. No es "IA". Pero es **crítico**.
 
-**Test simple de calidad:** 1. Toma 100 registros aleatorios 2. Valídalos manualmente: ¿son correctos? 3. Si \< 95% correcto → **hay problema de calidad**
+:::smaller
+
+**Test simple de calidad:** 
+
+1. Toma 100 registros aleatorios 
+2. Valídalos manualmente: ¿son correctos? 
+3. Si \< 95% correcto → **hay problema de calidad**
+
+:::
 
 ------------------------------------------------------------------------
 
@@ -410,7 +475,6 @@ Identifica 1–2 riesgos por categoría:
   - Ej. Churn: ¿incluyes si el cliente llamó a cancelar? (¡ya está cancelado!)
 - **Calidad:** ¿qué tan limpia está tu data? ¿hay valores faltantes críticos?
 
-*Elige el caso más interesante para discutir en plenaria.*
 :::
 
 ------------------------------------------------------------------------
@@ -519,7 +583,7 @@ Antes de aprobar cualquier proyecto de IA, formula estas preguntas a tu equipo t
 
 ::: tiny
 | Pregunta | Sí | No | Con riesgo |
-|-----------------|-----------------|-----------------|---------------------|
+|------------------|------------------|------------------|--------------------|
 | ¿Todos los grupos están representados? | `r fa("check", fill = "green")` Adelante | `r fa("xmark", fill = "red")` No aprobar | `r fa("triangle-exclamation", fill = "orange")` Limitar scope |
 | ¿Datos históricos fueron justos? | `r fa("check", fill = "green")` Adelante | `r fa("xmark", fill = "red")` No aprobar | `r fa("triangle-exclamation", fill = "orange")` Auditar y limpiar |
 | ¿Sin data leakage? | `r fa("check", fill = "green")` Adelante | `r fa("xmark", fill = "red")` No aprobar | `r fa("triangle-exclamation", fill = "orange")` Remover variables |
@@ -550,7 +614,7 @@ No tienes que ser técnico. Pero tienes que:
 Elige uno de estos proyectos y formula las 5 preguntas. Luego decide: ¿Aprobado? ¿Con riesgos? ¿Rechazado?
 
 | Opción | Propuesta | Datos | Beneficio esperado |
-|-----------------|-----------------|-----------------|----------------------|
+|-----------------|-----------------|-----------------|---------------------|
 | **A: Fintech** | Créditos automáticos | 10 años de otorgamientos + morosidad | Ahorrar 2 horas por solicitud |
 | **B: Retail** | Recomendador personalizado | Historial de compras online | +15% en ticket promedio |
 | **C: HR** | Identificar candidatos de alto potencial | CVs, desempeño, evaluaciones históricas | Reducir turnover |
@@ -573,7 +637,7 @@ Elige uno de estos proyectos y formula las 5 preguntas. Luego decide: ¿Aprobado
 
 ## Red Flags: Cuándo Desconfiar
 
-::: tiny
+
 | Frase | Red Flag | Acción |
 |---------------------|-----------------------------|-----------------------|
 | "Los datos están limpios" (sin explicar cómo) | Falta transparencia | Pide detalles del proceso |
@@ -582,13 +646,24 @@ Elige uno de estos proyectos y formula las 5 preguntas. Luego decide: ¿Aprobado
 | "Nuestro histórico es objetivo" (sin auditarlo) | Sesgo histórico oculto | Pide auditoría de decisiones |
 | "No sabemos qué vigilar en producción" | Falta de gobernanza | Exige plan antes de aprobar |
 | "Solo el equipo técnico entiende esto" | Opacidad deliberada | Demanda explicaciones claras |
-:::
+
+
+------------------------------------------------------------------------
+
+## Red Flags: Cuándo Desconfiar
+
+
+| Frase | Red Flag | Acción |
+|---------------------|-----------------------------|-----------------------|
+| "Nuestro histórico es objetivo" (sin auditarlo) | Sesgo histórico oculto | Pide auditoría de decisiones |
+| "No sabemos qué vigilar en producción" | Falta de gobernanza | Exige plan antes de aprobar |
+| "Solo el equipo técnico entiende esto" | Opacidad deliberada | Demanda explicaciones claras |
+
 
 ------------------------------------------------------------------------
 
 ## Checklist para Líderes: Antes de Aprobar
 
-::: tiny
 ```         
 □ ¿Representación de datos? ¿Hay grupos sub-representados?
 □ ¿Datos históricos validados como justos / objetivos?
@@ -601,13 +676,13 @@ Elige uno de estos proyectos y formula las 5 preguntas. Luego decide: ¿Aprobado
 □ ¿Documentación clara del dataset?
 □ ¿Auditoría independiente (si el impacto es alto)?
 ```
-:::
+
 
 ------------------------------------------------------------------------
 
 ## Checklist de Monitoreo Mensual
 
-::: tiny
+
 ```         
 □ ¿El modelo sigue funcionando igual que hace 30 días?
 □ ¿Hay cambios en el desempeño por segmento?
@@ -616,7 +691,7 @@ Elige uno de estos proyectos y formula las 5 preguntas. Luego decide: ¿Aprobado
 □ ¿Hay feedback de usuarios sobre errores o sesgos?
 □ ¿Necesitamos reentrenar?
 ```
-:::
+
 
 ------------------------------------------------------------------------
 
@@ -641,7 +716,7 @@ No necesitas ser Data Scientist para liderar con integridad. Necesitas:
 
 ## Glosario para Líderes
 
-::: tiny
+
 | Término | Definición simple |
 |-------------------------|-----------------------------------------------|
 | **Dataset** | Tabla con filas (ejemplos) y columnas (datos) |
@@ -650,21 +725,34 @@ No necesitas ser Data Scientist para liderar con integridad. Necesitas:
 | **Overfitting** | Modelo que memoriza en lugar de aprender patrones generalizables |
 | **Feature** | Una columna de datos: edad, ubicación, historial de compras |
 | **Entrenamiento** | Proceso donde el modelo aprende patrones desde los datos |
+
+------------------------------------------------------------------------
+
+## Glosario para Líderes
+
+| Término | Definición simple |
+|-------------------------|-----------------------------------------------|
 | **Validación** | Testear el modelo en datos nuevos (no usados en entrenamiento) |
 | **Producción** | El modelo en uso real, haciendo predicciones |
 | **KPI** | Métrica de desempeño (ej. "precisión 95%") |
 | **Monitoreo** | Vigilar que el modelo siga funcionando correctamente |
-:::
+
 
 ------------------------------------------------------------------------
 
 ## Lecturas Recomendadas
 
-::: smaller
+
 - **Weapons of Math Destruction** — Cathy O'Neil *(accesible, crítico)*
 - **Fairness and Machine Learning** — Barocas, Hardt & Narayanan *(más técnico pero abordable)*
 
-**Casos de estudio:** - Amazon Hiring Algorithm (2018) — sesgo histórico en contratación - COMPAS (justicia criminal) — sesgo histórico en sistema penal - Gender Shades — Buolamwini & Gebru (MIT, 2018) — sesgo de representación en reconocimiento facial
+::: smaller
+
+**Casos de estudio:** 
+
+- Amazon Hiring Algorithm (2018) — sesgo histórico en contratación 
+- COMPAS (justicia criminal) — sesgo histórico en sistema penal 
+- Gender Shades — Buolamwini & Gebru (MIT, 2018) — sesgo de representación en reconocimiento facial
 :::
 
 ------------------------------------------------------------------------
