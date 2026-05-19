@@ -18,21 +18,21 @@
     "href": "clases/index.html",
     "title": "Clases",
     "section": "",
-    "text": "Clases del curso\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDiapositiva 01\n\n\n\n\n\n\n\n\n\n\n\nDiapositiva 01\n\n\n\n\n\n\n\n\n\n\n\nNotebook 01\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Clases del curso\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDiapositiva 01\n\n\n\n\n\n\n\n\n\n\n\nDiapositiva 01\n\n\n\n\n\n\n\n\n\n\n\nDiapositiva 01\n\n\n\n\n\n\n\n\n\n\n\nMódulo 1 – Sesión 4\n\n\n\n\n\n\n\n\n\n\n\nNotebook 01\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "clases/diapo_01.html#contexto-actual",
     "href": "clases/diapo_01.html#contexto-actual",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "Contexto actual",
-    "text": "Contexto actual\n\nVolumen de datos global crece &gt;40% anual (IDC, 2024).\n\nSolo ~30% de las empresas se considera realmente data-driven (McKinsey, 2023).\n\nEl valor no está en acumular datos, sino en estructurarlos, analizarlos e interpretarlos."
+    "text": "Contexto actual\n\nVolumen de datos global crece &gt;40% anual (IDC, 2024).\nSolo ~30% de las empresas se considera realmente data-driven (McKinsey, 2023).\nEl valor no está en acumular datos, sino en estructurarlos, analizarlos e interpretarlos."
   },
   {
     "objectID": "clases/diapo_01.html#rol-de-la-ia",
     "href": "clases/diapo_01.html#rol-de-la-ia",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "Rol de la IA",
-    "text": "Rol de la IA\n\nIA = capacidad de extraer patrones y predicciones\n\nIntegra datos estructurados y no estructurados (texto, imágenes, audio, video, documentos) y los convierte en información utilizable; arquitecturas empresariales actuales permiten extraer y mapear contenido no estructurado y combinarlo con recuperación + generación (RAG)\nPermite reducir incertidumbre y mejorar la velocidad y calidad de la decisión"
+    "text": "Rol de la IA\n\nIA = capacidad de extraer patrones y predicciones\nIntegra datos estructurados y no estructurados (texto, imágenes, audio, video, documentos) y los convierte en información utilizable; arquitecturas empresariales actuales permiten extraer y mapear contenido no estructurado y combinarlo con recuperación + generación (RAG)\nPermite reducir incertidumbre y mejorar la velocidad y calidad de la decisión"
   },
   {
     "objectID": "clases/diapo_01.html#diferencia-entre-decisiones-intuitivas-vs.-basadas-en-datos.",
@@ -84,6 +84,216 @@
     "text": "Incertidumbre y confianza en la interpretación de resultados.\n\nSe debe tener en cuenta que la incertidumbre siempre va a existir y se debe convivir con eso. Esto no implica que no la interioricemos dentro de nuestra toma de decisiones o que no la intentemos medir.\nUna buena técnica es generar ejercicios que añaden incertidumbre a los modelos calculados.\n\nEn el análisis de datos, la incertidumbre no se elimina, se cuantifica. Por eso usamos intervalos de confianza, desviaciones estándar o bandas de predicción. Estas herramientas nos permiten comunicar no solo qué esperamos que ocurra, sino cuán seguros estamos de ello.\nLa clave no es eliminar la incertidumbre, sino tomar decisiones que sean robustas frente a ella. En un entorno data-driven, la confianza no proviene de la certeza, sino de la capacidad de medir y comunicar el riesgo asociado a cada decisión."
   },
   {
+    "objectID": "clases/diapositiva_01_202605.html#contexto-actual",
+    "href": "clases/diapositiva_01_202605.html#contexto-actual",
+    "title": "Fundamentos de Datos para la IA",
+    "section": "Contexto actual",
+    "text": "Contexto actual\n\nSe generan más de 328 millones de TB de datos diariamente (Statista, 2023).\nSolo ~30% de las empresas se consideran realmente data-driven (McKinsey, 2023).\nEl cuello de botella no es la IA — es la calidad y disponibilidad del dato."
+  },
+  {
+    "objectID": "clases/diapositiva_01_202605.html#la-pregunta-clave",
+    "href": "clases/diapositiva_01_202605.html#la-pregunta-clave",
+    "title": "Fundamentos de Datos para la IA",
+    "section": "La pregunta clave",
+    "text": "La pregunta clave\n\nNo es “¿tenemos datos?”\nEs “¿tenemos los datos correctos, limpios y listos para alimentar nuestros modelos?”"
+  },
+  {
+    "objectID": "clases/diapositiva_01_202605.html#tipos-de-datos-para-ia",
+    "href": "clases/diapositiva_01_202605.html#tipos-de-datos-para-ia",
+    "title": "Fundamentos de Datos para la IA",
+    "section": "Tipos de datos para IA",
+    "text": "Tipos de datos para IA\n\n\n\n\n\n\n\n\n\n\nTipo\nDescripción\nEjemplos\nDesafíos principales\n\n\n\n\nEstructurado\nTablas con esquema fijo\nTransacciones, CRM, ERP\nIntegración entre sistemas\n\n\nSemi-estructurado\nFormato flexible\nJSON, logs, XML, emails\nParsing y normalización\n\n\nNo estructurado\nSin esquema fijo\nTexto, imágenes, audio, video\nRequiere modelos especializados"
+  },
+  {
+    "objectID": "clases/diapositiva_01_202605.html#por-qué-importa-el-tipo-de-dato",
+    "href": "clases/diapositiva_01_202605.html#por-qué-importa-el-tipo-de-dato",
+    "title": "Fundamentos de Datos para la IA",
+    "section": "¿Por qué importa el tipo de dato?",
+    "text": "¿Por qué importa el tipo de dato?\n\nCada tipo requiere un pipeline distinto\nImagen → Computer Vision → OCR → LLM → respuesta\nLa arquitectura del sistema de IA depende del dato de entrada\nMezclar tipos de datos es hoy la norma, no la excepción (multimodal AI)"
+  },
+  {
+    "objectID": "clases/diapositiva_01_202605.html#garbage-in-garbage-out",
+    "href": "clases/diapositiva_01_202605.html#garbage-in-garbage-out",
+    "title": "Fundamentos de Datos para la IA",
+    "section": "“Garbage in, garbage out”",
+    "text": "“Garbage in, garbage out”\n\nNingún algoritmo corrige datos defectuosos\nUn modelo entrenado con datos sesgados o incompletos amplifica esos problemas a escala\nLa calidad del dato no es un problema de IT — es una responsabilidad de negocio"
+  },
+  {
+    "objectID": "clases/diapositiva_01_202605.html#dimensiones-de-la-calidad-de-datos",
+    "href": "clases/diapositiva_01_202605.html#dimensiones-de-la-calidad-de-datos",
+    "title": "Fundamentos de Datos para la IA",
+    "section": "Dimensiones de la calidad de datos",
+    "text": "Dimensiones de la calidad de datos\n\n\n\n\n\n\n\n\n\nDimensión\nDescripción\nEjemplo\n\n\n\n\nCompletitud\nAusencia de valores faltantes\n% de clientes sin RUT o correo\n\n\nExactitud\nConcordancia con la realidad\nDirección o edad correcta\n\n\nConsistencia\nCoherencia entre sistemas\nFecha nacimiento vs. fecha de afiliación\n\n\nActualidad\nVigencia de la información\nCliente activo con contacto obsoleto\n\n\nUnicidad\nSin registros duplicados\nMismo cliente en dos sistemas distintos"
+  },
+  {
+    "objectID": "clases/diapositiva_01_202605.html#riesgos-de-decisiones-con-datos-de-mala-calidad",
+    "href": "clases/diapositiva_01_202605.html#riesgos-de-decisiones-con-datos-de-mala-calidad",
+    "title": "Fundamentos de Datos para la IA",
+    "section": "Riesgos de decisiones con datos de mala calidad",
+    "text": "Riesgos de decisiones con datos de mala calidad\n\nOperativos: reprocesos, errores en informes, baja productividad\nFinancieros: decisiones de inversión o riesgo erradas\nReputacionales: pérdida de confianza del cliente o del regulador\nAnalíticos: modelos con sesgos o predicciones inconsistentes"
+  },
+  {
+    "objectID": "clases/diapositiva_01_202605.html#gobernanza-de-datos",
+    "href": "clases/diapositiva_01_202605.html#gobernanza-de-datos",
+    "title": "Fundamentos de Datos para la IA",
+    "section": "Gobernanza de datos",
+    "text": "Gobernanza de datos\nConjunto de políticas, roles y procesos que aseguran el uso responsable y confiable de los datos.\n\nRoles claros: propietario, custodio, analista, consumidor\nCatálogo de datos: inventario de qué dato existe, dónde y qué significa\nLinaje de datos: rastrear de dónde viene un dato y cómo fue transformado\nControl de acceso: quién puede leer, modificar o eliminar cada dato"
+  },
+  {
+    "objectID": "clases/diapositiva_01_202605.html#ética-y-compliance-en-el-uso-de-datos",
+    "href": "clases/diapositiva_01_202605.html#ética-y-compliance-en-el-uso-de-datos",
+    "title": "Fundamentos de Datos para la IA",
+    "section": "Ética y compliance en el uso de datos",
+    "text": "Ética y compliance en el uso de datos\n\nResponsabilidad: los datos son un activo compartido con impacto real en personas\nPrivacidad: cumplir normativas — Ley 19.628 (Chile), GDPR (Europa)\nTransparencia: explicar decisiones automatizadas\nEquidad: auditar y corregir sesgos en modelos de IA"
+  },
+  {
+    "objectID": "clases/diapositiva_01_202605.html#actividad-1-calidad-de-datos-10-min",
+    "href": "clases/diapositiva_01_202605.html#actividad-1-calidad-de-datos-10-min",
+    "title": "Fundamentos de Datos para la IA",
+    "section": " Actividad 1 — Calidad de datos (10 min)",
+    "text": "Actividad 1 — Calidad de datos (10 min)\n\nEn grupos de 3–4 personas, respondan:\n\n¿Cuál es el mayor problema de calidad de datos que tiene hoy su organización?\n¿Quién es el dueño formal de ese dato?\nSi tuvieran que alimentar un modelo de IA con ese dato, ¿qué pasaría?\n\nUn representante por grupo comparte brevemente con el curso."
+  },
+  {
+    "objectID": "clases/diapositiva_01_202605.html#qué-es-un-pipeline-de-datos",
+    "href": "clases/diapositiva_01_202605.html#qué-es-un-pipeline-de-datos",
+    "title": "Fundamentos de Datos para la IA",
+    "section": "¿Qué es un pipeline de datos?",
+    "text": "¿Qué es un pipeline de datos?\nUna secuencia automatizada de pasos que mueve, transforma y prepara datos para su uso.\n\nAnalogía: línea de producción industrial. Si falla un paso, el producto final es defectuoso — aunque el resto esté perfecto."
+  },
+  {
+    "objectID": "clases/diapositiva_01_202605.html#arquitectura-típica-de-un-pipeline-para-ia",
+    "href": "clases/diapositiva_01_202605.html#arquitectura-típica-de-un-pipeline-para-ia",
+    "title": "Fundamentos de Datos para la IA",
+    "section": "Arquitectura típica de un pipeline para IA",
+    "text": "Arquitectura típica de un pipeline para IA\n┌──────────┐    ┌──────────┐    ┌────────────┐    ┌──────────────┐\n│  Fuentes │───▶│  Ingesta │───▶│Transforma- │───▶│  Validación  │\n│ (CRM, BD,│    │(batch /  │    │  ción y    │    │  de calidad  │\n│ APIs,    │    │streaming)│    │  limpieza  │    │  y esquema   │\n│ archivos)│    └──────────┘    └────────────┘    └──────┬───────┘\n└──────────┘                                             │\n                                                         ▼\n                                               ┌──────────────────┐\n                                               │  Almacenamiento  │\n                                               │ (Data Warehouse, │\n                                               │  Data Lake)      │\n                                               └────────┬─────────┘\n                                                        │\n                                                        ▼\n                                               ┌──────────────────┐    ┌────────┐\n                                               │Feature Engineering│───▶│ Modelo │───▶ Serving\n                                               │  (Feature Store) │    └────────┘\n                                               └──────────────────┘"
+  },
+  {
+    "objectID": "clases/diapositiva_01_202605.html#ingesta-cómo-entra-el-dato-al-pipeline",
+    "href": "clases/diapositiva_01_202605.html#ingesta-cómo-entra-el-dato-al-pipeline",
+    "title": "Fundamentos de Datos para la IA",
+    "section": "Ingesta: cómo entra el dato al pipeline",
+    "text": "Ingesta: cómo entra el dato al pipeline\n\nBatch: procesamiento programado (diario, horario) — ideal para datos históricos\nStreaming: procesamiento en tiempo real — ideal para eventos y alertas\nFuentes comunes: APIs REST, bases de datos, archivos CSV/Parquet, eventos (Kafka, Pub/Sub)"
+  },
+  {
+    "objectID": "clases/diapositiva_01_202605.html#transformación-y-validación",
+    "href": "clases/diapositiva_01_202605.html#transformación-y-validación",
+    "title": "Fundamentos de Datos para la IA",
+    "section": "Transformación y validación",
+    "text": "Transformación y validación\n\nLimpieza: eliminar duplicados, tratar nulos, corregir tipos de dato\nNormalización: escalado, encoding de categorías, manejo de outliers\nValidación de esquema: ¿el dato tiene la estructura esperada?\nValidación de calidad: ¿los rangos son razonables? ¿hay registros faltantes inusuales?\n\nHerramientas: dbt (transformación en SQL), Great Expectations (validación automática)"
+  },
+  {
+    "objectID": "clases/diapositiva_01_202605.html#etl-vs-elt",
+    "href": "clases/diapositiva_01_202605.html#etl-vs-elt",
+    "title": "Fundamentos de Datos para la IA",
+    "section": "ETL vs ELT",
+    "text": "ETL vs ELT\n\n\n\n\n\n\n\n\n\n\nETL\nELT\n\n\n\n\nProceso\nTransforma antes de cargar\nCarga primero, transforma después\n\n\nCuándo usar\nDatos sensibles, sistemas legacy\nCloud data warehouses modernos\n\n\nEjemplo\nPipeline hacia DW on-premise\nBigQuery + dbt\n\n\nVentaja\nControl fino sobre los datos\nEscalabilidad y velocidad\n\n\n\n\nEn contextos de IA con cloud, ELT es hoy el enfoque dominante."
+  },
+  {
+    "objectID": "clases/diapositiva_01_202605.html#feature-engineering-y-feature-stores",
+    "href": "clases/diapositiva_01_202605.html#feature-engineering-y-feature-stores",
+    "title": "Fundamentos de Datos para la IA",
+    "section": "Feature Engineering y Feature Stores",
+    "text": "Feature Engineering y Feature Stores\n\nFeature: variable transformada y lista para alimentar un modelo (ej. “meses desde última compra”)\nProblema: el mismo feature se calcula múltiples veces en distintos equipos, de formas distintas\nFeature Store: repositorio centralizado de features reutilizables y versionadas\n\nGarantiza consistencia entre entrenamiento y producción — uno de los errores más comunes en MLOps.\nEjemplos: Vertex AI Feature Store, Feast (open source)"
+  },
+  {
+    "objectID": "clases/diapositiva_01_202605.html#herramienta-1-apache-airflow",
+    "href": "clases/diapositiva_01_202605.html#herramienta-1-apache-airflow",
+    "title": "Fundamentos de Datos para la IA",
+    "section": "Herramienta 1: Apache Airflow",
+    "text": "Herramienta 1: Apache Airflow\n\nOpen source, ampliamente adoptado en la industria\nDefine flujos como DAGs (grafos acíclicos dirigidos) en Python\nIdeal para: pipelines batch, ETL complejos, procesos periódicos\nVersión managed: Cloud Composer (GCP), MWAA (AWS)\n\nDAG: pipeline_churn_diario\n│\n├── extraer_datos_crm\n├── limpiar_y_transformar\n├── validar_calidad\n├── calcular_features\n└── trigger_entrenamiento_modelo"
+  },
+  {
+    "objectID": "clases/diapositiva_01_202605.html#herramienta-2-vertex-ai-pipelines",
+    "href": "clases/diapositiva_01_202605.html#herramienta-2-vertex-ai-pipelines",
+    "title": "Fundamentos de Datos para la IA",
+    "section": "Herramienta 2: Vertex AI Pipelines",
+    "text": "Herramienta 2: Vertex AI Pipelines\n\nBasado en Kubeflow Pipelines, managed completamente en GCP\nCada componente del pipeline es un contenedor reproducible\nIntegración nativa con BigQuery, Vertex AI Training y Model Registry\nPensado específicamente para ML workflows de extremo a extremo\n\n[Ingest BigQuery] ──▶ [Preprocess] ──▶ [Train Model] ──▶ [Evaluate]\n                                                               │\n                                           ┌───────────────────┤\n                                           ▼                   ▼\n                                    [Deploy to        [Log to Model\n                                     Endpoint]         Registry]"
+  },
+  {
+    "objectID": "clases/diapositiva_01_202605.html#herramienta-3-mlflow",
+    "href": "clases/diapositiva_01_202605.html#herramienta-3-mlflow",
+    "title": "Fundamentos de Datos para la IA",
+    "section": "Herramienta 3: MLflow",
+    "text": "Herramienta 3: MLflow\nOpen source (mantenido por Databricks), multicloud, agnóstico al framework de ML.\n\n\n\n\n\n\n\n\nComponente\nFunción\n\n\n\n\nMLflow Tracking\nRegistra experimentos: parámetros, métricas, artefactos\n\n\nMLflow Projects\nEmpaqueta el código para reproducibilidad\n\n\nMLflow Models\nFormato estándar de modelo (sklearn, PyTorch, etc.)\n\n\nMLflow Registry\nControl de versiones y estado del modelo (Staging / Production)"
+  },
+  {
+    "objectID": "clases/diapositiva_01_202605.html#mlflow-en-la-práctica",
+    "href": "clases/diapositiva_01_202605.html#mlflow-en-la-práctica",
+    "title": "Fundamentos de Datos para la IA",
+    "section": "MLflow en la práctica",
+    "text": "MLflow en la práctica\nExperimento A (LightGBM)          Experimento B (XGBoost)\n  accuracy: 0.82                    accuracy: 0.87  ◀── ganador\n  precision: 0.79                   precision: 0.84\n  AUC: 0.88                         AUC: 0.91\n         │                                 │\n         └──────────────┬──────────────────┘\n                        ▼\n               MLflow Model Registry\n               modelo: churn_predictor\n               versión: v3 → Production\n\nEl registry permite hacer rollback si una nueva versión falla en producción."
+  },
+  {
+    "objectID": "clases/diapositiva_01_202605.html#comparativa-de-herramientas",
+    "href": "clases/diapositiva_01_202605.html#comparativa-de-herramientas",
+    "title": "Fundamentos de Datos para la IA",
+    "section": "Comparativa de herramientas",
+    "text": "Comparativa de herramientas\n\n\n\n\n\n\n\n\n\n\nHerramienta\nFoco principal\nMejor para\n¿Excluyentes?\n\n\n\n\nApache Airflow\nOrquestación de datos\nETL/ELT, workflows batch\nNo\n\n\nVertex AI Pipelines\nML workflows en GCP\nTraining y deployment en nube\nNo\n\n\nMLflow\nTracking y model registry\nExperimentación y governance\nNo\n\n\n\n\n\nEn equipos maduros se usan los tres juntos: Airflow mueve los datos, Vertex entrena el modelo, MLflow registra los experimentos."
+  },
+  {
+    "objectID": "clases/diapositiva_01_202605.html#ejemplo-conceptual-pipeline-de-predicción-de-churn",
+    "href": "clases/diapositiva_01_202605.html#ejemplo-conceptual-pipeline-de-predicción-de-churn",
+    "title": "Fundamentos de Datos para la IA",
+    "section": "Ejemplo conceptual: pipeline de predicción de churn",
+    "text": "Ejemplo conceptual: pipeline de predicción de churn\n\n\n\n\n\n\n\n\n\nPaso\nAcción\nHerramienta\n\n\n\n\n1. Ingesta\nExtraer datos del CRM diariamente\nAirflow + BigQuery\n\n\n2. Transformación\nLimpiar, normalizar, tratar nulos\ndbt\n\n\n3. Validación\nVerificar rangos y completitud\nGreat Expectations\n\n\n4. Features\nCalcular recencia, frecuencia, saldo promedio\nVertex AI Feature Store\n\n\n5. Entrenamiento\nEntrenar modelo con los features\nVertex AI Pipelines\n\n\n6. Tracking\nRegistrar métricas y artefactos\nMLflow\n\n\n7. Deployment\nPublicar modelo en endpoint REST\nVertex AI Endpoints\n\n\n8. Acción\nAlertar a ejecutivo de cuenta\nAplicación de negocio"
+  },
+  {
+    "objectID": "clases/diapositiva_01_202605.html#el-problema-del-modelo-en-producción",
+    "href": "clases/diapositiva_01_202605.html#el-problema-del-modelo-en-producción",
+    "title": "Fundamentos de Datos para la IA",
+    "section": "El problema del “modelo en producción”",
+    "text": "El problema del “modelo en producción”\n\nUn modelo que funciona en el notebook no es un producto\nLa brecha entre data science y software engineering es real y costosa\nMLOps: prácticas para llevar ML a producción de forma confiable, repetible y auditable\nAnalogía: DevOps para el ciclo de vida del software, adaptado a modelos de ML"
+  },
+  {
+    "objectID": "clases/diapositiva_01_202605.html#ciclo-de-vida-de-un-modelo-ml",
+    "href": "clases/diapositiva_01_202605.html#ciclo-de-vida-de-un-modelo-ml",
+    "title": "Fundamentos de Datos para la IA",
+    "section": "Ciclo de vida de un modelo ML",
+    "text": "Ciclo de vida de un modelo ML\n  Definición      Datos        Entrenamiento    Evaluación\n  del problema ──▶ & Features ──▶ del modelo ──▶ & Validación\n                                                      │\n                                         ┌────────────┤\n                                         ▼            ▼\n                                    Despliegue    Rechazar /\n                                    en producción  iterar\n                                         │\n                                         ▼\n                                    Monitoreo\n                                         │\n                              ┌──────────┴──────────┐\n                              ▼                     ▼\n                         OK: continuar         Drift detectado:\n                                               Reentrenamiento"
+  },
+  {
+    "objectID": "clases/diapositiva_01_202605.html#data-drift-model-drift-y-concept-drift",
+    "href": "clases/diapositiva_01_202605.html#data-drift-model-drift-y-concept-drift",
+    "title": "Fundamentos de Datos para la IA",
+    "section": "Data Drift, Model Drift y Concept Drift",
+    "text": "Data Drift, Model Drift y Concept Drift\n\n\n\n\n\n\n\n\n\n\nConcepto\nDefinición\nSíntoma\nAcción\n\n\n\n\nData Drift\nCambia la distribución de los datos de entrada\nLas features tienen rangos distintos a los de entrenamiento\nReingesta y reentrenamiento\n\n\nModel Drift\nEl modelo pierde precisión en producción\nLas métricas bajan vs. el baseline\nReentrenamiento o reemplazo\n\n\nConcept Drift\nCambia la relación entre features y target\nEl comportamiento del cliente cambió\nReplantear el modelo\n\n\n\n\nEjemplo real: un modelo de riesgo crediticio entrenado antes de la pandemia sufrió concept drift masivo en 2020."
+  },
+  {
+    "objectID": "clases/diapositiva_01_202605.html#monitoreo-en-producción-tres-niveles",
+    "href": "clases/diapositiva_01_202605.html#monitoreo-en-producción-tres-niveles",
+    "title": "Fundamentos de Datos para la IA",
+    "section": "Monitoreo en producción: tres niveles",
+    "text": "Monitoreo en producción: tres niveles\n\n\n\n\n\n\n\n\n\nNivel\nQué se monitorea\nEjemplo\n\n\n\n\nTécnico\nLatencia, errores, disponibilidad\nEndpoint responde en &lt;200ms\n\n\nModelo\nDistribución de predicciones, drift, performance\nAUC cae de 0.91 a 0.78\n\n\nNegocio\nImpacto real en el KPI objetivo\nTasa de churn efectiva no baja\n\n\n\n\n\nSin monitoreo de los tres niveles, el sistema puede “funcionar” técnicamente mientras falla silenciosamente en el negocio."
+  },
+  {
+    "objectID": "clases/diapositiva_01_202605.html#el-pipeline-completo-visión-integrada",
+    "href": "clases/diapositiva_01_202605.html#el-pipeline-completo-visión-integrada",
+    "title": "Fundamentos de Datos para la IA",
+    "section": "El pipeline completo: visión integrada",
+    "text": "El pipeline completo: visión integrada\nFuentes de datos\n     │\n     ▼\n[Ingesta] ──▶ [Transformación] ──▶ [Validación calidad]\n                                           │\n                                           ▼\n                               [Feature Engineering / Feature Store]\n                                           │\n                                           ▼\n                                    [Entrenamiento]\n                                    (Vertex Pipelines)\n                                           │\n                                           ▼\n                               [Tracking de experimentos]\n                                      (MLflow)\n                                           │\n                                           ▼\n                               [Model Registry → Production]\n                                      (MLflow)\n                                           │\n                                           ▼\n                               [Deployment en endpoint]\n                                           │\n                                           ▼\n                                    [Monitoreo]\n                                    (Técnico / Modelo / Negocio)\n                                           │\n                              ┌────────────┴────────────┐\n                              ▼                         ▼\n                         Continuar                Alerta de drift\n                                                  → Reentrenamiento"
+  },
+  {
+    "objectID": "clases/diapositiva_01_202605.html#actividad-2-diseña-un-pipeline-20-min",
+    "href": "clases/diapositiva_01_202605.html#actividad-2-diseña-un-pipeline-20-min",
+    "title": "Fundamentos de Datos para la IA",
+    "section": " Actividad 2 — Diseña un pipeline (20 min)",
+    "text": "Actividad 2 — Diseña un pipeline (20 min)\n\nEn grupos de 3–4 personas, elijan un proceso de su industria que podría mejorarse con IA.\nDiseñen el pipeline respondiendo:\n\nIngesta: ¿Qué datos necesitan y de dónde vienen? (sistemas, frecuencia, batch o streaming)\nTransformación: ¿Qué limpieza o cálculos son necesarios?\nValidación: ¿Cómo garantizarían la calidad antes de que el dato llegue al modelo?\nMonitoreo: ¿Qué indicaría que el modelo está fallando en producción?\n\nPreparen 3–4 minutos para presentar al curso."
+  },
+  {
+    "objectID": "clases/diapositiva_01_202605.html#checklist-para-líderes",
+    "href": "clases/diapositiva_01_202605.html#checklist-para-líderes",
+    "title": "Fundamentos de Datos para la IA",
+    "section": "Checklist para líderes",
+    "text": "Checklist para líderes\n\n\n ¿Tenemos definido quién es el dueño de cada dato crítico para IA?\n ¿Nuestros pipelines son automatizados o dependemos de procesos manuales?\n ¿Sabemos qué pasa cuando los datos cambian inesperadamente?\n ¿Tenemos visibilidad del desempeño de nuestros modelos en producción?\n ¿Existe un proceso claro para reentrenar modelos cuando sea necesario?\n ¿Auditamos periódicamente los modelos en búsqueda de sesgos o drift?"
+  },
+  {
+    "objectID": "clases/diapositiva_01_202605.html#idea-central",
+    "href": "clases/diapositiva_01_202605.html#idea-central",
+    "title": "Fundamentos de Datos para la IA",
+    "section": "Idea central",
+    "text": "Idea central\n\nLa IA es tan buena como el pipeline que la alimenta.\nUn modelo brillante sobre datos sucios es un modelo inútil."
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
@@ -103,6 +313,328 @@
     "title": "clases",
     "section": "",
     "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#descripción-general",
+    "href": "clases/diapositiva_m1s4_202605.html#descripción-general",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Descripción General",
+    "text": "Descripción General\nEste módulo capacita para comprender el valor estratégico de los datos, identificar riesgos ocultos y tomar decisiones informadas sobre proyectos de IA.\nSin requerir programación, aprenderán a hacer preguntas críticas dentro de sus equipos y a gobernar responsablemente iniciativas de IA."
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#objetivos-de-aprendizaje",
+    "href": "clases/diapositiva_m1s4_202605.html#objetivos-de-aprendizaje",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Objetivos de Aprendizaje",
+    "text": "Objetivos de Aprendizaje\nAl finalizar esta sesión podrán:\n\nEntender por qué los datos son el cimiento crítico de la IA\nIdentificar los 4 enemigos silenciosos de los datos\nReconocer riesgos específicos en sus industrias\nFormular las 5 preguntas clave antes de implementar IA\nDiseñar un proceso básico de auditoría de datos"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#estructura-de-la-sesión",
+    "href": "clases/diapositiva_m1s4_202605.html#estructura-de-la-sesión",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Estructura de la Sesión",
+    "text": "Estructura de la Sesión\n\n\n\n\n\n\n\n\n\nBloque\nDuración\nContenido\n\n\n\n\n1\n50 + 10 min\nEl combustible de la IA: datos como diferenciador\n\n\n2\n50 + 10 min\nLos enemigos silenciosos: sesgos, calidad, leakage\n\n\n3\n50 + 10 min\nGobernanza y toma de decisiones informadas"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#concepto-central-datos-información",
+    "href": "clases/diapositiva_m1s4_202605.html#concepto-central-datos-información",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Concepto Central: Datos ≠ Información",
+    "text": "Concepto Central: Datos ≠ Información\nLo que la mayoría piensa:\n\nIA es magia / inteligencia artificial\nCon suficientes datos, la IA funciona\n\nLa realidad:\n\nIA es estadística + patrones en datos\nCalidad de datos &gt; cantidad de datos\nLos datos son el combustible; el modelo es el motor"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#el-triángulo-de-oro-de-la-ia",
+    "href": "clases/diapositiva_m1s4_202605.html#el-triángulo-de-oro-de-la-ia",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "El Triángulo de Oro de la IA",
+    "text": "El Triángulo de Oro de la IA\n\n\n\n\n\ngraph TD\n    D[\"🎯 DECISIONES&lt;br/&gt;(Output)\"]\n    M[\"⚙️ MODELO&lt;br/&gt;(Algoritmo)&lt;br/&gt;&lt;i&gt;5% del éxito&lt;/i&gt;\"]\n    DA[\"🗄️ DATA&lt;br/&gt;(Combustible)&lt;br/&gt;&lt;i&gt;95% del éxito&lt;/i&gt;\"]\n\n    M --&gt; D\n    DA --&gt; D\n    DA --&gt; M"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#la-fórmula",
+    "href": "clases/diapositiva_m1s4_202605.html#la-fórmula",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "La Fórmula",
+    "text": "La Fórmula\n\n\n\n\n\n\n\n\nEscenario\nResultado\n\n\n\n\nDatos buenos + features relevantes + modelo simple\nÉxito\n\n\nDatos malos + features complicadas + modelo sofisticado\nFracaso\n\n\n\n\n\nPuedes tener el algoritmo más avanzado del mundo. Si los datos son malos, el resultado será malo."
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#caso-netflix-vs-youtube",
+    "href": "clases/diapositiva_m1s4_202605.html#caso-netflix-vs-youtube",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Caso: Netflix vs YouTube",
+    "text": "Caso: Netflix vs YouTube\n\n\n\n\n\n\n\n\n\nAspecto\nNetflix\nYouTube\n\n\n\n\nDatos que tienen\nHistorial, ratings, tiempo visto, contexto (país, horario)\nBillones de vistas, pero datos demográficos limitados\n\n\nCalidad de datos\nEtiquetado claro (5 estrellas, visto completamente)\nRuidoso (clickbait, clicks accidentales)\n\n\nResultado\nRecomendaciones precisas\nRecomendaciones genéricas\n\n\n\n\nLección: Netflix tiene menos datos pero mejor calidad y relevancia."
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#caso-spotify-y-los-datos-contextuales",
+    "href": "clases/diapositiva_m1s4_202605.html#caso-spotify-y-los-datos-contextuales",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Caso: Spotify y los Datos Contextuales",
+    "text": "Caso: Spotify y los Datos Contextuales\nSpotify ganó no por tener más datos, sino por capturar los datos correctos:\n\nQué escuchas a las 6 AM vs las 10 PM\nSi repites una canción\nSi saltas después de 5 segundos\nContexto: gym, trabajo, fiesta\n\nPrimer insight: Éxito en IA = elegir los datos correctos, no acumular todos los datos."
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#la-pregunta-clave-para-líderes",
+    "href": "clases/diapositiva_m1s4_202605.html#la-pregunta-clave-para-líderes",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "La Pregunta Clave para Líderes",
+    "text": "La Pregunta Clave para Líderes\n\n“¿Qué datos tenemos nosotros que nuestros competidores NO tienen?”\n\nEso es tu ventaja competitiva en IA.\nNo es el algoritmo — todos usan los mismos. Es qué datos únicos capturas de tu negocio."
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#actividad-1-diagnóstico-de-datos-10-min",
+    "href": "clases/diapositiva_m1s4_202605.html#actividad-1-diagnóstico-de-datos-10-min",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": " Actividad 1 — Diagnóstico de Datos (10 min)",
+    "text": "Actividad 1 — Diagnóstico de Datos (10 min)\n\nPiensa en tu área/empresa y responde:\n1. ¿Qué datos generamos hoy que nunca capturamos? - Retail: captura punto de venta, pero NO el momento en que el cliente decide NO comprar - HR: captura performance review, pero NO conversaciones 1:1 informales\n2. ¿Qué datos tenemos que podrían revelar algo escondido? - Bancos: historial de transacciones → ¿cuándo alguien está en riesgo financiero? - Logística: rutas → ¿cuándo el costo de entrega será más alto?\n3. ¿Quién en nuestra organización NO está representado en nuestros datos? - ¿Solo clientes que compraron? ¿No los que visitaron y no compraron? - ¿Solo empleados en sede? ¿No remotos?"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#los-4-enemigos",
+    "href": "clases/diapositiva_m1s4_202605.html#los-4-enemigos",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Los 4 Enemigos",
+    "text": "Los 4 Enemigos\n\n\n\n\n\n\n\n\n\nEnemigo\nCausa\nRed Flag\n\n\n\n\nRepresentación\nFalta un grupo demográfico\n“Funciona bien para el cliente típico”\n\n\nHistórico\nDatos reflejan prejuicios del pasado\n“Reflejaría cómo siempre lo hemos hecho”\n\n\nLeakage\nInformación futura en datos de entrenamiento\n“99% de precisión” (sospechosamente alto)\n\n\nCalidad\nDatos incompletos, incorrectos o viejos\n“Nuestros datos están desordenados”"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#enemigo-1-sesgo-de-representación",
+    "href": "clases/diapositiva_m1s4_202605.html#enemigo-1-sesgo-de-representación",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Enemigo #1: Sesgo de Representación",
+    "text": "Enemigo #1: Sesgo de Representación\nDefinición: Tu dataset no representa a toda la población que afectará la IA."
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#caso-real-reconocimiento-facial",
+    "href": "clases/diapositiva_m1s4_202605.html#caso-real-reconocimiento-facial",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Caso Real: Reconocimiento Facial",
+    "text": "Caso Real: Reconocimiento Facial\nProblema descubierto (2018):\n\nGoogle, Amazon, Microsoft: tasa de error del 34% en rostros de mujeres oscuras\nTasa de error del 0.7% en rostros de hombres blancos\n\n¿Por qué? Los modelos se entrenaron mayormente con datos de personas blancas.\n\nImpacto:\n\nPolicía usa algoritmo para identificar sospechosos → falla en comunidades afrodescendientes\nAcceso a edificios por facial → gente con piel oscura queda afuera"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#caso-real-modelos-de-crédito",
+    "href": "clases/diapositiva_m1s4_202605.html#caso-real-modelos-de-crédito",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Caso Real: Modelos de Crédito",
+    "text": "Caso Real: Modelos de Crédito\nProblema:\n\nBanco entrena algoritmo con datos históricos de clientes de clase media-alta\nAlgoritmo rechaza más personas de clase baja, aunque sean buen riesgo crediticio\n\nRazón: no hay suficientes datos de ese grupo en el histórico\n\nImpacto:\n\nDiscriminación indirecta pero efectiva\nMercado perdido (no alcanzas segmentos nuevos)\nRegulatorio: Regulador podría penalizar (CMF)"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#cómo-identificar-el-sesgo-de-representación",
+    "href": "clases/diapositiva_m1s4_202605.html#cómo-identificar-el-sesgo-de-representación",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Cómo Identificar el Sesgo de Representación",
+    "text": "Cómo Identificar el Sesgo de Representación\nRed flags:\n\n“Nuestro modelo funciona bien para el cliente típico”\n“Estos grupos son muy pequeños en nuestros datos”\n“Hay outliers raros que el modelo rechaza”\n\n\nTest simple:\n\nSegmenta tu dataset por: género, edad, geografía, nivel socioeconómico\n¿El modelo funciona bien en todos los segmentos?\nSi no → hay sesgo de representación"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#enemigo-2-sesgo-histórico",
+    "href": "clases/diapositiva_m1s4_202605.html#enemigo-2-sesgo-histórico",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Enemigo #2: Sesgo Histórico",
+    "text": "Enemigo #2: Sesgo Histórico\nDefinición: Entrenas un modelo con datos del pasado que reflejan injusticias del pasado. El modelo las perpetúa."
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#caso-real-amazon-hiring-algorithm-20142018",
+    "href": "clases/diapositiva_m1s4_202605.html#caso-real-amazon-hiring-algorithm-20142018",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Caso Real: Amazon Hiring Algorithm (2014–2018)",
+    "text": "Caso Real: Amazon Hiring Algorithm (2014–2018)\n¿Qué pasó?\n\nAmazon creó un algoritmo para filtrar CVs automáticamente\nLo entrenó con 10 años de contrataciones históricas en tech\nProblema: históricamente contrataban más hombres en tech - Resultado: el algoritmo aprendió a rechazar mujeres\n\n\nDetalles perturbadores:\n\nRechazaba palabras como “women’s chess club”\nRechazaba CVs de egresadas de colegios para mujeres\n\nAmazon mató el proyecto en 2018. No por altruismo: costoso en reputación y legal."
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#caso-real-sistema-de-justicia-criminal",
+    "href": "clases/diapositiva_m1s4_202605.html#caso-real-sistema-de-justicia-criminal",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Caso Real: Sistema de Justicia Criminal",
+    "text": "Caso Real: Sistema de Justicia Criminal\n¿Qué pasó?\n\nPolicía usa el algoritmo COMPAS para predecir reincidencia\nEntrenado con datos históricos de quién fue detenido antes\nProblema: el sistema penal históricamente sobre-arresta a gente negra\nResultado: el algoritmo predice más reincidencia en gente negra (lógica circular)\n\n\nPreguntas sin respuesta:\n\n¿Fue reincidencia… o simplemente los arrestaron otra vez?\n¿El algoritmo predice crimen o predice quién será arrestado?"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#cómo-identificar-el-sesgo-histórico",
+    "href": "clases/diapositiva_m1s4_202605.html#cómo-identificar-el-sesgo-histórico",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Cómo Identificar el Sesgo Histórico",
+    "text": "Cómo Identificar el Sesgo Histórico\nRed flags:\n\n“Nuestro modelo refleja lo que siempre hemos hecho”\n“Usamos datos históricos de evaluaciones / contrataciones / decisiones”\n“El modelo mantiene el status quo”\n\n\nTest:\n\n¿Tus datos vienen de decisiones humanas del pasado?\n¿Esas decisiones eran justas / objetivas?\nSi la respuesta no es un “sí” claro → hay sesgo histórico"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#enemigo-3-data-leakage",
+    "href": "clases/diapositiva_m1s4_202605.html#enemigo-3-data-leakage",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Enemigo #3: Data Leakage",
+    "text": "Enemigo #3: Data Leakage\nDefinición: El modelo usa información que no tendría disponible en producción real. Parece perfecto en pruebas; falla en la realidad."
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#caso-real-predicción-de-fraude",
+    "href": "clases/diapositiva_m1s4_202605.html#caso-real-predicción-de-fraude",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Caso Real: Predicción de Fraude",
+    "text": "Caso Real: Predicción de Fraude\nDatos de entrenamiento incluyen:\n  - Monto de transacción\n  - País\n  - Hora\n  - ¿FUE REPORTADO COMO FRAUDE? ← ✗ ERROR\n\nEl modelo aprende: \"si fue reportado, es fraude\"\nKPI en test: 99% de precisión ✓ (falso)\n\nEn producción:\n  - Cliente realiza transacción\n  - Necesitamos predecir AHORA si es fraude\n  - Pero \"si fue reportado\" solo se sabe DESPUÉS\n  - Resultado: modelo rechaza transacciones legítimas"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#caso-real-predicción-de-mortalidad-hospitalaria",
+    "href": "clases/diapositiva_m1s4_202605.html#caso-real-predicción-de-mortalidad-hospitalaria",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Caso Real: Predicción de Mortalidad Hospitalaria",
+    "text": "Caso Real: Predicción de Mortalidad Hospitalaria\nVariables incluidas:\n  - Edad, síntomas, historial médico\n  - ¿TUVO CUIDADOS INTENSIVOS? ← ✗ ERROR\n\nModelo predice: \"pacientes en ICU mueren más\"\nConclusión: \"invertir menos en ICU reduce muertes\"\n\nRealidad: la ICU es lo que SALVA a pacientes críticos.\nEl modelo confundió causación con correlación."
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#data-leakage-predicción-de-deserción-escolar",
+    "href": "clases/diapositiva_m1s4_202605.html#data-leakage-predicción-de-deserción-escolar",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Data Leakage: Predicción de Deserción Escolar",
+    "text": "Data Leakage: Predicción de Deserción Escolar\nLo que FUNCIONA:\n\nDatos de hace 2 meses: asistencia, notas, engagement\nPredecir: ¿desertor en próximos 3 meses?\n\n\nLo que NO funciona:\n\nIncluir: “¿Se retiró del colegio?” — ¡eso es exactamente lo que predices!\nResultado: 100% de precisión, modelo completamente inútil\n\n\n\nSi el KPI es demasiado bueno (&gt;95%), busca leakage."
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#cómo-detectar-data-leakage",
+    "href": "clases/diapositiva_m1s4_202605.html#cómo-detectar-data-leakage",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Cómo Detectar Data Leakage",
+    "text": "Cómo Detectar Data Leakage\nPregunta clave:\n&gt; “¿Toda la información del modelo estaría disponible en el momento exacto en que necesitamos predecir?”\nRed flags:\n\nKPI de precisión &gt; 99% (sospechosamente perfecto)\nEl outcome (lo que predices) aparece como variable en el modelo\nDatos que solo existen después del evento que predices"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#enemigo-4-calidad-de-datos",
+    "href": "clases/diapositiva_m1s4_202605.html#enemigo-4-calidad-de-datos",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Enemigo #4: Calidad de Datos",
+    "text": "Enemigo #4: Calidad de Datos\nDefinición: Datos incompletos, incorrectos, contradictorios o desactualizados.\n\n\n\n\n\n\n\n\n\nProblema\nEjemplo\nImpacto\n\n\n\n\nIncompletos\n30% de edad faltante en CRM\nEl modelo rechaza registros o asume mal\n\n\nIncorrectos\nCliente registrado 2 veces con edades distintas\nInconsistencia en decisiones\n\n\nDesactualizados\nDirección de cliente de 2015\nMarketing envía a dirección incorrecta\n\n\nContradictorios\n“Estado: activo” pero “fecha baja: 2020”\nConfusión en la lógica de negocio\n\n\nSesgados en entrada\nSolo se registran clientes que compraron\nEl modelo no ve quién NO compra"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#la-realidad-incómoda",
+    "href": "clases/diapositiva_m1s4_202605.html#la-realidad-incómoda",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "La Realidad Incómoda",
+    "text": "La Realidad Incómoda\n\nEl 80% del tiempo en un proyecto de IA es limpieza de datos.\n\nNo es atractivo. No es “IA”. Pero es crítico.\n\nTest simple de calidad:\n\nToma 100 registros aleatorios\nValídalos manualmente: ¿son correctos?\nSi &lt; 95% correcto → hay problema de calidad"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#resumen-los-4-enemigos",
+    "href": "clases/diapositiva_m1s4_202605.html#resumen-los-4-enemigos",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Resumen: Los 4 Enemigos",
+    "text": "Resumen: Los 4 Enemigos\n\n\n\n\n\n\n\n\n\n\nEnemigo\nCausa\nImpacto\nRed Flag\n\n\n\n\nRepresentación\nFalta un grupo demográfico\nModelo falla para ese grupo\n“Funciona bien para el cliente típico”\n\n\nHistórico\nDatos reflejan prejuicios del pasado\nPerpetúa injusticia a escala\n“Refleja cómo siempre lo hicimos”\n\n\nLeakage\nInformación futura en entrenamiento\nKPI falso; falla en producción\n“99% de precisión”\n\n\nCalidad\nDatos incompletos, incorrectos o viejos\nDecisiones inconsistentes\n“Nuestros datos están desordenados”"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#actividad-2-diagnóstico-de-riesgos-10-min",
+    "href": "clases/diapositiva_m1s4_202605.html#actividad-2-diagnóstico-de-riesgos-10-min",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": " Actividad 2 — Diagnóstico de Riesgos (10 min)",
+    "text": "Actividad 2 — Diagnóstico de Riesgos (10 min)\n\nEscenario: tu empresa implementará IA en los próximos 6 meses.\nIdentifica 1–2 riesgos por categoría:\n\nSesgo de Representación: ¿hay grupos sub-representados en tus datos?\n\nEj. Retail: ¿solo tiendas físicas, no web?\n\nSesgo Histórico: ¿tus datos vienen de decisiones humanas del pasado? ¿eran justas?\n\nEj. Hiring: ¿datos de hace 10 años cuando contrataban diferente?\n\nData Leakage: ¿hay información que “solo sabrías después”?\n\nEj. Churn: ¿incluyes si el cliente llamó a cancelar? (¡ya está cancelado!)\n\nCalidad: ¿qué tan limpia está tu data? ¿hay valores faltantes críticos?"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#las-5-preguntas-que-todo-líder-debe-hacer",
+    "href": "clases/diapositiva_m1s4_202605.html#las-5-preguntas-que-todo-líder-debe-hacer",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Las 5 Preguntas que Todo Líder Debe Hacer",
+    "text": "Las 5 Preguntas que Todo Líder Debe Hacer\nAntes de aprobar cualquier proyecto de IA, formula estas preguntas a tu equipo técnico:\n\n¿Quién está representado en estos datos?\n¿Estos datos reflejan decisiones justas del pasado?\n¿Hay información aquí que no tendríamos al momento de decidir?\n¿Qué tan limpia y confiable es esta data?\n¿Cómo sabemos si el modelo falla? ¿Quién lo vigila?"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#pregunta-1-quién-está-representado",
+    "href": "clases/diapositiva_m1s4_202605.html#pregunta-1-quién-está-representado",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Pregunta 1: ¿Quién está representado?",
+    "text": "Pregunta 1: ¿Quién está representado?\nPor qué: identificar sesgos de representación.\n\nCómo preguntar: - “¿Todos nuestros clientes / empleados están en estos datos?” - “¿Hay grupos que falten? ¿Qué pasará con ellos?”\nSeñales de respuesta: -  “80% de nuestros clientes activos, distribuidos así…” -  “Suficientes datos” -  “No es importante”\nAcción si hay riesgo: - Recolectar datos del grupo faltante - Limitar el scope: “este modelo es solo para clientes premium” - Monitorear sesgo por segmento"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#pregunta-2-los-históricos-fueron-justos",
+    "href": "clases/diapositiva_m1s4_202605.html#pregunta-2-los-históricos-fueron-justos",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Pregunta 2: ¿Los históricos fueron justos?",
+    "text": "Pregunta 2: ¿Los históricos fueron justos?\nPor qué: identificar sesgo histórico que perpetúa injusticia.\n\nCómo preguntar: - “¿De dónde vienen estos datos históricos?” - “¿Las decisiones del pasado fueron justas? ¿O reflejan cómo discriminábamos?”\nSeñales de respuesta: -  “Datos de decisiones que auditamos y validamos” -  “Datos de cómo siempre lo hemos hecho” -  “Asumimos que el histórico es objetivo”\nAcción si hay riesgo: - Auditar las decisiones históricas - Limpiar datos discriminatorios - Limitar el impacto: recomendación (no decisión automática)"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#pregunta-3-hay-data-leakage",
+    "href": "clases/diapositiva_m1s4_202605.html#pregunta-3-hay-data-leakage",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Pregunta 3: ¿Hay data leakage?",
+    "text": "Pregunta 3: ¿Hay data leakage?\nPor qué: detectar información futura infiltrada en el entrenamiento.\n\nCómo preguntar: - “¿Cuándo predecimos esto exactamente?” - “¿Toda esta información estaría disponible EN ESE MOMENTO?”\nEjemplo de conversación:\nTú: “¿Incluyen la variable ‘fue reportado como fraude’ en entrenamiento?”\nTécnico: “Sí.”\nTú: “¿En producción, cuando necesitamos predecir, ya sabremos eso?”\nTécnico: “Ah… no. Eso se sabe después.”\nTú: “Saca esa variable. El modelo está truqueado.”"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#pregunta-4-qué-tan-limpia-es-la-data",
+    "href": "clases/diapositiva_m1s4_202605.html#pregunta-4-qué-tan-limpia-es-la-data",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Pregunta 4: ¿Qué tan limpia es la data?",
+    "text": "Pregunta 4: ¿Qué tan limpia es la data?\nPor qué: calidad de datos = confiabilidad de las decisiones.\n\nCómo preguntar: - “¿Cuánto tiempo se invirtió en limpieza?” - “¿Qué porcentaje está incompleto? ¿Qué tan actualizado está?”\nSeñales de respuesta: -  “80% del tiempo fue limpieza. Datos 95%+ correctos. Revisión mensual.” -  “Usamos datos como están. Probablemente esté bien.”\nBenchmark:\n\n\n\nProyecto\n% tiempo en limpieza\n\n\n\n\nPequeño\n~50%\n\n\nGrande\n~80%\n\n\nSospechoso\n&lt;30%"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#pregunta-5-quién-vigila-el-modelo",
+    "href": "clases/diapositiva_m1s4_202605.html#pregunta-5-quién-vigila-el-modelo",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Pregunta 5: ¿Quién vigila el modelo?",
+    "text": "Pregunta 5: ¿Quién vigila el modelo?\nPor qué: datos y modelos cambian; el sesgo puede aparecer con el tiempo.\n\nCómo preguntar: - “¿Cómo monitorean el desempeño en el mundo real?” - “¿Quién es responsable si falla?” - “¿Qué pasaría si el modelo empieza a favorecer a un grupo?”\nSeñales de respuesta: -  “Dashboard mensual. Métricas por segmento demográfico. Alertas automáticas.” -  “Asumimos que funciona igual que en el test.” -  “No lo hemos pensado.”\nAcción si hay riesgo: - Establecer SLAs y alertas - Plan de rollback (cómo parar rápido si falla) - Auditoría trimestral"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#cuadro-de-decisión-apruebo-este-proyecto",
+    "href": "clases/diapositiva_m1s4_202605.html#cuadro-de-decisión-apruebo-este-proyecto",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Cuadro de Decisión: ¿Apruebo Este Proyecto?",
+    "text": "Cuadro de Decisión: ¿Apruebo Este Proyecto?\n\n\n\n\n\n\n\n\n\n\nPregunta\nSí\nNo\nCon riesgo\n\n\n\n\n¿Todos los grupos están representados?\n Adelante\n No aprobar\n Limitar scope\n\n\n¿Datos históricos fueron justos?\n Adelante\n No aprobar\n Auditar y limpiar\n\n\n¿Sin data leakage?\n Adelante\n No aprobar\n Remover variables\n\n\n¿Datos &gt;95% limpios?\n Adelante\n No aprobar\n Invertir en limpieza\n\n\n¿Hay monitoreo?\n Adelante\n No aprobar\n Implementar primero\n\n\n\nCriterio de aprobación: al menos 4/5 deben ser “Sí” (o “Con riesgo” + plan concreto)."
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#el-rol-del-líder-en-gobernanza-de-datos",
+    "href": "clases/diapositiva_m1s4_202605.html#el-rol-del-líder-en-gobernanza-de-datos",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "El Rol del Líder en Gobernanza de Datos",
+    "text": "El Rol del Líder en Gobernanza de Datos\nNo tienes que ser técnico. Pero tienes que:\n\nHacer preguntas incómodas — sin miedo a parecer ignorante\nEntender los riesgos — sesgos, leakage, calidad\nEstablecer estándares — auditoría, monitoreo, responsabilidad\nActuar si hay problemas — parar, revisar, remediar\n\n\nSi un modelo falla y afecta a clientes o empleados, tú eres responsable."
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#actividad-3-simulación-aprobación-de-proyecto-10-min",
+    "href": "clases/diapositiva_m1s4_202605.html#actividad-3-simulación-aprobación-de-proyecto-10-min",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": " Actividad 3 — Simulación: “Aprobación de Proyecto” (10 min)",
+    "text": "Actividad 3 — Simulación: “Aprobación de Proyecto” (10 min)\n\nElige uno de estos proyectos y formula las 5 preguntas. Luego decide: ¿Aprobado? ¿Con riesgos? ¿Rechazado?\n\n\n\n\n\n\n\n\n\nOpción\nPropuesta\nDatos\nBeneficio esperado\n\n\n\n\nA: Fintech\nCréditos automáticos\n10 años de otorgamientos + morosidad\nAhorrar 2 horas por solicitud\n\n\nB: Retail\nRecomendador personalizado\nHistorial de compras online\n+15% en ticket promedio\n\n\nC: HR\nIdentificar candidatos de alto potencial\nCVs, desempeño, evaluaciones históricas\nReducir turnover\n\n\nD: Manufactura\nMantenimiento predictivo\nSensores + histórico de fallas\nReducir downtime 40%\n\n\n\nEjemplo: “¿Los datos incluyen todos los estratos socioeconómicos? → No solo clase media-alta → Sesgo de representación → Aprobado CON riesgo: necesitamos datos más amplios + monitoreo por estrato.”"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#los-3-pilares-de-una-gobernanza-responsable",
+    "href": "clases/diapositiva_m1s4_202605.html#los-3-pilares-de-una-gobernanza-responsable",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Los 3 Pilares de una Gobernanza Responsable",
+    "text": "Los 3 Pilares de una Gobernanza Responsable\nPilar 1 — Transparencia - ¿De dónde vienen los datos? - ¿Quién está representado? - ¿Qué decisiones se tomaron históricamente?\nPilar 2 — Validación - ¿Datos están limpios? - ¿Hay sesgos detectables? - ¿El modelo funciona igual para todos los grupos?\nPilar 3 — Monitoreo - ¿Vigilamos el modelo en producción? - ¿Detectamos cambios o degradación? - ¿Tenemos plan de rollback?"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#red-flags-cuándo-desconfiar",
+    "href": "clases/diapositiva_m1s4_202605.html#red-flags-cuándo-desconfiar",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Red Flags: Cuándo Desconfiar",
+    "text": "Red Flags: Cuándo Desconfiar\n\n\n\n\n\n\n\n\nFrase\nRed Flag\nAcción\n\n\n\n\n“Los datos están limpios” (sin explicar cómo)\nFalta transparencia\nPide detalles del proceso\n\n\n“El modelo funciona con 99% de precisión”\nData leakage posible\nValida las variables\n\n\n“Estos grupos son muy pequeños, no importa”\nSesgo aceptado\nCuestiona y exige representación\n\n\n“Nuestro histórico es objetivo” (sin auditarlo)\nSesgo histórico oculto\nPide auditoría de decisiones\n\n\n“No sabemos qué vigilar en producción”\nFalta de gobernanza\nExige plan antes de aprobar\n\n\n“Solo el equipo técnico entiende esto”\nOpacidad deliberada\nDemanda explicaciones claras"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#red-flags-cuándo-desconfiar-1",
+    "href": "clases/diapositiva_m1s4_202605.html#red-flags-cuándo-desconfiar-1",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Red Flags: Cuándo Desconfiar",
+    "text": "Red Flags: Cuándo Desconfiar\n\n\n\n\n\n\n\n\nFrase\nRed Flag\nAcción\n\n\n\n\n“Nuestro histórico es objetivo” (sin auditarlo)\nSesgo histórico oculto\nPide auditoría de decisiones\n\n\n“No sabemos qué vigilar en producción”\nFalta de gobernanza\nExige plan antes de aprobar\n\n\n“Solo el equipo técnico entiende esto”\nOpacidad deliberada\nDemanda explicaciones claras"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#checklist-para-líderes-antes-de-aprobar",
+    "href": "clases/diapositiva_m1s4_202605.html#checklist-para-líderes-antes-de-aprobar",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Checklist para Líderes: Antes de Aprobar",
+    "text": "Checklist para Líderes: Antes de Aprobar\n□ ¿Representación de datos? ¿Hay grupos sub-representados?\n□ ¿Datos históricos validados como justos / objetivos?\n□ ¿Variables sin data leakage?\n□ ¿Datos &gt;95% limpios? ¿Quién verifica?\n□ ¿Plan de monitoreo y alertas?\n□ ¿Responsabilidades claras (quién es accountable si falla)?\n□ ¿Proceso de rollback si falla?\n□ ¿Testeado con grupos minoritarios?\n□ ¿Documentación clara del dataset?\n□ ¿Auditoría independiente (si el impacto es alto)?"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#checklist-de-monitoreo-mensual",
+    "href": "clases/diapositiva_m1s4_202605.html#checklist-de-monitoreo-mensual",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Checklist de Monitoreo Mensual",
+    "text": "Checklist de Monitoreo Mensual\n□ ¿El modelo sigue funcionando igual que hace 30 días?\n□ ¿Hay cambios en el desempeño por segmento?\n□ ¿Hay alertas de anomalías activas?\n□ ¿Se actualizó la data? ¿Cómo impactó?\n□ ¿Hay feedback de usuarios sobre errores o sesgos?\n□ ¿Necesitamos reentrenar?"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#cierre-la-responsabilidad-del-líder",
+    "href": "clases/diapositiva_m1s4_202605.html#cierre-la-responsabilidad-del-líder",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Cierre: La Responsabilidad del Líder",
+    "text": "Cierre: La Responsabilidad del Líder\n\n“Datos es poder. El poder requiere responsabilidad.”\n\nNo necesitas ser Data Scientist para liderar con integridad. Necesitas:\n\nCuriosidad — hacer preguntas\nEscepticismo sano — dudar de resultados perfectos\nEmpatía — pensar en quién se ve afectado\nCoraje — parar un proyecto si tiene riesgo\n\nEl 80% de los fracasos en IA no son por tecnología. Son por datos malos, sesgos ocultos y líderes que no hicieron preguntas."
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#glosario-para-líderes",
+    "href": "clases/diapositiva_m1s4_202605.html#glosario-para-líderes",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Glosario para Líderes",
+    "text": "Glosario para Líderes\n\n\n\n\n\n\n\nTérmino\nDefinición simple\n\n\n\n\nDataset\nTabla con filas (ejemplos) y columnas (datos)\n\n\nSesgo\nEl modelo favorece o rechaza a un grupo sin razón válida\n\n\nData Leakage\nInformación futura “filtrada” en datos de entrenamiento\n\n\nOverfitting\nModelo que memoriza en lugar de aprender patrones generalizables\n\n\nFeature\nUna columna de datos: edad, ubicación, historial de compras\n\n\nEntrenamiento\nProceso donde el modelo aprende patrones desde los datos"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#glosario-para-líderes-1",
+    "href": "clases/diapositiva_m1s4_202605.html#glosario-para-líderes-1",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Glosario para Líderes",
+    "text": "Glosario para Líderes\n\n\n\n\n\n\n\nTérmino\nDefinición simple\n\n\n\n\nValidación\nTestear el modelo en datos nuevos (no usados en entrenamiento)\n\n\nProducción\nEl modelo en uso real, haciendo predicciones\n\n\nKPI\nMétrica de desempeño (ej. “precisión 95%”)\n\n\nMonitoreo\nVigilar que el modelo siga funcionando correctamente"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#lecturas-recomendadas",
+    "href": "clases/diapositiva_m1s4_202605.html#lecturas-recomendadas",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Lecturas Recomendadas",
+    "text": "Lecturas Recomendadas\n\nWeapons of Math Destruction — Cathy O’Neil (accesible, crítico)\nFairness and Machine Learning — Barocas, Hardt & Narayanan (más técnico pero abordable)\n\n\nCasos de estudio:\n\nAmazon Hiring Algorithm (2018) — sesgo histórico en contratación\nCOMPAS (justicia criminal) — sesgo histórico en sistema penal\nGender Shades — Buolamwini & Gebru (MIT, 2018) — sesgo de representación en reconocimiento facial"
   },
   {
     "objectID": "clases/diapo_02.html#por-qué-importa-la-calidad-de-los-datos",
