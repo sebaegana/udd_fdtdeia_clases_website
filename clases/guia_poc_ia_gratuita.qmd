@@ -1,0 +1,257 @@
+---
+title: "Cómo desarrollar una POC de IA"
+subtitle: "Metodología y herramientas gratuitas"
+author: "Sebastián Egaña Santibáñez"
+institution: 'Universidad del Desarrollo'
+lang: es
+date: today
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-title: "Contenidos"
+    theme: cosmo
+    self-contained: true
+    number-sections: true
+    logo: "Imagen1.png"
+    footer: "© Sebastián Egaña Santibáñez"
+  pdf:
+    toc: true
+    papersize: a4
+    geometry: margin=1in
+    number-sections: true
+---
+
+# ¿Qué es una POC y qué no es?
+
+Una **Prueba de Concepto** (POC, por sus siglas en inglés) es un ejercicio acotado cuyo único objetivo es responder una pregunta: *¿esto es factible?*
+
+No es un producto. No está pensada para escalar. No tiene que ser robusta ni bonita. Su valor radica en **reducir la incertidumbre técnica o de negocio al menor costo posible**.
+
+## Diferencias clave
+
+|                        | POC              | MVP              | Producción       |
+|------------------------|------------------|------------------|------------------|
+| **Objetivo**           | ¿Es posible?     | ¿Hay valor real? | Escalar y operar |
+| **Audiencia**          | Equipo interno   | Usuarios reales  | Todos            |
+| **Calidad del código** | Mínima           | Media            | Alta             |
+| **Duración típica**    | Días a 2 semanas | Semanas a meses  | Continuo         |
+| **Éxito**              | Aprendizaje      | Adopción         | KPIs de negocio  |
+
+::: callout-important
+Una POC que "falla" técnicamente puede ser un éxito de proyecto: descartó una dirección costosa a tiempo.
+:::
+
+------------------------------------------------------------------------
+
+# Las 4 etapas de una POC de IA
+
+Una POC de IA bien ejecutada recorre cuatro etapas en secuencia. Saltarse alguna es la causa más común de POCs que no llegan a ningún lado.
+
+```{mermaid}
+flowchart LR
+    A[1. Problema] --> B[2. Datos]
+    B --> C[3. Modelo]
+    C --> D[4. Demo]
+    D --> E{¿Continuar?}
+    E -- Sí --> F[MVP]
+    E -- No --> G[Aprendizaje documentado]
+```
+
+## Etapa 1: Definir el problema
+
+Antes de tocar una herramienta, el equipo debe acordar:
+
+- **¿Qué decisión queremos mejorar?** La IA no es un fin, es un medio.
+- **¿Cuál es la línea base?** ¿Cómo se hace hoy sin IA?
+- **¿Qué resultado mínimo sería suficiente** para justificar seguir adelante?
+
+::: callout-tip
+Un buen enunciado de problema tiene la forma: *"Hoy hacemos X manualmente, lo que toma Y tiempo/costo/errores. Si pudiéramos automatizar/mejorar X, impactaríamos Z".*
+:::
+
+## Etapa 2: Explorar los datos
+
+Los proyectos de IA mueren más por datos que por modelos. En esta etapa se valida:
+
+- ¿Existen los datos necesarios?
+- ¿Están accesibles y en qué formato?
+- ¿Tienen la calidad mínima para el problema?
+- ¿Hay restricciones legales o de privacidad?
+
+No se necesita un pipeline sofisticado. Un análisis exploratorio manual puede responder estas preguntas en horas.
+
+## Etapa 3: Probar el modelo
+
+En una POC el criterio de selección del modelo es **velocidad de iteración**, no performance óptima. Se recomienda:
+
+1.  Empezar con el modelo más simple posible
+2.  Evaluar con una muestra pequeña pero representativa
+3.  Definir una métrica de éxito antes de correr el experimento
+4.  Documentar qué funcionó y qué no
+
+::: callout-note
+Un modelo "suficientemente bueno" que resuelve el problema del negocio es mejor que un modelo perfectamente optimizado que llega tarde.
+:::
+
+## Etapa 4: Construir la demo
+
+La demo no es opcional. Es la forma en que el equipo técnico comunica el valor a quienes toman decisiones.
+
+Una buena demo de POC:
+
+- Muestra el flujo completo de punta a punta
+- Usa datos reales o muy similares a los reales
+- Permite interacción mínima (no solo una captura de pantalla)
+- Es honesta sobre las limitaciones actuales
+
+------------------------------------------------------------------------
+
+# Criterios para elegir herramientas gratuitas
+
+No todas las herramientas gratuitas son iguales. Al evaluar una, considerar:
+
+| Criterio | Preguntas clave |
+|------------------------------------|------------------------------------|
+| **Límites de uso** | ¿Hay cuota de requests, tokens o almacenamiento? ¿Cuándo se acaba? |
+| **Privacidad de datos** | ¿Los datos que subo son usados para entrenar modelos? |
+| **Portabilidad** | ¿Puedo exportar el trabajo si después migro a otra plataforma? |
+| **Curva de aprendizaje** | ¿El equipo puede usarla en horas, no semanas? |
+| **Escalabilidad futura** | ¿Tiene un plan de pago si el proyecto avanza? |
+
+------------------------------------------------------------------------
+
+# Mapa de herramientas gratuitas por categoría
+
+Las herramientas gratuitas útiles para POCs de IA se agrupan en cinco categorías funcionales.
+
+## Entorno de desarrollo
+
+Son los espacios donde se escribe y ejecuta código. Para POCs, lo más valioso es no tener que instalar nada localmente.
+
+**Opciones principales:**
+
+- **Google Colab** — Notebooks con GPU gratuita, integración nativa con Google Drive
+- **Kaggle Notebooks** — Similar a Colab, con acceso a datasets públicos
+- **GitHub Codespaces** (plan free con límite mensual) — Entorno completo basado en VS Code en la nube
+
+## Modelos de lenguaje e IA
+
+Acceso a modelos de fundación sin costo inicial.
+
+**Opciones principales:**
+
+- **APIs con free tier** — La mayoría de los grandes proveedores ofrecen créditos iniciales o un nivel gratuito con límites de uso (Anthropic, Google AI Studio, Groq, Cohere)
+- **Modelos locales** — Herramientas como Ollama permiten correr modelos de código abierto (Llama, Mistral, Gemma) directamente en el computador sin enviar datos a terceros
+- **Hugging Face Inference API** — Acceso gratuito (con límites) a miles de modelos open-source
+
+::: callout-warning
+Revisar siempre los términos de uso del proveedor antes de procesar datos sensibles de la empresa en un servicio gratuito.
+:::
+
+## Datos y almacenamiento
+
+Dónde guardar y acceder a los datos durante la POC.
+
+**Opciones principales:**
+
+- **Google Drive / OneDrive** — Almacenamiento de archivos con integración a notebooks
+- **Kaggle Datasets** — Repositorio de datasets públicos listos para usar
+- **Hugging Face Datasets** — Biblioteca de datasets para tareas de NLP, visión y más
+- **Bases de datos SQLite** — Para datos estructurados sin necesidad de servidor
+
+## Interfaz y demo
+
+Herramientas para construir una interfaz mínima que permita mostrar la POC sin desarrollo frontend.
+
+**Opciones principales:**
+
+- **Gradio** — Crear interfaces web interactivas con pocas líneas de Python; desplegable directamente desde Colab
+- **Streamlit** — Apps web de datos con componentes preconstruidos; plan gratuito en Streamlit Cloud
+- **Chainlit** — Especializado en interfaces de chat para aplicaciones con LLMs
+
+## Gestión del experimento
+
+Para no perder el hilo de qué se probó y qué resultó.
+
+**Opciones principales:**
+
+- **MLflow** (local) — Registro de experimentos, métricas y artefactos
+- **Weights & Biases** (plan free) — Seguimiento de experimentos con visualizaciones
+- **Notion / Google Docs** — Para POCs simples, una tabla de experimentos en un documento es suficiente
+
+------------------------------------------------------------------------
+
+# Un ejemplo ilustrativo
+
+Para hacer concreto el framework anterior, se describe brevemente cómo luciría una POC típica sin entrar en implementación.
+
+**Escenario:** Una empresa quiere saber si es posible clasificar automáticamente los tickets de soporte al cliente por urgencia.
+
+| Etapa | Acción | Herramienta posible |
+|------------------------|------------------------|------------------------|
+| Problema | Definir qué significa "urgente" y cuál es la línea base actual | Reunión + documento |
+| Datos | Exportar 500 tickets históricos ya clasificados manualmente | Google Sheets |
+| Modelo | Probar un modelo de lenguaje con few-shot prompting | Google AI Studio (free) |
+| Demo | Interfaz donde el agente de soporte pega un ticket y recibe la clasificación | Gradio en Colab |
+
+El equipo podría completar este ciclo en **2 a 3 días** antes de decidir si vale la pena invertir en un sistema más robusto.
+
+------------------------------------------------------------------------
+
+# Cómo evaluar si la POC fue exitosa
+
+Una POC no se evalúa igual que un sistema en producción. Los criterios son:
+
+## Lo que sí importa
+
+- **¿Respondió la pregunta de factibilidad?** Sí o No son ambos éxitos.
+- **¿El equipo aprendió algo accionable?** ¿Qué haría diferente en el siguiente intento?
+- **¿La demo convenció a los stakeholders** de que vale (o no vale) la pena seguir?
+
+## Lo que no importa (todavía)
+
+- Performance perfecta del modelo
+- Código limpio y mantenible
+- Escalabilidad a miles de usuarios
+- Integración con sistemas existentes
+
+## Entregables mínimos recomendados
+
+Al terminar una POC, conviene documentar:
+
+1.  **El problema original** y cómo se operacionalizó
+2.  **Los datos usados** y sus limitaciones
+3.  **Los experimentos realizados** y sus resultados
+4.  **La recomendación**: continuar, pivotar o descartar
+5.  **Los supuestos que habría que validar** si se continúa
+
+::: callout-tip
+Un documento de una página con estos cinco puntos vale más que 200 líneas de código sin contexto.
+:::
+
+------------------------------------------------------------------------
+
+# Recursos para comenzar
+
+## Para aprender
+
+- [fast.ai](https://www.fast.ai) — Cursos prácticos de ML y deep learning, gratuitos
+- [Hugging Face Learn](https://huggingface.co/learn) — Tutoriales de NLP y modelos de lenguaje
+- [Google AI for Developers](https://ai.google.dev) — Documentación y ejemplos con Gemini
+
+## Para explorar datasets
+
+- [Kaggle](https://www.kaggle.com/datasets) — Miles de datasets con notebooks asociados
+- [Hugging Face Datasets](https://huggingface.co/datasets) — Datasets listos para tareas de IA
+- [Google Dataset Search](https://datasetsearch.research.google.com) — Buscador de datasets públicos
+
+## Para modelos y APIs
+
+- [Hugging Face Models](https://huggingface.co/models) — Repositorio de modelos open-source
+- [Groq](https://groq.com) — Inferencia rápida y gratuita sobre modelos open-source
+- [Google AI Studio](https://aistudio.google.com) — Acceso gratuito a Gemini con playground interactivo
+
+------------------------------------------------------------------------
+
+*Documento elaborado para el Diplomado en IA para la Transformación Empresarial — Universidad del Desarrollo.*

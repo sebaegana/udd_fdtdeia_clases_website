@@ -485,6 +485,7 @@ Identifica 1–2 riesgos por categoría:
 
 ## Las 5 Preguntas que Todo Líder Debe Hacer
 
+::: tiny
 Antes de aprobar cualquier proyecto de IA, formula estas preguntas a tu equipo técnico:
 
 1.  ¿Quién está representado en estos datos?
@@ -492,14 +493,15 @@ Antes de aprobar cualquier proyecto de IA, formula estas preguntas a tu equipo t
 3.  ¿Hay información aquí que no tendríamos al momento de decidir?
 4.  ¿Qué tan limpia y confiable es esta data?
 5.  ¿Cómo sabemos si el modelo falla? ¿Quién lo vigila?
-
+:::
 ------------------------------------------------------------------------
 
 ## Pregunta 1: ¿Quién está representado?
 
+::: tiny
 **Por qué:** identificar sesgos de representación.
 
-::: smaller
+
 **Cómo preguntar:** - "¿Todos nuestros clientes / empleados están en estos datos?" - "¿Hay grupos que falten? ¿Qué pasará con ellos?"
 
 **Señales de respuesta:** - `r fa("check", fill = "green")` "80% de nuestros clientes activos, distribuidos así..." - `r fa("xmark", fill = "red")` "Suficientes datos" - `r fa("xmark", fill = "red")` "No es importante"
@@ -511,9 +513,10 @@ Antes de aprobar cualquier proyecto de IA, formula estas preguntas a tu equipo t
 
 ## Pregunta 2: ¿Los históricos fueron justos?
 
+::: tiny
 **Por qué:** identificar sesgo histórico que perpetúa injusticia.
 
-::: smaller
+
 **Cómo preguntar:** - "¿De dónde vienen estos datos históricos?" - "¿Las decisiones del pasado fueron justas? ¿O reflejan cómo discriminábamos?"
 
 **Señales de respuesta:** - `r fa("check", fill = "green")` "Datos de decisiones que auditamos y validamos" - `r fa("xmark", fill = "red")` "Datos de cómo siempre lo hemos hecho" - `r fa("xmark", fill = "red")` "Asumimos que el histórico es objetivo"
@@ -525,9 +528,10 @@ Antes de aprobar cualquier proyecto de IA, formula estas preguntas a tu equipo t
 
 ## Pregunta 3: ¿Hay data leakage?
 
+::: tiny
 **Por qué:** detectar información futura infiltrada en el entrenamiento.
 
-::: smaller
+
 **Cómo preguntar:** - "¿Cuándo predecimos esto exactamente?" - "¿Toda esta información estaría disponible EN ESE MOMENTO?"
 
 **Ejemplo de conversación:**
@@ -547,9 +551,9 @@ Antes de aprobar cualquier proyecto de IA, formula estas preguntas a tu equipo t
 
 ## Pregunta 4: ¿Qué tan limpia es la data?
 
+::: tiny
 **Por qué:** calidad de datos = confiabilidad de las decisiones.
 
-::: smaller
 **Cómo preguntar:** - "¿Cuánto tiempo se invirtió en limpieza?" - "¿Qué porcentaje está incompleto? ¿Qué tan actualizado está?"
 
 **Señales de respuesta:** - `r fa("check", fill = "green")` "80% del tiempo fue limpieza. Datos 95%+ correctos. Revisión mensual." - `r fa("xmark", fill = "red")` "Usamos datos como están. Probablemente esté bien."
@@ -567,9 +571,9 @@ Antes de aprobar cualquier proyecto de IA, formula estas preguntas a tu equipo t
 
 ## Pregunta 5: ¿Quién vigila el modelo?
 
+::: tiny
 **Por qué:** datos y modelos cambian; el sesgo puede aparecer con el tiempo.
 
-::: smaller
 **Cómo preguntar:** - "¿Cómo monitorean el desempeño en el mundo real?" - "¿Quién es responsable si falla?" - "¿Qué pasaría si el modelo empieza a favorecer a un grupo?"
 
 **Señales de respuesta:** - `r fa("check", fill = "green")` "Dashboard mensual. Métricas por segmento demográfico. Alertas automáticas." - `r fa("xmark", fill = "red")` "Asumimos que funciona igual que en el test." - `r fa("xmark", fill = "red")` "No lo hemos pensado."
