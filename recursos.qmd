@@ -3,6 +3,10 @@ title: "Recursos"
 format: html
 ---
 
+# Guías
+
+- [Cómo desarrollar una POC de IA: Metodología y herramientas gratuitas](clases/guia_poc_ia_gratuita.html) ([PDF](clases/guia_poc_ia_gratuita.pdf))
+
 # Articles
 
 - McKinsey & Company. (30 de abril de 2024). What is deep learning? Recuperado de

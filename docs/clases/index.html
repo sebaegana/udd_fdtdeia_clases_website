@@ -75,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    const listingTargetEl = window.document.querySelector('#listing-clases-actuales .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
@@ -88,7 +88,35 @@ ul.task-list li input[type="checkbox"] {
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+    window['quarto-listings']['listing-clases-actuales'] = new List('listing-clases-actuales', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-material-anterior .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-file-modified',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-material-anterior'] = new List('listing-material-anterior', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -184,6 +212,7 @@ window.Quarto = {
    
   <ul>
   <li><a href="#clases-del-curso" id="toc-clases-del-curso" class="nav-link active" data-scroll-target="#clases-del-curso">Clases del curso</a></li>
+  <li><a href="#material-anterior" id="toc-material-anterior" class="nav-link" data-scroll-target="#material-anterior">Material anterior</a></li>
   </ul>
 </nav>
     </div>
@@ -211,62 +240,9 @@ window.Quarto = {
 
 <section id="clases-del-curso" class="level1">
 <h1>Clases del curso</h1>
-
-
-
-</section>
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div id="listing-clases-actuales" class="quarto-listing quarto-listing-container-default">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1782014400000" data-listing-file-modified-sort="1779160473265" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="20" data-listing-word-count-sort="3804">
-<div class="body">
-
-</div>
-<div class="metadata">
-<a href="../clases/diapo_01.html" class="no-external">
-<div class="metadata-value listing-listing_title">
-Diapositiva 01
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1782014400000" data-listing-file-modified-sort="1779161886576" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1271">
-<div class="body">
-
-</div>
-<div class="metadata">
-<a href="../clases/diapo_02.html" class="no-external">
-<div class="metadata-value listing-listing_title">
-Diapositiva 01
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1782014400000" data-listing-file-modified-sort="1779076749877" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="24" data-listing-word-count-sort="4721">
-<div class="body">
-
-</div>
-<div class="metadata">
-<a href="../clases/diapositiva_01_202605.html" class="no-external">
-<div class="metadata-value listing-listing_title">
-Diapositiva 01
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1782014400000" data-listing-file-modified-sort="1782011460710" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="18" data-listing-word-count-sort="3454">
-<div class="body">
-
-</div>
-<div class="metadata">
-<a href="../clases/diapositiva_m1s4_202605.html" class="no-external">
-<div class="metadata-value listing-listing_title">
-Módulo 1 – Sesión 4
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1782014400000" data-listing-file-modified-sort="1782097078515" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="19" data-listing-word-count-sort="3624">
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1782014400000" data-listing-file-modified-sort="1782097078515" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="19" data-listing-word-count-sort="3624">
 <div class="body">
 
 </div>
@@ -278,39 +254,107 @@ Módulo 1 – Sesión 4
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-listing-file-modified-sort="1779162072563" data-listing-reading-time-sort="18" data-listing-word-count-sort="3506">
-<div class="body">
-
-</div>
-<div class="metadata">
-<a href="../clases/notebook_01.pdf" class="no-external">
-<div class="metadata-value listing-listing_title">
-Notebook 01
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-listing-file-modified-sort="1760418681747" data-listing-reading-time-sort="1" data-listing-word-count-sort="23">
-<div class="body">
-
-</div>
-<div class="metadata">
-<a href="../clases/clases.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-listing-date-sort="1782014400000" data-listing-file-modified-sort="1782099159010" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1644">
-<div class="body">
-
-</div>
-<div class="metadata">
-<a href="../clases/guia_poc_ia_gratuita.html" class="no-external">
-</a>
-</div>
-</div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</div>
+</section>
+<section id="material-anterior" class="level1">
+<h1>Material anterior</h1>
+<p>Versiones reemplazadas o sesiones previas, mantenidas como referencia.</p>
+<div id="listing-material-anterior" class="quarto-listing quarto-listing-container-table">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+    <select id="listing-material-anterior-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-material-anterior'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+      <option value="" disabled="" selected="" hidden="">Order By</option>
+      <option value="index" data-direction="asc">Default</option>
+      <option value="listing-title-sort" data-direction="asc">
+        Title
+      </option>
+    </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+
+<th>
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
+</th>
+
+<th>
+Modified
+</th>
+
+</tr>
+</thead>
+<tbody class="list">
+
+<tr data-index="0" data-listing-date-sort="1782014400000" data-listing-file-modified-sort="1782011460710" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="18" data-listing-word-count-sort="3454" data-listing-title-sort="Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA" data-listing-filename-sort="diapositiva_m1s4_202605.qmd">
+<td>
+<a href="../clases/diapositiva_m1s4_202605.html" class="title listing-title">Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA</a>
+</td>
+<td>
+<span class="listing-file-modified">6/20/26, 11:11:00 PM</span>
+</td>
+
+</tr>
+
+<tr data-index="1" data-listing-file-modified-sort="1779162072563" data-listing-reading-time-sort="18" data-listing-word-count-sort="3506" data-listing-title-sort="| \includegraphics[width=5cm]{Imagen1.png}
+| Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA" data-listing-filename-sort="notebook_01.qmd">
+<td>
+<a href="../clases/notebook_01.pdf" class="title listing-title">| | Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA</a>
+</td>
+<td>
+<span class="listing-file-modified">5/18/26, 11:41:12 PM</span>
+</td>
+
+</tr>
+
+<tr data-index="2" data-listing-date-sort="1782014400000" data-listing-file-modified-sort="1779161886576" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1271" data-listing-title-sort="Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA" data-listing-filename-sort="diapo_02.qmd">
+<td>
+<a href="../clases/diapo_02.html" class="title listing-title">Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA</a>
+</td>
+<td>
+<span class="listing-file-modified">5/18/26, 11:38:06 PM</span>
+</td>
+
+</tr>
+
+<tr data-index="3" data-listing-date-sort="1782014400000" data-listing-file-modified-sort="1779160473265" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="20" data-listing-word-count-sort="3804" data-listing-title-sort="Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA" data-listing-filename-sort="diapo_01.qmd">
+<td>
+<a href="../clases/diapo_01.html" class="title listing-title">Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA</a>
+</td>
+<td>
+<span class="listing-file-modified">5/18/26, 11:14:33 PM</span>
+</td>
+
+</tr>
+
+<tr data-index="4" data-listing-date-sort="1782014400000" data-listing-file-modified-sort="1779076749877" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="24" data-listing-word-count-sort="4721" data-listing-title-sort="Fundamentos de Datos para la IA" data-listing-filename-sort="diapositiva_01_202605.qmd">
+<td>
+<a href="../clases/diapositiva_01_202605.html" class="title listing-title">Fundamentos de Datos para la IA</a>
+</td>
+<td>
+<span class="listing-file-modified">5/17/26, 11:59:09 PM</span>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

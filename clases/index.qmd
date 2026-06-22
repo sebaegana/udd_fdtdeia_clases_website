@@ -1,10 +1,31 @@
 ---
 title: "Clases"
 listing:
-  contents: "*.qmd"
-  sort: "listing_title"
-  type: default
-  fields: [listing_title]    # ✅ Only show the title
+  - id: clases-actuales
+    contents:
+      - "diapositiva_m1s4_202607.qmd"
+    type: default
+    fields: [listing_title]
+  - id: material-anterior
+    contents:
+      - "diapo_01.qmd"
+      - "diapo_02.qmd"
+      - "diapositiva_01_202605.qmd"
+      - "diapositiva_m1s4_202605.qmd"
+      - "notebook_01.qmd"
+    type: table
+    sort: "file-modified desc"
+    fields: [title, file-modified]
 ---
 
 # Clases del curso
+
+::: {#clases-actuales}
+:::
+
+# Material anterior
+
+Versiones reemplazadas o sesiones previas, mantenidas como referencia.
+
+::: {#material-anterior}
+:::
