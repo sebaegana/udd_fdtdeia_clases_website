@@ -4862,13 +4862,13 @@ El modelo confundió causación con correlación.
 <ol type="1">
 <li>Elijan en grupo uno de los proyectos de la siguiente diapositiva</li>
 <li>Antes de ver la respuesta de la IA: ¿qué red flags ven ustedes? (1 min, en silencio)</li>
-<li>El facilitador ejecuta en vivo (terminal proyectada): <code>auditar &quot;...&quot;</code></li>
+<li>El facilitador pega el prompt (próxima diapositiva) en vivo, en <code>vibe</code> — el CLI oficial de Mistral</li>
 <li>Comparen: ¿la IA detectó lo mismo que ustedes? ¿qué se le pasó?</li>
 </ol>
-<p><strong>¿Quieren probarlo en su propio computador?</strong> El mismo prompt funciona en <a href="https://chat.mistral.ai" class="uri">https://chat.mistral.ai</a> — sin instalar nada ni API key, solo pegando el texto con la descripción de su proyecto.</p>
+<p><strong>¿No tienen <code>vibe</code> instalado?</strong> No hace falta — el mismo prompt se puede escribir a mano en <a href="https://chat.mistral.ai" class="uri">https://chat.mistral.ai</a>, sin instalar nada.</p>
 </div>
 <aside class="notes">
-<p>Preparación previa (no mostrar en pantalla): - Antes de la clase: <code>$env:MISTRAL_API_KEY = &quot;...&quot;</code> y luego <code>. .\clases\scripts\auditar_mistral.ps1</code> - Verificar que <code>auditar &quot;test&quot;</code> responda antes de que lleguen los participantes</p>
+<p>Preparación previa (no mostrar en pantalla): instalar y probar <code>vibe</code> con el prompt de prueba antes de la clase. Backup si <code>vibe</code> falla en vivo: usar <code>auditar_mistral.ps1</code> (<code>. .\clases\scripts\auditar_mistral.ps1</code> y <code>auditar &quot;...&quot;</code>) o directamente chat.mistral.ai.</p>
 <style type="text/css">
 span.MJX_Assistive_MathML {
 position:absolute!important;
@@ -4881,14 +4881,41 @@ overflow: hidden!important;
 display:block!important;
 }</style></aside>
 </section>
+<section id="el-cli-oficial-de-mistral-vibe" class="slide level2">
+<h2>El CLI oficial de Mistral: Vibe</h2>
+<div class="tiny">
+<p><strong>Qué es:</strong> <code>mistral-vibe</code> es el CLI oficial de Mistral — un agente de código para la terminal (similar a Claude Code). Requiere Python 3.12+.</p>
+<p><strong>Instalación (Windows, PowerShell):</strong></p>
+<pre><code>powershell -ExecutionPolicy ByPass -c &quot;irm https://astral.sh/uv/install.ps1 | iex&quot;
+uv tool install mistral-vibe
+vibe</code></pre>
+<p>El primer <code>vibe</code> abre un asistente: inicias sesión con tu cuenta Mistral o pegas tu API key. Una vez abierto, se le pega el prompt de la siguiente diapositiva como si fuera un chat.</p>
+<p><strong><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:orange;overflow:visible;position:relative;"><path d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7 .2 40.1S486.3 480 472 480H40c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8 .2-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24V296c0 13.3 10.7 24 24 24s24-10.7 24-24V184c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z" /></svg> Atención:</strong> Mistral soporta oficialmente solo Unix/macOS/Linux — en Windows puede fallar (hay bugs reportados). Por eso siempre queda la opción de escribir el mismo prompt a mano en chat.mistral.ai.</p>
+</div>
+</section>
+<section id="el-prompt-a-mano-en-vibe-o-en-chat.mistral.ai" class="slide level2">
+<h2>El Prompt (a mano, en <code>vibe</code> o en chat.mistral.ai)</h2>
+<div class="tiny">
+<p>Escriban o peguen esto, reemplazando <code>[PROYECTO]</code> por la descripción del proyecto que eligieron:</p>
+<pre><code>Actúa como auditor de gobernanza de datos para líderes no técnicos.
+Te voy a describir un proyecto de IA. Responde en español, en máximo 6 líneas:
+
+RED FLAGS DETECTADOS: (sesgo de representación, sesgo histórico, data leakage, calidad de datos - solo los que apliquen)
+VEREDICTO: Aprobado / Aprobado con riesgo / Rechazado
+JUSTIFICACIÓN: (una sola línea)
+
+Proyecto: [PROYECTO]</code></pre>
+<p><strong>Mensaje de prueba:</strong> <em>“Banco quiere otorgar créditos automáticos usando 10 años de historial de otorgamientos y morosidad”</em></p>
+</div>
+</section>
 <section id="actividad-3-auditoría-con-ia-mistral-cli-cont." class="slide level2">
 <h2><svg aria-hidden="true" role="img" viewbox="0 0 576 512" style="height:1em;width:1.12em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:steelblue;overflow:visible;position:relative;"><path d="M9.4 86.6C-3.1 74.1-3.1 53.9 9.4 41.4s32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L178.7 256 9.4 86.6zM256 416H544c17.7 0 32 14.3 32 32s-14.3 32-32 32H256c-17.7 0-32-14.3-32-32s14.3-32 32-32z" /></svg> Actividad 3 — Auditoría con IA: Mistral CLI (cont.)</h2>
 <div class="tiny">
 <table class="caption-top">
 <colgroup>
-<col style="width: 17%">
-<col style="width: 41%">
-<col style="width: 41%">
+<col style="width: 23%">
+<col style="width: 38%">
+<col style="width: 38%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -5045,8 +5072,8 @@ display:block!important;
 <h2>Glosario para Líderes</h2>
 <table class="caption-top">
 <colgroup>
-<col style="width: 35%">
-<col style="width: 64%">
+<col style="width: 36%">
+<col style="width: 63%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -5074,8 +5101,8 @@ display:block!important;
 <h2>Glosario para Líderes (cont.)</h2>
 <table class="caption-top">
 <colgroup>
-<col style="width: 35%">
-<col style="width: 64%">
+<col style="width: 36%">
+<col style="width: 63%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -5103,8 +5130,8 @@ display:block!important;
 <h2>Glosario para Líderes</h2>
 <table class="caption-top">
 <colgroup>
-<col style="width: 35%">
-<col style="width: 64%">
+<col style="width: 36%">
+<col style="width: 63%">
 </colgroup>
 <thead>
 <tr class="header">

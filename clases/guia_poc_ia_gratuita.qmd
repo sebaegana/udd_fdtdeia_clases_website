@@ -131,22 +131,35 @@ Son los espacios donde se escribe y ejecuta código. Para POCs, lo más valioso 
 
 **Opciones principales:**
 
-- **Google Colab** — Notebooks con GPU gratuita, integración nativa con Google Drive
+- **Google Colab** — Notebooks con GPU gratuita (no garantizada: la cuota varía según demanda), integración nativa con Google Drive
 - **Kaggle Notebooks** — Similar a Colab, con acceso a datasets públicos
-- **GitHub Codespaces** (plan free con límite mensual) — Entorno completo basado en VS Code en la nube
+- **GitHub Codespaces** (~120 horas-núcleo gratis al mes) — Entorno completo basado en VS Code en la nube
 
 ## Modelos de lenguaje e IA
 
-Acceso a modelos de fundación sin costo inicial.
+Acceso a modelos de fundación sin costo inicial. No todos los "gratis" son iguales: unos son un nivel gratuito permanente con límites de uso, otros son un crédito de prueba que se acaba en días.
 
-**Opciones principales:**
+**Nivel gratuito permanente (rate-limited, sin tarjeta de crédito):**
 
-- **APIs con free tier** — La mayoría de los grandes proveedores ofrecen créditos iniciales o un nivel gratuito con límites de uso (Anthropic, Google AI Studio, Groq, Cohere)
-- **Modelos locales** — Herramientas como Ollama permiten correr modelos de código abierto (Llama, Mistral, Gemma) directamente en el computador sin enviar datos a terceros
-- **Hugging Face Inference API** — Acceso gratuito (con límites) a miles de modelos open-source
+- **Google AI Studio** — Modelos Gemini Flash gratis sin expiración; Gemini Pro ya no tiene nivel gratuito (eliminado en 2026)
+- **Groq** — Acceso gratuito a modelos open-source sobre hardware LPU, pensado para prototipado
+- **Mistral (La Plateforme)** — Nivel "Experiment" gratuito con cuota generosa de tokens/mes; además **chat.mistral.ai (Le Chat)** funciona gratis desde el navegador sin crear cuenta de API
+- **Cohere** — "Trial key" gratuita (no apta para uso comercial/producción, pero suficiente para una POC)
+
+**Solo crédito de prueba (no es un nivel gratuito permanente):**
+
+- **Anthropic (Claude)** — Da créditos de prueba iniciales (no una cuota mensual recurrente) que alcanzan para 1-2 días de pruebas, no para sostener una POC completa
+
+**Modelos locales:**
+
+- **Ollama** — Permite correr modelos de código abierto (Llama, Mistral, Gemma) directamente en el computador sin enviar datos a terceros
+
+**Acceso a modelos open-source alojados:**
+
+- **Hugging Face Inference Providers** — Cada cuenta recibe créditos mensuales gratuitos para miles de modelos open-source; al agotarse, requiere plan de pago
 
 ::: callout-warning
-Revisar siempre los términos de uso del proveedor antes de procesar datos sensibles de la empresa en un servicio gratuito.
+Revisar siempre los términos de uso del proveedor antes de procesar datos sensibles de la empresa en un servicio gratuito — algunos (como el nivel gratuito de Google AI Studio) usan los datos enviados para mejorar sus modelos.
 :::
 
 ## Datos y almacenamiento
@@ -167,7 +180,7 @@ Herramientas para construir una interfaz mínima que permita mostrar la POC sin 
 **Opciones principales:**
 
 - **Gradio** — Crear interfaces web interactivas con pocas líneas de Python; desplegable directamente desde Colab
-- **Streamlit** — Apps web de datos con componentes preconstruidos; plan gratuito en Streamlit Cloud
+- **Streamlit** — Apps web de datos con componentes preconstruidos; plan gratuito en Streamlit Community Cloud
 - **Chainlit** — Especializado en interfaces de chat para aplicaciones con LLMs
 
 ## Gestión del experimento
@@ -251,6 +264,7 @@ Un documento de una página con estos cinco puntos vale más que 200 líneas de 
 - [Hugging Face Models](https://huggingface.co/models) — Repositorio de modelos open-source
 - [Groq](https://groq.com) — Inferencia rápida y gratuita sobre modelos open-source
 - [Google AI Studio](https://aistudio.google.com) — Acceso gratuito a Gemini con playground interactivo
+- [Mistral / chat.mistral.ai](https://chat.mistral.ai) — Chat web gratuito sin API key; [console.mistral.ai](https://console.mistral.ai) para el nivel gratuito de la API
 
 ------------------------------------------------------------------------
 

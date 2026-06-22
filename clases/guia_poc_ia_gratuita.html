@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -5333,7 +5333,7 @@ z-index: 1000;
     <div>
     <div class="quarto-title-meta-heading">Fecha de publicación</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">19 de mayo de 2026</p>
+      <p class="date">21 de junio de 2026</p>
     </div>
   </div>
   
@@ -5552,19 +5552,32 @@ Nota
 <p>Son los espacios donde se escribe y ejecuta código. Para POCs, lo más valioso es no tener que instalar nada localmente.</p>
 <p><strong>Opciones principales:</strong></p>
 <ul>
-<li><strong>Google Colab</strong> — Notebooks con GPU gratuita, integración nativa con Google Drive</li>
+<li><strong>Google Colab</strong> — Notebooks con GPU gratuita (no garantizada: la cuota varía según demanda), integración nativa con Google Drive</li>
 <li><strong>Kaggle Notebooks</strong> — Similar a Colab, con acceso a datasets públicos</li>
-<li><strong>GitHub Codespaces</strong> (plan free con límite mensual) — Entorno completo basado en VS Code en la nube</li>
+<li><strong>GitHub Codespaces</strong> (~120 horas-núcleo gratis al mes) — Entorno completo basado en VS Code en la nube</li>
 </ul>
 </section>
 <section id="modelos-de-lenguaje-e-ia" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="modelos-de-lenguaje-e-ia"><span class="header-section-number">4.2</span> Modelos de lenguaje e IA</h2>
-<p>Acceso a modelos de fundación sin costo inicial.</p>
-<p><strong>Opciones principales:</strong></p>
+<p>Acceso a modelos de fundación sin costo inicial. No todos los “gratis” son iguales: unos son un nivel gratuito permanente con límites de uso, otros son un crédito de prueba que se acaba en días.</p>
+<p><strong>Nivel gratuito permanente (rate-limited, sin tarjeta de crédito):</strong></p>
 <ul>
-<li><strong>APIs con free tier</strong> — La mayoría de los grandes proveedores ofrecen créditos iniciales o un nivel gratuito con límites de uso (Anthropic, Google AI Studio, Groq, Cohere)</li>
-<li><strong>Modelos locales</strong> — Herramientas como Ollama permiten correr modelos de código abierto (Llama, Mistral, Gemma) directamente en el computador sin enviar datos a terceros</li>
-<li><strong>Hugging Face Inference API</strong> — Acceso gratuito (con límites) a miles de modelos open-source</li>
+<li><strong>Google AI Studio</strong> — Modelos Gemini Flash gratis sin expiración; Gemini Pro ya no tiene nivel gratuito (eliminado en 2026)</li>
+<li><strong>Groq</strong> — Acceso gratuito a modelos open-source sobre hardware LPU, pensado para prototipado</li>
+<li><strong>Mistral (La Plateforme)</strong> — Nivel “Experiment” gratuito con cuota generosa de tokens/mes; además <strong>chat.mistral.ai (Le Chat)</strong> funciona gratis desde el navegador sin crear cuenta de API</li>
+<li><strong>Cohere</strong> — “Trial key” gratuita (no apta para uso comercial/producción, pero suficiente para una POC)</li>
+</ul>
+<p><strong>Solo crédito de prueba (no es un nivel gratuito permanente):</strong></p>
+<ul>
+<li><strong>Anthropic (Claude)</strong> — Da créditos de prueba iniciales (no una cuota mensual recurrente) que alcanzan para 1-2 días de pruebas, no para sostener una POC completa</li>
+</ul>
+<p><strong>Modelos locales:</strong></p>
+<ul>
+<li><strong>Ollama</strong> — Permite correr modelos de código abierto (Llama, Mistral, Gemma) directamente en el computador sin enviar datos a terceros</li>
+</ul>
+<p><strong>Acceso a modelos open-source alojados:</strong></p>
+<ul>
+<li><strong>Hugging Face Inference Providers</strong> — Cada cuenta recibe créditos mensuales gratuitos para miles de modelos open-source; al agotarse, requiere plan de pago</li>
 </ul>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -5576,7 +5589,7 @@ Advertencia
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Revisar siempre los términos de uso del proveedor antes de procesar datos sensibles de la empresa en un servicio gratuito.</p>
+<p>Revisar siempre los términos de uso del proveedor antes de procesar datos sensibles de la empresa en un servicio gratuito — algunos (como el nivel gratuito de Google AI Studio) usan los datos enviados para mejorar sus modelos.</p>
 </div>
 </div>
 </section>
@@ -5597,7 +5610,7 @@ Advertencia
 <p><strong>Opciones principales:</strong></p>
 <ul>
 <li><strong>Gradio</strong> — Crear interfaces web interactivas con pocas líneas de Python; desplegable directamente desde Colab</li>
-<li><strong>Streamlit</strong> — Apps web de datos con componentes preconstruidos; plan gratuito en Streamlit Cloud</li>
+<li><strong>Streamlit</strong> — Apps web de datos con componentes preconstruidos; plan gratuito en Streamlit Community Cloud</li>
 <li><strong>Chainlit</strong> — Especializado en interfaces de chat para aplicaciones con LLMs</li>
 </ul>
 </section>
@@ -5726,6 +5739,7 @@ Tip
 <li><a href="https://huggingface.co/models">Hugging Face Models</a> — Repositorio de modelos open-source</li>
 <li><a href="https://groq.com">Groq</a> — Inferencia rápida y gratuita sobre modelos open-source</li>
 <li><a href="https://aistudio.google.com">Google AI Studio</a> — Acceso gratuito a Gemini con playground interactivo</li>
+<li><a href="https://chat.mistral.ai">Mistral / chat.mistral.ai</a> — Chat web gratuito sin API key; <a href="https://console.mistral.ai">console.mistral.ai</a> para el nivel gratuito de la API</li>
 </ul>
 <hr>
 <p><em>Documento elaborado para el Diplomado en IA para la Transformación Empresarial — Universidad del Desarrollo.</em></p>
