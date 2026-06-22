@@ -1,5 +1,6 @@
 ---
 listing_title: "Diapositiva 01"
+pdf: "diapositiva_01_202605.pdf"
 title: "Fundamentos de Datos para la IA"
 subtitle: "Clase 01 – Calidad, Gobernanza, Pipelines y MLOps"
 institution: 'Diplomado Inteligencia Artificial para la Transformación de Negocios'

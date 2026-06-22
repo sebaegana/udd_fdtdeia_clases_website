@@ -1,5 +1,6 @@
 ---
 listing_title: "Módulo 1 – Sesión 4"
+pdf: "diapositiva_m1s4_202607.pdf"
 title: "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA"
 subtitle: "Diplomado en IA para la Transformación Empresarial"
 institution: 'Universidad del Desarrollo'

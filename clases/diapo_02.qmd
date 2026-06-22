@@ -1,5 +1,6 @@
 ---
 listing_title: "Diapositiva 01"
+pdf: "diapo_02.pdf"
 title: "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA"
 subtitle: "Clase 02 – Interpretación crítica de resultados con IA para decisiones estratégicas"
 institution: 'Diplomado Inteligencia Artificial para la Transformación de Negocios'

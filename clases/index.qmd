@@ -4,8 +4,8 @@ listing:
   - id: clases-actuales
     contents:
       - "diapositiva_m1s4_202607.qmd"
-    type: default
-    fields: [listing_title]
+    template: "_listado-clases.ejs.md"
+    fields: [title, pdf]
   - id: material-anterior
     contents:
       - "diapo_01.qmd"
@@ -13,9 +13,9 @@ listing:
       - "diapositiva_01_202605.qmd"
       - "diapositiva_m1s4_202605.qmd"
       - "notebook_01.qmd"
-    type: table
+    template: "_listado-clases.ejs.md"
     sort: "file-modified desc"
-    fields: [title, file-modified]
+    fields: [title, pdf, file-modified]
 ---
 
 # Clases del curso

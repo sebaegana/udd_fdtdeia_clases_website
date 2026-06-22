@@ -1,5 +1,6 @@
 ---
 listing_title: "Notebook 01"
+pdf: "notebook_01.pdf"
 title: |
   | \includegraphics[width=5cm]{Imagen1.png}  
   | Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA 
