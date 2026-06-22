@@ -460,24 +460,6 @@ No es atractivo. No es "IA". Pero es **crítico**.
 
 ------------------------------------------------------------------------
 
-## `r fa("users", fill = "steelblue")` Actividad 2 — Diagnóstico de Riesgos (10 min)
-
-::: tiny
-**Escenario:** tu empresa implementará IA en los próximos 6 meses.
-
-Identifica 1–2 riesgos por categoría:
-
-- **Sesgo de Representación:** ¿hay grupos sub-representados en tus datos?
-  - Ej. Retail: ¿solo tiendas físicas, no web?
-- **Sesgo Histórico:** ¿tus datos vienen de decisiones humanas del pasado? ¿eran justas?
-  - Ej. Hiring: ¿datos de hace 10 años cuando contrataban diferente?
-- **Data Leakage:** ¿hay información que "solo sabrías después"?
-  - Ej. Churn: ¿incluyes si el cliente llamó a cancelar? (¡ya está cancelado!)
-- **Calidad:** ¿qué tan limpia está tu data? ¿hay valores faltantes críticos?
-:::
-
-------------------------------------------------------------------------
-
 # Bloque 3: Gobernanza y Toma de Decisiones
 
 ------------------------------------------------------------------------
@@ -620,39 +602,39 @@ No tienes que ser técnico. Pero tienes que:
 
 ------------------------------------------------------------------------
 
-## `r fa("users", fill = "steelblue")` Actividad 3 — Simulación: "Aprobación de Proyecto" (10 min)
+## `r fa("terminal", fill = "steelblue")` Actividad 3 — Auditoría con IA: Mistral CLI (10 min)
 
 ::: tiny
-Elige uno de estos proyectos y formula las 5 preguntas. Luego decide: ¿Aprobado? ¿Con riesgos? ¿Rechazado?
+**Instrucciones:**
 
-| Opción | Propuesta | Datos | Beneficio esperado |
-|------------------|------------------|------------------|--------------------|
-| **A: Fintech** | Créditos automáticos | 10 años de otorgamientos + morosidad | Ahorrar 2 horas por solicitud |
-| **B: Retail** | Recomendador personalizado | Historial de compras online | +15% en ticket promedio |
+1. Elijan en grupo uno de los proyectos de la siguiente diapositiva
+2. Antes de ver la respuesta de la IA: ¿qué red flags ven ustedes? (1 min, en silencio)
+3. El facilitador ejecuta en vivo (terminal proyectada): `auditar "..."`
+4. Comparen: ¿la IA detectó lo mismo que ustedes? ¿qué se le pasó?
+
+**¿Quieren probarlo en su propio computador?** El mismo prompt funciona en <https://chat.mistral.ai> — sin instalar nada ni API key, solo pegando el texto con la descripción de su proyecto.
+:::
+
+::: notes
+Preparación previa (no mostrar en pantalla):
+- Antes de la clase: `$env:MISTRAL_API_KEY = "..."` y luego `. .\clases\scripts\auditar_mistral.ps1`
+- Verificar que `auditar "test"` responda antes de que lleguen los participantes
 :::
 
 ------------------------------------------------------------------------
 
-## `r fa("users", fill = "steelblue")` Actividad 3 — Simulación: "Aprobación de Proyecto" (cont.)
+## `r fa("terminal", fill = "steelblue")` Actividad 3 — Auditoría con IA: Mistral CLI (cont.)
 
 ::: tiny
-| Opción | Propuesta | Datos | Beneficio esperado |
-|------------------|------------------|------------------|--------------------|
-| **C: HR** | Identificar candidatos de alto potencial | CVs, desempeño, evaluaciones históricas | Reducir turnover |
-| **D: Manufactura** | Mantenimiento predictivo | Sensores + histórico de fallas | Reducir downtime 40% |
+| Opción | Propuesta | Datos |
+|------------------|------------------------------------------|------------------------------------------|
+| **A: Fintech** | Créditos automáticos | 10 años de otorgamientos + morosidad |
+| **B: Retail** | Recomendador personalizado | Historial de compras online |
+| **C: HR** | Identificar candidatos de alto potencial | CVs, desempeño, evaluaciones históricas |
+| **D: Manufactura** | Mantenimiento predictivo | Sensores + histórico de fallas |
 
-*Ejemplo:* "¿Los datos incluyen todos los estratos socioeconómicos? → No solo clase media-alta → Sesgo de representación → Aprobado CON riesgo: necesitamos datos más amplios + monitoreo por estrato."
+**Discusión:** ¿La IA detectó lo mismo que tú? ¿Qué se le pasó? La IA es una herramienta — el juicio sigue siendo tuyo.
 :::
-
-------------------------------------------------------------------------
-
-## Los 3 Pilares de una Gobernanza Responsable
-
-**Pilar 1 — Transparencia** - ¿De dónde vienen los datos? - ¿Quién está representado? - ¿Qué decisiones se tomaron históricamente?
-
-**Pilar 2 — Validación** - ¿Datos están limpios? - ¿Hay sesgos detectables? - ¿El modelo funciona igual para todos los grupos?
-
-**Pilar 3 — Monitoreo** - ¿Vigilamos el modelo en producción? - ¿Detectamos cambios o degradación? - ¿Tenemos plan de rollback?
 
 ------------------------------------------------------------------------
 
