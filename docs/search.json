@@ -7,18 +7,130 @@
     "text": "Articles\n\nMcKinsey & Company. (30 de abril de 2024). What is deep learning? Recuperado de https://www.mckinsey.com/featured-insights/mckinsey-explainers/what-is-deep-learning\n\n\n\nVideos\n\nDeep Learning | What is Deep Learning? | Deep Learning Tutorial For Beginners | 2023 | Simplilearn. Enlace aquí\n\n\n\nResources\n\nAlzubaidi, L., et al. (2021). Review of deep learning: concepts, CNN architectures, challenges, applications, future directions. Journal of big Data, 8(1), 53. Enlace aquí"
   },
   {
-    "objectID": "contacto.html",
-    "href": "contacto.html",
-    "title": "Contacto",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Diplomado Inteligencia Artificial para la Transformación de Negocios",
     "section": "",
-    "text": "Contacto\nSebastián Egaña Santibáñez\nDocente del curso\n\n📧 sebastian.egana@udd.cl\n\n💼 LinkedIn\n💻Página Web\n🐈Github"
+    "text": "Este será el repositorio de los distintos materiales utilizados en el curso."
   },
   {
-    "objectID": "clases/index.html",
-    "href": "clases/index.html",
-    "title": "Clases",
+    "objectID": "clases/guia_poc_ia_gratuita.html",
+    "href": "clases/guia_poc_ia_gratuita.html",
+    "title": "Cómo desarrollar una POC de IA",
     "section": "",
-    "text": "Clases del curso\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDiapositiva 01\n\n\n\n\n\n\n\n\n\n\n\nDiapositiva 01\n\n\n\n\n\n\n\n\n\n\n\nDiapositiva 01\n\n\n\n\n\n\n\n\n\n\n\nMódulo 1 – Sesión 4\n\n\n\n\n\n\n\n\n\n\n\nNotebook 01\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Una Prueba de Concepto (POC, por sus siglas en inglés) es un ejercicio acotado cuyo único objetivo es responder una pregunta: ¿esto es factible?\nNo es un producto. No está pensada para escalar. No tiene que ser robusta ni bonita. Su valor radica en reducir la incertidumbre técnica o de negocio al menor costo posible.\n\n\n\n\n\n\n\n\n\n\n\n\nPOC\nMVP\nProducción\n\n\n\n\nObjetivo\n¿Es posible?\n¿Hay valor real?\nEscalar y operar\n\n\nAudiencia\nEquipo interno\nUsuarios reales\nTodos\n\n\nCalidad del código\nMínima\nMedia\nAlta\n\n\nDuración típica\nDías a 2 semanas\nSemanas a meses\nContinuo\n\n\nÉxito\nAprendizaje\nAdopción\nKPIs de negocio\n\n\n\n\n\n\n\n\n\nImportante\n\n\n\nUna POC que “falla” técnicamente puede ser un éxito de proyecto: descartó una dirección costosa a tiempo."
+  },
+  {
+    "objectID": "clases/guia_poc_ia_gratuita.html#diferencias-clave",
+    "href": "clases/guia_poc_ia_gratuita.html#diferencias-clave",
+    "title": "Cómo desarrollar una POC de IA",
+    "section": "",
+    "text": "POC\nMVP\nProducción\n\n\n\n\nObjetivo\n¿Es posible?\n¿Hay valor real?\nEscalar y operar\n\n\nAudiencia\nEquipo interno\nUsuarios reales\nTodos\n\n\nCalidad del código\nMínima\nMedia\nAlta\n\n\nDuración típica\nDías a 2 semanas\nSemanas a meses\nContinuo\n\n\nÉxito\nAprendizaje\nAdopción\nKPIs de negocio\n\n\n\n\n\n\n\n\n\nImportante\n\n\n\nUna POC que “falla” técnicamente puede ser un éxito de proyecto: descartó una dirección costosa a tiempo."
+  },
+  {
+    "objectID": "clases/guia_poc_ia_gratuita.html#etapa-1-definir-el-problema",
+    "href": "clases/guia_poc_ia_gratuita.html#etapa-1-definir-el-problema",
+    "title": "Cómo desarrollar una POC de IA",
+    "section": "2.1 Etapa 1: Definir el problema",
+    "text": "2.1 Etapa 1: Definir el problema\nAntes de tocar una herramienta, el equipo debe acordar:\n\n¿Qué decisión queremos mejorar? La IA no es un fin, es un medio.\n¿Cuál es la línea base? ¿Cómo se hace hoy sin IA?\n¿Qué resultado mínimo sería suficiente para justificar seguir adelante?\n\n\n\n\n\n\n\nTip\n\n\n\nUn buen enunciado de problema tiene la forma: “Hoy hacemos X manualmente, lo que toma Y tiempo/costo/errores. Si pudiéramos automatizar/mejorar X, impactaríamos Z”."
+  },
+  {
+    "objectID": "clases/guia_poc_ia_gratuita.html#etapa-2-explorar-los-datos",
+    "href": "clases/guia_poc_ia_gratuita.html#etapa-2-explorar-los-datos",
+    "title": "Cómo desarrollar una POC de IA",
+    "section": "2.2 Etapa 2: Explorar los datos",
+    "text": "2.2 Etapa 2: Explorar los datos\nLos proyectos de IA mueren más por datos que por modelos. En esta etapa se valida:\n\n¿Existen los datos necesarios?\n¿Están accesibles y en qué formato?\n¿Tienen la calidad mínima para el problema?\n¿Hay restricciones legales o de privacidad?\n\nNo se necesita un pipeline sofisticado. Un análisis exploratorio manual puede responder estas preguntas en horas."
+  },
+  {
+    "objectID": "clases/guia_poc_ia_gratuita.html#etapa-3-probar-el-modelo",
+    "href": "clases/guia_poc_ia_gratuita.html#etapa-3-probar-el-modelo",
+    "title": "Cómo desarrollar una POC de IA",
+    "section": "2.3 Etapa 3: Probar el modelo",
+    "text": "2.3 Etapa 3: Probar el modelo\nEn una POC el criterio de selección del modelo es velocidad de iteración, no performance óptima. Se recomienda:\n\nEmpezar con el modelo más simple posible\nEvaluar con una muestra pequeña pero representativa\nDefinir una métrica de éxito antes de correr el experimento\nDocumentar qué funcionó y qué no\n\n\n\n\n\n\n\nNota\n\n\n\nUn modelo “suficientemente bueno” que resuelve el problema del negocio es mejor que un modelo perfectamente optimizado que llega tarde."
+  },
+  {
+    "objectID": "clases/guia_poc_ia_gratuita.html#etapa-4-construir-la-demo",
+    "href": "clases/guia_poc_ia_gratuita.html#etapa-4-construir-la-demo",
+    "title": "Cómo desarrollar una POC de IA",
+    "section": "2.4 Etapa 4: Construir la demo",
+    "text": "2.4 Etapa 4: Construir la demo\nLa demo no es opcional. Es la forma en que el equipo técnico comunica el valor a quienes toman decisiones.\nUna buena demo de POC:\n\nMuestra el flujo completo de punta a punta\nUsa datos reales o muy similares a los reales\nPermite interacción mínima (no solo una captura de pantalla)\nEs honesta sobre las limitaciones actuales"
+  },
+  {
+    "objectID": "clases/guia_poc_ia_gratuita.html#entorno-de-desarrollo",
+    "href": "clases/guia_poc_ia_gratuita.html#entorno-de-desarrollo",
+    "title": "Cómo desarrollar una POC de IA",
+    "section": "4.1 Entorno de desarrollo",
+    "text": "4.1 Entorno de desarrollo\nSon los espacios donde se escribe y ejecuta código. Para POCs, lo más valioso es no tener que instalar nada localmente.\nOpciones principales:\n\nGoogle Colab — Notebooks con GPU gratuita (no garantizada: la cuota varía según demanda), integración nativa con Google Drive\nKaggle Notebooks — Similar a Colab, con acceso a datasets públicos\nGitHub Codespaces (~120 horas-núcleo gratis al mes) — Entorno completo basado en VS Code en la nube"
+  },
+  {
+    "objectID": "clases/guia_poc_ia_gratuita.html#modelos-de-lenguaje-e-ia",
+    "href": "clases/guia_poc_ia_gratuita.html#modelos-de-lenguaje-e-ia",
+    "title": "Cómo desarrollar una POC de IA",
+    "section": "4.2 Modelos de lenguaje e IA",
+    "text": "4.2 Modelos de lenguaje e IA\nAcceso a modelos de fundación sin costo inicial. No todos los “gratis” son iguales: unos son un nivel gratuito permanente con límites de uso, otros son un crédito de prueba que se acaba en días.\nNivel gratuito permanente (rate-limited, sin tarjeta de crédito):\n\nGoogle AI Studio — Modelos Gemini Flash gratis sin expiración; Gemini Pro ya no tiene nivel gratuito (eliminado en 2026)\nGroq — Acceso gratuito a modelos open-source sobre hardware LPU, pensado para prototipado\nMistral (La Plateforme) — Nivel “Experiment” gratuito con cuota generosa de tokens/mes; además chat.mistral.ai (Le Chat) funciona gratis desde el navegador sin crear cuenta de API\nCohere — “Trial key” gratuita (no apta para uso comercial/producción, pero suficiente para una POC)\n\nSolo crédito de prueba (no es un nivel gratuito permanente):\n\nAnthropic (Claude) — Da créditos de prueba iniciales (no una cuota mensual recurrente) que alcanzan para 1-2 días de pruebas, no para sostener una POC completa\n\nModelos locales:\n\nOllama — Permite correr modelos de código abierto (Llama, Mistral, Gemma) directamente en el computador sin enviar datos a terceros\n\nAcceso a modelos open-source alojados:\n\nHugging Face Inference Providers — Cada cuenta recibe créditos mensuales gratuitos para miles de modelos open-source; al agotarse, requiere plan de pago\n\n\n\n\n\n\n\nAdvertencia\n\n\n\nRevisar siempre los términos de uso del proveedor antes de procesar datos sensibles de la empresa en un servicio gratuito — algunos (como el nivel gratuito de Google AI Studio) usan los datos enviados para mejorar sus modelos."
+  },
+  {
+    "objectID": "clases/guia_poc_ia_gratuita.html#datos-y-almacenamiento",
+    "href": "clases/guia_poc_ia_gratuita.html#datos-y-almacenamiento",
+    "title": "Cómo desarrollar una POC de IA",
+    "section": "4.3 Datos y almacenamiento",
+    "text": "4.3 Datos y almacenamiento\nDónde guardar y acceder a los datos durante la POC.\nOpciones principales:\n\nGoogle Drive / OneDrive — Almacenamiento de archivos con integración a notebooks\nKaggle Datasets — Repositorio de datasets públicos listos para usar\nHugging Face Datasets — Biblioteca de datasets para tareas de NLP, visión y más\nBases de datos SQLite — Para datos estructurados sin necesidad de servidor"
+  },
+  {
+    "objectID": "clases/guia_poc_ia_gratuita.html#interfaz-y-demo",
+    "href": "clases/guia_poc_ia_gratuita.html#interfaz-y-demo",
+    "title": "Cómo desarrollar una POC de IA",
+    "section": "4.4 Interfaz y demo",
+    "text": "4.4 Interfaz y demo\nHerramientas para construir una interfaz mínima que permita mostrar la POC sin desarrollo frontend.\nOpciones principales:\n\nGradio — Crear interfaces web interactivas con pocas líneas de Python; desplegable directamente desde Colab\nStreamlit — Apps web de datos con componentes preconstruidos; plan gratuito en Streamlit Community Cloud\nChainlit — Especializado en interfaces de chat para aplicaciones con LLMs"
+  },
+  {
+    "objectID": "clases/guia_poc_ia_gratuita.html#gestión-del-experimento",
+    "href": "clases/guia_poc_ia_gratuita.html#gestión-del-experimento",
+    "title": "Cómo desarrollar una POC de IA",
+    "section": "4.5 Gestión del experimento",
+    "text": "4.5 Gestión del experimento\nPara no perder el hilo de qué se probó y qué resultó.\nOpciones principales:\n\nMLflow (local) — Registro de experimentos, métricas y artefactos\nWeights & Biases (plan free) — Seguimiento de experimentos con visualizaciones\nNotion / Google Docs — Para POCs simples, una tabla de experimentos en un documento es suficiente"
+  },
+  {
+    "objectID": "clases/guia_poc_ia_gratuita.html#lo-que-sí-importa",
+    "href": "clases/guia_poc_ia_gratuita.html#lo-que-sí-importa",
+    "title": "Cómo desarrollar una POC de IA",
+    "section": "6.1 Lo que sí importa",
+    "text": "6.1 Lo que sí importa\n\n¿Respondió la pregunta de factibilidad? Sí o No son ambos éxitos.\n¿El equipo aprendió algo accionable? ¿Qué haría diferente en el siguiente intento?\n¿La demo convenció a los stakeholders de que vale (o no vale) la pena seguir?"
+  },
+  {
+    "objectID": "clases/guia_poc_ia_gratuita.html#lo-que-no-importa-todavía",
+    "href": "clases/guia_poc_ia_gratuita.html#lo-que-no-importa-todavía",
+    "title": "Cómo desarrollar una POC de IA",
+    "section": "6.2 Lo que no importa (todavía)",
+    "text": "6.2 Lo que no importa (todavía)\n\nPerformance perfecta del modelo\nCódigo limpio y mantenible\nEscalabilidad a miles de usuarios\nIntegración con sistemas existentes"
+  },
+  {
+    "objectID": "clases/guia_poc_ia_gratuita.html#entregables-mínimos-recomendados",
+    "href": "clases/guia_poc_ia_gratuita.html#entregables-mínimos-recomendados",
+    "title": "Cómo desarrollar una POC de IA",
+    "section": "6.3 Entregables mínimos recomendados",
+    "text": "6.3 Entregables mínimos recomendados\nAl terminar una POC, conviene documentar:\n\nEl problema original y cómo se operacionalizó\nLos datos usados y sus limitaciones\nLos experimentos realizados y sus resultados\nLa recomendación: continuar, pivotar o descartar\nLos supuestos que habría que validar si se continúa\n\n\n\n\n\n\n\nTip\n\n\n\nUn documento de una página con estos cinco puntos vale más que 200 líneas de código sin contexto."
+  },
+  {
+    "objectID": "clases/guia_poc_ia_gratuita.html#para-aprender",
+    "href": "clases/guia_poc_ia_gratuita.html#para-aprender",
+    "title": "Cómo desarrollar una POC de IA",
+    "section": "7.1 Para aprender",
+    "text": "7.1 Para aprender\n\nfast.ai — Cursos prácticos de ML y deep learning, gratuitos\nHugging Face Learn — Tutoriales de NLP y modelos de lenguaje\nGoogle AI for Developers — Documentación y ejemplos con Gemini"
+  },
+  {
+    "objectID": "clases/guia_poc_ia_gratuita.html#para-explorar-datasets",
+    "href": "clases/guia_poc_ia_gratuita.html#para-explorar-datasets",
+    "title": "Cómo desarrollar una POC de IA",
+    "section": "7.2 Para explorar datasets",
+    "text": "7.2 Para explorar datasets\n\nKaggle — Miles de datasets con notebooks asociados\nHugging Face Datasets — Datasets listos para tareas de IA\nGoogle Dataset Search — Buscador de datasets públicos"
+  },
+  {
+    "objectID": "clases/guia_poc_ia_gratuita.html#para-modelos-y-apis",
+    "href": "clases/guia_poc_ia_gratuita.html#para-modelos-y-apis",
+    "title": "Cómo desarrollar una POC de IA",
+    "section": "7.3 Para modelos y APIs",
+    "text": "7.3 Para modelos y APIs\n\nHugging Face Models — Repositorio de modelos open-source\nGroq — Inferencia rápida y gratuita sobre modelos open-source\nGoogle AI Studio — Acceso gratuito a Gemini con playground interactivo\nMistral / chat.mistral.ai — Chat web gratuito sin API key; console.mistral.ai para el nivel gratuito de la API\n\n\nDocumento elaborado para el Diplomado en IA para la Transformación Empresarial — Universidad del Desarrollo."
   },
   {
     "objectID": "clases/diapo_01.html#contexto-actual",
@@ -82,6 +194,405 @@
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "Incertidumbre y confianza en la interpretación de resultados.",
     "text": "Incertidumbre y confianza en la interpretación de resultados.\n\nSe debe tener en cuenta que la incertidumbre siempre va a existir y se debe convivir con eso. Esto no implica que no la interioricemos dentro de nuestra toma de decisiones o que no la intentemos medir.\nUna buena técnica es generar ejercicios que añaden incertidumbre a los modelos calculados.\n\nEn el análisis de datos, la incertidumbre no se elimina, se cuantifica. Por eso usamos intervalos de confianza, desviaciones estándar o bandas de predicción. Estas herramientas nos permiten comunicar no solo qué esperamos que ocurra, sino cuán seguros estamos de ello.\nLa clave no es eliminar la incertidumbre, sino tomar decisiones que sean robustas frente a ella. En un entorno data-driven, la confianza no proviene de la certeza, sino de la capacidad de medir y comunicar el riesgo asociado a cada decisión."
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#descripción-general",
+    "href": "clases/diapositiva_m1s4_202605.html#descripción-general",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Descripción General",
+    "text": "Descripción General\nEste módulo capacita para comprender el valor estratégico de los datos, identificar riesgos ocultos y tomar decisiones informadas sobre proyectos de IA.\nSin requerir programación, aprenderán a hacer preguntas críticas dentro de sus equipos y a gobernar responsablemente iniciativas de IA."
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#objetivos-de-aprendizaje",
+    "href": "clases/diapositiva_m1s4_202605.html#objetivos-de-aprendizaje",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Objetivos de Aprendizaje",
+    "text": "Objetivos de Aprendizaje\nAl finalizar esta sesión podrán:\n\nEntender por qué los datos son el cimiento crítico de la IA\nIdentificar los 4 enemigos silenciosos de los datos\nReconocer riesgos específicos en sus industrias\nFormular las 5 preguntas clave antes de implementar IA\nDiseñar un proceso básico de auditoría de datos"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#estructura-de-la-sesión",
+    "href": "clases/diapositiva_m1s4_202605.html#estructura-de-la-sesión",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Estructura de la Sesión",
+    "text": "Estructura de la Sesión\n\n\n\n\n\n\n\n\n\nBloque\nDuración\nContenido\n\n\n\n\n1\n50 + 10 min\nEl combustible de la IA: datos como diferenciador\n\n\n2\n50 + 10 min\nLos enemigos silenciosos: sesgos, calidad, leakage\n\n\n3\n50 + 10 min\nGobernanza y toma de decisiones informadas"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#concepto-central-datos-información",
+    "href": "clases/diapositiva_m1s4_202605.html#concepto-central-datos-información",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Concepto Central: Datos ≠ Información",
+    "text": "Concepto Central: Datos ≠ Información\nLo que la mayoría piensa:\n\nIA es magia / inteligencia artificial\nCon suficientes datos, la IA funciona\n\nLa realidad:\n\nIA es estadística + patrones en datos\nCalidad de datos &gt; cantidad de datos\nLos datos son el combustible; el modelo es el motor"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#el-triángulo-de-oro-de-la-ia",
+    "href": "clases/diapositiva_m1s4_202605.html#el-triángulo-de-oro-de-la-ia",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "El Triángulo de Oro de la IA",
+    "text": "El Triángulo de Oro de la IA\n\n\n\n\n\ngraph TD\n    D[\"🎯 DECISIONES&lt;br/&gt;(Output)\"]\n    M[\"⚙️ MODELO&lt;br/&gt;(Algoritmo)&lt;br/&gt;&lt;i&gt;5% del éxito&lt;/i&gt;\"]\n    DA[\"🗄️ DATA&lt;br/&gt;(Combustible)&lt;br/&gt;&lt;i&gt;95% del éxito&lt;/i&gt;\"]\n\n    M --&gt; D\n    DA --&gt; D\n    DA --&gt; M"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#la-fórmula",
+    "href": "clases/diapositiva_m1s4_202605.html#la-fórmula",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "La Fórmula",
+    "text": "La Fórmula\n\n\n\n\n\n\n\n\nEscenario\nResultado\n\n\n\n\nDatos buenos + features relevantes + modelo simple\nÉxito\n\n\nDatos malos + features complicadas + modelo sofisticado\nFracaso\n\n\n\n\n\nPuedes tener el algoritmo más avanzado del mundo. Si los datos son malos, el resultado será malo."
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#caso-netflix-vs-youtube",
+    "href": "clases/diapositiva_m1s4_202605.html#caso-netflix-vs-youtube",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Caso: Netflix vs YouTube",
+    "text": "Caso: Netflix vs YouTube\n\n\n\n\n\n\n\n\n\nAspecto\nNetflix\nYouTube\n\n\n\n\nDatos que tienen\nHistorial, ratings, tiempo visto, contexto (país, horario)\nBillones de vistas, pero datos demográficos limitados\n\n\nCalidad de datos\nEtiquetado claro (5 estrellas, visto completamente)\nRuidoso (clickbait, clicks accidentales)\n\n\nResultado\nRecomendaciones precisas\nRecomendaciones genéricas\n\n\n\nLección: Netflix tiene menos datos pero mejor calidad y relevancia."
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#caso-spotify-y-los-datos-contextuales",
+    "href": "clases/diapositiva_m1s4_202605.html#caso-spotify-y-los-datos-contextuales",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Caso: Spotify y los Datos Contextuales",
+    "text": "Caso: Spotify y los Datos Contextuales\nSpotify ganó no por tener más datos, sino por capturar los datos correctos:\n\nQué escuchas a las 6 AM vs las 10 PM\nSi repites una canción\nSi saltas después de 5 segundos\nContexto: gym, trabajo, fiesta\n\nPrimer insight: Éxito en IA = elegir los datos correctos, no acumular todos los datos."
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#la-pregunta-clave-para-líderes",
+    "href": "clases/diapositiva_m1s4_202605.html#la-pregunta-clave-para-líderes",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "La Pregunta Clave para Líderes",
+    "text": "La Pregunta Clave para Líderes\n\n“¿Qué datos tenemos nosotros que nuestros competidores NO tienen?”\n\nEso es tu ventaja competitiva en IA.\nNo es el algoritmo — todos usan los mismos. Es qué datos únicos capturas de tu negocio."
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#actividad-1-diagnóstico-de-datos-10-min",
+    "href": "clases/diapositiva_m1s4_202605.html#actividad-1-diagnóstico-de-datos-10-min",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": " Actividad 1 — Diagnóstico de Datos (10 min)",
+    "text": "Actividad 1 — Diagnóstico de Datos (10 min)\n\nPiensa en tu área/empresa y responde:\n1. ¿Qué datos generamos hoy que nunca capturamos? - Retail: captura punto de venta, pero NO el momento en que el cliente decide NO comprar - HR: captura performance review, pero NO conversaciones 1:1 informales\n2. ¿Qué datos tenemos que podrían revelar algo escondido? - Bancos: historial de transacciones → ¿cuándo alguien está en riesgo financiero? - Logística: rutas → ¿cuándo el costo de entrega será más alto?\n3. ¿Quién en nuestra organización NO está representado en nuestros datos? - ¿Solo clientes que compraron? ¿No los que visitaron y no compraron? - ¿Solo empleados en sede? ¿No remotos?"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#los-4-enemigos",
+    "href": "clases/diapositiva_m1s4_202605.html#los-4-enemigos",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Los 4 Enemigos",
+    "text": "Los 4 Enemigos\n\n\n\n\n\n\n\n\n\nEnemigo\nCausa\nRed Flag\n\n\n\n\nRepresentación\nFalta un grupo demográfico\n“Funciona bien para el cliente típico”\n\n\nHistórico\nDatos reflejan prejuicios del pasado\n“Reflejaría cómo siempre lo hemos hecho”\n\n\nLeakage\nInformación futura en datos de entrenamiento\n“99% de precisión” (sospechosamente alto)\n\n\nCalidad\nDatos incompletos, incorrectos o viejos\n“Nuestros datos están desordenados”"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#enemigo-1-sesgo-de-representación",
+    "href": "clases/diapositiva_m1s4_202605.html#enemigo-1-sesgo-de-representación",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Enemigo #1: Sesgo de Representación",
+    "text": "Enemigo #1: Sesgo de Representación\nDefinición: Tu dataset no representa a toda la población que afectará la IA."
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#caso-real-reconocimiento-facial",
+    "href": "clases/diapositiva_m1s4_202605.html#caso-real-reconocimiento-facial",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Caso Real: Reconocimiento Facial",
+    "text": "Caso Real: Reconocimiento Facial\nProblema descubierto (2018):\n\nGoogle, Amazon, Microsoft: tasa de error del 34% en rostros de mujeres oscuras\nTasa de error del 0.7% en rostros de hombres blancos\n\n¿Por qué? Los modelos se entrenaron mayormente con datos de personas blancas."
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#caso-real-reconocimiento-facial-impacto",
+    "href": "clases/diapositiva_m1s4_202605.html#caso-real-reconocimiento-facial-impacto",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Caso Real: Reconocimiento Facial (Impacto)",
+    "text": "Caso Real: Reconocimiento Facial (Impacto)\nImpacto:\n\nPolicía usa algoritmo para identificar sospechosos → falla en comunidades afrodescendientes\nAcceso a edificios por facial → gente con piel oscura queda afuera"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#caso-real-modelos-de-crédito",
+    "href": "clases/diapositiva_m1s4_202605.html#caso-real-modelos-de-crédito",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Caso Real: Modelos de Crédito",
+    "text": "Caso Real: Modelos de Crédito\nProblema:\n\nBanco entrena algoritmo con datos históricos de clientes de clase media-alta\nAlgoritmo rechaza más personas de clase baja, aunque sean buen riesgo crediticio\n\nRazón: no hay suficientes datos de ese grupo en el histórico"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#caso-real-modelos-de-crédito-impacto",
+    "href": "clases/diapositiva_m1s4_202605.html#caso-real-modelos-de-crédito-impacto",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Caso Real: Modelos de Crédito (Impacto)",
+    "text": "Caso Real: Modelos de Crédito (Impacto)\nImpacto:\n\nDiscriminación indirecta pero efectiva\nMercado perdido (no alcanzas segmentos nuevos)\nRegulatorio: Regulador podría penalizar (CMF)"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#cómo-identificar-el-sesgo-de-representación",
+    "href": "clases/diapositiva_m1s4_202605.html#cómo-identificar-el-sesgo-de-representación",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Cómo Identificar el Sesgo de Representación",
+    "text": "Cómo Identificar el Sesgo de Representación\nRed flags:\n\n“Nuestro modelo funciona bien para el cliente típico”\n“Estos grupos son muy pequeños en nuestros datos”\n“Hay outliers raros que el modelo rechaza”\n\n\nTest simple:\n\nSegmenta tu dataset por: género, edad, geografía, nivel socioeconómico\n¿El modelo funciona bien en todos los segmentos?\nSi no → hay sesgo de representación"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#enemigo-2-sesgo-histórico",
+    "href": "clases/diapositiva_m1s4_202605.html#enemigo-2-sesgo-histórico",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Enemigo #2: Sesgo Histórico",
+    "text": "Enemigo #2: Sesgo Histórico\nDefinición: Entrenas un modelo con datos del pasado que reflejan injusticias del pasado. El modelo las perpetúa."
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#caso-real-amazon-hiring-algorithm-20142018",
+    "href": "clases/diapositiva_m1s4_202605.html#caso-real-amazon-hiring-algorithm-20142018",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Caso Real: Amazon Hiring Algorithm (2014–2018)",
+    "text": "Caso Real: Amazon Hiring Algorithm (2014–2018)\n¿Qué pasó?\n\nAmazon creó un algoritmo para filtrar CVs automáticamente\nLo entrenó con 10 años de contrataciones históricas en tech\nProblema: históricamente contrataban más hombres en tech - Resultado: el algoritmo aprendió a rechazar mujeres"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#caso-real-amazon-hiring-algorithm-detalles",
+    "href": "clases/diapositiva_m1s4_202605.html#caso-real-amazon-hiring-algorithm-detalles",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Caso Real: Amazon Hiring Algorithm (Detalles)",
+    "text": "Caso Real: Amazon Hiring Algorithm (Detalles)\nDetalles perturbadores:\n\nRechazaba palabras como “women’s chess club”\nRechazaba CVs de egresadas de colegios para mujeres\n\nAmazon mató el proyecto en 2018. No por altruismo: costoso en reputación y legal."
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#caso-real-sistema-de-justicia-criminal",
+    "href": "clases/diapositiva_m1s4_202605.html#caso-real-sistema-de-justicia-criminal",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Caso Real: Sistema de Justicia Criminal",
+    "text": "Caso Real: Sistema de Justicia Criminal\n¿Qué pasó?\n\nPolicía usa el algoritmo COMPAS para predecir reincidencia\nEntrenado con datos históricos de quién fue detenido antes\nProblema: el sistema penal históricamente sobre-arresta a gente negra\nResultado: el algoritmo predice más reincidencia en gente negra (lógica circular)"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#caso-real-sistema-de-justicia-criminal-preguntas",
+    "href": "clases/diapositiva_m1s4_202605.html#caso-real-sistema-de-justicia-criminal-preguntas",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Caso Real: Sistema de Justicia Criminal (Preguntas)",
+    "text": "Caso Real: Sistema de Justicia Criminal (Preguntas)\nPreguntas sin respuesta:\n\n¿Fue reincidencia… o simplemente los arrestaron otra vez?\n¿El algoritmo predice crimen o predice quién será arrestado?"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#cómo-identificar-el-sesgo-histórico",
+    "href": "clases/diapositiva_m1s4_202605.html#cómo-identificar-el-sesgo-histórico",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Cómo Identificar el Sesgo Histórico",
+    "text": "Cómo Identificar el Sesgo Histórico\nRed flags:\n\n“Nuestro modelo refleja lo que siempre hemos hecho”\n“Usamos datos históricos de evaluaciones / contrataciones / decisiones”\n“El modelo mantiene el status quo”\n\n\nTest:\n\n¿Tus datos vienen de decisiones humanas del pasado?\n¿Esas decisiones eran justas / objetivas?\nSi la respuesta no es un “sí” claro → hay sesgo histórico"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#enemigo-3-data-leakage",
+    "href": "clases/diapositiva_m1s4_202605.html#enemigo-3-data-leakage",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Enemigo #3: Data Leakage",
+    "text": "Enemigo #3: Data Leakage\nDefinición: El modelo usa información que no tendría disponible en producción real. Parece perfecto en pruebas; falla en la realidad."
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#caso-real-predicción-de-fraude",
+    "href": "clases/diapositiva_m1s4_202605.html#caso-real-predicción-de-fraude",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Caso Real: Predicción de Fraude",
+    "text": "Caso Real: Predicción de Fraude\nDatos de entrenamiento incluyen:\n  - Monto de transacción\n  - País\n  - Hora\n  - ¿FUE REPORTADO COMO FRAUDE? ← ✗ ERROR\n\nEl modelo aprende: \"si fue reportado, es fraude\"\nKPI en test: 99% de precisión ✓ (falso)\n\nEn producción:\n  - Cliente realiza transacción\n  - Necesitamos predecir AHORA si es fraude\n  - Pero \"si fue reportado\" solo se sabe DESPUÉS\n  - Resultado: modelo rechaza transacciones legítimas"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#caso-real-predicción-de-mortalidad-hospitalaria",
+    "href": "clases/diapositiva_m1s4_202605.html#caso-real-predicción-de-mortalidad-hospitalaria",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Caso Real: Predicción de Mortalidad Hospitalaria",
+    "text": "Caso Real: Predicción de Mortalidad Hospitalaria\nVariables incluidas:\n  - Edad, síntomas, historial médico\n  - ¿TUVO CUIDADOS INTENSIVOS? ← ✗ ERROR\n\nModelo predice: \"pacientes en ICU mueren más\"\nConclusión: \"invertir menos en ICU reduce muertes\"\n\nRealidad: la ICU es lo que SALVA a pacientes críticos.\nEl modelo confundió causación con correlación."
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#data-leakage-predicción-de-deserción-escolar",
+    "href": "clases/diapositiva_m1s4_202605.html#data-leakage-predicción-de-deserción-escolar",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Data Leakage: Predicción de Deserción Escolar",
+    "text": "Data Leakage: Predicción de Deserción Escolar\nLo que FUNCIONA:\n\nDatos de hace 2 meses: asistencia, notas, engagement\nPredecir: ¿desertor en próximos 3 meses?\n\n\nLo que NO funciona:\n\nIncluir: “¿Se retiró del colegio?” — ¡eso es exactamente lo que predices!\nResultado: 100% de precisión, modelo completamente inútil\n\n\nSi el KPI es demasiado bueno (&gt;95%), busca leakage."
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#cómo-detectar-data-leakage",
+    "href": "clases/diapositiva_m1s4_202605.html#cómo-detectar-data-leakage",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Cómo Detectar Data Leakage",
+    "text": "Cómo Detectar Data Leakage\nPregunta clave:\n&gt; “¿Toda la información del modelo estaría disponible en el momento exacto en que necesitamos predecir?”\nRed flags:\n\nKPI de precisión &gt; 99% (sospechosamente perfecto)\nEl outcome (lo que predices) aparece como variable en el modelo\nDatos que solo existen después del evento que predices"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#enemigo-4-calidad-de-datos",
+    "href": "clases/diapositiva_m1s4_202605.html#enemigo-4-calidad-de-datos",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Enemigo #4: Calidad de Datos",
+    "text": "Enemigo #4: Calidad de Datos\nDefinición: Datos incompletos, incorrectos, contradictorios o desactualizados.\n\n\n\n\n\n\n\n\n\nProblema\nEjemplo\nImpacto\n\n\n\n\nIncompletos\n30% de edad faltante en CRM\nEl modelo rechaza registros o asume mal\n\n\nIncorrectos\nCliente registrado 2 veces con edades distintas\nInconsistencia en decisiones\n\n\nDesactualizados\nDirección de cliente de 2015\nMarketing envía a dirección incorrecta"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#enemigo-4-calidad-de-datos-cont.",
+    "href": "clases/diapositiva_m1s4_202605.html#enemigo-4-calidad-de-datos-cont.",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Enemigo #4: Calidad de Datos (cont.)",
+    "text": "Enemigo #4: Calidad de Datos (cont.)\n\n\n\n\n\n\n\n\n\nProblema\nEjemplo\nImpacto\n\n\n\n\nContradictorios\n“Estado: activo” pero “fecha baja: 2020”\nConfusión en la lógica de negocio\n\n\nSesgados en entrada\nSolo se registran clientes que compraron\nEl modelo no ve quién NO compra"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#la-realidad-incómoda",
+    "href": "clases/diapositiva_m1s4_202605.html#la-realidad-incómoda",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "La Realidad Incómoda",
+    "text": "La Realidad Incómoda\n\nEl 80% del tiempo en un proyecto de IA es limpieza de datos.\n\nNo es atractivo. No es “IA”. Pero es crítico.\n\nTest simple de calidad:\n\nToma 100 registros aleatorios\nValídalos manualmente: ¿son correctos?\nSi &lt; 95% correcto → hay problema de calidad"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#resumen-los-4-enemigos",
+    "href": "clases/diapositiva_m1s4_202605.html#resumen-los-4-enemigos",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Resumen: Los 4 Enemigos",
+    "text": "Resumen: Los 4 Enemigos\n\n\n\n\n\n\n\n\n\n\nEnemigo\nCausa\nImpacto\nRed Flag\n\n\n\n\nRepresentación\nFalta un grupo demográfico\nModelo falla para ese grupo\n“Funciona bien para el cliente típico”\n\n\nHistórico\nDatos reflejan prejuicios del pasado\nPerpetúa injusticia a escala\n“Refleja cómo siempre lo hicimos”\n\n\nLeakage\nInformación futura en entrenamiento\nKPI falso; falla en producción\n“99% de precisión”\n\n\nCalidad\nDatos incompletos, incorrectos o viejos\nDecisiones inconsistentes\n“Nuestros datos están desordenados”"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#actividad-2-diagnóstico-de-riesgos-10-min",
+    "href": "clases/diapositiva_m1s4_202605.html#actividad-2-diagnóstico-de-riesgos-10-min",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": " Actividad 2 — Diagnóstico de Riesgos (10 min)",
+    "text": "Actividad 2 — Diagnóstico de Riesgos (10 min)\n\nEscenario: tu empresa implementará IA en los próximos 6 meses.\nIdentifica 1–2 riesgos por categoría:\n\nSesgo de Representación: ¿hay grupos sub-representados en tus datos?\n\nEj. Retail: ¿solo tiendas físicas, no web?\n\nSesgo Histórico: ¿tus datos vienen de decisiones humanas del pasado? ¿eran justas?\n\nEj. Hiring: ¿datos de hace 10 años cuando contrataban diferente?\n\nData Leakage: ¿hay información que “solo sabrías después”?\n\nEj. Churn: ¿incluyes si el cliente llamó a cancelar? (¡ya está cancelado!)\n\nCalidad: ¿qué tan limpia está tu data? ¿hay valores faltantes críticos?"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#las-5-preguntas-que-todo-líder-debe-hacer",
+    "href": "clases/diapositiva_m1s4_202605.html#las-5-preguntas-que-todo-líder-debe-hacer",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Las 5 Preguntas que Todo Líder Debe Hacer",
+    "text": "Las 5 Preguntas que Todo Líder Debe Hacer\n\nAntes de aprobar cualquier proyecto de IA, formula estas preguntas a tu equipo técnico:\n\n¿Quién está representado en estos datos?\n¿Estos datos reflejan decisiones justas del pasado?\n¿Hay información aquí que no tendríamos al momento de decidir?\n¿Qué tan limpia y confiable es esta data?\n¿Cómo sabemos si el modelo falla? ¿Quién lo vigila?"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#pregunta-1-quién-está-representado",
+    "href": "clases/diapositiva_m1s4_202605.html#pregunta-1-quién-está-representado",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Pregunta 1: ¿Quién está representado?",
+    "text": "Pregunta 1: ¿Quién está representado?\n\nPor qué: identificar sesgos de representación.\nCómo preguntar: - “¿Todos nuestros clientes / empleados están en estos datos?” - “¿Hay grupos que falten? ¿Qué pasará con ellos?”\nSeñales de respuesta: -  “80% de nuestros clientes activos, distribuidos así…” -  “Suficientes datos” -  “No es importante”\nAcción si hay riesgo: - Recolectar datos del grupo faltante - Limitar el scope: “este modelo es solo para clientes premium” - Monitorear sesgo por segmento"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#pregunta-2-los-históricos-fueron-justos",
+    "href": "clases/diapositiva_m1s4_202605.html#pregunta-2-los-históricos-fueron-justos",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Pregunta 2: ¿Los históricos fueron justos?",
+    "text": "Pregunta 2: ¿Los históricos fueron justos?\n\nPor qué: identificar sesgo histórico que perpetúa injusticia.\nCómo preguntar: - “¿De dónde vienen estos datos históricos?” - “¿Las decisiones del pasado fueron justas? ¿O reflejan cómo discriminábamos?”\nSeñales de respuesta: -  “Datos de decisiones que auditamos y validamos” -  “Datos de cómo siempre lo hemos hecho” -  “Asumimos que el histórico es objetivo”\nAcción si hay riesgo: - Auditar las decisiones históricas - Limpiar datos discriminatorios - Limitar el impacto: recomendación (no decisión automática)"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#pregunta-3-hay-data-leakage",
+    "href": "clases/diapositiva_m1s4_202605.html#pregunta-3-hay-data-leakage",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Pregunta 3: ¿Hay data leakage?",
+    "text": "Pregunta 3: ¿Hay data leakage?\n\nPor qué: detectar información futura infiltrada en el entrenamiento.\nCómo preguntar: - “¿Cuándo predecimos esto exactamente?” - “¿Toda esta información estaría disponible EN ESE MOMENTO?”\nEjemplo de conversación:\nTú: “¿Incluyen la variable ‘fue reportado como fraude’ en entrenamiento?”\nTécnico: “Sí.”\nTú: “¿En producción, cuando necesitamos predecir, ya sabremos eso?”\nTécnico: “Ah… no. Eso se sabe después.”\nTú: “Saca esa variable. El modelo está truqueado.”"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#pregunta-4-qué-tan-limpia-es-la-data",
+    "href": "clases/diapositiva_m1s4_202605.html#pregunta-4-qué-tan-limpia-es-la-data",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Pregunta 4: ¿Qué tan limpia es la data?",
+    "text": "Pregunta 4: ¿Qué tan limpia es la data?\n\nPor qué: calidad de datos = confiabilidad de las decisiones.\nCómo preguntar: - “¿Cuánto tiempo se invirtió en limpieza?” - “¿Qué porcentaje está incompleto? ¿Qué tan actualizado está?”\nSeñales de respuesta: -  “80% del tiempo fue limpieza. Datos 95%+ correctos. Revisión mensual.” -  “Usamos datos como están. Probablemente esté bien.”\nBenchmark:\n\n\n\nProyecto\n% tiempo en limpieza\n\n\n\n\nPequeño\n~50%\n\n\nGrande\n~80%\n\n\nSospechoso\n&lt;30%"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#pregunta-5-quién-vigila-el-modelo",
+    "href": "clases/diapositiva_m1s4_202605.html#pregunta-5-quién-vigila-el-modelo",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Pregunta 5: ¿Quién vigila el modelo?",
+    "text": "Pregunta 5: ¿Quién vigila el modelo?\n\nPor qué: datos y modelos cambian; el sesgo puede aparecer con el tiempo.\nCómo preguntar: - “¿Cómo monitorean el desempeño en el mundo real?” - “¿Quién es responsable si falla?” - “¿Qué pasaría si el modelo empieza a favorecer a un grupo?”\nSeñales de respuesta: -  “Dashboard mensual. Métricas por segmento demográfico. Alertas automáticas.” -  “Asumimos que funciona igual que en el test.” -  “No lo hemos pensado.”\nAcción si hay riesgo: - Establecer SLAs y alertas - Plan de rollback (cómo parar rápido si falla) - Auditoría trimestral"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#cuadro-de-decisión-apruebo-este-proyecto",
+    "href": "clases/diapositiva_m1s4_202605.html#cuadro-de-decisión-apruebo-este-proyecto",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Cuadro de Decisión: ¿Apruebo Este Proyecto?",
+    "text": "Cuadro de Decisión: ¿Apruebo Este Proyecto?\n\n\n\n\n\n\n\n\n\n\nPregunta\nSí\nNo\nCon riesgo\n\n\n\n\n¿Todos los grupos están representados?\n Adelante\n No aprobar\n Limitar scope\n\n\n¿Datos históricos fueron justos?\n Adelante\n No aprobar\n Auditar y limpiar\n\n\n¿Sin data leakage?\n Adelante\n No aprobar\n Remover variables"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#cuadro-de-decisión-apruebo-este-proyecto-cont.",
+    "href": "clases/diapositiva_m1s4_202605.html#cuadro-de-decisión-apruebo-este-proyecto-cont.",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Cuadro de Decisión: ¿Apruebo Este Proyecto? (cont.)",
+    "text": "Cuadro de Decisión: ¿Apruebo Este Proyecto? (cont.)\n\n\n\n\n\n\n\n\n\n\nPregunta\nSí\nNo\nCon riesgo\n\n\n\n\n¿Datos &gt;95% limpios?\n Adelante\n No aprobar\n Invertir en limpieza\n\n\n¿Hay monitoreo?\n Adelante\n No aprobar\n Implementar primero\n\n\n\nCriterio de aprobación: al menos 4/5 deben ser “Sí” (o “Con riesgo” + plan concreto)."
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#el-rol-del-líder-en-gobernanza-de-datos",
+    "href": "clases/diapositiva_m1s4_202605.html#el-rol-del-líder-en-gobernanza-de-datos",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "El Rol del Líder en Gobernanza de Datos",
+    "text": "El Rol del Líder en Gobernanza de Datos\n\nNo tienes que ser técnico. Pero tienes que:\n\nHacer preguntas incómodas — sin miedo a parecer ignorante\nEntender los riesgos — sesgos, leakage, calidad\nEstablecer estándares — auditoría, monitoreo, responsabilidad\nActuar si hay problemas — parar, revisar, remediar\n\n\nSi un modelo falla y afecta a clientes o empleados, tú eres responsable."
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#actividad-3-simulación-aprobación-de-proyecto-10-min",
+    "href": "clases/diapositiva_m1s4_202605.html#actividad-3-simulación-aprobación-de-proyecto-10-min",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": " Actividad 3 — Simulación: “Aprobación de Proyecto” (10 min)",
+    "text": "Actividad 3 — Simulación: “Aprobación de Proyecto” (10 min)\n\nElige uno de estos proyectos y formula las 5 preguntas. Luego decide: ¿Aprobado? ¿Con riesgos? ¿Rechazado?\n\n\n\n\n\n\n\n\n\nOpción\nPropuesta\nDatos\nBeneficio esperado\n\n\n\n\nA: Fintech\nCréditos automáticos\n10 años de otorgamientos + morosidad\nAhorrar 2 horas por solicitud\n\n\nB: Retail\nRecomendador personalizado\nHistorial de compras online\n+15% en ticket promedio"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#actividad-3-simulación-aprobación-de-proyecto-cont.",
+    "href": "clases/diapositiva_m1s4_202605.html#actividad-3-simulación-aprobación-de-proyecto-cont.",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": " Actividad 3 — Simulación: “Aprobación de Proyecto” (cont.)",
+    "text": "Actividad 3 — Simulación: “Aprobación de Proyecto” (cont.)\n\n\n\n\n\n\n\n\n\n\nOpción\nPropuesta\nDatos\nBeneficio esperado\n\n\n\n\nC: HR\nIdentificar candidatos de alto potencial\nCVs, desempeño, evaluaciones históricas\nReducir turnover\n\n\nD: Manufactura\nMantenimiento predictivo\nSensores + histórico de fallas\nReducir downtime 40%\n\n\n\nEjemplo: “¿Los datos incluyen todos los estratos socioeconómicos? → No solo clase media-alta → Sesgo de representación → Aprobado CON riesgo: necesitamos datos más amplios + monitoreo por estrato.”"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#los-3-pilares-de-una-gobernanza-responsable",
+    "href": "clases/diapositiva_m1s4_202605.html#los-3-pilares-de-una-gobernanza-responsable",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Los 3 Pilares de una Gobernanza Responsable",
+    "text": "Los 3 Pilares de una Gobernanza Responsable\nPilar 1 — Transparencia - ¿De dónde vienen los datos? - ¿Quién está representado? - ¿Qué decisiones se tomaron históricamente?\nPilar 2 — Validación - ¿Datos están limpios? - ¿Hay sesgos detectables? - ¿El modelo funciona igual para todos los grupos?\nPilar 3 — Monitoreo - ¿Vigilamos el modelo en producción? - ¿Detectamos cambios o degradación? - ¿Tenemos plan de rollback?"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#red-flags-cuándo-desconfiar",
+    "href": "clases/diapositiva_m1s4_202605.html#red-flags-cuándo-desconfiar",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Red Flags: Cuándo Desconfiar",
+    "text": "Red Flags: Cuándo Desconfiar\n\n\n\n\n\n\n\n\n\nFrase\nRed Flag\nAcción\n\n\n\n\n“Los datos están limpios” (sin explicar cómo)\nFalta transparencia\nPide detalles del proceso\n\n\n“El modelo funciona con 99% de precisión”\nData leakage posible\nValida las variables\n\n\n“Estos grupos son muy pequeños, no importa”\nSesgo aceptado\nCuestiona y exige representación"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#red-flags-cuándo-desconfiar-cont.",
+    "href": "clases/diapositiva_m1s4_202605.html#red-flags-cuándo-desconfiar-cont.",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Red Flags: Cuándo Desconfiar (cont.)",
+    "text": "Red Flags: Cuándo Desconfiar (cont.)\n\n\n\n\n\n\n\n\n\nFrase\nRed Flag\nAcción\n\n\n\n\n“Nuestro histórico es objetivo” (sin auditarlo)\nSesgo histórico oculto\nPide auditoría de decisiones\n\n\n“No sabemos qué vigilar en producción”\nFalta de gobernanza\nExige plan antes de aprobar\n\n\n“Solo el equipo técnico entiende esto”\nOpacidad deliberada\nDemanda explicaciones claras"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#checklist-para-líderes-antes-de-aprobar",
+    "href": "clases/diapositiva_m1s4_202605.html#checklist-para-líderes-antes-de-aprobar",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Checklist para Líderes: Antes de Aprobar",
+    "text": "Checklist para Líderes: Antes de Aprobar\n□ ¿Representación de datos? ¿Hay grupos sub-representados?\n□ ¿Datos históricos validados como justos / objetivos?\n□ ¿Variables sin data leakage?\n□ ¿Datos &gt;95% limpios? ¿Quién verifica?\n□ ¿Plan de monitoreo y alertas?\n□ ¿Responsabilidades claras (quién es accountable si falla)?\n□ ¿Proceso de rollback si falla?\n□ ¿Testeado con grupos minoritarios?\n□ ¿Documentación clara del dataset?\n□ ¿Auditoría independiente (si el impacto es alto)?"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#checklist-de-monitoreo-mensual",
+    "href": "clases/diapositiva_m1s4_202605.html#checklist-de-monitoreo-mensual",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Checklist de Monitoreo Mensual",
+    "text": "Checklist de Monitoreo Mensual\n□ ¿El modelo sigue funcionando igual que hace 30 días?\n□ ¿Hay cambios en el desempeño por segmento?\n□ ¿Hay alertas de anomalías activas?\n□ ¿Se actualizó la data? ¿Cómo impactó?\n□ ¿Hay feedback de usuarios sobre errores o sesgos?\n□ ¿Necesitamos reentrenar?"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#cierre-la-responsabilidad-del-líder",
+    "href": "clases/diapositiva_m1s4_202605.html#cierre-la-responsabilidad-del-líder",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Cierre: La Responsabilidad del Líder",
+    "text": "Cierre: La Responsabilidad del Líder\n\n“Datos es poder. El poder requiere responsabilidad.”\n\n\nNo necesitas ser Data Scientist para liderar con integridad. Necesitas:\n\nCuriosidad — hacer preguntas\nEscepticismo sano — dudar de resultados perfectos\nEmpatía — pensar en quién se ve afectado\nCoraje — parar un proyecto si tiene riesgo\n\nEl 80% de los fracasos en IA no son por tecnología. Son por datos malos, sesgos ocultos y líderes que no hicieron preguntas."
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#glosario-para-líderes",
+    "href": "clases/diapositiva_m1s4_202605.html#glosario-para-líderes",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Glosario para Líderes",
+    "text": "Glosario para Líderes\n\n\n\n\n\n\n\nTérmino\nDefinición simple\n\n\n\n\nDataset\nTabla con filas (ejemplos) y columnas (datos)\n\n\nSesgo\nEl modelo favorece o rechaza a un grupo sin razón válida\n\n\nData Leakage\nInformación futura “filtrada” en datos de entrenamiento"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#glosario-para-líderes-cont.",
+    "href": "clases/diapositiva_m1s4_202605.html#glosario-para-líderes-cont.",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Glosario para Líderes (cont.)",
+    "text": "Glosario para Líderes (cont.)\n\n\n\n\n\n\n\nTérmino\nDefinición simple\n\n\n\n\nOverfitting\nModelo que memoriza en lugar de aprender patrones generalizables\n\n\nFeature\nUna columna de datos: edad, ubicación, historial de compras\n\n\nEntrenamiento\nProceso donde el modelo aprende patrones desde los datos"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#glosario-para-líderes-1",
+    "href": "clases/diapositiva_m1s4_202605.html#glosario-para-líderes-1",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Glosario para Líderes",
+    "text": "Glosario para Líderes\n\n\n\n\n\n\n\nTérmino\nDefinición simple\n\n\n\n\nValidación\nTestear el modelo en datos nuevos (no usados en entrenamiento)\n\n\nProducción\nEl modelo en uso real, haciendo predicciones\n\n\nKPI\nMétrica de desempeño (ej. “precisión 95%”)\n\n\nMonitoreo\nVigilar que el modelo siga funcionando correctamente"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202605.html#lecturas-recomendadas",
+    "href": "clases/diapositiva_m1s4_202605.html#lecturas-recomendadas",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Lecturas Recomendadas",
+    "text": "Lecturas Recomendadas\n\nWeapons of Math Destruction — Cathy O’Neil (accesible, crítico)\nFairness and Machine Learning — Barocas, Hardt & Narayanan (más técnico pero abordable)\n\n\nCasos de estudio:\n\nAmazon Hiring Algorithm (2018) — sesgo histórico en contratación\nCOMPAS (justicia criminal) — sesgo histórico en sistema penal\nGender Shades — Buolamwini & Gebru (MIT, 2018) — sesgo de representación en reconocimiento facial"
+  },
+  {
+    "objectID": "clases/clases.html",
+    "href": "clases/clases.html",
+    "title": "clases",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "clases/clases.html#quarto",
+    "href": "clases/clases.html#quarto",
+    "title": "clases",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1 + 1\n\n[1] 3"
   },
   {
     "objectID": "clases/diapositiva_01_202605.html#contexto-actual",
@@ -294,344 +805,379 @@
     "text": "Idea central\n\nLa IA es tan buena como el pipeline que la alimenta.\nUn modelo brillante sobre datos sucios es un modelo inútil."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1 + 1\n\n[1] 3"
-  },
-  {
-    "objectID": "clases/clases.html",
-    "href": "clases/clases.html",
-    "title": "clases",
-    "section": "",
-    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org.\n\n1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "clases/clases.html#quarto",
-    "href": "clases/clases.html#quarto",
-    "title": "clases",
-    "section": "",
-    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org.\n\n1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "clases/diapositiva_m1s4_202605.html#descripción-general",
-    "href": "clases/diapositiva_m1s4_202605.html#descripción-general",
+    "objectID": "clases/diapositiva_m1s4_202607.html#descripción-general",
+    "href": "clases/diapositiva_m1s4_202607.html#descripción-general",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "Descripción General",
     "text": "Descripción General\nEste módulo capacita para comprender el valor estratégico de los datos, identificar riesgos ocultos y tomar decisiones informadas sobre proyectos de IA.\nSin requerir programación, aprenderán a hacer preguntas críticas dentro de sus equipos y a gobernar responsablemente iniciativas de IA."
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#objetivos-de-aprendizaje",
-    "href": "clases/diapositiva_m1s4_202605.html#objetivos-de-aprendizaje",
+    "objectID": "clases/diapositiva_m1s4_202607.html#objetivos-de-aprendizaje",
+    "href": "clases/diapositiva_m1s4_202607.html#objetivos-de-aprendizaje",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "Objetivos de Aprendizaje",
     "text": "Objetivos de Aprendizaje\nAl finalizar esta sesión podrán:\n\nEntender por qué los datos son el cimiento crítico de la IA\nIdentificar los 4 enemigos silenciosos de los datos\nReconocer riesgos específicos en sus industrias\nFormular las 5 preguntas clave antes de implementar IA\nDiseñar un proceso básico de auditoría de datos"
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#estructura-de-la-sesión",
-    "href": "clases/diapositiva_m1s4_202605.html#estructura-de-la-sesión",
+    "objectID": "clases/diapositiva_m1s4_202607.html#estructura-de-la-sesión",
+    "href": "clases/diapositiva_m1s4_202607.html#estructura-de-la-sesión",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "Estructura de la Sesión",
     "text": "Estructura de la Sesión\n\n\n\n\n\n\n\n\n\nBloque\nDuración\nContenido\n\n\n\n\n1\n50 + 10 min\nEl combustible de la IA: datos como diferenciador\n\n\n2\n50 + 10 min\nLos enemigos silenciosos: sesgos, calidad, leakage\n\n\n3\n50 + 10 min\nGobernanza y toma de decisiones informadas"
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#concepto-central-datos-información",
-    "href": "clases/diapositiva_m1s4_202605.html#concepto-central-datos-información",
+    "objectID": "clases/diapositiva_m1s4_202607.html#concepto-central-datos-información",
+    "href": "clases/diapositiva_m1s4_202607.html#concepto-central-datos-información",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "Concepto Central: Datos ≠ Información",
     "text": "Concepto Central: Datos ≠ Información\nLo que la mayoría piensa:\n\nIA es magia / inteligencia artificial\nCon suficientes datos, la IA funciona\n\nLa realidad:\n\nIA es estadística + patrones en datos\nCalidad de datos &gt; cantidad de datos\nLos datos son el combustible; el modelo es el motor"
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#el-triángulo-de-oro-de-la-ia",
-    "href": "clases/diapositiva_m1s4_202605.html#el-triángulo-de-oro-de-la-ia",
+    "objectID": "clases/diapositiva_m1s4_202607.html#el-triángulo-de-oro-de-la-ia",
+    "href": "clases/diapositiva_m1s4_202607.html#el-triángulo-de-oro-de-la-ia",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "El Triángulo de Oro de la IA",
     "text": "El Triángulo de Oro de la IA\n\n\n\n\n\ngraph TD\n    D[\"🎯 DECISIONES&lt;br/&gt;(Output)\"]\n    M[\"⚙️ MODELO&lt;br/&gt;(Algoritmo)&lt;br/&gt;&lt;i&gt;5% del éxito&lt;/i&gt;\"]\n    DA[\"🗄️ DATA&lt;br/&gt;(Combustible)&lt;br/&gt;&lt;i&gt;95% del éxito&lt;/i&gt;\"]\n\n    M --&gt; D\n    DA --&gt; D\n    DA --&gt; M"
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#la-fórmula",
-    "href": "clases/diapositiva_m1s4_202605.html#la-fórmula",
+    "objectID": "clases/diapositiva_m1s4_202607.html#la-fórmula",
+    "href": "clases/diapositiva_m1s4_202607.html#la-fórmula",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "La Fórmula",
     "text": "La Fórmula\n\n\n\n\n\n\n\n\nEscenario\nResultado\n\n\n\n\nDatos buenos + features relevantes + modelo simple\nÉxito\n\n\nDatos malos + features complicadas + modelo sofisticado\nFracaso\n\n\n\n\n\nPuedes tener el algoritmo más avanzado del mundo. Si los datos son malos, el resultado será malo."
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#caso-netflix-vs-youtube",
-    "href": "clases/diapositiva_m1s4_202605.html#caso-netflix-vs-youtube",
+    "objectID": "clases/diapositiva_m1s4_202607.html#caso-netflix-vs-youtube",
+    "href": "clases/diapositiva_m1s4_202607.html#caso-netflix-vs-youtube",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "Caso: Netflix vs YouTube",
-    "text": "Caso: Netflix vs YouTube\n\n\n\n\n\n\n\n\n\nAspecto\nNetflix\nYouTube\n\n\n\n\nDatos que tienen\nHistorial, ratings, tiempo visto, contexto (país, horario)\nBillones de vistas, pero datos demográficos limitados\n\n\nCalidad de datos\nEtiquetado claro (5 estrellas, visto completamente)\nRuidoso (clickbait, clicks accidentales)\n\n\nResultado\nRecomendaciones precisas\nRecomendaciones genéricas\n\n\n\n\nLección: Netflix tiene menos datos pero mejor calidad y relevancia."
+    "text": "Caso: Netflix vs YouTube\n\n\n\n\n\n\n\n\n\nAspecto\nNetflix\nYouTube\n\n\n\n\nDatos que tienen\nHistorial, ratings, tiempo visto, contexto (país, horario)\nBillones de vistas, pero datos demográficos limitados\n\n\nCalidad de datos\nEtiquetado claro (5 estrellas, visto completamente)\nRuidoso (clickbait, clicks accidentales)\n\n\nResultado\nRecomendaciones precisas\nRecomendaciones genéricas\n\n\n\nLección: Netflix tiene menos datos pero mejor calidad y relevancia."
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#caso-spotify-y-los-datos-contextuales",
-    "href": "clases/diapositiva_m1s4_202605.html#caso-spotify-y-los-datos-contextuales",
+    "objectID": "clases/diapositiva_m1s4_202607.html#caso-spotify-y-los-datos-contextuales",
+    "href": "clases/diapositiva_m1s4_202607.html#caso-spotify-y-los-datos-contextuales",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "Caso: Spotify y los Datos Contextuales",
     "text": "Caso: Spotify y los Datos Contextuales\nSpotify ganó no por tener más datos, sino por capturar los datos correctos:\n\nQué escuchas a las 6 AM vs las 10 PM\nSi repites una canción\nSi saltas después de 5 segundos\nContexto: gym, trabajo, fiesta\n\nPrimer insight: Éxito en IA = elegir los datos correctos, no acumular todos los datos."
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#la-pregunta-clave-para-líderes",
-    "href": "clases/diapositiva_m1s4_202605.html#la-pregunta-clave-para-líderes",
+    "objectID": "clases/diapositiva_m1s4_202607.html#la-pregunta-clave-para-líderes",
+    "href": "clases/diapositiva_m1s4_202607.html#la-pregunta-clave-para-líderes",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "La Pregunta Clave para Líderes",
     "text": "La Pregunta Clave para Líderes\n\n“¿Qué datos tenemos nosotros que nuestros competidores NO tienen?”\n\nEso es tu ventaja competitiva en IA.\nNo es el algoritmo — todos usan los mismos. Es qué datos únicos capturas de tu negocio."
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#actividad-1-diagnóstico-de-datos-10-min",
-    "href": "clases/diapositiva_m1s4_202605.html#actividad-1-diagnóstico-de-datos-10-min",
+    "objectID": "clases/diapositiva_m1s4_202607.html#actividad-1-diagnóstico-de-datos-10-min",
+    "href": "clases/diapositiva_m1s4_202607.html#actividad-1-diagnóstico-de-datos-10-min",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": " Actividad 1 — Diagnóstico de Datos (10 min)",
     "text": "Actividad 1 — Diagnóstico de Datos (10 min)\n\nPiensa en tu área/empresa y responde:\n1. ¿Qué datos generamos hoy que nunca capturamos? - Retail: captura punto de venta, pero NO el momento en que el cliente decide NO comprar - HR: captura performance review, pero NO conversaciones 1:1 informales\n2. ¿Qué datos tenemos que podrían revelar algo escondido? - Bancos: historial de transacciones → ¿cuándo alguien está en riesgo financiero? - Logística: rutas → ¿cuándo el costo de entrega será más alto?\n3. ¿Quién en nuestra organización NO está representado en nuestros datos? - ¿Solo clientes que compraron? ¿No los que visitaron y no compraron? - ¿Solo empleados en sede? ¿No remotos?"
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#los-4-enemigos",
-    "href": "clases/diapositiva_m1s4_202605.html#los-4-enemigos",
+    "objectID": "clases/diapositiva_m1s4_202607.html#los-4-enemigos",
+    "href": "clases/diapositiva_m1s4_202607.html#los-4-enemigos",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "Los 4 Enemigos",
     "text": "Los 4 Enemigos\n\n\n\n\n\n\n\n\n\nEnemigo\nCausa\nRed Flag\n\n\n\n\nRepresentación\nFalta un grupo demográfico\n“Funciona bien para el cliente típico”\n\n\nHistórico\nDatos reflejan prejuicios del pasado\n“Reflejaría cómo siempre lo hemos hecho”\n\n\nLeakage\nInformación futura en datos de entrenamiento\n“99% de precisión” (sospechosamente alto)\n\n\nCalidad\nDatos incompletos, incorrectos o viejos\n“Nuestros datos están desordenados”"
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#enemigo-1-sesgo-de-representación",
-    "href": "clases/diapositiva_m1s4_202605.html#enemigo-1-sesgo-de-representación",
+    "objectID": "clases/diapositiva_m1s4_202607.html#enemigo-1-sesgo-de-representación",
+    "href": "clases/diapositiva_m1s4_202607.html#enemigo-1-sesgo-de-representación",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "Enemigo #1: Sesgo de Representación",
     "text": "Enemigo #1: Sesgo de Representación\nDefinición: Tu dataset no representa a toda la población que afectará la IA."
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#caso-real-reconocimiento-facial",
-    "href": "clases/diapositiva_m1s4_202605.html#caso-real-reconocimiento-facial",
+    "objectID": "clases/diapositiva_m1s4_202607.html#caso-real-reconocimiento-facial",
+    "href": "clases/diapositiva_m1s4_202607.html#caso-real-reconocimiento-facial",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "Caso Real: Reconocimiento Facial",
-    "text": "Caso Real: Reconocimiento Facial\nProblema descubierto (2018):\n\nGoogle, Amazon, Microsoft: tasa de error del 34% en rostros de mujeres oscuras\nTasa de error del 0.7% en rostros de hombres blancos\n\n¿Por qué? Los modelos se entrenaron mayormente con datos de personas blancas.\n\nImpacto:\n\nPolicía usa algoritmo para identificar sospechosos → falla en comunidades afrodescendientes\nAcceso a edificios por facial → gente con piel oscura queda afuera"
+    "text": "Caso Real: Reconocimiento Facial\nProblema descubierto (2018):\n\nGoogle, Amazon, Microsoft: tasa de error del 34% en rostros de mujeres oscuras\nTasa de error del 0.7% en rostros de hombres blancos\n\n¿Por qué? Los modelos se entrenaron mayormente con datos de personas blancas."
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#caso-real-modelos-de-crédito",
-    "href": "clases/diapositiva_m1s4_202605.html#caso-real-modelos-de-crédito",
+    "objectID": "clases/diapositiva_m1s4_202607.html#caso-real-reconocimiento-facial-impacto",
+    "href": "clases/diapositiva_m1s4_202607.html#caso-real-reconocimiento-facial-impacto",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Caso Real: Reconocimiento Facial (Impacto)",
+    "text": "Caso Real: Reconocimiento Facial (Impacto)\nImpacto:\n\nPolicía usa algoritmo para identificar sospechosos → falla en comunidades afrodescendientes\nAcceso a edificios por facial → gente con piel oscura queda afuera"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202607.html#caso-real-modelos-de-crédito",
+    "href": "clases/diapositiva_m1s4_202607.html#caso-real-modelos-de-crédito",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "Caso Real: Modelos de Crédito",
-    "text": "Caso Real: Modelos de Crédito\nProblema:\n\nBanco entrena algoritmo con datos históricos de clientes de clase media-alta\nAlgoritmo rechaza más personas de clase baja, aunque sean buen riesgo crediticio\n\nRazón: no hay suficientes datos de ese grupo en el histórico\n\nImpacto:\n\nDiscriminación indirecta pero efectiva\nMercado perdido (no alcanzas segmentos nuevos)\nRegulatorio: Regulador podría penalizar (CMF)"
+    "text": "Caso Real: Modelos de Crédito\nProblema:\n\nBanco entrena algoritmo con datos históricos de clientes de clase media-alta\nAlgoritmo rechaza más personas de clase baja, aunque sean buen riesgo crediticio\n\nRazón: no hay suficientes datos de ese grupo en el histórico"
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#cómo-identificar-el-sesgo-de-representación",
-    "href": "clases/diapositiva_m1s4_202605.html#cómo-identificar-el-sesgo-de-representación",
+    "objectID": "clases/diapositiva_m1s4_202607.html#caso-real-modelos-de-crédito-impacto",
+    "href": "clases/diapositiva_m1s4_202607.html#caso-real-modelos-de-crédito-impacto",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Caso Real: Modelos de Crédito (Impacto)",
+    "text": "Caso Real: Modelos de Crédito (Impacto)\nImpacto:\n\nDiscriminación indirecta pero efectiva\nMercado perdido (no alcanzas segmentos nuevos)\nRegulatorio: Regulador podría penalizar (CMF)"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202607.html#cómo-identificar-el-sesgo-de-representación",
+    "href": "clases/diapositiva_m1s4_202607.html#cómo-identificar-el-sesgo-de-representación",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "Cómo Identificar el Sesgo de Representación",
     "text": "Cómo Identificar el Sesgo de Representación\nRed flags:\n\n“Nuestro modelo funciona bien para el cliente típico”\n“Estos grupos son muy pequeños en nuestros datos”\n“Hay outliers raros que el modelo rechaza”\n\n\nTest simple:\n\nSegmenta tu dataset por: género, edad, geografía, nivel socioeconómico\n¿El modelo funciona bien en todos los segmentos?\nSi no → hay sesgo de representación"
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#enemigo-2-sesgo-histórico",
-    "href": "clases/diapositiva_m1s4_202605.html#enemigo-2-sesgo-histórico",
+    "objectID": "clases/diapositiva_m1s4_202607.html#enemigo-2-sesgo-histórico",
+    "href": "clases/diapositiva_m1s4_202607.html#enemigo-2-sesgo-histórico",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "Enemigo #2: Sesgo Histórico",
     "text": "Enemigo #2: Sesgo Histórico\nDefinición: Entrenas un modelo con datos del pasado que reflejan injusticias del pasado. El modelo las perpetúa."
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#caso-real-amazon-hiring-algorithm-20142018",
-    "href": "clases/diapositiva_m1s4_202605.html#caso-real-amazon-hiring-algorithm-20142018",
+    "objectID": "clases/diapositiva_m1s4_202607.html#caso-real-amazon-hiring-algorithm-20142018",
+    "href": "clases/diapositiva_m1s4_202607.html#caso-real-amazon-hiring-algorithm-20142018",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "Caso Real: Amazon Hiring Algorithm (2014–2018)",
-    "text": "Caso Real: Amazon Hiring Algorithm (2014–2018)\n¿Qué pasó?\n\nAmazon creó un algoritmo para filtrar CVs automáticamente\nLo entrenó con 10 años de contrataciones históricas en tech\nProblema: históricamente contrataban más hombres en tech - Resultado: el algoritmo aprendió a rechazar mujeres\n\n\nDetalles perturbadores:\n\nRechazaba palabras como “women’s chess club”\nRechazaba CVs de egresadas de colegios para mujeres\n\nAmazon mató el proyecto en 2018. No por altruismo: costoso en reputación y legal."
+    "text": "Caso Real: Amazon Hiring Algorithm (2014–2018)\n¿Qué pasó?\n\nAmazon creó un algoritmo para filtrar CVs automáticamente\nLo entrenó con 10 años de contrataciones históricas en tech\nProblema: históricamente contrataban más hombres en tech - Resultado: el algoritmo aprendió a rechazar mujeres"
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#caso-real-sistema-de-justicia-criminal",
-    "href": "clases/diapositiva_m1s4_202605.html#caso-real-sistema-de-justicia-criminal",
+    "objectID": "clases/diapositiva_m1s4_202607.html#caso-real-amazon-hiring-algorithm-detalles",
+    "href": "clases/diapositiva_m1s4_202607.html#caso-real-amazon-hiring-algorithm-detalles",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Caso Real: Amazon Hiring Algorithm (Detalles)",
+    "text": "Caso Real: Amazon Hiring Algorithm (Detalles)\nDetalles perturbadores:\n\nRechazaba palabras como “women’s chess club”\nRechazaba CVs de egresadas de colegios para mujeres\n\nAmazon mató el proyecto en 2018. No por altruismo: costoso en reputación y legal."
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202607.html#caso-real-sistema-de-justicia-criminal",
+    "href": "clases/diapositiva_m1s4_202607.html#caso-real-sistema-de-justicia-criminal",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "Caso Real: Sistema de Justicia Criminal",
-    "text": "Caso Real: Sistema de Justicia Criminal\n¿Qué pasó?\n\nPolicía usa el algoritmo COMPAS para predecir reincidencia\nEntrenado con datos históricos de quién fue detenido antes\nProblema: el sistema penal históricamente sobre-arresta a gente negra\nResultado: el algoritmo predice más reincidencia en gente negra (lógica circular)\n\n\nPreguntas sin respuesta:\n\n¿Fue reincidencia… o simplemente los arrestaron otra vez?\n¿El algoritmo predice crimen o predice quién será arrestado?"
+    "text": "Caso Real: Sistema de Justicia Criminal\n¿Qué pasó?\n\nPolicía usa el algoritmo COMPAS para predecir reincidencia\nEntrenado con datos históricos de quién fue detenido antes\nProblema: el sistema penal históricamente sobre-arresta a gente negra\nResultado: el algoritmo predice más reincidencia en gente negra (lógica circular)"
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#cómo-identificar-el-sesgo-histórico",
-    "href": "clases/diapositiva_m1s4_202605.html#cómo-identificar-el-sesgo-histórico",
+    "objectID": "clases/diapositiva_m1s4_202607.html#caso-real-sistema-de-justicia-criminal-preguntas",
+    "href": "clases/diapositiva_m1s4_202607.html#caso-real-sistema-de-justicia-criminal-preguntas",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Caso Real: Sistema de Justicia Criminal (Preguntas)",
+    "text": "Caso Real: Sistema de Justicia Criminal (Preguntas)\nPreguntas sin respuesta:\n\n¿Fue reincidencia… o simplemente los arrestaron otra vez?\n¿El algoritmo predice crimen o predice quién será arrestado?"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202607.html#cómo-identificar-el-sesgo-histórico",
+    "href": "clases/diapositiva_m1s4_202607.html#cómo-identificar-el-sesgo-histórico",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "Cómo Identificar el Sesgo Histórico",
     "text": "Cómo Identificar el Sesgo Histórico\nRed flags:\n\n“Nuestro modelo refleja lo que siempre hemos hecho”\n“Usamos datos históricos de evaluaciones / contrataciones / decisiones”\n“El modelo mantiene el status quo”\n\n\nTest:\n\n¿Tus datos vienen de decisiones humanas del pasado?\n¿Esas decisiones eran justas / objetivas?\nSi la respuesta no es un “sí” claro → hay sesgo histórico"
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#enemigo-3-data-leakage",
-    "href": "clases/diapositiva_m1s4_202605.html#enemigo-3-data-leakage",
+    "objectID": "clases/diapositiva_m1s4_202607.html#enemigo-3-data-leakage",
+    "href": "clases/diapositiva_m1s4_202607.html#enemigo-3-data-leakage",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "Enemigo #3: Data Leakage",
     "text": "Enemigo #3: Data Leakage\nDefinición: El modelo usa información que no tendría disponible en producción real. Parece perfecto en pruebas; falla en la realidad."
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#caso-real-predicción-de-fraude",
-    "href": "clases/diapositiva_m1s4_202605.html#caso-real-predicción-de-fraude",
+    "objectID": "clases/diapositiva_m1s4_202607.html#caso-real-predicción-de-fraude",
+    "href": "clases/diapositiva_m1s4_202607.html#caso-real-predicción-de-fraude",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "Caso Real: Predicción de Fraude",
     "text": "Caso Real: Predicción de Fraude\nDatos de entrenamiento incluyen:\n  - Monto de transacción\n  - País\n  - Hora\n  - ¿FUE REPORTADO COMO FRAUDE? ← ✗ ERROR\n\nEl modelo aprende: \"si fue reportado, es fraude\"\nKPI en test: 99% de precisión ✓ (falso)\n\nEn producción:\n  - Cliente realiza transacción\n  - Necesitamos predecir AHORA si es fraude\n  - Pero \"si fue reportado\" solo se sabe DESPUÉS\n  - Resultado: modelo rechaza transacciones legítimas"
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#caso-real-predicción-de-mortalidad-hospitalaria",
-    "href": "clases/diapositiva_m1s4_202605.html#caso-real-predicción-de-mortalidad-hospitalaria",
+    "objectID": "clases/diapositiva_m1s4_202607.html#caso-real-predicción-de-mortalidad-hospitalaria",
+    "href": "clases/diapositiva_m1s4_202607.html#caso-real-predicción-de-mortalidad-hospitalaria",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "Caso Real: Predicción de Mortalidad Hospitalaria",
     "text": "Caso Real: Predicción de Mortalidad Hospitalaria\nVariables incluidas:\n  - Edad, síntomas, historial médico\n  - ¿TUVO CUIDADOS INTENSIVOS? ← ✗ ERROR\n\nModelo predice: \"pacientes en ICU mueren más\"\nConclusión: \"invertir menos en ICU reduce muertes\"\n\nRealidad: la ICU es lo que SALVA a pacientes críticos.\nEl modelo confundió causación con correlación."
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#data-leakage-predicción-de-deserción-escolar",
-    "href": "clases/diapositiva_m1s4_202605.html#data-leakage-predicción-de-deserción-escolar",
+    "objectID": "clases/diapositiva_m1s4_202607.html#data-leakage-predicción-de-deserción-escolar",
+    "href": "clases/diapositiva_m1s4_202607.html#data-leakage-predicción-de-deserción-escolar",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "Data Leakage: Predicción de Deserción Escolar",
-    "text": "Data Leakage: Predicción de Deserción Escolar\nLo que FUNCIONA:\n\nDatos de hace 2 meses: asistencia, notas, engagement\nPredecir: ¿desertor en próximos 3 meses?\n\n\nLo que NO funciona:\n\nIncluir: “¿Se retiró del colegio?” — ¡eso es exactamente lo que predices!\nResultado: 100% de precisión, modelo completamente inútil\n\n\n\nSi el KPI es demasiado bueno (&gt;95%), busca leakage."
+    "text": "Data Leakage: Predicción de Deserción Escolar\nLo que FUNCIONA:\n\nDatos de hace 2 meses: asistencia, notas, engagement\nPredecir: ¿desertor en próximos 3 meses?\n\n\nLo que NO funciona:\n\nIncluir: “¿Se retiró del colegio?” — ¡eso es exactamente lo que predices!\nResultado: 100% de precisión, modelo completamente inútil\n\n\nSi el KPI es demasiado bueno (&gt;95%), busca leakage."
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#cómo-detectar-data-leakage",
-    "href": "clases/diapositiva_m1s4_202605.html#cómo-detectar-data-leakage",
+    "objectID": "clases/diapositiva_m1s4_202607.html#cómo-detectar-data-leakage",
+    "href": "clases/diapositiva_m1s4_202607.html#cómo-detectar-data-leakage",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "Cómo Detectar Data Leakage",
     "text": "Cómo Detectar Data Leakage\nPregunta clave:\n&gt; “¿Toda la información del modelo estaría disponible en el momento exacto en que necesitamos predecir?”\nRed flags:\n\nKPI de precisión &gt; 99% (sospechosamente perfecto)\nEl outcome (lo que predices) aparece como variable en el modelo\nDatos que solo existen después del evento que predices"
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#enemigo-4-calidad-de-datos",
-    "href": "clases/diapositiva_m1s4_202605.html#enemigo-4-calidad-de-datos",
+    "objectID": "clases/diapositiva_m1s4_202607.html#enemigo-4-calidad-de-datos",
+    "href": "clases/diapositiva_m1s4_202607.html#enemigo-4-calidad-de-datos",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "Enemigo #4: Calidad de Datos",
-    "text": "Enemigo #4: Calidad de Datos\nDefinición: Datos incompletos, incorrectos, contradictorios o desactualizados.\n\n\n\n\n\n\n\n\n\nProblema\nEjemplo\nImpacto\n\n\n\n\nIncompletos\n30% de edad faltante en CRM\nEl modelo rechaza registros o asume mal\n\n\nIncorrectos\nCliente registrado 2 veces con edades distintas\nInconsistencia en decisiones\n\n\nDesactualizados\nDirección de cliente de 2015\nMarketing envía a dirección incorrecta\n\n\nContradictorios\n“Estado: activo” pero “fecha baja: 2020”\nConfusión en la lógica de negocio\n\n\nSesgados en entrada\nSolo se registran clientes que compraron\nEl modelo no ve quién NO compra"
+    "text": "Enemigo #4: Calidad de Datos\nDefinición: Datos incompletos, incorrectos, contradictorios o desactualizados.\n\n\n\n\n\n\n\n\n\nProblema\nEjemplo\nImpacto\n\n\n\n\nIncompletos\n30% de edad faltante en CRM\nEl modelo rechaza registros o asume mal\n\n\nIncorrectos\nCliente registrado 2 veces con edades distintas\nInconsistencia en decisiones\n\n\nDesactualizados\nDirección de cliente de 2015\nMarketing envía a dirección incorrecta"
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#la-realidad-incómoda",
-    "href": "clases/diapositiva_m1s4_202605.html#la-realidad-incómoda",
+    "objectID": "clases/diapositiva_m1s4_202607.html#enemigo-4-calidad-de-datos-cont.",
+    "href": "clases/diapositiva_m1s4_202607.html#enemigo-4-calidad-de-datos-cont.",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Enemigo #4: Calidad de Datos (cont.)",
+    "text": "Enemigo #4: Calidad de Datos (cont.)\n\n\n\n\n\n\n\n\n\nProblema\nEjemplo\nImpacto\n\n\n\n\nContradictorios\n“Estado: activo” pero “fecha baja: 2020”\nConfusión en la lógica de negocio\n\n\nSesgados en entrada\nSolo se registran clientes que compraron\nEl modelo no ve quién NO compra"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202607.html#la-realidad-incómoda",
+    "href": "clases/diapositiva_m1s4_202607.html#la-realidad-incómoda",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "La Realidad Incómoda",
     "text": "La Realidad Incómoda\n\nEl 80% del tiempo en un proyecto de IA es limpieza de datos.\n\nNo es atractivo. No es “IA”. Pero es crítico.\n\nTest simple de calidad:\n\nToma 100 registros aleatorios\nValídalos manualmente: ¿son correctos?\nSi &lt; 95% correcto → hay problema de calidad"
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#resumen-los-4-enemigos",
-    "href": "clases/diapositiva_m1s4_202605.html#resumen-los-4-enemigos",
+    "objectID": "clases/diapositiva_m1s4_202607.html#resumen-los-4-enemigos",
+    "href": "clases/diapositiva_m1s4_202607.html#resumen-los-4-enemigos",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "Resumen: Los 4 Enemigos",
     "text": "Resumen: Los 4 Enemigos\n\n\n\n\n\n\n\n\n\n\nEnemigo\nCausa\nImpacto\nRed Flag\n\n\n\n\nRepresentación\nFalta un grupo demográfico\nModelo falla para ese grupo\n“Funciona bien para el cliente típico”\n\n\nHistórico\nDatos reflejan prejuicios del pasado\nPerpetúa injusticia a escala\n“Refleja cómo siempre lo hicimos”\n\n\nLeakage\nInformación futura en entrenamiento\nKPI falso; falla en producción\n“99% de precisión”\n\n\nCalidad\nDatos incompletos, incorrectos o viejos\nDecisiones inconsistentes\n“Nuestros datos están desordenados”"
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#actividad-2-diagnóstico-de-riesgos-10-min",
-    "href": "clases/diapositiva_m1s4_202605.html#actividad-2-diagnóstico-de-riesgos-10-min",
-    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
-    "section": " Actividad 2 — Diagnóstico de Riesgos (10 min)",
-    "text": "Actividad 2 — Diagnóstico de Riesgos (10 min)\n\nEscenario: tu empresa implementará IA en los próximos 6 meses.\nIdentifica 1–2 riesgos por categoría:\n\nSesgo de Representación: ¿hay grupos sub-representados en tus datos?\n\nEj. Retail: ¿solo tiendas físicas, no web?\n\nSesgo Histórico: ¿tus datos vienen de decisiones humanas del pasado? ¿eran justas?\n\nEj. Hiring: ¿datos de hace 10 años cuando contrataban diferente?\n\nData Leakage: ¿hay información que “solo sabrías después”?\n\nEj. Churn: ¿incluyes si el cliente llamó a cancelar? (¡ya está cancelado!)\n\nCalidad: ¿qué tan limpia está tu data? ¿hay valores faltantes críticos?"
-  },
-  {
-    "objectID": "clases/diapositiva_m1s4_202605.html#las-5-preguntas-que-todo-líder-debe-hacer",
-    "href": "clases/diapositiva_m1s4_202605.html#las-5-preguntas-que-todo-líder-debe-hacer",
+    "objectID": "clases/diapositiva_m1s4_202607.html#las-5-preguntas-que-todo-líder-debe-hacer",
+    "href": "clases/diapositiva_m1s4_202607.html#las-5-preguntas-que-todo-líder-debe-hacer",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "Las 5 Preguntas que Todo Líder Debe Hacer",
-    "text": "Las 5 Preguntas que Todo Líder Debe Hacer\nAntes de aprobar cualquier proyecto de IA, formula estas preguntas a tu equipo técnico:\n\n¿Quién está representado en estos datos?\n¿Estos datos reflejan decisiones justas del pasado?\n¿Hay información aquí que no tendríamos al momento de decidir?\n¿Qué tan limpia y confiable es esta data?\n¿Cómo sabemos si el modelo falla? ¿Quién lo vigila?"
+    "text": "Las 5 Preguntas que Todo Líder Debe Hacer\n\nAntes de aprobar cualquier proyecto de IA, formula estas preguntas a tu equipo técnico:\n\n¿Quién está representado en estos datos?\n¿Estos datos reflejan decisiones justas del pasado?\n¿Hay información aquí que no tendríamos al momento de decidir?\n¿Qué tan limpia y confiable es esta data?\n¿Cómo sabemos si el modelo falla? ¿Quién lo vigila?"
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#pregunta-1-quién-está-representado",
-    "href": "clases/diapositiva_m1s4_202605.html#pregunta-1-quién-está-representado",
+    "objectID": "clases/diapositiva_m1s4_202607.html#pregunta-1-quién-está-representado",
+    "href": "clases/diapositiva_m1s4_202607.html#pregunta-1-quién-está-representado",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "Pregunta 1: ¿Quién está representado?",
-    "text": "Pregunta 1: ¿Quién está representado?\nPor qué: identificar sesgos de representación.\n\nCómo preguntar: - “¿Todos nuestros clientes / empleados están en estos datos?” - “¿Hay grupos que falten? ¿Qué pasará con ellos?”\nSeñales de respuesta: -  “80% de nuestros clientes activos, distribuidos así…” -  “Suficientes datos” -  “No es importante”\nAcción si hay riesgo: - Recolectar datos del grupo faltante - Limitar el scope: “este modelo es solo para clientes premium” - Monitorear sesgo por segmento"
+    "text": "Pregunta 1: ¿Quién está representado?\n\nPor qué: identificar sesgos de representación.\nCómo preguntar: - “¿Todos nuestros clientes / empleados están en estos datos?” - “¿Hay grupos que falten? ¿Qué pasará con ellos?”\nSeñales de respuesta: -  “80% de nuestros clientes activos, distribuidos así…” -  “Suficientes datos” -  “No es importante”\nAcción si hay riesgo: - Recolectar datos del grupo faltante - Limitar el scope: “este modelo es solo para clientes premium” - Monitorear sesgo por segmento"
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#pregunta-2-los-históricos-fueron-justos",
-    "href": "clases/diapositiva_m1s4_202605.html#pregunta-2-los-históricos-fueron-justos",
+    "objectID": "clases/diapositiva_m1s4_202607.html#pregunta-2-los-históricos-fueron-justos",
+    "href": "clases/diapositiva_m1s4_202607.html#pregunta-2-los-históricos-fueron-justos",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "Pregunta 2: ¿Los históricos fueron justos?",
-    "text": "Pregunta 2: ¿Los históricos fueron justos?\nPor qué: identificar sesgo histórico que perpetúa injusticia.\n\nCómo preguntar: - “¿De dónde vienen estos datos históricos?” - “¿Las decisiones del pasado fueron justas? ¿O reflejan cómo discriminábamos?”\nSeñales de respuesta: -  “Datos de decisiones que auditamos y validamos” -  “Datos de cómo siempre lo hemos hecho” -  “Asumimos que el histórico es objetivo”\nAcción si hay riesgo: - Auditar las decisiones históricas - Limpiar datos discriminatorios - Limitar el impacto: recomendación (no decisión automática)"
+    "text": "Pregunta 2: ¿Los históricos fueron justos?\n\nPor qué: identificar sesgo histórico que perpetúa injusticia.\nCómo preguntar: - “¿De dónde vienen estos datos históricos?” - “¿Las decisiones del pasado fueron justas? ¿O reflejan cómo discriminábamos?”\nSeñales de respuesta: -  “Datos de decisiones que auditamos y validamos” -  “Datos de cómo siempre lo hemos hecho” -  “Asumimos que el histórico es objetivo”\nAcción si hay riesgo: - Auditar las decisiones históricas - Limpiar datos discriminatorios - Limitar el impacto: recomendación (no decisión automática)"
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#pregunta-3-hay-data-leakage",
-    "href": "clases/diapositiva_m1s4_202605.html#pregunta-3-hay-data-leakage",
+    "objectID": "clases/diapositiva_m1s4_202607.html#pregunta-3-hay-data-leakage",
+    "href": "clases/diapositiva_m1s4_202607.html#pregunta-3-hay-data-leakage",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "Pregunta 3: ¿Hay data leakage?",
-    "text": "Pregunta 3: ¿Hay data leakage?\nPor qué: detectar información futura infiltrada en el entrenamiento.\n\nCómo preguntar: - “¿Cuándo predecimos esto exactamente?” - “¿Toda esta información estaría disponible EN ESE MOMENTO?”\nEjemplo de conversación:\nTú: “¿Incluyen la variable ‘fue reportado como fraude’ en entrenamiento?”\nTécnico: “Sí.”\nTú: “¿En producción, cuando necesitamos predecir, ya sabremos eso?”\nTécnico: “Ah… no. Eso se sabe después.”\nTú: “Saca esa variable. El modelo está truqueado.”"
+    "text": "Pregunta 3: ¿Hay data leakage?\n\nPor qué: detectar información futura infiltrada en el entrenamiento.\nCómo preguntar: - “¿Cuándo predecimos esto exactamente?” - “¿Toda esta información estaría disponible EN ESE MOMENTO?”\nEjemplo de conversación:\nTú: “¿Incluyen la variable ‘fue reportado como fraude’ en entrenamiento?”\nTécnico: “Sí.”\nTú: “¿En producción, cuando necesitamos predecir, ya sabremos eso?”\nTécnico: “Ah… no. Eso se sabe después.”\nTú: “Saca esa variable. El modelo está truqueado.”"
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#pregunta-4-qué-tan-limpia-es-la-data",
-    "href": "clases/diapositiva_m1s4_202605.html#pregunta-4-qué-tan-limpia-es-la-data",
+    "objectID": "clases/diapositiva_m1s4_202607.html#pregunta-4-qué-tan-limpia-es-la-data",
+    "href": "clases/diapositiva_m1s4_202607.html#pregunta-4-qué-tan-limpia-es-la-data",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "Pregunta 4: ¿Qué tan limpia es la data?",
-    "text": "Pregunta 4: ¿Qué tan limpia es la data?\nPor qué: calidad de datos = confiabilidad de las decisiones.\n\nCómo preguntar: - “¿Cuánto tiempo se invirtió en limpieza?” - “¿Qué porcentaje está incompleto? ¿Qué tan actualizado está?”\nSeñales de respuesta: -  “80% del tiempo fue limpieza. Datos 95%+ correctos. Revisión mensual.” -  “Usamos datos como están. Probablemente esté bien.”\nBenchmark:\n\n\n\nProyecto\n% tiempo en limpieza\n\n\n\n\nPequeño\n~50%\n\n\nGrande\n~80%\n\n\nSospechoso\n&lt;30%"
+    "text": "Pregunta 4: ¿Qué tan limpia es la data?\n\nPor qué: calidad de datos = confiabilidad de las decisiones.\nCómo preguntar: - “¿Cuánto tiempo se invirtió en limpieza?” - “¿Qué porcentaje está incompleto? ¿Qué tan actualizado está?”\nSeñales de respuesta: -  “80% del tiempo fue limpieza. Datos 95%+ correctos. Revisión mensual.” -  “Usamos datos como están. Probablemente esté bien.”\nBenchmark:\n\n\n\nProyecto\n% tiempo en limpieza\n\n\n\n\nPequeño\n~50%\n\n\nGrande\n~80%\n\n\nSospechoso\n&lt;30%"
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#pregunta-5-quién-vigila-el-modelo",
-    "href": "clases/diapositiva_m1s4_202605.html#pregunta-5-quién-vigila-el-modelo",
+    "objectID": "clases/diapositiva_m1s4_202607.html#pregunta-5-quién-vigila-el-modelo",
+    "href": "clases/diapositiva_m1s4_202607.html#pregunta-5-quién-vigila-el-modelo",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "Pregunta 5: ¿Quién vigila el modelo?",
-    "text": "Pregunta 5: ¿Quién vigila el modelo?\nPor qué: datos y modelos cambian; el sesgo puede aparecer con el tiempo.\n\nCómo preguntar: - “¿Cómo monitorean el desempeño en el mundo real?” - “¿Quién es responsable si falla?” - “¿Qué pasaría si el modelo empieza a favorecer a un grupo?”\nSeñales de respuesta: -  “Dashboard mensual. Métricas por segmento demográfico. Alertas automáticas.” -  “Asumimos que funciona igual que en el test.” -  “No lo hemos pensado.”\nAcción si hay riesgo: - Establecer SLAs y alertas - Plan de rollback (cómo parar rápido si falla) - Auditoría trimestral"
+    "text": "Pregunta 5: ¿Quién vigila el modelo?\n\nPor qué: datos y modelos cambian; el sesgo puede aparecer con el tiempo.\nCómo preguntar: - “¿Cómo monitorean el desempeño en el mundo real?” - “¿Quién es responsable si falla?” - “¿Qué pasaría si el modelo empieza a favorecer a un grupo?”\nSeñales de respuesta: -  “Dashboard mensual. Métricas por segmento demográfico. Alertas automáticas.” -  “Asumimos que funciona igual que en el test.” -  “No lo hemos pensado.”\nAcción si hay riesgo: - Establecer SLAs y alertas - Plan de rollback (cómo parar rápido si falla) - Auditoría trimestral"
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#cuadro-de-decisión-apruebo-este-proyecto",
-    "href": "clases/diapositiva_m1s4_202605.html#cuadro-de-decisión-apruebo-este-proyecto",
+    "objectID": "clases/diapositiva_m1s4_202607.html#cuadro-de-decisión-apruebo-este-proyecto",
+    "href": "clases/diapositiva_m1s4_202607.html#cuadro-de-decisión-apruebo-este-proyecto",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "Cuadro de Decisión: ¿Apruebo Este Proyecto?",
-    "text": "Cuadro de Decisión: ¿Apruebo Este Proyecto?\n\n\n\n\n\n\n\n\n\n\nPregunta\nSí\nNo\nCon riesgo\n\n\n\n\n¿Todos los grupos están representados?\n Adelante\n No aprobar\n Limitar scope\n\n\n¿Datos históricos fueron justos?\n Adelante\n No aprobar\n Auditar y limpiar\n\n\n¿Sin data leakage?\n Adelante\n No aprobar\n Remover variables\n\n\n¿Datos &gt;95% limpios?\n Adelante\n No aprobar\n Invertir en limpieza\n\n\n¿Hay monitoreo?\n Adelante\n No aprobar\n Implementar primero\n\n\n\nCriterio de aprobación: al menos 4/5 deben ser “Sí” (o “Con riesgo” + plan concreto)."
+    "text": "Cuadro de Decisión: ¿Apruebo Este Proyecto?\n\n\n\n\n\n\n\n\n\n\nPregunta\nSí\nNo\nCon riesgo\n\n\n\n\n¿Todos los grupos están representados?\n Adelante\n No aprobar\n Limitar scope\n\n\n¿Datos históricos fueron justos?\n Adelante\n No aprobar\n Auditar y limpiar\n\n\n¿Sin data leakage?\n Adelante\n No aprobar\n Remover variables"
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#el-rol-del-líder-en-gobernanza-de-datos",
-    "href": "clases/diapositiva_m1s4_202605.html#el-rol-del-líder-en-gobernanza-de-datos",
+    "objectID": "clases/diapositiva_m1s4_202607.html#cuadro-de-decisión-apruebo-este-proyecto-cont.",
+    "href": "clases/diapositiva_m1s4_202607.html#cuadro-de-decisión-apruebo-este-proyecto-cont.",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Cuadro de Decisión: ¿Apruebo Este Proyecto? (cont.)",
+    "text": "Cuadro de Decisión: ¿Apruebo Este Proyecto? (cont.)\n\n\n\n\n\n\n\n\n\n\nPregunta\nSí\nNo\nCon riesgo\n\n\n\n\n¿Datos &gt;95% limpios?\n Adelante\n No aprobar\n Invertir en limpieza\n\n\n¿Hay monitoreo?\n Adelante\n No aprobar\n Implementar primero\n\n\n\nCriterio de aprobación: al menos 4/5 deben ser “Sí” (o “Con riesgo” + plan concreto)."
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202607.html#el-rol-del-líder-en-gobernanza-de-datos",
+    "href": "clases/diapositiva_m1s4_202607.html#el-rol-del-líder-en-gobernanza-de-datos",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "El Rol del Líder en Gobernanza de Datos",
-    "text": "El Rol del Líder en Gobernanza de Datos\nNo tienes que ser técnico. Pero tienes que:\n\nHacer preguntas incómodas — sin miedo a parecer ignorante\nEntender los riesgos — sesgos, leakage, calidad\nEstablecer estándares — auditoría, monitoreo, responsabilidad\nActuar si hay problemas — parar, revisar, remediar\n\n\nSi un modelo falla y afecta a clientes o empleados, tú eres responsable."
+    "text": "El Rol del Líder en Gobernanza de Datos\n\nNo tienes que ser técnico. Pero tienes que:\n\nHacer preguntas incómodas — sin miedo a parecer ignorante\nEntender los riesgos — sesgos, leakage, calidad\nEstablecer estándares — auditoría, monitoreo, responsabilidad\nActuar si hay problemas — parar, revisar, remediar\n\n\nSi un modelo falla y afecta a clientes o empleados, tú eres responsable."
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#actividad-3-simulación-aprobación-de-proyecto-10-min",
-    "href": "clases/diapositiva_m1s4_202605.html#actividad-3-simulación-aprobación-de-proyecto-10-min",
+    "objectID": "clases/diapositiva_m1s4_202607.html#actividad-3-auditoría-con-ia-mistral-cli-10-min",
+    "href": "clases/diapositiva_m1s4_202607.html#actividad-3-auditoría-con-ia-mistral-cli-10-min",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
-    "section": " Actividad 3 — Simulación: “Aprobación de Proyecto” (10 min)",
-    "text": "Actividad 3 — Simulación: “Aprobación de Proyecto” (10 min)\n\nElige uno de estos proyectos y formula las 5 preguntas. Luego decide: ¿Aprobado? ¿Con riesgos? ¿Rechazado?\n\n\n\n\n\n\n\n\n\nOpción\nPropuesta\nDatos\nBeneficio esperado\n\n\n\n\nA: Fintech\nCréditos automáticos\n10 años de otorgamientos + morosidad\nAhorrar 2 horas por solicitud\n\n\nB: Retail\nRecomendador personalizado\nHistorial de compras online\n+15% en ticket promedio\n\n\nC: HR\nIdentificar candidatos de alto potencial\nCVs, desempeño, evaluaciones históricas\nReducir turnover\n\n\nD: Manufactura\nMantenimiento predictivo\nSensores + histórico de fallas\nReducir downtime 40%\n\n\n\nEjemplo: “¿Los datos incluyen todos los estratos socioeconómicos? → No solo clase media-alta → Sesgo de representación → Aprobado CON riesgo: necesitamos datos más amplios + monitoreo por estrato.”"
+    "section": " Actividad 3 — Auditoría con IA: Mistral CLI (10 min)",
+    "text": "Actividad 3 — Auditoría con IA: Mistral CLI (10 min)\n\nInstrucciones:\n\nElijan en grupo uno de los proyectos de la siguiente diapositiva\nAntes de ver la respuesta de la IA: ¿qué red flags ven ustedes? (1 min, en silencio)\nEl facilitador pega el prompt (próxima diapositiva) en vivo, en vibe — el CLI oficial de Mistral\nComparen: ¿la IA detectó lo mismo que ustedes? ¿qué se le pasó?\n\n¿No tienen vibe instalado? No hace falta — el mismo prompt se puede escribir a mano en https://chat.mistral.ai, sin instalar nada.\n\n\nPreparación previa (no mostrar en pantalla): instalar y probar vibe con el prompt de prueba antes de la clase. Backup si vibe falla en vivo: usar auditar_mistral.ps1 (. .\\clases\\scripts\\auditar_mistral.ps1 y auditar \"...\") o directamente chat.mistral.ai."
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#los-3-pilares-de-una-gobernanza-responsable",
-    "href": "clases/diapositiva_m1s4_202605.html#los-3-pilares-de-una-gobernanza-responsable",
+    "objectID": "clases/diapositiva_m1s4_202607.html#el-cli-oficial-de-mistral-vibe",
+    "href": "clases/diapositiva_m1s4_202607.html#el-cli-oficial-de-mistral-vibe",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
-    "section": "Los 3 Pilares de una Gobernanza Responsable",
-    "text": "Los 3 Pilares de una Gobernanza Responsable\nPilar 1 — Transparencia - ¿De dónde vienen los datos? - ¿Quién está representado? - ¿Qué decisiones se tomaron históricamente?\nPilar 2 — Validación - ¿Datos están limpios? - ¿Hay sesgos detectables? - ¿El modelo funciona igual para todos los grupos?\nPilar 3 — Monitoreo - ¿Vigilamos el modelo en producción? - ¿Detectamos cambios o degradación? - ¿Tenemos plan de rollback?"
+    "section": "El CLI oficial de Mistral: Vibe",
+    "text": "El CLI oficial de Mistral: Vibe\n\nQué es: mistral-vibe es el CLI oficial de Mistral — un agente de código para la terminal (similar a Claude Code). Requiere Python 3.12+.\nInstalación (Windows, PowerShell):\npowershell -ExecutionPolicy ByPass -c \"irm https://astral.sh/uv/install.ps1 | iex\"\nuv tool install mistral-vibe\nvibe\nEl primer vibe abre un asistente: inicias sesión con tu cuenta Mistral o pegas tu API key. Una vez abierto, se le pega el prompt de la siguiente diapositiva como si fuera un chat.\n Atención: Mistral soporta oficialmente solo Unix/macOS/Linux — en Windows puede fallar (hay bugs reportados). Por eso siempre queda la opción de escribir el mismo prompt a mano en chat.mistral.ai."
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#red-flags-cuándo-desconfiar",
-    "href": "clases/diapositiva_m1s4_202605.html#red-flags-cuándo-desconfiar",
+    "objectID": "clases/diapositiva_m1s4_202607.html#el-prompt-a-mano-en-vibe-o-en-chat.mistral.ai",
+    "href": "clases/diapositiva_m1s4_202607.html#el-prompt-a-mano-en-vibe-o-en-chat.mistral.ai",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "El Prompt (a mano, en vibe o en chat.mistral.ai)",
+    "text": "El Prompt (a mano, en vibe o en chat.mistral.ai)\n\nEscriban o peguen esto, reemplazando [PROYECTO] por la descripción del proyecto que eligieron:\nActúa como auditor de gobernanza de datos para líderes no técnicos.\nTe voy a describir un proyecto de IA. Responde en español, en máximo 6 líneas:\n\nRED FLAGS DETECTADOS: (sesgo de representación, sesgo histórico, data leakage, calidad de datos - solo los que apliquen)\nVEREDICTO: Aprobado / Aprobado con riesgo / Rechazado\nJUSTIFICACIÓN: (una sola línea)\n\nProyecto: [PROYECTO]\nMensaje de prueba: “Banco quiere otorgar créditos automáticos usando 10 años de historial de otorgamientos y morosidad”"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202607.html#actividad-3-auditoría-con-ia-mistral-cli-cont.",
+    "href": "clases/diapositiva_m1s4_202607.html#actividad-3-auditoría-con-ia-mistral-cli-cont.",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": " Actividad 3 — Auditoría con IA: Mistral CLI (cont.)",
+    "text": "Actividad 3 — Auditoría con IA: Mistral CLI (cont.)\n\n\n\n\n\n\n\n\n\nOpción\nPropuesta\nDatos\n\n\n\n\nA: Fintech\nCréditos automáticos\n10 años de otorgamientos + morosidad\n\n\nB: Retail\nRecomendador personalizado\nHistorial de compras online\n\n\nC: HR\nIdentificar candidatos de alto potencial\nCVs, desempeño, evaluaciones históricas\n\n\nD: Manufactura\nMantenimiento predictivo\nSensores + histórico de fallas\n\n\n\nDiscusión: ¿La IA detectó lo mismo que tú? ¿Qué se le pasó? La IA es una herramienta — el juicio sigue siendo tuyo."
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202607.html#red-flags-cuándo-desconfiar",
+    "href": "clases/diapositiva_m1s4_202607.html#red-flags-cuándo-desconfiar",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "Red Flags: Cuándo Desconfiar",
-    "text": "Red Flags: Cuándo Desconfiar\n\n\n\n\n\n\n\n\nFrase\nRed Flag\nAcción\n\n\n\n\n“Los datos están limpios” (sin explicar cómo)\nFalta transparencia\nPide detalles del proceso\n\n\n“El modelo funciona con 99% de precisión”\nData leakage posible\nValida las variables\n\n\n“Estos grupos son muy pequeños, no importa”\nSesgo aceptado\nCuestiona y exige representación\n\n\n“Nuestro histórico es objetivo” (sin auditarlo)\nSesgo histórico oculto\nPide auditoría de decisiones\n\n\n“No sabemos qué vigilar en producción”\nFalta de gobernanza\nExige plan antes de aprobar\n\n\n“Solo el equipo técnico entiende esto”\nOpacidad deliberada\nDemanda explicaciones claras"
+    "text": "Red Flags: Cuándo Desconfiar\n\n\n\n\n\n\n\n\n\nFrase\nRed Flag\nAcción\n\n\n\n\n“Los datos están limpios” (sin explicar cómo)\nFalta transparencia\nPide detalles del proceso\n\n\n“El modelo funciona con 99% de precisión”\nData leakage posible\nValida las variables\n\n\n“Estos grupos son muy pequeños, no importa”\nSesgo aceptado\nCuestiona y exige representación"
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#red-flags-cuándo-desconfiar-1",
-    "href": "clases/diapositiva_m1s4_202605.html#red-flags-cuándo-desconfiar-1",
+    "objectID": "clases/diapositiva_m1s4_202607.html#red-flags-cuándo-desconfiar-cont.",
+    "href": "clases/diapositiva_m1s4_202607.html#red-flags-cuándo-desconfiar-cont.",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
-    "section": "Red Flags: Cuándo Desconfiar",
-    "text": "Red Flags: Cuándo Desconfiar\n\n\n\n\n\n\n\n\nFrase\nRed Flag\nAcción\n\n\n\n\n“Nuestro histórico es objetivo” (sin auditarlo)\nSesgo histórico oculto\nPide auditoría de decisiones\n\n\n“No sabemos qué vigilar en producción”\nFalta de gobernanza\nExige plan antes de aprobar\n\n\n“Solo el equipo técnico entiende esto”\nOpacidad deliberada\nDemanda explicaciones claras"
+    "section": "Red Flags: Cuándo Desconfiar (cont.)",
+    "text": "Red Flags: Cuándo Desconfiar (cont.)\n\n\n\n\n\n\n\n\n\nFrase\nRed Flag\nAcción\n\n\n\n\n“Nuestro histórico es objetivo” (sin auditarlo)\nSesgo histórico oculto\nPide auditoría de decisiones\n\n\n“No sabemos qué vigilar en producción”\nFalta de gobernanza\nExige plan antes de aprobar\n\n\n“Solo el equipo técnico entiende esto”\nOpacidad deliberada\nDemanda explicaciones claras"
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#checklist-para-líderes-antes-de-aprobar",
-    "href": "clases/diapositiva_m1s4_202605.html#checklist-para-líderes-antes-de-aprobar",
+    "objectID": "clases/diapositiva_m1s4_202607.html#checklist-para-líderes-antes-de-aprobar",
+    "href": "clases/diapositiva_m1s4_202607.html#checklist-para-líderes-antes-de-aprobar",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "Checklist para Líderes: Antes de Aprobar",
     "text": "Checklist para Líderes: Antes de Aprobar\n□ ¿Representación de datos? ¿Hay grupos sub-representados?\n□ ¿Datos históricos validados como justos / objetivos?\n□ ¿Variables sin data leakage?\n□ ¿Datos &gt;95% limpios? ¿Quién verifica?\n□ ¿Plan de monitoreo y alertas?\n□ ¿Responsabilidades claras (quién es accountable si falla)?\n□ ¿Proceso de rollback si falla?\n□ ¿Testeado con grupos minoritarios?\n□ ¿Documentación clara del dataset?\n□ ¿Auditoría independiente (si el impacto es alto)?"
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#checklist-de-monitoreo-mensual",
-    "href": "clases/diapositiva_m1s4_202605.html#checklist-de-monitoreo-mensual",
+    "objectID": "clases/diapositiva_m1s4_202607.html#checklist-de-monitoreo-mensual",
+    "href": "clases/diapositiva_m1s4_202607.html#checklist-de-monitoreo-mensual",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "Checklist de Monitoreo Mensual",
     "text": "Checklist de Monitoreo Mensual\n□ ¿El modelo sigue funcionando igual que hace 30 días?\n□ ¿Hay cambios en el desempeño por segmento?\n□ ¿Hay alertas de anomalías activas?\n□ ¿Se actualizó la data? ¿Cómo impactó?\n□ ¿Hay feedback de usuarios sobre errores o sesgos?\n□ ¿Necesitamos reentrenar?"
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#cierre-la-responsabilidad-del-líder",
-    "href": "clases/diapositiva_m1s4_202605.html#cierre-la-responsabilidad-del-líder",
+    "objectID": "clases/diapositiva_m1s4_202607.html#cierre-la-responsabilidad-del-líder",
+    "href": "clases/diapositiva_m1s4_202607.html#cierre-la-responsabilidad-del-líder",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "Cierre: La Responsabilidad del Líder",
-    "text": "Cierre: La Responsabilidad del Líder\n\n“Datos es poder. El poder requiere responsabilidad.”\n\nNo necesitas ser Data Scientist para liderar con integridad. Necesitas:\n\nCuriosidad — hacer preguntas\nEscepticismo sano — dudar de resultados perfectos\nEmpatía — pensar en quién se ve afectado\nCoraje — parar un proyecto si tiene riesgo\n\nEl 80% de los fracasos en IA no son por tecnología. Son por datos malos, sesgos ocultos y líderes que no hicieron preguntas."
+    "text": "Cierre: La Responsabilidad del Líder\n\n“Datos es poder. El poder requiere responsabilidad.”\n\n\nNo necesitas ser Data Scientist para liderar con integridad. Necesitas:\n\nCuriosidad — hacer preguntas\nEscepticismo sano — dudar de resultados perfectos\nEmpatía — pensar en quién se ve afectado\nCoraje — parar un proyecto si tiene riesgo\n\nEl 80% de los fracasos en IA no son por tecnología. Son por datos malos, sesgos ocultos y líderes que no hicieron preguntas."
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#glosario-para-líderes",
-    "href": "clases/diapositiva_m1s4_202605.html#glosario-para-líderes",
+    "objectID": "clases/diapositiva_m1s4_202607.html#glosario-para-líderes",
+    "href": "clases/diapositiva_m1s4_202607.html#glosario-para-líderes",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "Glosario para Líderes",
-    "text": "Glosario para Líderes\n\n\n\n\n\n\n\nTérmino\nDefinición simple\n\n\n\n\nDataset\nTabla con filas (ejemplos) y columnas (datos)\n\n\nSesgo\nEl modelo favorece o rechaza a un grupo sin razón válida\n\n\nData Leakage\nInformación futura “filtrada” en datos de entrenamiento\n\n\nOverfitting\nModelo que memoriza en lugar de aprender patrones generalizables\n\n\nFeature\nUna columna de datos: edad, ubicación, historial de compras\n\n\nEntrenamiento\nProceso donde el modelo aprende patrones desde los datos"
+    "text": "Glosario para Líderes\n\n\n\n\n\n\n\nTérmino\nDefinición simple\n\n\n\n\nDataset\nTabla con filas (ejemplos) y columnas (datos)\n\n\nSesgo\nEl modelo favorece o rechaza a un grupo sin razón válida\n\n\nData Leakage\nInformación futura “filtrada” en datos de entrenamiento"
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#glosario-para-líderes-1",
-    "href": "clases/diapositiva_m1s4_202605.html#glosario-para-líderes-1",
+    "objectID": "clases/diapositiva_m1s4_202607.html#glosario-para-líderes-cont.",
+    "href": "clases/diapositiva_m1s4_202607.html#glosario-para-líderes-cont.",
+    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
+    "section": "Glosario para Líderes (cont.)",
+    "text": "Glosario para Líderes (cont.)\n\n\n\n\n\n\n\nTérmino\nDefinición simple\n\n\n\n\nOverfitting\nModelo que memoriza en lugar de aprender patrones generalizables\n\n\nFeature\nUna columna de datos: edad, ubicación, historial de compras\n\n\nEntrenamiento\nProceso donde el modelo aprende patrones desde los datos"
+  },
+  {
+    "objectID": "clases/diapositiva_m1s4_202607.html#glosario-para-líderes-1",
+    "href": "clases/diapositiva_m1s4_202607.html#glosario-para-líderes-1",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "Glosario para Líderes",
     "text": "Glosario para Líderes\n\n\n\n\n\n\n\nTérmino\nDefinición simple\n\n\n\n\nValidación\nTestear el modelo en datos nuevos (no usados en entrenamiento)\n\n\nProducción\nEl modelo en uso real, haciendo predicciones\n\n\nKPI\nMétrica de desempeño (ej. “precisión 95%”)\n\n\nMonitoreo\nVigilar que el modelo siga funcionando correctamente"
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202605.html#lecturas-recomendadas",
-    "href": "clases/diapositiva_m1s4_202605.html#lecturas-recomendadas",
+    "objectID": "clases/diapositiva_m1s4_202607.html#lecturas-recomendadas",
+    "href": "clases/diapositiva_m1s4_202607.html#lecturas-recomendadas",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "Lecturas Recomendadas",
     "text": "Lecturas Recomendadas\n\nWeapons of Math Destruction — Cathy O’Neil (accesible, crítico)\nFairness and Machine Learning — Barocas, Hardt & Narayanan (más técnico pero abordable)\n\n\nCasos de estudio:\n\nAmazon Hiring Algorithm (2018) — sesgo histórico en contratación\nCOMPAS (justicia criminal) — sesgo histórico en sistema penal\nGender Shades — Buolamwini & Gebru (MIT, 2018) — sesgo de representación en reconocimiento facial"
@@ -770,10 +1316,31 @@
     "text": "🧭 Cierre\n\nLa Inteligencia Artificial no reemplaza el juicio humano, lo potencia.\n\n\nEntender sus principios, límites y sesgos es clave para liderar con responsabilidad."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Diplomado Inteligencia Artificial para la Transformación de Negocios",
+    "objectID": "clases/index.html",
+    "href": "clases/index.html",
+    "title": "Clases",
     "section": "",
-    "text": "Este será el repositorio de los distintos materiales utilizados en el curso."
+    "text": "Clases del curso\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDiapositiva 01\n\n\n\n\n\n\n\n\n\n\n\nDiapositiva 01\n\n\n\n\n\n\n\n\n\n\n\nDiapositiva 01\n\n\n\n\n\n\n\n\n\n\n\nMódulo 1 – Sesión 4\n\n\n\n\n\n\n\n\n\n\n\nMódulo 1 – Sesión 4\n\n\n\n\n\n\n\n\n\n\n\nNotebook 01\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "contacto.html",
+    "href": "contacto.html",
+    "title": "Contacto",
+    "section": "",
+    "text": "Contacto\nSebastián Egaña Santibáñez\nDocente del curso\n\n📧 sebastian.egana@udd.cl\n\n💼 LinkedIn\n💻Página Web\n🐈Github"
+  },
+  {
+    "objectID": "preguntas_m1s4.html",
+    "href": "preguntas_m1s4.html",
+    "title": "Preguntas de Selección Múltiple — Módulo 1, Sesión 4",
+    "section": "",
+    "text": "Pregunta 1\nUna empresa entrena un modelo de IA para otorgar créditos. El modelo fue entrenado con 10 años de datos históricos de aprobaciones. Al analizar los resultados, se detecta que el modelo rechaza sistemáticamente a clientes de bajos ingresos, aunque estadísticamente representen buen riesgo crediticio. Además, el equipo técnico informa que el modelo tiene una precisión del 98%.\n¿Cuáles de las siguientes afirmaciones describen correctamente los problemas presentes en este caso?\nI. El modelo presenta sesgo histórico, porque los datos de entrenamiento reflejan decisiones de aprobación del pasado que podrían haber sido discriminatorias.\n\nEl modelo presenta sesgo de representación, porque el grupo de bajos ingresos probablemente estuvo sub-representado en el histórico de aprobaciones.\nUna precisión del 98% confirma que el modelo es confiable y debe aprobarse.\nEl líder debería exigir una auditoría de los datos históricos antes de aprobar el proyecto.\n\n\nSolo I\nSolo I y III\nI, II y IV\nI, II, III y IV\nSolo II y III\n\nRespuesta correcta: c) I, II y IV\nLa precisión alta no confirma confiabilidad cuando existen sesgos estructurales en los datos. Las afirmaciones I, II y IV identifican correctamente los problemas y la acción esperada del líder.\n\nPregunta 2\nUn equipo presenta un modelo para predecir deserción escolar. Las variables utilizadas son: asistencia del último mes, notas del semestre, número de inasistencias injustificadas, y si el alumno se retiró del colegio. El modelo alcanza un 100% de precisión en el set de prueba. El equipo técnico concluye que el modelo está listo para producción.\n¿Cuáles de las siguientes afirmaciones son correctas?\nI. Un 100% de precisión es señal de que el modelo aprendió perfectamente los patrones de deserción.\n\nLa variable “si el alumno se retiró del colegio” constituye data leakage, porque es exactamente lo que el modelo intenta predecir.\nEn producción, el modelo fallará porque la variable filtrada no estará disponible al momento de predecir.\nEl líder debería rechazar la aprobación y solicitar eliminar las variables que solo se conocen después del evento que se quiere predecir.\n\nV. Una precisión superior al 95% siempre es una señal positiva y no requiere revisión adicional.\n\nSolo I y V\nSolo II y III\nII, III y IV\nI, II y IV\nTodas las anteriores\n\nRespuesta correcta: c) II, III y IV\nLa precisión perfecta es una señal de alerta, no de éxito. La inclusión del outcome como variable predictora invalida completamente el modelo. Las afirmaciones I y V son incorrectas porque ignoran el problema de leakage."
+  },
+  {
+    "objectID": "preguntas_m1s4.html#fundamentos-de-datos-para-la-toma-de-decisiones-estratégicas-con-ia",
+    "href": "preguntas_m1s4.html#fundamentos-de-datos-para-la-toma-de-decisiones-estratégicas-con-ia",
+    "title": "Preguntas de Selección Múltiple — Módulo 1, Sesión 4",
+    "section": "",
+    "text": "Pregunta 1\nUna empresa entrena un modelo de IA para otorgar créditos. El modelo fue entrenado con 10 años de datos históricos de aprobaciones. Al analizar los resultados, se detecta que el modelo rechaza sistemáticamente a clientes de bajos ingresos, aunque estadísticamente representen buen riesgo crediticio. Además, el equipo técnico informa que el modelo tiene una precisión del 98%.\n¿Cuáles de las siguientes afirmaciones describen correctamente los problemas presentes en este caso?\nI. El modelo presenta sesgo histórico, porque los datos de entrenamiento reflejan decisiones de aprobación del pasado que podrían haber sido discriminatorias.\n\nEl modelo presenta sesgo de representación, porque el grupo de bajos ingresos probablemente estuvo sub-representado en el histórico de aprobaciones.\nUna precisión del 98% confirma que el modelo es confiable y debe aprobarse.\nEl líder debería exigir una auditoría de los datos históricos antes de aprobar el proyecto.\n\n\nSolo I\nSolo I y III\nI, II y IV\nI, II, III y IV\nSolo II y III\n\nRespuesta correcta: c) I, II y IV\nLa precisión alta no confirma confiabilidad cuando existen sesgos estructurales en los datos. Las afirmaciones I, II y IV identifican correctamente los problemas y la acción esperada del líder.\n\nPregunta 2\nUn equipo presenta un modelo para predecir deserción escolar. Las variables utilizadas son: asistencia del último mes, notas del semestre, número de inasistencias injustificadas, y si el alumno se retiró del colegio. El modelo alcanza un 100% de precisión en el set de prueba. El equipo técnico concluye que el modelo está listo para producción.\n¿Cuáles de las siguientes afirmaciones son correctas?\nI. Un 100% de precisión es señal de que el modelo aprendió perfectamente los patrones de deserción.\n\nLa variable “si el alumno se retiró del colegio” constituye data leakage, porque es exactamente lo que el modelo intenta predecir.\nEn producción, el modelo fallará porque la variable filtrada no estará disponible al momento de predecir.\nEl líder debería rechazar la aprobación y solicitar eliminar las variables que solo se conocen después del evento que se quiere predecir.\n\nV. Una precisión superior al 95% siempre es una señal positiva y no requiere revisión adicional.\n\nSolo I y V\nSolo II y III\nII, III y IV\nI, II y IV\nTodas las anteriores\n\nRespuesta correcta: c) II, III y IV\nLa precisión perfecta es una señal de alerta, no de éxito. La inclusión del outcome como variable predictora invalida completamente el modelo. Las afirmaciones I y V son incorrectas porque ignoran el problema de leakage."
   }
 ]

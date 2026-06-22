@@ -9,3 +9,11 @@
 /.quarto/
 
 **/*.quarto_ipynb
+
+# El proyecto publica a docs/ (project: output-dir: docs en _quarto.yml).
+# Renderizar un .qmd individual fuera de ese pipeline (quarto render
+# clases/archivo.qmd) deja html/pdf/_files sueltos junto a la fuente;
+# no deben commitearse ahi, solo en docs/.
+clases/*.html
+clases/*.pdf
+clases/*_files/
