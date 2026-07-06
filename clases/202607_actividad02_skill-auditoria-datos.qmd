@@ -13,9 +13,11 @@ format:
     linestretch: 1.3
 ---
 
-Actividad en dos partes: primero evalúas el escenario con tu propio criterio, luego lo auditas con un LLM usando un prompt estructurado. Al final comparamos ambos resultados. **Tiempo total:** \~15 minutos.
+Actividad en dos partes: primero evalúas el caso con tu propio criterio, luego lo auditas con un LLM usando un prompt estructurado. Al final comparamos ambos resultados. **Tiempo total:** \~15 minutos.
 
-## El escenario
+Cada grupo elige **uno** de los dos casos (o el facilitador los asigna).
+
+## Caso A: Fintech — Créditos Automáticos
 
 ```
 Proyecto: Créditos Automáticos por Historial
@@ -42,17 +44,38 @@ Reemplazará la evaluación manual de ejecutivos de crédito.
 No hubo auditoría de sesgo por segmento ni revisión legal/compliance.
 ```
 
-**Escenarios alternativos** (si el facilitador asigna otro a tu grupo):
+## Caso B: Manufactura — Mantenimiento Predictivo
 
-| Opción | Propuesta | Datos |
-|:---|:---|:---|
-| **B: Retail** | Recomendador personalizado | Historial de compras online |
-| **C: HR** | Identificar candidatos de alto potencial | CVs, desempeño, evaluaciones históricas |
-| **D: Manufactura** | Mantenimiento predictivo | Sensores + histórico de fallas |
+```
+Proyecto: Mantenimiento Predictivo de Línea de Producción
+Institución: Manufacturera industrial, 3 plantas, ~1.200 máquinas en operación
+Área responsable: Gerencia de Operaciones, con apoyo del equipo de Datos
+
+Objetivo declarado: predecir qué máquinas fallarán en los próximos 30 días,
+para programar mantenimiento preventivo y evitar paradas no planificadas.
+
+Datos utilizados:
+- Fuente: sensores IoT (vibración, temperatura, presión) + historial de
+  fallas (2020-2025)
+- Solo se incluyeron máquinas con al menos 2 años de sensores instalados
+  (las líneas nuevas y la planta más pequeña quedaron fuera)
+- Variables: vibración promedio, temperatura máxima, horas de uso,
+  antigüedad, ¿tuvo mantenimiento correctivo de emergencia en los
+  últimos 7 días?
+- Muestra de entrenamiento: 45.000 lecturas diarias
+
+Modelo: Random Forest. Métrica en pruebas: 96% de precisión.
+Validación: split 80/20 aleatorio sobre el mismo dataset.
+
+Estado: listo para producción el próximo trimestre.
+Reemplazará las rondas de inspección manual de los técnicos.
+No hubo revisión de si el modelo funciona igual en máquinas nuevas
+o en la planta más pequeña.
+```
 
 ## Parte 1 — Evaluación propia (sin LLM)
 
-Lee el escenario y anota tu diagnóstico usando los 4 Enemigos Silenciosos. Para cada uno indica si está bien controlado, ausente o es riesgoso.
+Lee el caso elegido y anota tu diagnóstico usando los 4 Enemigos Silenciosos. Para cada uno indica si está bien controlado, ausente o es riesgoso.
 
 | Enemigo | ¿Bien controlado? | Riesgo que identificas |
 |:---|:---:|:---|
@@ -71,7 +94,7 @@ Lee el escenario y anota tu diagnóstico usando los 4 Enemigos Silenciosos. Para
 
 ## Parte 2 — Evaluación con skill (con LLM)
 
-Abre `vibe` (CLI oficial de Mistral) o, si no lo tienes instalado, pega el prompt directamente en <https://chat.mistral.ai>. Reemplaza `[escenario]` con el texto de arriba.
+Abre `vibe` (CLI oficial de Mistral) o, si no lo tienes instalado, pega el prompt directamente en <https://chat.mistral.ai>. Reemplaza `[escenario]` con el texto del caso elegido.
 
 ```
 Actúa como auditor de gobernanza de datos especializado en proyectos de IA.
@@ -102,6 +125,8 @@ No inventes información que no esté en el escenario. Responde en español.
 
 El proyecto es: [escenario]
 ```
+
+**Mensaje de prueba (Caso A):** *"Banco quiere otorgar créditos automáticos usando 10 años de historial de otorgamientos y morosidad"*
 
 ## Debrief
 

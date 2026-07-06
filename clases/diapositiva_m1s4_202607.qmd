@@ -606,7 +606,7 @@ No tienes que ser técnico. Pero tienes que:
 ## `r fa("terminal", fill = "steelblue")` Actividad 2 — Auditoría con IA (15 min)
 
 ::: tiny
-- Trabajen en grupo con el escenario del handout: crédito automático usando 10 años de historial
+- Trabajen en grupo con uno de los 2 casos del handout: Fintech (créditos automáticos) o Manufactura (mantenimiento predictivo)
 - Parte 1: evalúen el proyecto ustedes mismos con los 4 Enemigos Silenciosos, **sin IA**
 - Parte 2: auditen el mismo escenario con un LLM (`vibe`, el CLI oficial de Mistral, o <https://chat.mistral.ai>), usando el prompt-framework del handout
 - Comparen: ¿la IA detectó lo mismo que ustedes? ¿qué se le pasó?
