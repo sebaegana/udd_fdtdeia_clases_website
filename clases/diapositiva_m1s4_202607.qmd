@@ -71,7 +71,7 @@ Al finalizar esta sesión podrán:
 |--------|-------------|----------------------------------------------------|
 | **1**  | 50 + 10 min | El combustible de la IA: datos como diferenciador  |
 | **2**  | 50 + 10 min | Los enemigos silenciosos: sesgos, calidad, leakage |
-| **3**  | 50 + 10 min | Gobernanza y toma de decisiones informadas         |
+| **3**  | 50 + 15 min | Gobernanza y toma de decisiones informadas         |
 :::
 
 ------------------------------------------------------------------------
@@ -603,77 +603,19 @@ No tienes que ser técnico. Pero tienes que:
 
 ------------------------------------------------------------------------
 
-## `r fa("terminal", fill = "steelblue")` Actividad 3 — Auditoría con IA: Mistral CLI (10 min)
+## `r fa("terminal", fill = "steelblue")` Actividad 2 — Auditoría con IA (15 min)
 
 ::: tiny
-**Instrucciones:**
+- Trabajen en grupo con el escenario del handout: crédito automático usando 10 años de historial
+- Parte 1: evalúen el proyecto ustedes mismos con los 4 Enemigos Silenciosos, **sin IA**
+- Parte 2: auditen el mismo escenario con un LLM (`vibe`, el CLI oficial de Mistral, o <https://chat.mistral.ai>), usando el prompt-framework del handout
+- Comparen: ¿la IA detectó lo mismo que ustedes? ¿qué se le pasó?
 
-1.  Elijan en grupo uno de los proyectos de la siguiente diapositiva
-2.  Antes de ver la respuesta de la IA: ¿qué red flags ven ustedes? (1 min, en silencio)
-3.  El facilitador pega el prompt (próxima diapositiva) en vivo, en `vibe` — el CLI oficial de Mistral
-4.  Comparen: ¿la IA detectó lo mismo que ustedes? ¿qué se le pasó?
-
-**¿No tienen `vibe` instalado?** No hace falta — el mismo prompt se puede escribir a mano en <https://chat.mistral.ai>, sin instalar nada.
+> **Handout completo (escenario, tablas, prompt y debrief):** `202607_actividad02_skill-auditoria-datos.pdf`
 :::
 
 ::: notes
-Preparación previa (no mostrar en pantalla): instalar y probar `vibe` con el prompt de prueba antes de la clase. Backup si `vibe` falla en vivo: usar `auditar_mistral.ps1` (`. .\clases\scripts\auditar_mistral.ps1` y `auditar "..."`) o directamente chat.mistral.ai.
-:::
-
-------------------------------------------------------------------------
-
-## El CLI oficial de Mistral: Vibe
-
-::: tiny
-**Qué es:** `mistral-vibe` es el CLI oficial de Mistral — un agente de código para la terminal (similar a Claude Code). Requiere Python 3.12+.
-
-**Instalación (Windows, PowerShell):**
-
-```
-powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
-uv tool install mistral-vibe
-vibe
-```
-
-El primer `vibe` abre un asistente: inicias sesión con tu cuenta Mistral o pegas tu API key. Una vez abierto, se le pega el prompt de la siguiente diapositiva como si fuera un chat.
-
-**`r fa("triangle-exclamation", fill = "orange")` Atención:** Mistral soporta oficialmente solo Unix/macOS/Linux — en Windows puede fallar (hay bugs reportados). Por eso siempre queda la opción de escribir el mismo prompt a mano en chat.mistral.ai.
-:::
-
-------------------------------------------------------------------------
-
-## El Prompt (a mano, en `vibe` o en chat.mistral.ai)
-
-::: tiny
-Escriban o peguen esto, reemplazando `[PROYECTO]` por la descripción del proyecto que eligieron:
-
-```
-Actúa como auditor de gobernanza de datos para líderes no técnicos.
-Te voy a describir un proyecto de IA. Responde en español, en máximo 6 líneas:
-
-RED FLAGS DETECTADOS: (sesgo de representación, sesgo histórico, data leakage, calidad de datos - solo los que apliquen)
-VEREDICTO: Aprobado / Aprobado con riesgo / Rechazado
-JUSTIFICACIÓN: (una sola línea)
-
-Proyecto: [PROYECTO]
-```
-
-**Mensaje de prueba:** *"Banco quiere otorgar créditos automáticos usando 10 años de historial de otorgamientos y morosidad"*
-:::
-
-------------------------------------------------------------------------
-
-## `r fa("terminal", fill = "steelblue")` Actividad 3 — Auditoría con IA: Mistral CLI (cont.)
-
-::: tiny
-| Opción | Propuesta | Datos |
-|-----------------|----------------------------|----------------------------|
-| **A: Fintech** | Créditos automáticos | 10 años de otorgamientos + morosidad |
-| **B: Retail** | Recomendador personalizado | Historial de compras online |
-| **C: HR** | Identificar candidatos de alto potencial | CVs, desempeño, evaluaciones históricas |
-| **D: Manufactura** | Mantenimiento predictivo | Sensores + histórico de fallas |
-
-**Discusión:** ¿La IA detectó lo mismo que tú? ¿Qué se le pasó? La IA es una herramienta — el juicio sigue siendo tuyo.
+Preparación previa (no mostrar en pantalla): instalar y probar `vibe` con el prompt del handout antes de la clase. Backup si `vibe` falla en vivo: usar `auditar_mistral.ps1` (`. .\clases\scripts\auditar_mistral.ps1` y `auditar "..."`) o directamente chat.mistral.ai. Repartir el handout `202607_actividad02_skill-auditoria-datos.pdf` antes de comenzar la actividad.
 :::
 
 ------------------------------------------------------------------------

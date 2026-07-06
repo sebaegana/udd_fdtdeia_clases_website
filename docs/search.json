@@ -823,7 +823,7 @@
     "href": "clases/diapositiva_m1s4_202607.html#estructura-de-la-sesión",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
     "section": "Estructura de la Sesión",
-    "text": "Estructura de la Sesión\n\n\n\n\n\n\n\n\n\nBloque\nDuración\nContenido\n\n\n\n\n1\n50 + 10 min\nEl combustible de la IA: datos como diferenciador\n\n\n2\n50 + 10 min\nLos enemigos silenciosos: sesgos, calidad, leakage\n\n\n3\n50 + 10 min\nGobernanza y toma de decisiones informadas"
+    "text": "Estructura de la Sesión\n\n\n\n\n\n\n\n\n\nBloque\nDuración\nContenido\n\n\n\n\n1\n50 + 10 min\nEl combustible de la IA: datos como diferenciador\n\n\n2\n50 + 10 min\nLos enemigos silenciosos: sesgos, calidad, leakage\n\n\n3\n50 + 15 min\nGobernanza y toma de decisiones informadas"
   },
   {
     "objectID": "clases/diapositiva_m1s4_202607.html#concepto-central-datos-información",
@@ -1092,32 +1092,11 @@
     "text": "El Rol del Líder en Gobernanza de Datos\n\nNo tienes que ser técnico. Pero tienes que:\n\nHacer preguntas incómodas — sin miedo a parecer ignorante\nEntender los riesgos — sesgos, leakage, calidad\nEstablecer estándares — auditoría, monitoreo, responsabilidad\nActuar si hay problemas — parar, revisar, remediar\n\n\nSi un modelo falla y afecta a clientes o empleados, tú eres responsable."
   },
   {
-    "objectID": "clases/diapositiva_m1s4_202607.html#actividad-3-auditoría-con-ia-mistral-cli-10-min",
-    "href": "clases/diapositiva_m1s4_202607.html#actividad-3-auditoría-con-ia-mistral-cli-10-min",
+    "objectID": "clases/diapositiva_m1s4_202607.html#actividad-2-auditoría-con-ia-15-min",
+    "href": "clases/diapositiva_m1s4_202607.html#actividad-2-auditoría-con-ia-15-min",
     "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
-    "section": " Actividad 3 — Auditoría con IA: Mistral CLI (10 min)",
-    "text": "Actividad 3 — Auditoría con IA: Mistral CLI (10 min)\n\nInstrucciones:\n\nElijan en grupo uno de los proyectos de la siguiente diapositiva\nAntes de ver la respuesta de la IA: ¿qué red flags ven ustedes? (1 min, en silencio)\nEl facilitador pega el prompt (próxima diapositiva) en vivo, en vibe — el CLI oficial de Mistral\nComparen: ¿la IA detectó lo mismo que ustedes? ¿qué se le pasó?\n\n¿No tienen vibe instalado? No hace falta — el mismo prompt se puede escribir a mano en https://chat.mistral.ai, sin instalar nada.\n\n\nPreparación previa (no mostrar en pantalla): instalar y probar vibe con el prompt de prueba antes de la clase. Backup si vibe falla en vivo: usar auditar_mistral.ps1 (. .\\clases\\scripts\\auditar_mistral.ps1 y auditar \"...\") o directamente chat.mistral.ai."
-  },
-  {
-    "objectID": "clases/diapositiva_m1s4_202607.html#el-cli-oficial-de-mistral-vibe",
-    "href": "clases/diapositiva_m1s4_202607.html#el-cli-oficial-de-mistral-vibe",
-    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
-    "section": "El CLI oficial de Mistral: Vibe",
-    "text": "El CLI oficial de Mistral: Vibe\n\nQué es: mistral-vibe es el CLI oficial de Mistral — un agente de código para la terminal (similar a Claude Code). Requiere Python 3.12+.\nInstalación (Windows, PowerShell):\npowershell -ExecutionPolicy ByPass -c \"irm https://astral.sh/uv/install.ps1 | iex\"\nuv tool install mistral-vibe\nvibe\nEl primer vibe abre un asistente: inicias sesión con tu cuenta Mistral o pegas tu API key. Una vez abierto, se le pega el prompt de la siguiente diapositiva como si fuera un chat.\n Atención: Mistral soporta oficialmente solo Unix/macOS/Linux — en Windows puede fallar (hay bugs reportados). Por eso siempre queda la opción de escribir el mismo prompt a mano en chat.mistral.ai."
-  },
-  {
-    "objectID": "clases/diapositiva_m1s4_202607.html#el-prompt-a-mano-en-vibe-o-en-chat.mistral.ai",
-    "href": "clases/diapositiva_m1s4_202607.html#el-prompt-a-mano-en-vibe-o-en-chat.mistral.ai",
-    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
-    "section": "El Prompt (a mano, en vibe o en chat.mistral.ai)",
-    "text": "El Prompt (a mano, en vibe o en chat.mistral.ai)\n\nEscriban o peguen esto, reemplazando [PROYECTO] por la descripción del proyecto que eligieron:\nActúa como auditor de gobernanza de datos para líderes no técnicos.\nTe voy a describir un proyecto de IA. Responde en español, en máximo 6 líneas:\n\nRED FLAGS DETECTADOS: (sesgo de representación, sesgo histórico, data leakage, calidad de datos - solo los que apliquen)\nVEREDICTO: Aprobado / Aprobado con riesgo / Rechazado\nJUSTIFICACIÓN: (una sola línea)\n\nProyecto: [PROYECTO]\nMensaje de prueba: “Banco quiere otorgar créditos automáticos usando 10 años de historial de otorgamientos y morosidad”"
-  },
-  {
-    "objectID": "clases/diapositiva_m1s4_202607.html#actividad-3-auditoría-con-ia-mistral-cli-cont.",
-    "href": "clases/diapositiva_m1s4_202607.html#actividad-3-auditoría-con-ia-mistral-cli-cont.",
-    "title": "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA",
-    "section": " Actividad 3 — Auditoría con IA: Mistral CLI (cont.)",
-    "text": "Actividad 3 — Auditoría con IA: Mistral CLI (cont.)\n\n\n\n\n\n\n\n\n\nOpción\nPropuesta\nDatos\n\n\n\n\nA: Fintech\nCréditos automáticos\n10 años de otorgamientos + morosidad\n\n\nB: Retail\nRecomendador personalizado\nHistorial de compras online\n\n\nC: HR\nIdentificar candidatos de alto potencial\nCVs, desempeño, evaluaciones históricas\n\n\nD: Manufactura\nMantenimiento predictivo\nSensores + histórico de fallas\n\n\n\nDiscusión: ¿La IA detectó lo mismo que tú? ¿Qué se le pasó? La IA es una herramienta — el juicio sigue siendo tuyo."
+    "section": " Actividad 2 — Auditoría con IA (15 min)",
+    "text": "Actividad 2 — Auditoría con IA (15 min)\n\n\nTrabajen en grupo con el escenario del handout: crédito automático usando 10 años de historial\nParte 1: evalúen el proyecto ustedes mismos con los 4 Enemigos Silenciosos, sin IA\nParte 2: auditen el mismo escenario con un LLM (vibe, el CLI oficial de Mistral, o https://chat.mistral.ai), usando el prompt-framework del handout\nComparen: ¿la IA detectó lo mismo que ustedes? ¿qué se le pasó?\n\n\nHandout completo (escenario, tablas, prompt y debrief): 202607_actividad02_skill-auditoria-datos.pdf\n\n\n\nPreparación previa (no mostrar en pantalla): instalar y probar vibe con el prompt del handout antes de la clase. Backup si vibe falla en vivo: usar auditar_mistral.ps1 (. .\\clases\\scripts\\auditar_mistral.ps1 y auditar \"...\") o directamente chat.mistral.ai. Repartir el handout 202607_actividad02_skill-auditoria-datos.pdf antes de comenzar la actividad."
   },
   {
     "objectID": "clases/diapositiva_m1s4_202607.html#red-flags-cuándo-desconfiar",

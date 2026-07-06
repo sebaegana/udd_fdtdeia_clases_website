@@ -1,0 +1,110 @@
+---
+title: "Skill de Auditoría con los 4 Enemigos Silenciosos"
+subtitle: "Actividad 02 — Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA"
+author: "Sebastián Egaña Santibáñez"
+lang: es
+date: today
+format:
+  pdf:
+    toc: false
+    papersize: a4
+    geometry: margin=2.5cm
+    fontsize: 11pt
+    linestretch: 1.3
+---
+
+Actividad en dos partes: primero evalúas el escenario con tu propio criterio, luego lo auditas con un LLM usando un prompt estructurado. Al final comparamos ambos resultados. **Tiempo total:** \~15 minutos.
+
+## El escenario
+
+```
+Proyecto: Créditos Automáticos por Historial
+Institución: Banco de consumo, ~800.000 clientes activos
+Área responsable: Gerencia de Riesgo, con apoyo del equipo de Datos
+
+Objetivo declarado: otorgar o rechazar créditos de forma automática,
+sin intervención humana, para reducir el tiempo de aprobación de
+días a segundos.
+
+Datos utilizados:
+- Fuente: 10 años de historial interno de otorgamientos y morosidad
+  (2015-2025)
+- Solo se incluyeron solicitudes que fueron aprobadas en ese período
+- Variables: monto solicitado, ingreso declarado, comuna, edad,
+  historial de pago, ¿fue castigado contablemente?
+- Muestra de entrenamiento: 250.000 operaciones
+
+Modelo: Gradient Boosting. Métrica en pruebas: 97% de precisión.
+Validación: split 80/20 aleatorio sobre el mismo dataset.
+
+Estado: listo para producción el próximo mes.
+Reemplazará la evaluación manual de ejecutivos de crédito.
+No hubo auditoría de sesgo por segmento ni revisión legal/compliance.
+```
+
+**Escenarios alternativos** (si el facilitador asigna otro a tu grupo):
+
+| Opción | Propuesta | Datos |
+|:---|:---|:---|
+| **B: Retail** | Recomendador personalizado | Historial de compras online |
+| **C: HR** | Identificar candidatos de alto potencial | CVs, desempeño, evaluaciones históricas |
+| **D: Manufactura** | Mantenimiento predictivo | Sensores + histórico de fallas |
+
+## Parte 1 — Evaluación propia (sin LLM)
+
+Lee el escenario y anota tu diagnóstico usando los 4 Enemigos Silenciosos. Para cada uno indica si está bien controlado, ausente o es riesgoso.
+
+| Enemigo | ¿Bien controlado? | Riesgo que identificas |
+|:---|:---:|:---|
+| Representación | | |
+| Histórico | | |
+| Leakage | | |
+| Calidad | | |
+
+: {tbl-colwidths="[20,20,60]"}
+
+**¿Aprobarías este proyecto para producción?** Sí / No / Con condiciones
+
+**¿Por qué?**
+
+\vspace{2cm}
+
+## Parte 2 — Evaluación con skill (con LLM)
+
+Abre `vibe` (CLI oficial de Mistral) o, si no lo tienes instalado, pega el prompt directamente en <https://chat.mistral.ai>. Reemplaza `[escenario]` con el texto de arriba.
+
+```
+Actúa como auditor de gobernanza de datos especializado en proyectos de IA.
+
+Los 4 Enemigos Silenciosos son un framework para auditar datos antes de
+llevar un modelo a producción:
+
+1. Representación — ¿el dataset representa a todos los grupos que el
+   modelo afectará (género, edad, geografía, nivel socioeconómico)?
+2. Histórico      — ¿los datos reflejan decisiones humanas del pasado
+   que podrían haber sido injustas o discriminatorias?
+3. Leakage        — ¿alguna variable usada en el entrenamiento solo
+   existiría DESPUÉS del momento en que se necesita predecir?
+4. Calidad        — ¿los datos están completos, actualizados y son
+   consistentes entre sí?
+
+Para cada enemigo indica:
+  (1) qué está bien controlado en el proyecto
+  (2) qué está ausente, es ambiguo o es riesgoso
+
+Presenta el análisis como tabla:
+  Enemigo | Bien controlado | Riesgo identificado | Estado (Verde / Amarillo / Rojo)
+
+Cierra con los 3 mayores riesgos y clasifica cada uno como:
+  bloqueante (no lanzar) / moderado (lanzar con plan) / menor (monitorear)
+
+No inventes información que no esté en el escenario. Responde en español.
+
+El proyecto es: [escenario]
+```
+
+## Debrief
+
+1. ¿Qué riesgos identificó el LLM que tú no habías visto en la Parte 1?
+2. ¿Qué viste tú que el LLM no vio, o vio mal?
+3. ¿Cambiarías algo del prompt para obtener un mejor diagnóstico?
