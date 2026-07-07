@@ -23,6 +23,8 @@ listing:
 ::: {#clases-actuales}
 :::
 
+**Guía complementaria:** <a href="202607_guia_instalacion_vibe.pdf" download>Instalación y uso de Vibe (CLI de Mistral)</a>
+
 # Material anterior
 
 Versiones reemplazadas o sesiones previas, mantenidas como referencia.
