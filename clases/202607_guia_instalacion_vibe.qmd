@@ -1,0 +1,168 @@
+---
+title: "Guía de Instalación y Uso de Vibe (CLI de Mistral)"
+subtitle: "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA"
+author: "Sebastián Egaña Santibáñez"
+lang: es
+date: today
+format:
+  pdf:
+    toc: false
+    papersize: a4
+    geometry: margin=2.5cm
+    fontsize: 11pt
+    linestretch: 1.3
+---
+
+Esta guía te enseña a instalar y usar `vibe`, el CLI oficial de Mistral, desde cero. No necesitas experiencia previa con la terminal: cada paso indica exactamente qué escribir y qué deberías ver. **Tiempo estimado:** 15-20 minutos.
+
+Sigue solo la sección de tu sistema operativo: **Windows** o **Mac**.
+
+## ¿Qué es `vibe` y para qué sirve?
+
+`vibe` es un asistente de inteligencia artificial que se usa escribiendo texto en una ventana negra (la **terminal**), en vez de hacer clic en botones. Permite conversar con un modelo de Mistral para hacer preguntas, analizar archivos o auditar información, como en la actividad de los 4 Enemigos Silenciosos.
+
+No es un programa con ventanas ni íconos: se instala una sola vez y después se usa escribiendo comandos.
+
+## ¿Qué es la terminal?
+
+La terminal (o "línea de comandos") es una aplicación que ya viene instalada en tu computador y permite escribir instrucciones directamente, en vez de usar el mouse. No necesitas instalar nada para abrirla: viene con el sistema operativo.
+
+- En **Windows** se llama **PowerShell**.
+- En **Mac** se llama **Terminal**.
+
+Vamos a usarla para instalar y ejecutar `vibe`.
+
+## Antes de empezar
+
+1. Crea una cuenta gratuita en <https://mistral.ai> (necesaria para obtener tu clave de acceso, la "API key").
+2. Ten conexión a internet estable durante toda la instalación.
+
+## Instalación en Windows
+
+### Paso 1: Abrir PowerShell
+
+1. Haz clic en el botón de inicio de Windows (el ícono en la esquina inferior izquierda).
+2. Escribe `PowerShell`.
+3. Haz clic en la aplicación **Windows PowerShell** que aparece.
+
+Se abrirá una ventana azul o negra con texto. Ese es tu punto de partida para todos los pasos siguientes.
+
+### Paso 2: Instalar la herramienta base (`uv`)
+
+`vibe` necesita una herramienta llamada `uv` para instalarse correctamente. Copia y pega esta línea en PowerShell y presiona `Enter`:
+
+```
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+
+Espera a que el proceso termine (verás texto avanzando y luego el cursor parpadeando solo, listo para escribir de nuevo).
+
+### Paso 3: Cerrar y volver a abrir PowerShell
+
+Cierra la ventana de PowerShell por completo y ábrela de nuevo (repite el Paso 1). Esto es necesario para que Windows reconozca la nueva herramienta instalada.
+
+### Paso 4: Instalar `vibe`
+
+En la nueva ventana de PowerShell, escribe:
+
+```
+uv tool install mistral-vibe
+```
+
+y presiona `Enter`. Espera a que termine la instalación.
+
+### Paso 5: Verificar que quedó instalado
+
+Escribe:
+
+```
+vibe --version
+```
+
+Si ves un número de versión (por ejemplo `0.4.2`), la instalación fue exitosa. Si en cambio aparece un mensaje de error como *"vibe no se reconoce como un comando"*, revisa la sección de **Problemas comunes** al final de esta guía.
+
+## Instalación en Mac
+
+### Paso 1: Abrir la Terminal
+
+1. Presiona `Cmd + Espacio` para abrir Spotlight.
+2. Escribe `Terminal`.
+3. Presiona `Enter`.
+
+Se abrirá una ventana blanca o negra con texto. Ese es tu punto de partida para todos los pasos siguientes.
+
+### Paso 2: Instalar `vibe`
+
+Copia y pega esta línea en la Terminal y presiona `Enter`:
+
+```
+curl -LsSf https://mistral.ai/vibe/install.sh | bash
+```
+
+Este comando instala automáticamente todo lo necesario (incluyendo `uv`, la herramienta base) y deja listo el comando `vibe`. Espera a que el proceso termine por completo.
+
+### Paso 3: Cerrar y volver a abrir la Terminal
+
+Cierra la ventana de Terminal y ábrela de nuevo (repite el Paso 1). Esto asegura que Mac reconozca el nuevo comando instalado.
+
+### Paso 4: Verificar que quedó instalado
+
+Escribe:
+
+```
+vibe --version
+```
+
+Si ves un número de versión (por ejemplo `0.4.2`), la instalación fue exitosa. Si aparece un mensaje de error como *"command not found: vibe"*, revisa la sección de **Problemas comunes** al final de esta guía.
+
+## Configuración inicial (Windows y Mac)
+
+1. En la terminal, escribe simplemente:
+
+```
+vibe
+```
+
+y presiona `Enter`.
+
+2. La primera vez, `vibe` te mostrará un asistente de configuración. Te pedirá iniciar sesión con tu cuenta de Mistral o pegar una clave de API (API key).
+
+3. Para obtener tu clave: entra a <https://mistral.ai>, inicia sesión, y busca la sección **Studio → API keys** (o **Studio → Code → Vibe CLI**). Copia la clave que aparece ahí.
+
+4. Pega la clave en la terminal cuando te la solicite y presiona `Enter`. Tus credenciales quedan guardadas localmente: no necesitarás repetir este paso cada vez.
+
+## Primer uso
+
+Con `vibe` ya configurado, prueba escribir directamente una pregunta en la terminal, por ejemplo:
+
+```
+vibe "Explícame qué es la auditoría de datos con los 4 Enemigos Silenciosos"
+```
+
+También puedes primero escribir `vibe` solo (sin texto) para entrar a una sesión interactiva, y luego escribir tus preguntas una por una, presionando `Enter` después de cada una.
+
+**Prefijos útiles dentro de una sesión:**
+
+- `@` antes de un nombre de archivo: le permite a `vibe` leer ese archivo (ej: `@datos.csv`).
+- `/` antes de una palabra: accede a comandos internos, como `/help` (ayuda) o `/config` (configuración).
+- `!` antes de un comando: ejecuta ese comando directamente en el sistema, sin pasar por la IA.
+
+**Para salir de la sesión:** escribe `exit` y presiona `Enter`, o cierra la ventana de la terminal.
+
+## Problemas comunes
+
+| Problema | Causa probable | Solución |
+|:---|:---|:---|
+| `vibe no se reconoce como un comando` (Windows) | No cerraste y reabriste PowerShell después de instalar | Cierra y abre PowerShell de nuevo |
+| `command not found: vibe` (Mac) | No cerraste y reabriste la Terminal después de instalar | Cierra y abre la Terminal de nuevo |
+| El instalador no avanza o da error de permisos | Antivirus o restricciones de la organización | Ejecuta PowerShell como administrador (clic derecho → "Ejecutar como administrador") |
+| Pide una clave (API key) que no tienes | No has creado cuenta en Mistral | Crea una cuenta gratuita en <https://mistral.ai> y repite la Configuración inicial |
+
+## Checklist final
+
+- [ ] Abrí la terminal de mi sistema operativo (PowerShell o Terminal).
+- [ ] Instalé `uv` (solo Windows).
+- [ ] Instalé `vibe` con el comando correspondiente.
+- [ ] `vibe --version` muestra un número de versión.
+- [ ] Configuré mi cuenta o clave de API de Mistral.
+- [ ] Envié un primer mensaje de prueba y recibí respuesta.
