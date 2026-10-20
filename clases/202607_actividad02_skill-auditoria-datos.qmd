@@ -19,7 +19,7 @@ Cada grupo elige **uno** de los dos casos (o el facilitador los asigna).
 
 ## Caso A: Fintech — Créditos Automáticos
 
-```
+```         
 Proyecto: Créditos Automáticos por Historial
 Institución: Banco de consumo, ~800.000 clientes activos
 Área responsable: Gerencia de Riesgo, con apoyo del equipo de Datos
@@ -46,7 +46,7 @@ No hubo auditoría de sesgo por segmento ni revisión legal/compliance.
 
 ## Caso B: Manufactura — Mantenimiento Predictivo
 
-```
+```         
 Proyecto: Mantenimiento Predictivo de Línea de Producción
 Institución: Manufacturera industrial, 3 plantas, ~1.200 máquinas en operación
 Área responsable: Gerencia de Operaciones, con apoyo del equipo de Datos
@@ -77,14 +77,12 @@ o en la planta más pequeña.
 
 Lee el caso elegido y anota tu diagnóstico usando los 4 Enemigos Silenciosos. Para cada uno indica si está bien controlado, ausente o es riesgoso.
 
-| Enemigo | ¿Bien controlado? | Riesgo que identificas |
-|:---|:---:|:---|
-| Representación | | |
-| Histórico | | |
-| Leakage | | |
-| Calidad | | |
-
-: {tbl-colwidths="[20,20,60]"}
+| Enemigo        | ¿Bien controlado? | Riesgo que identificas |
+|:---------------|:-----------------:|:-----------------------|
+| Representación |                   |                        |
+| Histórico      |                   |                        |
+| Leakage        |                   |                        |
+| Calidad        |                   |                        |
 
 **¿Aprobarías este proyecto para producción?** Sí / No / Con condiciones
 
@@ -94,9 +92,9 @@ Lee el caso elegido y anota tu diagnóstico usando los 4 Enemigos Silenciosos. P
 
 ## Parte 2 — Evaluación con skill (con LLM)
 
-Abre `vibe` (CLI oficial de Mistral) o, si no lo tienes instalado, pega el prompt directamente en <https://chat.mistral.ai>. Reemplaza `[escenario]` con el texto del caso elegido.
+Abre el chat de IA que uses habitualmente y pega el prompt completo. Reemplaza `[escenario]` con el texto del caso elegido.
 
-```
+```         
 Actúa como auditor de gobernanza de datos especializado en proyectos de IA.
 
 Los 4 Enemigos Silenciosos son un framework para auditar datos antes de
@@ -130,6 +128,6 @@ El proyecto es: [escenario]
 
 ## Debrief
 
-1. ¿Qué riesgos identificó el LLM que tú no habías visto en la Parte 1?
-2. ¿Qué viste tú que el LLM no vio, o vio mal?
-3. ¿Cambiarías algo del prompt para obtener un mejor diagnóstico?
+1.  ¿Qué riesgos identificó el LLM que tú no habías visto en la Parte 1?
+2.  ¿Qué viste tú que el LLM no vio, o vio mal?
+3.  ¿Cambiarías algo del prompt para obtener un mejor diagnóstico?
