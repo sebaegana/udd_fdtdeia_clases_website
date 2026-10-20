@@ -97,9 +97,9 @@ Al finalizar esta sesión podrán:
 
 ------------------------------------------------------------------------
 
-## El Triángulo Decisional: Desde Dato hasta Impacto
+## El Triángulo Decisional: Cómo Funciona la IA en Realidad
 
-Un proyecto de IA es en realidad una **cadena de 4 pasos**:
+Cuando implementas IA, en realidad estás construyendo una **cadena simple de 4 pasos**:
 
 ```{mermaid}
 %%| fig-align: center
@@ -107,7 +107,7 @@ graph LR
     DA["🗄️ DATOS<br/>(Captura & Limpieza)"]
     M["⚙️ MODELO<br/>(Aprendizaje)"]
     D["🎯 DECISIÓN<br/>(Automatización)"]
-    I["📊 IMPACTO<br/>(Consecuencias)"]
+    I["📊 IMPACTO<br/>(Consecuencias en<br/>clientes/empleados)"]
 
     DA --> M
     M --> D
@@ -119,22 +119,27 @@ graph LR
     style I fill:#ffebee
 ```
 
-**Verdad incómoda:** Si CUALQUIERA de estos pasos es malo, **la cadena entera falla**.
+**El punto clave:** Si CUALQUIERA de estos 4 pasos es malo, **todo falla**. Y tú (como líder) eres responsable del impacto final.
 
 ------------------------------------------------------------------------
 
 ## Por Qué Cada Paso Importa
 
 ::: smaller
-| Paso | Qué es | Si Falla | Impacto |
-|------|--------|---------|--------|
-| **DATOS** | Información capturada sobre clientes, transacciones, empleados | Datos incompletos, sesgados, viejos, contradictorios | Modelo aprende patrones falsos |
-| **MODELO** | Algoritmo que encuentra patrones en los datos | Modelo memoriza ruido (no patrones verdaderos) | Decisiones inconsistentes, impredecibles |
-| **DECISIÓN** | Automatización de una acción basada en predicción | Sistema rechaza/acepta basándose en modelo quebrado | Clientes/empleados afectados injustamente |
-| **IMPACTO** | Consecuencias en el mundo real | Discriminación, pérdida de mercado, riesgo regulatorio | Responsabilidad cae en **ti** |
+**Si el DATO es malo** → Modelo aprende cosas falsas
+- Ejemplo: Datos que reflejan discriminación pasada → Modelo la perpetúa
+
+**Si el MODELO es malo** → Decisiones inconsistentes e impredecibles
+- Ejemplo: Modelo que memorizó, no aprendió → Funciona en tests, falla en realidad
+
+**Si la DECISIÓN es automática pero mala** → Clientes/empleados sufren
+- Ejemplo: Sistema rechaza automáticamente sin supervisión → Alguien perjudicado sin remedio
+
+**Si el IMPACTO no se monitorea** → Nadie se da cuenta hasta que explota
+- Ejemplo: Modelo degrada silenciosamente, pero no hay alertas → Desastre público
 :::
 
-**Pregunta clave:** ¿Si todos estos pasos fallaran simultáneamente, te darías cuenta?
+**Pregunta clave:** ¿Tienes visibilidad en TODOS estos 4 pasos, o solo en algunos?
 
 ------------------------------------------------------------------------
 
@@ -205,22 +210,20 @@ Pero solo si **cada paso del Triángulo es sólido**. Si no:
 
 ------------------------------------------------------------------------
 
-## Donde Se Rompe la Cadena
+## Los 4 Modos en que la Cadena Se Rompe
 
-El Triángulo falla en **exactamente 4 modos**. Cada uno es un "enemigo silencioso" porque:
+Un proyecto de IA puede fallar de **exactamente 4 maneras**. Son silenciosas porque no las ves hasta que es tarde:
 
-- No es evidente (hasta que es demasiado tarde)
-- Afecta pasos específicos de la cadena
-- Tiene un costo concreto en tu negocio
-
-::: tiny
-| Enemigo | Afecta | Causa | Impacto | Red Flag |
-|---------|---|---|---|---|
-| **Representación** | DATOS | Grupo demográfico ausente | Modelo falla p/ ese grupo | "Funciona bien para típico" |
-| **Histórico** | DATOS | Decisiones injustas del pasado | Perpetúa discriminación | "Refleja lo de siempre" |
-| **Data Leakage** | MODELO | Info futura en entrenamiento | KPI falso; falla producción | "99% precisión" |
-| **Calidad** | DATOS | Incompletos, viejos, contradictorios | Decisiones inconsistentes | "Datos desordenados" |
+::: smaller
+| Enemigo | Afecta | Qué Pasa | Señal de Alerta |
+|---------|---|---|---|
+| **Sesgo de Representación** | DATOS | Grupo falta en datos → Modelo falla para ese grupo | "Funciona bien para cliente típico" |
+| **Sesgo Histórico** | DATOS | Datos vienen de discriminación pasada → Modelo la perpetúa | "Refleja cómo siempre lo hicimos" |
+| **Data Leakage** | MODELO | Información secreta se filtra → Parece perfecto, falla en realidad | "99% de precisión" (sospechoso) |
+| **Mala Calidad** | DATOS | Datos incompletos, viejos o incorrectos → Decisiones malas | "Nuestros datos están desordenados" |
 :::
+
+**Por qué son "silenciosos":** Pueden estar ocurriendo AHORA y nadie se da cuenta hasta que un cliente reclama o un regulador investiga.
 
 ------------------------------------------------------------------------
 
@@ -230,19 +233,20 @@ El Triángulo falla en **exactamente 4 modos**. Cada uno es un "enemigo silencio
 
 ------------------------------------------------------------------------
 
-## Caso Real: Reconocimiento Facial (Gender Shades, 2018)
+## Caso Real: Reconocimiento Facial — Google, Amazon, Microsoft (2018)
 
-**Problema descubierto:**
+**¿Qué pasó?**
 
-- Google, Amazon, Microsoft: **tasa de error del 34% en rostros de mujeres oscuras**
-- Tasa de error del 0.7% en rostros de hombres blancos
-- **¿Por qué?** Los modelos se entrenaron mayormente con datos de personas blancas
+El algoritmo para reconocer rostros fallaba dramáticamente:
+- ❌ Mujer oscura → 34% de error (falla 1 de cada 3 veces)
+- ✓ Hombre blanco → 0.7% de error (casi nunca falla)
 
-**Impacto en el mundo real:**
+**¿Por qué?** Se entrenó con mayormente fotos de personas blancas. El modelo nunca aprendió a reconocer otros tipos de rostros.
 
-- Policía usa algoritmo para identificar sospechosos → falla en comunidades afrodescendientes
-- Acceso a edificios por facial → gente con piel oscura queda afuera
-- **Costo:** Discriminación indirecta pero efectiva
+**Impacto real:**
+- Policía lo usó para identificar sospechosos → criminalizó a afrodescendientes injustamente
+- Sistemas de acceso a edificios lo usaron → excluyó gente con piel oscura
+- **Resultado:** Discriminación silenciosa y automática a escala
 
 **Pregunta:** ¿Cómo lo hubiera evitado?
 - Pregunta #1: "¿Quién está representado en estos datos? ¿Hay grupos faltantes?"
@@ -560,24 +564,28 @@ Equivalente a: "Un algoritmo de cartera que recomienda 100% en acciones penny = 
 
 ------------------------------------------------------------------------
 
-## Marco de Decisión: ¿Apruebo Este Proyecto?
+## Marco de Decisión: ¿Apruebo o NO Este Proyecto?
 
-::: tiny
-| # | Pregunta | ✓ APRUEBA | ✗ DETENER | ⚠️ RIESGO |
-|---|----------|----------|----------|----------|
-| 1️⃣ | ¿Representación? | Distribuido equitativo | Falta grupo | Recolectar datos O limitar scope |
-| 2️⃣ | ¿Históricos justos? | Auditado completo | Nunca auditado | Auditar y limpiar ANTES |
-| 3️⃣ | ¿Sin leakage? | Variables validadas | Info futura | Remover variables futuras |
-| 4️⃣ | ¿Calidad? | >95% correcto | <95% correcto | Invertir en limpieza |
-| 5️⃣ | ¿Monitoreo? | Dashboard + alertas | Sin plan | Implementar monitoreo ANTES |
+Para cada una de las 5 preguntas, tienes 3 opciones:
+
+**✓ APRUEBA:** Respuesta clara y documentada
+**✗ DETENER:** Riesgo evidente, no está listo
+**⚠️ RIESGO:** Hay problema, pero se puede arreglar con plan concreto
+
+::: smaller
+| Pregunta | Si es APRUEBA | Si es DETENER | Si es RIESGO → Acción |
+|----------|---|---|---|
+| **1. ¿Representación?** | Grupos diversos en datos | Falta grupo importante | Recolecta datos de ese grupo primero |
+| **2. ¿Históricos justos?** | Pasado auditado y limpio | Nunca lo auditaron | Audita y limpia ANTES de usar |
+| **3. ¿Sin leakage?** | Todas variables validadas | Hay info futura | Quita esas variables |
+| **4. ¿Datos limpios?** | >95% correcto | <95% correcto | Invierte 2-4 semanas en limpieza |
+| **5. ¿Hay monitoreo?** | Plan claro + dashboard | Sin plan | Arma plan de vigilancia |
 :::
 
-**Criterio:**
-- **5/5 APRUEBA** → Adelante
-- **4/5 APRUEBA + 1 RIESGO (con plan)** → Adelante con remediación
-- **Cualquier DETENER** → NO aprueba
-
-**Tiempo remediación:** 2-6 semanas
+**Regla simple:**
+- Si las 5 son **APRUEBA** → Adelante
+- Si 4 son **APRUEBA** + 1 es **RIESGO (con plan concreto)** → Adelante pero vigila
+- Si CUALQUIERA es **DETENER** → NO APRUEBAS hasta que lo arreglen
 
 ------------------------------------------------------------------------
 
@@ -689,20 +697,17 @@ No necesitas ser Data Scientist para liderar con integridad. Necesitas:
 
 ------------------------------------------------------------------------
 
-## Glosario para Líderes
+## Términos Clave (Glosario Simple)
 
-| Término | Definición Simple |
-|---------|---|
-| **Dataset** | Tabla con filas (ejemplos) y columnas (datos sobre cada ejemplo) |
-| **Sesgo** | El modelo favorece o rechaza a un grupo sin razón válida |
-| **Data Leakage** | Información futura "filtrada" en datos de entrenamiento (modelo lo aprende, parece perfecto, falla en producción) |
-| **Overfitting** | Modelo que memoriza datos en lugar de aprender patrones generalizables |
-| **Feature** | Una columna de datos: edad, ubicación, historial de compras |
-| **Entrenamiento** | Proceso donde el modelo aprende patrones desde los datos |
-| **Validación** | Testear el modelo en datos nuevos (no usados en entrenamiento) |
-| **Producción** | El modelo en uso real, haciendo predicciones |
-| **KPI** | Métrica de desempeño (ej. "precisión 95%") |
-| **Monitoreo** | Vigilar que el modelo siga funcionando correctamente |
+| Término | Qué Significa | Ejemplo |
+|---------|---|---|
+| **Dataset** | Una tabla con datos: filas = casos, columnas = información | Tabla de 1000 clientes con edad, saldo, historial |
+| **Sesgo** | El modelo favorece a unos grupos y rechaza otros sin razón válida | Rechaza más a mujeres que a hombres, sin justificación |
+| **Data Leakage** | Información que debería ser secreta se "filtra" en entrenamient | Incluir "fue reportado como fraude" cuando deberías predecir AHORA |
+| **Modelo** | El algoritmo que aprende patrones de los datos | La máquina aprende: "gente joven con saldo alto = bajo riesgo" |
+| **Entrenamiento** | Enseñarle al modelo a reconocer patrones | Mostrarle 1000 ejemplos para que aprenda |
+| **Producción** | El modelo en uso real, tomando decisiones de verdad | Hoy mismo: aprueba/rechaza un cliente que solicita crédito |
+| **Monitoreo** | Vigilancia continua de si el modelo sigue funcionando bien | Ver cada mes: ¿sigue funcionando igual? ¿hay cambios? |
 
 ------------------------------------------------------------------------
 
