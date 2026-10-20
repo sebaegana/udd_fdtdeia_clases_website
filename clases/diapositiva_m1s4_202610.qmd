@@ -502,24 +502,61 @@ Preparación previa (no mostrar en pantalla): instalar y probar `vibe` con el pr
 
 ------------------------------------------------------------------------
 
-## Cómo Hacer Preguntas Incómodas
+## Pregunta Operativa #6: El "Test de Smell-Check"
 
-**Si el equipo es evasivo, presiona así:**
+**No necesitas ser técnico para validar un modelo. Haz esto:**
 
-::: tiny
-| Si Dicen... | Significa... | Tú Preguntas... |
-|---|---|---|
-| "Suficientes datos" | No auditaron representación | "¿Cuánto? Muéstrenme por segmento" |
-| "Funciona bien" | Puede haber sesgo oculto | "¿Bien para QUIÉNES? ¿Y minorías?" |
-| "Es complicado" | Evasión | "Expliquenme cómo lo resolvieron" |
-| "Está limpio" | No lo validaron | "¿Cuántas horas limpiar? ¿>50%?" |
-| "Históricos buenos" | Sesgo probable | "¿Auditaron justicia del pasado?" |
-| "99% precisión" | Data leakage probable | "¿Revisaron variables futuras?" |
-| "No lo hemos pensado" | Sin gobernanza | "Párelo. No apruebo sin plan" |
-| "Solo técnicos entienden" | Opacidad deliberada | "Expliquenmelo. Yo decido" |
+::: smaller
+**Estrategia Simple:** Dale casos de prueba reales y ve si falla en lo obvio
+
+**Ejemplo: Sistema de IA para diagnóstico médico**
+
+*Paso 1: Prepara casos obvios*
+```
+Caso 1: Paciente con síntomas de gripe clara
+        (tos, fiebre, dolor muscular, 2 días de inicio)
+
+Caso 2: Paciente con síntomas de neumonía severa
+        (dificultad respiratoria, febril, radiografía anormal)
+
+Caso 3: Paciente sano (sin síntomas)
+```
+
+*Paso 2: Dale al modelo SOLO los síntomas (zero-shot)*
+```
+"Resumiendo el caso, el diagnóstico probable sería: ____"
+```
+
+*Paso 3: ¿Qué debería pasar?*
+- Caso 1 → Gripe (no neumonía)
+- Caso 2 → Neumonía (no gastritis)
+- Caso 3 → Sin enfermedad evidente (no "cáncer terminal")
+
+*Paso 4: Si falla en lo obvio → Alerta roja*
+- "El modelo diagnostica cáncer terminal en pacientes sanos" → NO APRUEBA
+- "Confunde constantemente gripe con neumonía" → Sesgo probable
 :::
 
-**Tu rol:** No necesitas entender técnicamente. Solo detecta si **transparentan o evaden**.
+**La lógica:** Si el modelo se equivoca en lo obvio, imagina en lo complejo.
+Equivalente a: "Un algoritmo de cartera que recomienda 100% en acciones penny = desconfía"
+
+------------------------------------------------------------------------
+
+## Generalizar el Test: Cualquier Proyecto de IA
+
+**Este patrón funciona en CUALQUIER industria:**
+
+::: smaller
+| Industria | Modelo | Casos Obvios para Probar | Señal de Alerta |
+|-----------|--------|---|---|
+| **Fintech** | Scoring de crédito | Cliente con deuda clara ¿rechaza? Multimillonario ¿aprueba? | Rechaza buenos clientes; aprueba riesgosos |
+| **HR** | Selección de CV | CV excelente ¿lo recomienda? CV pobre ¿lo rechaza? | Rechaza candidatos buenos |
+| **Retail** | Recomendaciones | Cliente compró A, ¿recomienda A? ¿O cosas sin relación? | Recomendaciones aleatorias |
+| **Logística** | Ruteo | Ruta corta ¿la elige? ¿O elige largas siempre? | Elige ineficiencia consistente |
+| **Healthcare** | Diagnóstico | Síntomas claros de Enfermedad X ¿la detecta? | Falla en lo obvio |
+:::
+
+**Ventaja:** No necesitas entender el algoritmo. Solo observas si comete errores estúpidos.
 
 ------------------------------------------------------------------------
 
