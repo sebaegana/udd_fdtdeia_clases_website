@@ -56,7 +56,7 @@ library(knitr)
 Al terminar podrán:
 
 1. Distinguir **dato, información y decisión**
-2. Explicar **cómo aprende un modelo** y qué significa "95% de precisión"
+2. Explicar **qué es un modelo de IA**, cómo aprende y qué significa "95% de precisión"
 3. Reconocer **cuatro riesgos** que dañan un proyecto de IA
 4. Hacer **cinco preguntas** antes de aprobar un proyecto
 5. Probar un modelo con **casos obvios**, sin programar
@@ -99,6 +99,29 @@ Al terminar podrán:
 :::
 :::
 
+## Anatomía de un dataset
+
+| Cliente | Edad | Ingreso | Deudas | ¿Pagó el crédito? |
+|-----|----|-------|-----|-------------|
+| 1 | 34 | \$1,2 M | 0 | Sí |
+| 2 | 51 | \$0,8 M | 2 | No |
+| 3 | 28 | \$1,5 M | 1 | Sí |
+
+- **Fila:** un caso (un cliente)
+- **Columna:** una variable que describe el caso
+- **Variable objetivo:** lo que queremos predecir (¿pagó?)
+
+## Un promedio no basta
+
+**Un café con 10 personas:** 9 ganan \$600 mil y el dueño gana \$10 millones.
+
+- Sueldo **promedio: \$1,54 millones**
+- Ninguna de las 10 personas gana eso
+
+**Muestra vs. población:** si encuestan a 200 clientes de su web, ¿representan a todos sus clientes?
+
+Un resumen puede **esconder** a quienes no aparecen en los datos. Lo veremos en el Riesgo 1.
+
 ## Tres niveles de decisión
 
 | Nivel | Ejemplo | Frecuencia | Tipo de dato |
@@ -125,15 +148,6 @@ flowchart LR
 
 Un error en cualquier etapa **se arrastra** a las siguientes. Volveremos a este ciclo en el Bloque 3.
 
-## Decidir simulando: el ejemplo del portafolio
-
-**Problema:** repartir una inversión entre varios activos.
-
-- **Camino teórico:** optimización de Markowitz (requiere matemática y supuestos)
-- **Camino simple:** simular miles de reparticiones al azar y quedarse con la mejor según un criterio (ej. retorno por unidad de riesgo)
-
-**Idea clave:** no hace falta entender el cálculo para evaluar el resultado. Con la IA haremos lo mismo: **probarla con casos y mirar qué responde**.
-
 ## Más datos no es mejor dato
 
 | | Qué datos tiene | Resultado |
@@ -159,17 +173,45 @@ En parejas, elijan **una decisión** de su organización y respondan:
 - Si una venta de \$4.200 es un dato, ¿qué sería la información?
 - ¿Por qué la IA se usa más en decisiones operativas que estratégicas?
 - Si hay un error en la **captura**, ¿qué etapas posteriores afecta?
+- En una tabla de clientes, ¿qué es la **variable objetivo**?
 :::
 
 # Bloque 2: De los datos a la IA
 
+## IA frente al software tradicional
+
+| | Software tradicional | IA (machine learning) |
+|--------|--------------|--------------|
+| **Cómo se crea** | Alguien escribe las reglas | El sistema **aprende** las reglas desde ejemplos |
+| **Ejemplo** | "Si ingreso < X, rechazar" | Aprende de 100.000 créditos pasados qué patrones anticipan el impago |
+| **Si los datos son malos** | Sigue las reglas igual | Aprende **malos patrones** |
+
 ## Qué es un modelo
 
-Un **modelo** es un programa que **aprende patrones** a partir de ejemplos pasados para **predecir** casos nuevos.
+Un **modelo** recibe las variables de un caso y devuelve una **predicción**.
 
-- Como un analista junior que estudió 10.000 casos antes de opinar
+- **Entra:** edad 34, ingreso \$1,2 M, sin deudas
+- **Sale:** "probabilidad de impago: 8%"
+- Aprendió de ejemplos pasados, como un analista junior que estudió 10.000 casos
 - No "entiende": detecta regularidades en lo que se le mostró
-- Si los ejemplos son malos, aprende **malos patrones**
+
+## Tres tareas típicas
+
+| Tarea | Pregunta que responde | Ejemplo |
+|--------|-----------------|-----------------|
+| **Clasificar** | ¿A qué grupo pertenece? | ¿Fraude o no? ¿El cliente se va? |
+| **Estimar un número** | ¿Cuánto? | Demanda del mes, precio de una propiedad |
+| **Generar** | Crear algo nuevo | Texto, imágenes, resúmenes (ChatGPT, Mistral) |
+
+## IA generativa: por qué suena segura aunque invente
+
+Un modelo de lenguaje (LLM) **predice la siguiente palabra más probable**.
+
+- No consulta una base de hechos: produce texto **verosímil**
+- Puede inventar datos, citas o cifras con total seguridad (*alucinación*)
+- Responde mejor o peor según cómo se le pregunta
+
+Por eso su salida **se prueba**, no se asume correcta.
 
 ## Cómo aprende: entrenar y probar
 
@@ -184,6 +226,17 @@ flowchart LR
 ```
 
 Un modelo que sólo se evalúa con datos que ya vio **memoriza** en vez de aprender.
+
+## Los modelos se equivocan
+
+Ningún modelo acierta siempre. Detecta fraude:
+
+| | Dijo "fraude" | Dijo "legítima" |
+|----------|-------------------|-------------------|
+| **Era fraude** | Acierto | **Falso negativo:** el fraude pasa |
+| **Era legítima** | **Falso positivo:** cliente bloqueado | Acierto |
+
+La pregunta útil no es "¿se equivoca?" sino **"¿qué error nos sale más caro?"**
 
 ## Qué significa "95% de precisión"
 
@@ -203,13 +256,14 @@ Un modelo que sólo se evalúa con datos que ya vio **memoriza** en vez de apren
 
 Antes de actuar sobre un patrón, pregunten: **¿qué más podría explicarlo?**
 
-## Qué puede y qué no puede hacer un modelo
+## Probar por simulación: el ejemplo del portafolio
 
-| Puede | No puede |
-|---|---|
-| Encontrar patrones en grandes volúmenes | Saber **por qué** ocurre algo |
-| Predecir casos parecidos a los vistos | Funcionar bien en situaciones nuevas |
-| Aplicar un criterio de forma consistente | Corregir datos injustos o incompletos |
+**Problema:** repartir una inversión entre varios activos.
+
+- **Camino teórico:** optimización de Markowitz (requiere matemática y supuestos)
+- **Camino simple:** simular miles de reparticiones al azar y quedarse con la mejor según un criterio (ej. retorno por unidad de riesgo)
+
+**Idea clave:** no hace falta entender el cálculo por dentro para evaluar el resultado. Con la IA haremos lo mismo: **probarla con casos y mirar qué responde**.
 
 ## Test de humo: probar con casos obvios
 
@@ -233,9 +287,10 @@ Si falla en lo **obvio**, no apruebe el proyecto. Si acierta, recién ahí miren
 ## Chequeo rápido
 
 ::: {.incremental}
-- ¿Por qué se guarda un 20% de los datos sin usarlo para entrenar?
+- ¿En qué se diferencia una regla escrita a mano de lo que aprende un modelo?
+- ¿Por qué un LLM puede inventar un dato con total seguridad?
+- En detección de fraude, ¿qué error cuesta más: el falso positivo o el negativo?
 - Un modelo dice "99% de precisión". ¿Qué pregunta hacen primero?
-- ¿Cómo prueban un modelo sin saber programar?
 :::
 
 # Bloque 3: Riesgos y gobernanza
