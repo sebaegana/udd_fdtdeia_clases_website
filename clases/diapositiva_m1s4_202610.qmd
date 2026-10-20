@@ -335,6 +335,17 @@ Anoten: ¿acertó lo obvio? ¿Qué tan seguro sonó? Repitan el caso A: ¿respon
 Ejercicio de práctica, no usar un LLM para decisiones clínicas reales. Respuestas esperables: A cuadro viral o gripe; B neumonía grave que requiere atención urgente; C sin enfermedad evidente. Al cierre preguntar: ¿alguien obtuvo respuestas distintas con el mismo caso? Eso muestra que la salida varía y por qué hay que probar varias veces.
 :::
 
+## Qué pasa si repetimos la pregunta 100 veces
+
+![](imagenes/m1s4_diagnosticos_100_consultas.png){.nostretch fig-align="center" width="1050px"}
+
+- **Caso obvio y grave:** 100 de 100 responden lo mismo.
+- **Caso ambiguo:** la respuesta correcta aparece con distintos nombres.
+
+::: notes
+Resultado de una simulación educativa: se hizo la misma consulta 100 veces por caso a un modelo de lenguaje (gpt-4o-mini), sin valor clínico. Caso 2 (neumonía): 100/100, es la prueba de humo superada. Caso 1: gripe 76, con variantes de redacción el resto. Caso 3 (sin síntomas): las respuestas se dispersan en frases distintas ("salud óptima", "paciente asintomático"...), que significan lo mismo pero se cuentan por separado. Mensaje: la salida de un modelo varía entre consultas, por eso se prueba varias veces y no una sola. Conecta con la pregunta de la práctica "repitan el caso A: ¿responde lo mismo?".
+:::
+
 ## Chequeo rápido
 
 ::: {.incremental}
