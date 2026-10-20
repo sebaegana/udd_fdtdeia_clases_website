@@ -213,13 +213,13 @@ El Triángulo falla en **exactamente 4 modos**. Cada uno es un "enemigo silencio
 - Afecta pasos específicos de la cadena
 - Tiene un costo concreto en tu negocio
 
-::: smaller
-| Enemigo | Afecta Paso | Causa | Impacto | Red Flag |
+::: tiny
+| Enemigo | Afecta | Causa | Impacto | Red Flag |
 |---------|---|---|---|---|
-| **Sesgo de Representación** | DATOS | Grupo demográfico falta en dataset | Modelo falla para ese grupo | "Funciona bien para el cliente típico" |
-| **Sesgo Histórico** | DATOS | Datos vienen de decisiones injustas del pasado | Perpetúas discriminación a escala | "Refleja cómo siempre lo hemos hecho" |
-| **Data Leakage** | MODELO | Información futura se filtra en entrenamiento | KPI falso en tests; falla en producción | "99% de precisión" (sospechosamente perfecto) |
-| **Calidad de Datos** | DATOS | Incompletos, incorrectos, contradictorios, viejos | Decisiones inconsistentes | "Nuestros datos están desordenados" |
+| **Representación** | DATOS | Grupo demográfico ausente | Modelo falla p/ ese grupo | "Funciona bien para típico" |
+| **Histórico** | DATOS | Decisiones injustas del pasado | Perpetúa discriminación | "Refleja lo de siempre" |
+| **Data Leakage** | MODELO | Info futura en entrenamiento | KPI falso; falla producción | "99% precisión" |
+| **Calidad** | DATOS | Incompletos, viejos, contradictorios | Decisiones inconsistentes | "Datos desordenados" |
 :::
 
 ------------------------------------------------------------------------
@@ -249,59 +249,38 @@ El Triángulo falla en **exactamente 4 modos**. Cada uno es un "enemigo silencio
 
 ------------------------------------------------------------------------
 
-## Enemigo #2: Sesgo Histórico
+## Enemigo #2: Sesgo Histórico — Amazon Hiring (Caso Real)
 
 **Definición:** Entrenas un modelo con datos del pasado que reflejan **injusticias del pasado**. El modelo las **perpetúa a escala**.
 
-------------------------------------------------------------------------
-
-## Caso Real: Amazon Hiring Algorithm (Recordatorio)
-
-**¿Qué pasó?**
-
+**¿Qué pasó en Amazon?**
 - Entrenado con 10 años de contrataciones históricas en tech
 - Históricamente contrataban más hombres en tech
-- **Resultado:** El algoritmo aprendió a rechazar mujeres
+- **Resultado:** El algoritmo aprendió a rechazar mujeres (rechazaba palabras como "women's chess club")
 
-**¿Por qué es diferente de "Sesgo de Representación"?**
+**¿Por qué es diferente de "Representación"?**
+- Representación: "No hay mujeres porque no las tenemos"
+- Histórico: "Hay datos, pero reflejan que antes DISCRIMINÁBAMOS. El modelo lo aprende y lo perpetúa"
 
-- Representación: "No hay mujeres en los datos porque no las tenemos"
-- Histórico: "Hay datos históricos, pero reflejan que antes discriminábamos. El modelo lo aprende."
-
-**Pregunta:** ¿Cómo lo hubiera evitado?
-- Pregunta #2: "¿Estos datos reflejan decisiones justas del pasado? ¿O tenemos que limpiar primero?"
+**Pregunta para auditar:** "¿Estos datos reflejan decisiones justas del pasado? ¿O tenemos que limpiar primero?"
 
 ------------------------------------------------------------------------
 
-## Enemigo #3: Data Leakage
+## Enemigo #3: Data Leakage — Predicción de Fraude (Caso Real)
 
-**Definición:** El modelo usa **información que NO tendría disponible** cuando necesita predecir en producción real. Parece perfecto en tests; falla catastrofalmente después.
+**Definición:** El modelo usa **información que NO tendría disponible** en producción. Parece perfecto en tests; falla catastrofalmente después.
 
-------------------------------------------------------------------------
+::: smaller
+**¿Qué pasó?**
 
-## Caso Real: Predicción de Fraude
+| Etapa | Dato | Problema |
+|-------|------|----------|
+| Entrenamiento | Monto + País + Hora + **¿FUE REPORTADO COMO FRAUDE?** | ✗ Información futura (se sabe DESPUÉS) |
+| Resultado Test | 99% de precisión | ✓ Sospechosamente perfecto |
+| Producción Real | Monto + País + Hora (solo) | ✗ Modelo no funciona sin la variable "fue reportado" |
 
-```{=html}
-<pre style="font-size:0.72em; line-height:1.5;">
-Datos de entrenamiento incluyen:
-  - Monto de transacción
-  - País
-  - Hora
-  - ¿FUE REPORTADO COMO FRAUDE? ← ✗ ERROR (información futura)
-
-El modelo aprende: "si fue reportado, es fraude"
-KPI en test: 99% de precisión ✓ (FALSO)
-
-En producción:
-  - Cliente realiza transacción
-  - Necesitamos predecir AHORA si es fraude
-  - Pero "si fue reportado" solo se sabe DESPUÉS
-  - Resultado: modelo no funciona en producción
-</pre>
-```
-
-**Pregunta:** ¿Cómo lo hubiera evitado?
-- Pregunta #3: "¿Toda esta información estaría disponible EN EL MOMENTO que decidimos? ¿O es información futura?"
+**Pregunta para auditar:** "¿Toda esta información estaría disponible EN EL MOMENTO que decidimos? ¿O es información futura?"
+:::
 
 ------------------------------------------------------------------------
 
@@ -353,14 +332,14 @@ No es atractivo. No es "IA". Pero es **crítico**.
 
 ## Desglose por Industria: Cuál Enemigo es Crítico
 
-::: smaller
-| Sector | Enemigos Críticos | Por Qué | Acción Inmediata |
+::: tiny
+| Sector | Enemigos Críticos | Riesgo | Acción Inmediata |
 |--------|---|---|---|
-| **Fintech / Crédito** | Data Leakage + Histórico | Riesgo regulatorio; perpetúa discriminación | Auditar variables; validar justicia histórica |
-| **HR / Contratación** | Histórico + Representación | Perpetúa sesgos de contratación | Diversificar dataset de entrenamiento |
-| **Healthcare** | Calidad + Leakage | Decisiones médicas en datos incompletos | Validar completitud (>95%); revisar variables |
-| **Justicia Criminal** | Histórico + Representación | Lógica circular (arresto = reincidencia) | Cuestionable usar este dato en absoluto |
-| **Retail / Recomendaciones** | Representación + Calidad | Sesgos culturales invisibles | Test con clientes de diferentes perfiles |
+| **Fintech** | Leakage + Histórico | Regulatorio + discriminación | Auditar variables; validar justicia |
+| **HR** | Histórico + Representación | Sesgos en contratación | Diversificar dataset |
+| **Healthcare** | Calidad + Leakage | Datos incompletos = decisiones malas | Validar >95% completitud |
+| **Justicia Criminal** | Histórico + Representación | Lógica circular (arresto = reincidencia) | Cuestionable usar el dato |
+| **Retail** | Representación + Calidad | Sesgos culturales invisibles | Test con clientes diversos |
 :::
 
 ------------------------------------------------------------------------
@@ -394,14 +373,14 @@ Preparación previa (no mostrar en pantalla): instalar y probar `vibe` con el pr
 
 **Cada pregunta audita un paso específico del Triángulo y mapea a un enemigo:**
 
-::: smaller
-| # | Pregunta | Audita Paso | Mapea a Enemigo | Objetivo |
+::: tiny
+| # | Pregunta | Paso | Mapea a | Objetivo |
 |---|----------|---|---|---|
-| 1️⃣ | ¿Quién está representado en estos datos? | DATOS | **Sesgo de Representación** | Identificar grupos sub-representados |
-| 2️⃣ | ¿Estos datos reflejan decisiones justas del pasado? | DATOS | **Sesgo Histórico** | Auditar si perpetúamos injusticia |
-| 3️⃣ | ¿Hay información aquí que NO tendríamos al momento de decidir? | MODELO | **Data Leakage** | Detectar información futura infiltrada |
-| 4️⃣ | ¿Qué tan limpios y confiables son estos datos? | DATOS | **Calidad de Datos** | Validar integridad antes de usar |
-| 5️⃣ | ¿Cómo sabemos si el modelo falla? ¿Quién lo vigila? | IMPACTO | **Gobernanza Continua** | Evitar sorpresas post-lanzamiento |
+| 1️⃣ | ¿Quién está representado? | DATOS | **Representación** | Grupos sub-representados |
+| 2️⃣ | ¿Históricos fueron justos? | DATOS | **Histórico** | Injusticia perpetuada |
+| 3️⃣ | ¿Info futura infiltrada? | MODELO | **Leakage** | Información futura |
+| 4️⃣ | ¿Qué tan limpios? | DATOS | **Calidad** | Integridad de datos |
+| 5️⃣ | ¿Quién vigila después? | IMPACTO | **Gobernanza** | Sorpresas post-lanzamiento |
 :::
 
 ------------------------------------------------------------------------
@@ -525,45 +504,43 @@ Preparación previa (no mostrar en pantalla): instalar y probar `vibe` con el pr
 
 ## Cómo Hacer Preguntas Incómodas
 
-**Si el equipo es evasivo, usa esta tabla:**
+**Si el equipo es evasivo, presiona así:**
 
 ::: tiny
-| Si Escuchas... | Significa... | Pregunta de Profundización |
+| Si Dicen... | Significa... | Tú Preguntas... |
 |---|---|---|
-| "Suficientes datos" (sin detallar) | No han auditado representación | "¿Cuánto es 'suficiente'? Muéstrenme por segmento" |
-| "El modelo funciona bien" (sin contexto) | Pueden estar escondiendo sesgo | "¿Bien para QUIÉNES? ¿Y para minorías?" |
-| "Es complicado" / "No es importante" | Evasión deliberada | "Entiendo. Expliquenme cómo lo resolvieron" |
-| "Asumimos que está limpio" | NO lo auditaron | "¿Cuántas horas en limpieza? ¿Menos de 50%?" |
-| "Usamos datos históricos" (sin validación) | Sesgo histórico probable | "¿Auditaron que las decisiones pasadas fueron justas?" |
-| "99% de precisión" / "Perfecto en tests" | Data leakage casi garantizado | "¿Revisaron explícitamente por variables futuras?" |
-| "No lo hemos pensado" (sobre monitoreo) | No hay gobernanza | "Entonces no está listo. Párelo hasta tener plan" |
-| "Solo el equipo técnico entiende" | Opacidad deliberada | "Expliquenmelo. Si no entiendo, nadie aprueba" |
+| "Suficientes datos" | No auditaron representación | "¿Cuánto? Muéstrenme por segmento" |
+| "Funciona bien" | Puede haber sesgo oculto | "¿Bien para QUIÉNES? ¿Y minorías?" |
+| "Es complicado" | Evasión | "Expliquenme cómo lo resolvieron" |
+| "Está limpio" | No lo validaron | "¿Cuántas horas limpiar? ¿>50%?" |
+| "Históricos buenos" | Sesgo probable | "¿Auditaron justicia del pasado?" |
+| "99% precisión" | Data leakage probable | "¿Revisaron variables futuras?" |
+| "No lo hemos pensado" | Sin gobernanza | "Párelo. No apruebo sin plan" |
+| "Solo técnicos entienden" | Opacidad deliberada | "Expliquenmelo. Yo decido" |
 :::
 
-**Tu rol:** No necesitas entender la respuesta técnica. Necesitas ver si **están evadiendo o siendo transparentes**.
+**Tu rol:** No necesitas entender técnicamente. Solo detecta si **transparentan o evaden**.
 
 ------------------------------------------------------------------------
 
 ## Marco de Decisión: ¿Apruebo Este Proyecto?
 
 ::: tiny
-| # | Pregunta | ✓ APRUEBA | ✗ DETENER | ⚠️ RIESGO → Acción Inmediata |
+| # | Pregunta | ✓ APRUEBA | ✗ DETENER | ⚠️ RIESGO |
 |---|----------|----------|----------|----------|
-| 1️⃣ | ¿Representación? Todos grupos presentes | Distribuido equitativamente | Falta grupo importante | Sub-representado → Recolectar datos de ese grupo O limitar scope |
-| 2️⃣ | ¿Históricos justos? Auditados | Auditoría completa | Nunca auditado | Perpetúa injusticia → Auditar y limpiar ANTES de usar |
-| 3️⃣ | ¿Sin data leakage? Variables validadas | Todas disponibles EN EL MOMENTO | Hay información futura | KPI falso → Remover variables futuras AHORA |
-| 4️⃣ | ¿Calidad? Datos validados | >95% correcto | <95% correcto | Inconsistencia → Invertir 2-4 semanas en limpieza |
-| 5️⃣ | ¿Monitoreo? Plan definido | Dashboard + alertas por segmento | Sin plan | Sorpresas en producción → Implementar monitoreo ANTES |
+| 1️⃣ | ¿Representación? | Distribuido equitativo | Falta grupo | Recolectar datos O limitar scope |
+| 2️⃣ | ¿Históricos justos? | Auditado completo | Nunca auditado | Auditar y limpiar ANTES |
+| 3️⃣ | ¿Sin leakage? | Variables validadas | Info futura | Remover variables futuras |
+| 4️⃣ | ¿Calidad? | >95% correcto | <95% correcto | Invertir en limpieza |
+| 5️⃣ | ¿Monitoreo? | Dashboard + alertas | Sin plan | Implementar monitoreo ANTES |
 :::
 
-::: smaller
-**Criterio final:**
-- **5/5 "APRUEBA"** → Adelante sin restricciones
-- **4/5 "APRUEBA" + 1 "RIESGO" (con plan concreto)** → Adelante con plan de remediación
-- **Cualquier "DETENER"** → **NO aprueba hasta resolverlo**
+**Criterio:**
+- **5/5 APRUEBA** → Adelante
+- **4/5 APRUEBA + 1 RIESGO (con plan)** → Adelante con remediación
+- **Cualquier DETENER** → NO aprueba
 
-**Tiempo típico de remediación:** 2-6 semanas (es invertible pero necesario)
-:::
+**Tiempo remediación:** 2-6 semanas
 
 ------------------------------------------------------------------------
 
