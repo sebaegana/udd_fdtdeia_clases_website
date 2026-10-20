@@ -65,9 +65,17 @@ Al terminar podrán:
 
 | Bloque | Pregunta que responde | Tiempo |
 |----------|----------------------|------|
-| **1. Datos y decisiones** | ¿Qué es un dato y cómo se vuelve decisión? | 60 min |
-| **2. De los datos a la IA** | ¿Cómo aprende un modelo y qué puede fallar? | 60 min |
-| **3. Riesgos y gobernanza** | ¿Cómo me aseguro de que no falle? | 60 min |
+| **1. Datos y decisiones** | ¿Qué es un dato y cómo se vuelve decisión? | ~40 min |
+| **2. De los datos a la IA** | ¿Cómo aprende un modelo y qué puede fallar? | ~50 min |
+| **3. Riesgos y gobernanza** | ¿Cómo me aseguro de que no falle? | ~65 min |
+
+Incluye las actividades. Más 5 min de apertura, 10 de pausa y 10 de margen.
+
+::: notes
+Estimación de abajo hacia arriba (2 a 4 min por slide según tipo): apertura 5, Bloque 1 = 37, Bloque 2 = 49, Bloque 3 = 66, total de contenido ~158 min. Con 10 min de pausa y ~10 de margen se llega a 180. No está medido en un ensayo: cronometrar una pasada completa antes de la clase.
+
+Si el grupo va lento (según el sondeo): recortar en el Bloque 3 "Los enemigos se combinan" y "Una conversación modelo" (~4,5 min) y acortar "Los modelos se equivocan" en el Bloque 2. Si el grupo va rápido, ampliar la discusión de los chequeos.
+:::
 
 ## Sondeo rápido: ¿desde dónde partimos? (2 min)
 
