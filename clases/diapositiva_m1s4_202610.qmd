@@ -319,7 +319,7 @@ Si falla en lo **obvio**, no apruebe el proyecto. Si acierta, recién ahí miren
 
 ## `r fa("users", fill = "steelblue")` Práctica guiada · Test de humo en vivo (10 min)
 
-En parejas, abran <https://chat.mistral.ai> y pregunten por cada caso:
+En parejas, abran el chat de IA que usen habitualmente y pregunten por cada caso:
 
 *"¿Cuál es el diagnóstico más probable? Responde en una línea e indica qué tan seguro estás."*
 
