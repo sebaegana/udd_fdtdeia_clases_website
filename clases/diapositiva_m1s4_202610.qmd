@@ -57,7 +57,7 @@ Al terminar podrán:
 
 1. Distinguir **dato, información y decisión**
 2. Explicar **qué es un modelo de IA**, cómo aprende y qué significa "95% de precisión"
-3. Reconocer **cuatro riesgos** que dañan un proyecto de IA
+3. Reconocer los **4 Enemigos Silenciosos** de un proyecto de IA
 4. Hacer **cinco preguntas** antes de aprobar un proyecto
 5. Probar un modelo con **casos obvios**, sin programar
 
@@ -68,6 +68,19 @@ Al terminar podrán:
 | **1. Datos y decisiones** | ¿Qué es un dato y cómo se vuelve decisión? | 60 min |
 | **2. De los datos a la IA** | ¿Cómo aprende un modelo y qué puede fallar? | 60 min |
 | **3. Riesgos y gobernanza** | ¿Cómo me aseguro de que no falle? | 60 min |
+
+## Sondeo rápido: ¿desde dónde partimos? (2 min)
+
+Levanten la mano si…
+
+1. han trabajado con planillas o bases de más de 1.000 filas
+2. pueden explicar qué es un modelo de *machine learning*
+3. han usado ChatGPT, Mistral u otro asistente en su trabajo
+4. han participado en un proyecto de IA
+
+::: notes
+Calibrar el ritmo: si menos de un tercio levanta la mano en 2 y 4, dedicar más tiempo al Bloque 2 (modelo, entrenar y probar) y acortar el Bloque 3. Si la mayoría levanta la mano en todas, abreviar el Bloque 1.
+:::
 
 # Bloque 1: Datos y decisiones
 
@@ -111,6 +124,8 @@ Al terminar podrán:
 - **Columna:** una variable que describe el caso
 - **Variable objetivo:** lo que queremos predecir (¿pagó?)
 
+**Por qué importa:** si una columna está mal, el modelo aprende mal; si falta un tipo de cliente, el modelo no sabrá nada de ellos.
+
 ## Un promedio no basta
 
 **Un café con 10 personas:** 9 ganan \$600 mil y el dueño gana \$10 millones.
@@ -146,6 +161,8 @@ flowchart LR
     F -.-> A
 ```
 
+**Ejemplo:** un banco captura la solicitud, la guarda, limpia los datos, entrena su scoring, decide el crédito y monitorea la mora.
+
 Un error en cualquier etapa **se arrastra** a las siguientes. Volveremos a este ciclo en el Bloque 3.
 
 ## Más datos no es mejor dato
@@ -176,6 +193,10 @@ En parejas, elijan **una decisión** de su organización y respondan:
 - En una tabla de clientes, ¿qué es la **variable objetivo**?
 :::
 
+::: notes
+Respuestas: (1) la información es "las ventas cayeron 12% vs. el mes pasado". (2) Porque son muchas, repetidas y medibles, y el error se detecta pronto. (3) Se arrastra a limpieza, modelo, decisión y monitoreo. (4) La columna que queremos predecir, por ejemplo "¿pagó el crédito?".
+:::
+
 # Bloque 2: De los datos a la IA
 
 ## IA frente al software tradicional
@@ -203,6 +224,8 @@ Un **modelo** recibe las variables de un caso y devuelve una **predicción**.
 | **Estimar un número** | ¿Cuánto? | Demanda del mes, precio de una propiedad |
 | **Generar** | Crear algo nuevo | Texto, imágenes, resúmenes (ChatGPT, Mistral) |
 
+**Por qué importa:** cada tarea falla distinto: al clasificar se cometen errores de decisión; al generar, se inventan datos.
+
 ## IA generativa: por qué suena segura aunque invente
 
 Un modelo de lenguaje (LLM) **predice la siguiente palabra más probable**.
@@ -226,6 +249,8 @@ flowchart LR
 ```
 
 Un modelo que sólo se evalúa con datos que ya vio **memoriza** en vez de aprender.
+
+Después pasa a **producción**: opera con casos reales y toma decisiones de verdad.
 
 ## Los modelos se equivocan
 
@@ -284,6 +309,24 @@ Si falla en lo **obvio**, no apruebe el proyecto. Si acierta, recién ahí miren
 | **Retail** | Cliente que compró cámara | Recomienda algo sin relación |
 | **Logística** | Dos rutas, una claramente más corta | Elige la larga |
 
+## `r fa("users", fill = "steelblue")` Práctica guiada · Test de humo en vivo (10 min)
+
+En parejas, abran <https://chat.mistral.ai> y pregunten por cada caso:
+
+*"¿Cuál es el diagnóstico más probable? Responde en una línea e indica qué tan seguro estás."*
+
+| Caso | Datos |
+|----|----------------------------|
+| **A** | 25 años, 2 días con tos seca, fiebre 38°C, dolor muscular |
+| **B** | 70 años, fiebre alta, dificultad respiratoria severa, saturación 86% |
+| **C** | 30 años, sin síntomas, control de rutina |
+
+Anoten: ¿acertó lo obvio? ¿Qué tan seguro sonó? Repitan el caso A: ¿responde lo mismo?
+
+::: notes
+Ejercicio de práctica, no usar un LLM para decisiones clínicas reales. Respuestas esperables: A cuadro viral o gripe; B neumonía grave que requiere atención urgente; C sin enfermedad evidente. Al cierre preguntar: ¿alguien obtuvo respuestas distintas con el mismo caso? Eso muestra que la salida varía y por qué hay que probar varias veces.
+:::
+
 ## Chequeo rápido
 
 ::: {.incremental}
@@ -293,32 +336,55 @@ Si falla en lo **obvio**, no apruebe el proyecto. Si acierta, recién ahí miren
 - Un modelo dice "99% de precisión". ¿Qué pregunta hacen primero?
 :::
 
+::: notes
+Respuestas: (1) La regla la escribe una persona; el modelo la infiere de ejemplos y hereda sus defectos. (2) Porque predice la palabra más probable, no consulta hechos. (3) Depende del negocio: bloquear a un cliente legítimo cuesta reputación; dejar pasar un fraude cuesta dinero. (4) Preguntar en qué casos y para quiénes.
+:::
+
 # Bloque 3: Riesgos y gobernanza
+
+## Antes de seguir: lo que ya sabemos
+
+- Un dato se vuelve decisión recorriendo un **ciclo**: captura, limpieza, modelo, decisión, monitoreo
+- Un modelo **aprende de ejemplos**, por eso hereda sus defectos
+- Una cifra alta no basta: hay que **probar**
+
+**Ahora:** ver en qué etapas se rompe ese ciclo y qué preguntar para detectarlo.
 
 ## Dónde se rompe el ciclo
 
-Cuatro riesgos, cada uno aparece en una etapa distinta:
+Cuatro **Enemigos Silenciosos**, cada uno aparece en una etapa distinta:
 
-| Riesgo | Etapa | Qué pasa |
+| Enemigo | Etapa | Qué pasa |
 |---------|------|----------------|
-| **Representación** | Captura | Falta un grupo en los datos |
-| **Histórico** | Captura | Los datos copian decisiones injustas del pasado |
-| **Calidad** | Limpieza | Datos incompletos, viejos o contradictorios |
-| **Leakage** | Modelo | El modelo usa información que no tendrá al decidir |
+| **1. Representación** | Captura | Falta un grupo en los datos |
+| **2. Histórico** | Captura | Los datos copian decisiones injustas del pasado |
+| **3. Calidad** | Limpieza | Datos incompletos, viejos o contradictorios |
+| **4. Leakage** | Modelo | El modelo usa información que no tendrá al decidir |
 
-## Riesgo 1 · Representación
+## Enemigo 1 · Representación
 
-**Definición:** el modelo se entrenó con datos que no incluyen a todos los afectados.
-
-**Caso (Gender Shades, 2018):** sistemas de reconocimiento facial de Google, Amazon y Microsoft.
+**Caso (Gender Shades, 2018):** reconocimiento facial de Google, Amazon y Microsoft.
 
 - Error de **34%** en mujeres de piel oscura
 - Error de **0,7%** en hombres de piel clara
 - Causa: se entrenaron sobre todo con rostros claros
 
-## Riesgo 2 · Histórico
+**Qué es:** el modelo se entrenó con datos que no incluyen a todos los afectados.
 
-**Definición:** el modelo aprende a repetir decisiones injustas que están en los datos.
+**Cómo detectarlo:** pedir el desempeño **por grupo**, no sólo el promedio.
+
+## Caso local · Sistema Alerta Niñez (Chile)
+
+Modelo del Estado que asigna a cada niño un **puntaje de riesgo** para priorizar atención.
+
+- Se alimenta de registros administrativos y de **programas sociales públicos**
+- Sólo "ve" a las familias que ya usan esos programas
+- Sus desarrolladores reconocieron menor capacidad para detectar riesgo en niveles socioeconómicos altos
+- Críticas documentadas: usa variables que miden **pobreza** más que riesgo
+
+**La pregunta:** ¿quién no aparece en estos datos?
+
+## Enemigo 2 · Histórico
 
 **Caso (Amazon, 2014–2018):** filtro automático de currículums.
 
@@ -326,9 +392,13 @@ Cuatro riesgos, cada uno aparece en una etapa distinta:
 - Penalizaba la palabra "women's" y colegios de mujeres
 - Amazon canceló el proyecto
 
-**Diferencia con el riesgo 1:** aquí **sí hay datos**, pero reflejan un sesgo del pasado.
+**Qué es:** el modelo repite decisiones injustas que están en los datos. A diferencia del Enemigo 1, aquí **sí hay datos**, pero reflejan un sesgo del pasado.
 
-## Riesgo 3 · Calidad de datos
+**Cómo detectarlo:** preguntar **quién tomó** las decisiones con que se entrenó y si alguien las auditó.
+
+## Enemigo 3 · Calidad de datos
+
+**Qué es:** datos incompletos, incorrectos, desactualizados o contradictorios.
 
 | Problema | Ejemplo |
 |---|---|
@@ -337,21 +407,21 @@ Cuatro riesgos, cada uno aparece en una etapa distinta:
 | **Desactualizado** | Dirección de 2015 |
 | **Contradictorio** | "Estado: activo" con "fecha de baja: 2020" |
 
-**Test simple:** revisen a mano 100 registros al azar. Si menos de 95 están correctos, hay un problema.
+**Cómo detectarlo:** revisar a mano 100 registros al azar. Si menos de 95 están correctos, hay un problema.
 
-## Riesgo 4 · Fuga de información (leakage)
-
-**Definición:** el modelo usa información que **no tendrá disponible** cuando deba decidir.
+## Enemigo 4 · Fuga de información (leakage)
 
 **Caso:** predecir fraude incluyendo la variable "¿fue reportado como fraude?".
 
 - En las pruebas: **99%** de precisión
-- En producción esa variable no existe todavía, porque se sabe **después**
+- En **producción** (cuando el modelo opera con casos reales) esa variable aún no existe, porque se sabe **después**
 - El modelo deja de funcionar
 
-**Señal:** una precisión demasiado perfecta.
+**Qué es:** el modelo usa información que **no tendrá disponible** cuando deba decidir.
 
-## Los riesgos se combinan
+**Cómo detectarlo:** desconfiar de precisiones casi perfectas y preguntar: *¿existirá este dato al momento de decidir?*
+
+## Los enemigos se combinan
 
 **Ejemplo: banco que automatiza créditos**
 
@@ -361,9 +431,20 @@ Cuatro riesgos, cada uno aparece en una etapa distinta:
 
 Resultado: el modelo **rechaza injustamente** a un segmento y nadie lo nota hasta que hay reclamos o fiscalización.
 
+## Chequeo: ¿qué enemigo es?
+
+1. "Funciona perfecto con clientes de Santiago, pero falla en regiones."
+2. "Lo entrenamos con las aprobaciones de los últimos 10 años."
+3. "Acierta 100% en las pruebas, pero falla el primer día real."
+4. "El 30% de los ingresos está en blanco."
+
+::: {.fragment}
+**Respuestas:** 1 Representación · 2 Histórico · 3 Leakage · 4 Calidad
+:::
+
 ## Las 5 preguntas del líder
 
-| # | Pregunta | Riesgo que detecta |
+| # | Pregunta | Enemigo que detecta |
 |-|--------------------|------------|
 | 1 | ¿Quién está representado en estos datos? | Representación |
 | 2 | ¿Las decisiones del pasado fueron justas? | Histórico |
@@ -412,12 +493,29 @@ Un modelo se degrada aunque nadie lo toque: cambian los clientes, el mercado o l
 - Desempeño **por segmento**, no sólo el promedio
 - Alertas activas y qué se hizo con ellas
 - Reclamos o errores reportados por usuarios
-- Si corresponde **reentrenar** el modelo
+- Si corresponde **reentrenar**: volver a enseñarle al modelo con datos nuevos
+
+## Chequeo: ¿apruebo este proyecto?
+
+Un banco quiere automatizar créditos de consumo:
+
+- Precisión en pruebas: **99%**
+- Entrenado con las aprobaciones de 2015 a 2020
+- Datos sólo de sucursales de Santiago
+- No hay plan de monitoreo
+
+::: {.fragment}
+**Detener hasta resolver.** El 99% sugiere *leakage*; 2015–2020 sugiere sesgo *histórico*; sólo Santiago, falta de *representación*; sin monitoreo, la pregunta 5 queda sin respuesta.
+:::
+
+::: notes
+Pedir: revisión de variables, auditoría de las decisiones pasadas, desempeño por región y un plan de monitoreo con responsable. Dar 2 minutos para que conversen en parejas antes de mostrar la respuesta.
+:::
 
 ## `r fa("terminal", fill = "steelblue")` Actividad 2 · Auditoría con IA (15 min)
 
 - Grupos: elijan el caso **Fintech** (créditos) o **Manufactura** (mantenimiento)
-- **Parte 1:** evalúenlo con los 4 riesgos, sin IA
+- **Parte 1:** evalúenlo con los 4 Enemigos Silenciosos, sin IA
 - **Parte 2:** auditen el mismo caso con un LLM (`vibe` o <https://chat.mistral.ai>) usando el prompt del handout
 - **Comparen:** ¿qué detectó la IA que ustedes no vieron, y al revés?
 
@@ -458,13 +556,14 @@ No necesitan programar. Sí necesitan:
 | **Sesgo** | Favorecer o perjudicar a un grupo sin razón válida |
 | **Leakage** | Usar información que no existirá al decidir |
 | **Monitoreo** | Vigilar que el modelo siga funcionando bien |
+| **Reentrenar** | Volver a enseñarle al modelo con datos nuevos |
 
 ## Lecturas recomendadas
 
 - **Weapons of Math Destruction** — Cathy O'Neil *(accesible)*
 - **Fairness and Machine Learning** — Barocas, Hardt y Narayanan *(más técnico)*
 
-**Casos:** Gender Shades (2018), Amazon y su filtro de currículums (2018), COMPAS (ProPublica, 2016)
+**Casos:** Gender Shades (2018), Amazon y su filtro de currículums (2018), Sistema Alerta Niñez (Chile), COMPAS (ProPublica, 2016)
 
 ## Referencias
 
@@ -476,6 +575,8 @@ Barocas, S., Hardt, M., & Narayanan, A. (2023). *Fairness and Machine Learning*.
 O'Neil, C. (2016). *Weapons of Math Destruction*. Crown Publishers.
 
 Angwin, J., Larson, J., Mattu, S., & Kirchner, L. (2016). Machine bias. *ProPublica*. <https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing>
+
+Center for Human Rights and Global Justice. (2022). *Risk scoring children in Chile*. <https://chrgj.org/2022-04-20-risk-scoring-children-in-chile/>
 
 Dastin, J. (2018). Amazon scraps secret AI recruiting tool that showed bias against women. *Reuters*.
 :::
