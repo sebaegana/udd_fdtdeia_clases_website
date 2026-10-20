@@ -166,12 +166,11 @@ flowchart LR
     C --> D[Análisis o modelo]
     D --> E[Decisión]
     E --> F[Monitoreo]
-    F -.-> A
 ```
 
 **Ejemplo:** un banco captura la solicitud, la guarda, limpia los datos, entrena su scoring, decide el crédito y monitorea la mora.
 
-Un error en cualquier etapa **se arrastra** a las siguientes. Volveremos a este ciclo en el Bloque 3.
+Después del monitoreo, el ciclo **vuelve a empezar**. Un error en cualquier etapa **se arrastra** a las siguientes; volveremos a este ciclo en el Bloque 3.
 
 ## Más datos no es mejor dato
 
@@ -337,10 +336,20 @@ Ejercicio de práctica, no usar un LLM para decisiones clínicas reales. Respues
 
 ## Qué pasa si repetimos la pregunta 100 veces
 
-![](imagenes/m1s4_diagnosticos_100_consultas.png){.nostretch fig-align="center" width="900px"}
+![](imagenes/m1s4_diagnosticos_100_consultas.png){.nostretch fig-align="center" width="1180px"}
 
-- **Caso B (obvio):** 98 de 100 dicen neumonía.
-- **Casos A y C:** el sentido se repite, pero las palabras cambian.
+::: notes
+Mostrar el gráfico y pedir que lo lean antes de interpretarlo: mismos casos A, B y C de la práctica, 100 consultas por caso. Resultado de una simulación educativa con un modelo de lenguaje (gpt-4o-mini), sin valor clínico.
+:::
+
+## Cómo leer el gráfico
+
+::: {.incremental}
+- **A (tos seca, fiebre):** 70 dicen "infección viral respiratoria"; el resto, variantes de gripe.
+- **B (saturación 86%):** 98 de 100 dicen neumonía, con distinta redacción.
+- **C (sin síntomas):** "salud óptima", "salud general", "paciente sano"... dicen lo mismo con palabras distintas.
+- **Lección:** el modelo no responde igual cada vez; por eso se prueba varias veces.
+:::
 
 ::: notes
 Son los mismos casos A, B y C de la práctica. Resultado de una simulación educativa: se hizo la misma consulta 100 veces por caso a un modelo de lenguaje (gpt-4o-mini), sin valor clínico. Caso B: 59 "Neumonía", 28 "Neumonía severa", 10 "Neumonía grave"; 98 de 100 son neumonía, es la prueba de humo superada. Caso A: 70 "Infección viral respiratoria" y unas 13 más hablan de gripe o infección viral; el sentido es estable. Caso C (sin síntomas): las respuestas se dispersan en frases distintas ("salud óptima", "salud general", "paciente sano"...) que significan lo mismo pero se cuentan por separado; 40 caen en "otras variantes". Mensaje: la salida de un modelo varía entre consultas, por eso se prueba varias veces y no una sola. Conecta con "repitan el caso A: ¿responde lo mismo?".
