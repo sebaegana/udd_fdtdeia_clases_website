@@ -24,18 +24,37 @@ format:
 ```{=html}
 <style>
 /* Global font size reduction for better fit */
-.reveal h1, .reveal h2, .reveal h3 { margin: 0.3em 0 0.3em 0; }
-.reveal p { margin: 0.4em 0; line-height: 1.3; }
-.reveal li { margin: 0.15em 0; }
+.reveal h1 { font-size: 2.5em; margin: 0.2em 0; }
+.reveal h2 { font-size: 1.6em; margin: 0.2em 0; }
+.reveal h3 { font-size: 1.3em; margin: 0.15em 0; }
+.reveal p { margin: 0.3em 0; line-height: 1.25; }
+.reveal li { margin: 0.1em 0; line-height: 1.2; }
 
 /* Custom classes for density control */
-.smaller { font-size: 85%; }
-.tiny    { font-size: 70%; }
-.compact { font-size: 80%; line-height: 1.2; margin: 0.2em 0; }
+.smaller { font-size: 80%; line-height: 1.2; }
+.tiny    { font-size: 65%; line-height: 1.15; }
+.compact { font-size: 75%; line-height: 1.15; margin: 0.1em 0; }
 
-/* Table density */
-.reveal table { font-size: 0.85em; }
-.reveal table td, .reveal table th { padding: 0.3em 0.4em; }
+/* Aggressive table sizing */
+.reveal section table {
+  font-size: 0.75em !important;
+  margin: 0.3em auto !important;
+}
+.reveal table td, .reveal table th {
+  padding: 0.2em 0.25em !important;
+  vertical-align: middle;
+}
+.reveal table td {
+  white-space: nowrap;
+  overflow-wrap: break-word;
+}
+
+/* Blockquote density */
+.reveal blockquote {
+  font-size: 0.9em;
+  padding: 0.3em 0.5em;
+  margin: 0.3em 0;
+}
 </style>
 ```
 
@@ -189,26 +208,17 @@ Pero solo si **cada paso del Triángulo es sólido**. Si no:
 ## `r fa("users", fill = "steelblue")` Actividad 1 — Mapear tu Cadena (15 min)
 
 ::: tiny
-**Trabajo en grupo: Piensa en un proyecto de IA en tu área/empresa (real o hipotético)**
+**Piensa en un proyecto de IA en tu área. Responde rápido:**
 
-**1. DATOS: ¿Qué datos usarías?**
-- ¿Qué información capturas hoy que podrías usar?
-- ¿Hay datos que GENERAN pero NUNCA capturan? (ej: momentos de NO-compra)
-- ¿Quién está representado vs ausente en esos datos?
+**1. DATOS:** ¿Qué datos usarías? ¿Hay grupos no representados?
 
-**2. MODELO: ¿Qué aprendería el modelo?**
-- ¿Qué patrón esperas que encuentre?
-- ¿Hay patrones que NO quieres que encuentre? (sesgos históricos)
+**2. MODELO:** ¿Qué patrón esperas? ¿Hay patrones que NO quieres?
 
-**3. DECISIÓN: ¿Qué automatizarías?**
-- ¿Quién usaría las predicciones?
-- ¿Es una recomendación (sugerencia) o una decisión (automática)?
+**3. DECISIÓN:** ¿Qué automatizas? ¿Quién la usa? ¿Sugerencia o automática?
 
-**4. IMPACTO: ¿A quién afecta y cómo?**
-- ¿Quién gana/pierde si el modelo se equivoca?
-- ¿Cuál es el costo de una equivocación?
+**4. IMPACTO:** ¿A quién afecta? ¿Qué pasa si se equivoca?
 
-**Nota:** No necesitas respuestas perfectas. Solo quiero que veas toda la cadena.
+**Meta:** Ver toda la cadena en 15 minutos.
 :::
 
 ------------------------------------------------------------------------
@@ -362,12 +372,15 @@ No es atractivo. No es "IA". Pero es **crítico**.
 ## `r fa("users", fill = "steelblue")` Actividad 2 — Auditoría con IA (15 min)
 
 ::: tiny
-- Trabajen en grupo con uno de los 2 casos del handout: Fintech (créditos automáticos) o Manufactura (mantenimiento predictivo)
-- Parte 1: evalúen el proyecto ustedes mismos con los 4 Enemigos Silenciosos, **sin IA**
-- Parte 2: auditen el mismo escenario con un LLM (`vibe`, el CLI oficial de Mistral, o <https://chat.mistral.ai>), usando el prompt-framework del handout
-- Comparen: ¿la IA detectó lo mismo que ustedes? ¿qué se le pasó?
+**Grupo: Fintech (créditos) o Manufactura (mantenimiento)**
 
-> **Handout completo (escenario, tablas, prompt y debrief):** `202607_actividad02_skill-auditoria-datos.pdf`
+Parte 1: Ustedes auditan con los 4 Enemigos (sin IA)
+
+Parte 2: IA audita el mismo caso (Mistral o vibe)
+
+Comparen: ¿Detectó lo mismo? ¿Qué se le pasó?
+
+Handout: `202607_actividad02_skill-auditoria-datos.pdf`
 :::
 
 ::: notes
