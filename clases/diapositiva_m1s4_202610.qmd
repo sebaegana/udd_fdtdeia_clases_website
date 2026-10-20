@@ -337,13 +337,13 @@ Ejercicio de práctica, no usar un LLM para decisiones clínicas reales. Respues
 
 ## Qué pasa si repetimos la pregunta 100 veces
 
-![](imagenes/m1s4_diagnosticos_100_consultas.png){.nostretch fig-align="center" width="1050px"}
+![](imagenes/m1s4_diagnosticos_100_consultas.png){.nostretch fig-align="center" width="900px"}
 
-- **Caso obvio y grave:** 100 de 100 responden lo mismo.
-- **Caso ambiguo:** la respuesta correcta aparece con distintos nombres.
+- **Caso B (obvio):** 98 de 100 dicen neumonía.
+- **Casos A y C:** el sentido se repite, pero las palabras cambian.
 
 ::: notes
-Resultado de una simulación educativa: se hizo la misma consulta 100 veces por caso a un modelo de lenguaje (gpt-4o-mini), sin valor clínico. Caso 2 (neumonía): 100/100, es la prueba de humo superada. Caso 1: gripe 76, con variantes de redacción el resto. Caso 3 (sin síntomas): las respuestas se dispersan en frases distintas ("salud óptima", "paciente asintomático"...), que significan lo mismo pero se cuentan por separado. Mensaje: la salida de un modelo varía entre consultas, por eso se prueba varias veces y no una sola. Conecta con la pregunta de la práctica "repitan el caso A: ¿responde lo mismo?".
+Son los mismos casos A, B y C de la práctica. Resultado de una simulación educativa: se hizo la misma consulta 100 veces por caso a un modelo de lenguaje (gpt-4o-mini), sin valor clínico. Caso B: 59 "Neumonía", 28 "Neumonía severa", 10 "Neumonía grave"; 98 de 100 son neumonía, es la prueba de humo superada. Caso A: 70 "Infección viral respiratoria" y unas 13 más hablan de gripe o infección viral; el sentido es estable. Caso C (sin síntomas): las respuestas se dispersan en frases distintas ("salud óptima", "salud general", "paciente sano"...) que significan lo mismo pero se cuentan por separado; 40 caen en "otras variantes". Mensaje: la salida de un modelo varía entre consultas, por eso se prueba varias veces y no una sola. Conecta con "repitan el caso A: ¿responde lo mismo?".
 :::
 
 ## Chequeo rápido
