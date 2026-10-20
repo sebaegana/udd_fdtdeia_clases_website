@@ -33,10 +33,6 @@ format:
           .small  { font-size: 0.85em; }
           .muted  { color: #666; }
           </style>
-  pdf:
-    toc: false
-    papersize: a4
-    geometry: margin=1in
 ---
 
 ## Sobre el docente
