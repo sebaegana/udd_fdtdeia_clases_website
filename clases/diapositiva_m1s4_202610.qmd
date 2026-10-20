@@ -231,20 +231,21 @@ Pero solo si **cada paso del Triángulo es sólido**. Si no:
 
 ------------------------------------------------------------------------
 
-## Los 4 Modos en que Falla la Cadena
+## Los 4 Modos en que Falla
 
-Un proyecto puede fallar de **4 maneras**. Son silenciosas = no las ves hasta que explota:
+**1. REPRESENTACIÓN** — Falta un grupo en datos → Modelo falla para ese grupo
+*Red flag:* "Funciona bien para cliente típico"
 
-::: tiny
-| Enemigo | Afecta | Qué Ocurre | Red Flag |
-|---------|---|---|---|
-| **Representación** | DATOS | Grupo falta → Modelo falla p/ ese grupo | "Funciona bien para típico" |
-| **Histórico** | DATOS | Discriminación pasada → Perpetuada | "Siempre fue así" |
-| **Leakage** | MODELO | Info secreta se filtra → Parece bueno, falla | "99% precisión" |
-| **Calidad** | DATOS | Incompletos, viejos, incorrectos | "Datos desordenados" |
-:::
+**2. HISTÓRICO** — Datos reflejan discriminación pasada → Perpetuada
+*Red flag:* "Siempre fue así"
 
-Se detectan cuando un cliente reclama o un regulador investiga. Demasiado tarde.
+**3. DATA LEAKAGE** — Info futura se filtra → Parece bueno, falla en realidad
+*Red flag:* "99% precisión"
+
+**4. CALIDAD** — Datos incompletos, viejos, incorrectos
+*Red flag:* "Datos desordenados"
+
+Se detectan cuando explota. Demasiado tarde.
 
 ------------------------------------------------------------------------
 
