@@ -704,48 +704,6 @@ Preparación previa (no mostrar en pantalla): instalar y probar `vibe` con el pr
 
 ------------------------------------------------------------------------
 
-## Checklist Práctico: Antes de Aprobar Cualquier Proyecto de IA
-
-::: smaller
-**Pregunta 1: REPRESENTACIÓN**
-```
-□ ¿Quiénes están en estos datos? Pedir desglose demográfico
-□ ¿Hay grupos faltantes? (minorías, baja renta, regiones, etc.)
-□ ¿Testeado con grupos minoritarios?
-```
-
-**Pregunta 2: HISTÓRICOS**
-```
-□ ¿De dónde vienen los datos históricos?
-□ ¿Fueron auditados para sesgo?
-□ ¿Las decisiones pasadas eran justas/objetivas?
-```
-
-**Pregunta 3: DATA LEAKAGE**
-```
-□ ¿Documentación clara de cada variable?
-□ ¿Toda esta información existirá EN EL MOMENTO de decidir?
-□ ¿Revisaron explícitamente por leakage?
-```
-
-**Pregunta 4: CALIDAD**
-```
-□ ¿Cuánto tiempo invirtieron en limpieza? (benchmark: >50%)
-□ ¿Datos >95% correctos? (validado en muestra)
-□ ¿Quién verifica la calidad continuamente?
-```
-
-**Pregunta 5: MONITOREO**
-```
-□ ¿Plan de monitoreo y alertas definido?
-□ ¿Responsabilidades claras (quién es accountable)?
-□ ¿Proceso de rollback si falla? (cómo paramos rápido)
-□ ¿Auditoría independiente? (si impacto es alto)
-```
-:::
-
-------------------------------------------------------------------------
-
 ## Monitoreo Mensual: Mantén la Vigilancia
 
 ::: smaller
