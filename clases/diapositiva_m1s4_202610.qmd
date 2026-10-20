@@ -23,8 +23,19 @@ format:
 
 ```{=html}
 <style>
+/* Global font size reduction for better fit */
+.reveal h1, .reveal h2, .reveal h3 { margin: 0.3em 0 0.3em 0; }
+.reveal p { margin: 0.4em 0; line-height: 1.3; }
+.reveal li { margin: 0.15em 0; }
+
+/* Custom classes for density control */
 .smaller { font-size: 85%; }
 .tiny    { font-size: 70%; }
+.compact { font-size: 80%; line-height: 1.2; margin: 0.2em 0; }
+
+/* Table density */
+.reveal table { font-size: 0.85em; }
+.reveal table td, .reveal table th { padding: 0.3em 0.4em; }
 </style>
 ```
 
@@ -125,21 +136,21 @@ graph LR
 
 ## Por Qué Cada Paso Importa
 
-::: smaller
-**Si el DATO es malo** → Modelo aprende cosas falsas
-- Ejemplo: Datos que reflejan discriminación pasada → Modelo la perpetúa
+::: compact
+**DATOS malo** → Modelo aprende falsedades
+- *Ej:* Datos de discriminación pasada → Modelo la perpetúa
 
-**Si el MODELO es malo** → Decisiones inconsistentes e impredecibles
-- Ejemplo: Modelo que memorizó, no aprendió → Funciona en tests, falla en realidad
+**MODELO malo** → Decisiones impredecibles
+- *Ej:* Funciona en tests, falla en realidad
 
-**Si la DECISIÓN es automática pero mala** → Clientes/empleados sufren
-- Ejemplo: Sistema rechaza automáticamente sin supervisión → Alguien perjudicado sin remedio
+**DECISIÓN automática** → Alguien sufre sin remedio
+- *Ej:* Sistema rechaza sin supervisión humana
 
-**Si el IMPACTO no se monitorea** → Nadie se da cuenta hasta que explota
-- Ejemplo: Modelo degrada silenciosamente, pero no hay alertas → Desastre público
+**IMPACTO sin vigilancia** → Nadie se da cuenta
+- *Ej:* Modelo degrada, pero sin alertas → Desastre público
 :::
 
-**Pregunta clave:** ¿Tienes visibilidad en TODOS estos 4 pasos, o solo en algunos?
+**Pregunta:** ¿Tienes visibilidad en los 4 pasos, o solo en algunos?
 
 ------------------------------------------------------------------------
 
@@ -210,20 +221,20 @@ Pero solo si **cada paso del Triángulo es sólido**. Si no:
 
 ------------------------------------------------------------------------
 
-## Los 4 Modos en que la Cadena Se Rompe
+## Los 4 Modos en que Falla la Cadena
 
-Un proyecto de IA puede fallar de **exactamente 4 maneras**. Son silenciosas porque no las ves hasta que es tarde:
+Un proyecto puede fallar de **4 maneras**. Son silenciosas = no las ves hasta que explota:
 
-::: smaller
-| Enemigo | Afecta | Qué Pasa | Señal de Alerta |
+::: tiny
+| Enemigo | Afecta | Qué Ocurre | Red Flag |
 |---------|---|---|---|
-| **Sesgo de Representación** | DATOS | Grupo falta en datos → Modelo falla para ese grupo | "Funciona bien para cliente típico" |
-| **Sesgo Histórico** | DATOS | Datos vienen de discriminación pasada → Modelo la perpetúa | "Refleja cómo siempre lo hicimos" |
-| **Data Leakage** | MODELO | Información secreta se filtra → Parece perfecto, falla en realidad | "99% de precisión" (sospechoso) |
-| **Mala Calidad** | DATOS | Datos incompletos, viejos o incorrectos → Decisiones malas | "Nuestros datos están desordenados" |
+| **Representación** | DATOS | Grupo falta → Modelo falla p/ ese grupo | "Funciona bien para típico" |
+| **Histórico** | DATOS | Discriminación pasada → Perpetuada | "Siempre fue así" |
+| **Leakage** | MODELO | Info secreta se filtra → Parece bueno, falla | "99% precisión" |
+| **Calidad** | DATOS | Incompletos, viejos, incorrectos | "Datos desordenados" |
 :::
 
-**Por qué son "silenciosos":** Pueden estar ocurriendo AHORA y nadie se da cuenta hasta que un cliente reclama o un regulador investiga.
+Se detectan cuando un cliente reclama o un regulador investiga. Demasiado tarde.
 
 ------------------------------------------------------------------------
 
@@ -334,16 +345,16 @@ No es atractivo. No es "IA". Pero es **crítico**.
 
 ------------------------------------------------------------------------
 
-## Desglose por Industria: Cuál Enemigo es Crítico
+## Cuál Enemigo Es Crítico en Tu Industria
 
 ::: tiny
-| Sector | Enemigos Críticos | Riesgo | Acción Inmediata |
-|--------|---|---|---|
-| **Fintech** | Leakage + Histórico | Regulatorio + discriminación | Auditar variables; validar justicia |
-| **HR** | Histórico + Representación | Sesgos en contratación | Diversificar dataset |
-| **Healthcare** | Calidad + Leakage | Datos incompletos = decisiones malas | Validar >95% completitud |
-| **Justicia Criminal** | Histórico + Representación | Lógica circular (arresto = reincidencia) | Cuestionable usar el dato |
-| **Retail** | Representación + Calidad | Sesgos culturales invisibles | Test con clientes diversos |
+| Sector | Enemigos | Riesgo Principal | Acción |
+|--------|----------|---|---|
+| **Fintech** | Leakage + Histórico | Regulatorio + discriminación | Audita variables |
+| **HR** | Histórico + Representación | Sesgos en contratación | Diversifica dataset |
+| **Healthcare** | Calidad + Leakage | Datos incompletos | Valida >95% |
+| **Justicia** | Histórico + Representación | Lógica circular | Cuestiona el dato |
+| **Retail** | Representación + Calidad | Sesgos invisibles | Test con diversos |
 :::
 
 ------------------------------------------------------------------------
@@ -375,16 +386,16 @@ Preparación previa (no mostrar en pantalla): instalar y probar `vibe` con el pr
 
 ## Las 5 Preguntas que Auditan la Cadena
 
-**Cada pregunta audita un paso específico del Triángulo y mapea a un enemigo:**
+Cada una audita un paso del Triángulo:
 
 ::: tiny
-| # | Pregunta | Paso | Mapea a | Objetivo |
+| # | Pregunta | Paso | Enemigo | Busca |
 |---|----------|---|---|---|
-| 1️⃣ | ¿Quién está representado? | DATOS | **Representación** | Grupos sub-representados |
-| 2️⃣ | ¿Históricos fueron justos? | DATOS | **Histórico** | Injusticia perpetuada |
-| 3️⃣ | ¿Info futura infiltrada? | MODELO | **Leakage** | Información futura |
-| 4️⃣ | ¿Qué tan limpios? | DATOS | **Calidad** | Integridad de datos |
-| 5️⃣ | ¿Quién vigila después? | IMPACTO | **Gobernanza** | Sorpresas post-lanzamiento |
+| 1️⃣ | ¿Quién representado? | DATOS | Representación | Sub-representados |
+| 2️⃣ | ¿Históricos justos? | DATOS | Histórico | Injusticia perpetuada |
+| 3️⃣ | ¿Info futura infiltrada? | MODELO | Leakage | Info futura |
+| 4️⃣ | ¿Qué tan limpios? | DATOS | Calidad | Integridad |
+| 5️⃣ | ¿Quién vigila? | IMPACTO | Gobernanza | Vigilancia |
 :::
 
 ------------------------------------------------------------------------
@@ -546,21 +557,21 @@ Equivalente a: "Un algoritmo de cartera que recomienda 100% en acciones penny = 
 
 ------------------------------------------------------------------------
 
-## Generalizar el Test: Cualquier Proyecto de IA
+## Generalizar el Test: Cualquier Industria
 
-**Este patrón funciona en CUALQUIER industria:**
+**Este patrón funciona AQUÍ:**
 
-::: smaller
-| Industria | Modelo | Casos Obvios para Probar | Señal de Alerta |
+::: tiny
+| Industria | Modelo | Test Obvio | Alerta |
 |-----------|--------|---|---|
-| **Fintech** | Scoring de crédito | Cliente con deuda clara ¿rechaza? Multimillonario ¿aprueba? | Rechaza buenos clientes; aprueba riesgosos |
-| **HR** | Selección de CV | CV excelente ¿lo recomienda? CV pobre ¿lo rechaza? | Rechaza candidatos buenos |
-| **Retail** | Recomendaciones | Cliente compró A, ¿recomienda A? ¿O cosas sin relación? | Recomendaciones aleatorias |
-| **Logística** | Ruteo | Ruta corta ¿la elige? ¿O elige largas siempre? | Elige ineficiencia consistente |
-| **Healthcare** | Diagnóstico | Síntomas claros de Enfermedad X ¿la detecta? | Falla en lo obvio |
+| **Fintech** | Scoring crédito | ¿Aprueba multimillonario? ¿Rechaza cliente bueno? | Inconsistencias |
+| **HR** | CV selection | ¿Rechaza CV excelente? | Sesgo obvio |
+| **Retail** | Recomendaciones | ¿Son relevantes o aleatorias? | Sin sentido |
+| **Logística** | Ruteo | ¿Elige rutas eficientes? | Siempre ineficiente |
+| **Healthcare** | Diagnóstico | ¿Detecta enfermedad obvia? | Falla evidente |
 :::
 
-**Ventaja:** No necesitas entender el algoritmo. Solo observas si comete errores estúpidos.
+**Ventaja:** No necesitas entender el algoritmo. Solo si comete errores obvios.
 
 ------------------------------------------------------------------------
 
