@@ -1,0 +1,77 @@
+---
+title: "Preguntas de selección múltiple para el control"
+subtitle: "Fundamentos de Datos para la Toma de Decisiones Estratégicas con IA · Módulo 1, Sesión 4"
+author: "Sebastián Egaña Santibáñez"
+institution: 'Universidad del Desarrollo'
+lang: es
+date: today
+format:
+  html:
+    toc: false
+    theme: cosmo
+    self-contained: true
+    logo: "Imagen1.png"
+    footer: "© Sebastián Egaña Santibáñez"
+  docx:
+    toc: false
+---
+
+# Pregunta 1
+
+Una empresa de crédito registra el ingreso de sus clientes en miles de pesos en una sucursal y en pesos en otra. Nadie detecta la diferencia, y con esos datos se entrena un modelo de scoring. El equipo propone las siguientes afirmaciones:
+
+I. El error de captura se arrastra a las etapas siguientes del ciclo de vida del dato: análisis o modelo, decisión y monitoreo.
+
+II. Por ser un error de captura, solo afecta a la etapa de almacenamiento.
+
+III. Reunir más datos compensará el error, porque a mayor volumen de datos, mejor calidad.
+
+IV. El modelo entrenado con estos datos aprenderá patrones incorrectos, aunque entregue predicciones.
+
+¿Cuáles de las afirmaciones son correctas?
+
+a)  Solo I
+
+b)  I y IV
+
+c)  II y III
+
+d)  I, III y IV
+
+e)  I, II, III y IV
+
+**Respuesta correcta: b) I y IV**
+
+*Justificación:*
+
+- **I y IV son correctas:** un error en cualquier etapa se arrastra a las siguientes, y un modelo entrenado con datos malos aprende malos patrones.
+- **II es falsa:** el error no se queda en el almacenamiento; se propaga por todo el ciclo.
+- **III es falsa:** más datos no es mejor dato. Lo que importa es que los datos sean claros y confiables, como en el ejemplo de Netflix frente a YouTube.
+
+# Pregunta 2
+
+Un banco procesa 10.000 transacciones, de las cuales **1% son fraude** (100 casos). Compara dos modelos:
+
+- **Modelo A:** responde siempre "no es fraude".
+- **Modelo B:** detecta 80 de los 100 fraudes, pero también bloquea por error a 200 transacciones legítimas.
+
+¿Qué conclusión es correcta?
+
+a)  El Modelo A es mejor, porque su precisión global (99%) es mayor que la del B (97,8%).
+
+b)  El Modelo B es peor, porque bloquea clientes legítimos y eso nunca se justifica.
+
+c)  La precisión global es engañosa: el A no detecta ningún fraude, y para elegir hay que comparar el costo de dejar pasar un fraude con el de bloquear a un cliente legítimo.
+
+d)  Ambos modelos son equivalentes, porque su precisión difiere en solo 1,2 puntos.
+
+e)  No se puede evaluar ningún modelo sin conocer el algoritmo que usa.
+
+**Respuesta correcta: c)**
+
+*Justificación:*
+
+- **Modelo A:** acierta 9.900 de 10.000 (99%), pero deja pasar los 100 fraudes (falsos negativos).
+- **Modelo B:** acierta 80 + 9.700 = 9.780 de 10.000 (97,8%), detecta el 80% de los fraudes, pero genera 200 falsos positivos y 20 falsos negativos.
+- La pregunta útil no es "¿se equivoca?" sino **"¿qué error nos sale más caro?"** Una cifra alta no basta: hay que preguntar en qué casos y para quiénes.
+- **e)** es falsa: se puede evaluar un resultado probándolo con casos, sin entender el cálculo por dentro.

@@ -1,0 +1,170 @@
+---
+title: "Skills, MCP y plugins: cómo ampliar lo que hace un LLM"
+subtitle: "Explicado de forma simple, con la actividad de auditoría como ejemplo"
+author: "Sebastián Egaña Santibáñez"
+institution: 'Universidad del Desarrollo'
+lang: es
+date: today
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-title: "Contenidos"
+    theme: cosmo
+    self-contained: true
+    number-sections: true
+    logo: "Imagen1.png"
+    footer: "© Sebastián Egaña Santibáñez"
+---
+
+# El punto de partida
+
+Un LLM "pelado" solo hace una cosa: **recibe texto y devuelve texto**. No ve tus archivos, no abre tu correo, no consulta tu base de datos y no recuerda cómo trabajas tú.
+
+Para que sea útil en una organización hay que resolver tres preguntas distintas:
+
+| Pregunta | Qué lo resuelve |
+|-----------------------------------------|--------------------------------|
+| ¿**Cómo** quiero que haga esta tarea, siempre igual? | **Skill** |
+| ¿**A qué sistemas y datos** puede acceder, y cómo? | **MCP** |
+| ¿Cómo **instalo todo eso junto**, listo para usar? | **Plugin** |
+
+> **Analogía:** el LLM es un **empleado muy capaz que recién llega**. Sabe mucho en general, pero no conoce tu empresa. El *skill* es el **manual de procedimiento** de una tarea. El *MCP* es la **llave y el acceso** a los sistemas. El *plugin* es el **kit de bienvenida** que trae ambas cosas ya preparadas.
+
+# Skills: un manual de procedimiento reutilizable
+
+## Qué es
+
+Un **skill** es un conjunto de **instrucciones escritas una vez**, normalmente en un archivo de texto, que le dicen al modelo *cómo* hacer una tarea específica: qué pasos seguir, qué criterios aplicar y en qué formato responder. Puede incluir ejemplos y plantillas.
+
+El modelo no las lee todas siempre: **las carga solo cuando la tarea las necesita**, igual que un empleado que abre el manual correcto cuando le piden esa tarea.
+
+## Ejemplo: la actividad 2
+
+En la **Actividad 2** (auditoría con los 4 Enemigos Silenciosos), el prompt estructurado que usaron es, en esencia, un skill:
+
+```text
+Eres auditor de proyectos de IA. Evalúa el caso con estos 4 enemigos:
+1. Representación  2. Histórico  3. Calidad de datos  4. Fuga de información
+Para cada uno: ¿hay riesgo? (sí / no / no se puede saber), evidencia
+textual del caso, y qué pregunta haría el líder.
+Cierra con una recomendación: aprobar / aprobar con condiciones / rechazar.
+```
+
+Si ese texto vive en un archivo, y cualquier persona del equipo puede invocarlo, **todos auditan con el mismo criterio**. Es la diferencia entre "cada uno le pregunta lo que se le ocurre" y "la organización tiene un método".
+
+## Por qué ayuda con la variabilidad
+
+Conecta con la guía anterior: un skill fija **rol, pasos, criterios y formato de salida**. Eso reduce la variabilidad de forma y deja la tarea **repetible y revisable**, porque el método está escrito y se puede mejorar.
+
+## Cuándo conviene
+
+- Una tarea se repite y quieres **calidad consistente** (informes, auditorías, clasificaciones).
+- Tienes **criterio experto** que hoy está en la cabeza de una persona.
+- Quieres que un colega nuevo obtenga resultados parecidos a los de un experto.
+
+## Límite
+
+Un skill **orienta** al modelo, pero no le da datos nuevos ni acceso a sistemas. Tampoco garantiza que no se equivoque: sigue siendo necesario probarlo varias veces.
+
+# MCP: un enchufe estándar hacia tus sistemas
+
+## Qué es
+
+**MCP** (*Model Context Protocol*) es un **estándar abierto** que define cómo un LLM se conecta a herramientas y fuentes de datos: una base de datos, una carpeta de documentos, el calendario, un sistema de tickets, un CRM.
+
+> **Analogía:** el **USB-C** de los asistentes de IA. Antes, cada conexión era un cable distinto hecho a medida. Con un estándar, **un mismo conector sirve para muchos aparatos**, y una herramienta conectada una vez funciona con distintos asistentes que soporten MCP.
+
+## Cómo funciona, en simple
+
+```{mermaid}
+flowchart LR
+    U[Usuario] --> L[Asistente<br/>con LLM]
+    L <-->|MCP| S1[Servidor MCP<br/>Base de datos]
+    L <-->|MCP| S2[Servidor MCP<br/>Documentos]
+    L <-->|MCP| S3[Servidor MCP<br/>Calendario]
+```
+
+1. Cada sistema expone un **servidor MCP** que declara qué sabe hacer ("buscar un cliente", "listar reuniones", "crear un ticket").
+2. El asistente **descubre** esas capacidades y, cuando la pregunta lo requiere, **las usa**.
+3. El resultado vuelve al modelo, que lo incorpora a su respuesta.
+
+## Ejemplo
+
+Sin MCP: *"¿Cuántos clientes se dieron de baja en septiembre?"* El modelo no tiene cómo saberlo; o se niega, o **inventa**.
+
+Con un MCP conectado a la base de clientes: el modelo **consulta el dato real**, lo lee y responde, indicando de qué consulta salió.
+
+Esto cumple el mismo rol que el RAG de la guía anterior, pero más amplio: RAG sirve para **buscar en documentos**; MCP permite también **consultar sistemas en vivo e incluso ejecutar acciones**.
+
+## Lo que hay que mirar con cuidado
+
+Dar acceso es dar poder, y ahí aparecen los riesgos de gobernanza:
+
+| Riesgo | Qué significa | Cómo se mitiga |
+|--------------------------|----------------------------|-----------------------------|
+| **Exceso de permisos** | El asistente puede leer o modificar más de lo necesario | **Mínimo privilegio**: acceso de solo lectura salvo que se justifique otra cosa |
+| **Acciones irreversibles** | Enviar un correo, borrar un registro, pagar | **Confirmación humana** antes de acciones con efecto externo |
+| **Datos sensibles** | La información conectada puede salir en una respuesta | Definir qué se conecta, a quién y con qué registro (*logs*) |
+| **Instrucciones ocultas** | Un documento o página puede traer texto que intenta "mandar" al modelo (*prompt injection*) | Tratar el contenido externo como **dato, no como orden**, y limitar lo que el modelo puede hacer sin revisión |
+| **Servidores de origen dudoso** | Instalar un conector de un tercero desconocido | Usar solo fuentes confiables y revisar qué permisos pide |
+
+# Plugins: el kit listo para instalar
+
+## Qué es
+
+Un **plugin** es un **paquete** que agrupa varias piezas para entregarlas juntas: por ejemplo, **skills** (el método), **conexiones MCP** (el acceso) y a veces comandos o configuraciones. Se instala de una vez.
+
+> **Analogía:** el skill es la **receta**, el MCP es la **despensa**, el plugin es la **caja de comida** que trae ambas cosas y se puede entregar a otra persona.
+
+## Ejemplo: "plugin de auditoría de proyectos de IA"
+
+| Pieza | Contenido |
+|---------------------|--------------------------------------------------|
+| **Skill** | El método de auditoría de los 4 enemigos y las 5 preguntas del líder |
+| **MCP** | Acceso de solo lectura a la carpeta de documentos del proyecto |
+| **Plantilla** | Formato de informe de salida |
+
+Cualquier equipo lo instala y obtiene **el método y el acceso**, sin armar nada a mano.
+
+## Una advertencia sobre el término
+
+La palabra "plugin" **no significa lo mismo en todas las plataformas**. Algunas la usan para extensiones de terceros, otras para paquetes como el descrito, y hay productos que dejaron de usarla. Lo importante no es el nombre, sino la idea: **empaquetar capacidades para reutilizarlas**. Siempre conviene revisar qué incluye y qué permisos pide cada uno.
+
+# Las tres piezas juntas
+
+| | **Skill** | **MCP** | **Plugin** |
+|---------------------|------------------|---------------------|--------------------|
+| **Es...** | Un manual de procedimiento | Un conector estándar | Un paquete |
+| **Aporta** | **Método** y criterio | **Acceso** a datos y acciones | **Distribución** fácil |
+| **Responde a** | ¿Cómo lo hago? | ¿Con qué datos y sistemas? | ¿Cómo lo instalo y comparto? |
+| **Reduce** | Variabilidad | Invención por falta de datos | Fricción de adopción |
+| **Riesgo principal** | Método mal pensado, copiado a todos | Permisos excesivos y fuga de datos | Instalar algo sin revisar |
+
+## Un flujo completo, paso a paso
+
+Pedido: *"Audita el proyecto de créditos automáticos."*
+
+1. El asistente **reconoce la tarea** y carga el **skill** de auditoría.
+2. Usa **MCP** para leer los documentos del proyecto y los resultados del modelo.
+3. Aplica el método: revisa los 4 enemigos con **evidencia textual**.
+4. Responde en el **formato** fijado: JSON o informe.
+5. Una **persona revisa** y decide, porque es una decisión de alto impacto.
+
+Combina lo visto en las dos guías: **formato fijo** (output estructurado), **datos reales** (RAG o MCP) y **método explícito** (skill).
+
+# Lo que no cambia
+
+Estas herramientas hacen que el modelo sea más **útil**, no más **infalible**:
+
+- Puede **equivocarse** aunque tenga el mejor skill y acceso a datos reales.
+- Si los datos conectados son malos, la respuesta lo será: siguen aplicando los **4 Enemigos Silenciosos**.
+- Cuanto más poder se le da, más importa la **supervisión humana**.
+
+# Preguntas del líder antes de adoptar estas herramientas
+
+1. ¿Qué tarea concreta mejora y **cómo lo medimos** (set de prueba, repetición de casos)?
+2. ¿**Quién escribió y mantiene** el skill? ¿Quién revisa los cambios?
+3. ¿A qué sistemas se conecta por MCP, con **qué permisos** y con qué registro de lo que hace?
+4. ¿Qué acciones **requieren confirmación humana**?
+5. ¿De dónde viene cada plugin o conector, y **quién lo revisó** antes de instalarlo?

@@ -1,0 +1,151 @@
+---
+title: "¿Cuánto vale un cliente?"
+subtitle: "Valor del cliente en un modelo de suscripción, ajustado por churn y valor presente"
+author: "Sebastián Egaña Santibáñez"
+institution: 'Universidad del Desarrollo'
+lang: es
+date: today
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-title: "Contenidos"
+    theme: cosmo
+    self-contained: true
+    number-sections: true
+    logo: "Imagen1.png"
+    footer: "© Sebastián Egaña Santibáñez"
+---
+
+# La idea en una frase
+
+El **valor del cliente** (*Customer Lifetime Value*, CLV) es **lo que esperamos ganar con un cliente mientras se mantenga suscrito**, expresado en pesos de hoy.
+
+Para una suscripción, se calcula con tres ingredientes:
+
+| Ingrediente | Símbolo | Pregunta que responde |
+|---------------------|:-------:|-------------------------------------------|
+| **Margen mensual** | $m$ | ¿Cuánto nos deja cada mes, descontados los costos de servir? |
+| **Tasa de churn mensual** | $c$ | ¿Qué probabilidad hay de que se dé de baja cada mes? |
+| **Tasa de descuento mensual** | $d$ | ¿Cuánto vale hoy un peso que llegará en el futuro? |
+
+# Paso a paso
+
+## Paso 1: lo que paga cada mes
+
+Si el cliente paga una suscripción de \$20.000 y servirlo nos cuesta \$8.000, el margen es $m = \$12.000$ por mes.
+
+Usamos **margen** y no ingreso porque lo que le importa a la empresa es lo que *queda*, no lo que se factura.
+
+## Paso 2: ¿seguirá pagando? (churn)
+
+El cliente no pagará para siempre. Si el churn es $c = 5\%$ mensual, cada mes **sobrevive el 95%**.
+
+La probabilidad de que siga activo en el mes $t$ es:
+
+$$
+\text{Prob. activo en } t = (1-c)^t
+$$
+
+Con la convención de que el primer pago ($t=0$) es seguro, porque el cliente recién se suscribió.
+
+> **Lectura útil:** vida esperada $\approx 1/c$. Con 5% de churn, un cliente dura en promedio $1/0{,}05 = 20$ meses.
+
+## Paso 3: los pesos futuros valen menos (valor presente)
+
+Un peso dentro de 12 meses vale menos que un peso hoy: podríamos haberlo invertido, hay inflación y hay incertidumbre. Lo corregimos dividiendo por $(1+d)^t$:
+
+$$
+\text{Valor presente de \$1 en } t = \frac{1}{(1+d)^t}
+$$
+
+Con una tasa de descuento anual de ~12%, la mensual es $d \approx 1\%$.
+
+## Paso 4: juntar todo
+
+Cada mes aporta: **margen × probabilidad de seguir activo × factor de descuento**. El CLV es la suma de todos los meses:
+
+$$
+\text{CLV} = \sum_{t=0}^{\infty} \; m \cdot \frac{(1-c)^t}{(1+d)^t}
+$$
+
+Como es una suma con razón constante, tiene **fórmula cerrada**:
+
+$$
+\boxed{\text{CLV} = m \cdot \frac{1+d}{c+d}}
+$$
+
+Es decir: **margen mensual × un multiplicador** que crece cuando baja el churn o baja la tasa de descuento.
+
+# Ejemplo numérico
+
+**Datos:** margen $m = \$12.000$ al mes, churn $c = 5\%$, descuento $d = 1\%$.
+
+## Los primeros 6 meses a mano
+
+El factor combinado cada mes es $\frac{1-c}{1+d} = \frac{0{,}95}{1{,}01} \approx 0{,}9406$.
+
+| Mes $t$ | Prob. activo × descuento | Aporte esperado (\$) | Acumulado (\$) |
+|:-------:|:------------------------:|---------------------:|---------------:|
+| 0 | 1,0000 | 12.000 | 12.000 |
+| 1 | 0,9406 | 11.287 | 23.287 |
+| 2 | 0,8847 | 10.617 | 33.904 |
+| 3 | 0,8322 | 9.986 | 43.890 |
+| 4 | 0,7827 | 9.393 | 53.282 |
+| 5 | 0,7362 | 8.835 | 62.117 |
+| 6 | 0,6925 | 8.310 | 70.427 |
+| ... | ... | ... | ... |
+
+Cada mes aporta menos que el anterior, porque algunos clientes ya se fueron y lo que queda vale menos hoy.
+
+## El total con la fórmula
+
+$$
+\text{CLV} = 12.000 \cdot \frac{1{,}01}{0{,}05 + 0{,}01} = 12.000 \cdot 16{,}83 = \mathbf{\$202.000}
+$$
+
+Un cliente nuevo vale **\$202.000 en pesos de hoy**. Si lo comparamos con el costo de adquirirlo (CAC), tenemos una regla de decisión simple:
+
+| Costo de adquisición (CAC) | CLV / CAC | Lectura |
+|:--------------------------:|:---------:|---------------------------------------|
+| \$60.000 | 3,4 | Muy rentable: se puede invertir más en captar |
+| \$150.000 | 1,3 | Rentable, pero con poco margen de error |
+| \$250.000 | 0,8 | Cada cliente nuevo destruye valor |
+
+: Regla práctica: CLV/CAC sobre 3 suele considerarse sano; bajo 1, se pierde plata. {tbl-colwidths="[30,15,55]"}
+
+# Qué mueve el valor
+
+El churn es la palanca más sensible. Con el mismo margen y descuento:
+
+| Churn mensual | Vida esperada | CLV |
+|:-------------:|:-------------:|-------------:|
+| 3% | ~33 meses | \$303.000 |
+| **5%** | **20 meses** | **\$202.000** |
+| 8% | ~12,5 meses | \$134.667 |
+
+Bajar el churn de 5% a 3% **sube el valor del cliente en 50%**. Por eso retener suele rendir más que captar.
+
+# Conexión con la sesión
+
+- **El churn no se conoce, se estima.** Normalmente sale de un modelo predictivo; entonces aplican los **4 Enemigos Silenciosos**. Si el modelo se entrenó solo con clientes que se quedaron (histórico), con datos de calidad dudosa, o con variables que ya delatan la baja (leakage), el CLV calculado será optimista.
+- **Un churn promedio esconde segmentos.** El 5% puede ser 1% en un segmento y 15% en otro. Conviene calcular el CLV *por segmento*.
+- **Pregunta del líder:** ¿de dónde sale el churn que se usa en este cálculo, y con qué datos se estimó?
+
+# Supuestos y límites
+
+Esta versión es deliberadamente simple:
+
+- El churn es **constante** en el tiempo. En la práctica suele ser mayor en los primeros meses.
+- El margen es **constante**: no hay alzas de precio, ni *upselling*, ni descuentos.
+- No considera clientes que **vuelven** tras darse de baja.
+- La tasa de descuento es una decisión de negocio (costo de capital), no un dato objetivo.
+
+Los modelos más completos (por ejemplo, con churn por cohorte) relajan estos supuestos, pero el principio no cambia: **margen × probabilidad de seguir × valor presente**.
+
+# Resumen
+
+1. CLV = suma de los márgenes futuros esperados, en pesos de hoy.
+2. Cada mes se pondera por la **probabilidad de que el cliente siga** y por el **descuento** del tiempo.
+3. Con churn y descuento constantes: $\text{CLV} = m \cdot \frac{1+d}{c+d}$.
+4. El churn es la variable más sensible, y la más difícil de estimar bien.

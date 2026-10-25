@@ -1,0 +1,190 @@
+---
+title: "Cómo mejorar la calidad de las respuestas de un LLM"
+subtitle: "De la variabilidad al output estructurado y al RAG"
+author: "Sebastián Egaña Santibáñez"
+institution: 'Universidad del Desarrollo'
+lang: es
+date: today
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-title: "Contenidos"
+    theme: cosmo
+    self-contained: true
+    number-sections: true
+    logo: "Imagen1.png"
+    footer: "© Sebastián Egaña Santibáñez"
+---
+
+# El problema que vimos en clase
+
+Hicimos la misma consulta **100 veces** a un modelo de lenguaje, con los casos A, B y C de la práctica de diagnóstico. Resultado:
+
+- **Caso B** (saturación 86%): 98 de 100 dijeron neumonía, pero con redacción distinta ("Neumonía", "Neumonía severa", "Neumonía grave").
+- **Caso A** (tos seca, fiebre): 70 dijeron "infección viral respiratoria" y el resto, variantes de gripe.
+- **Caso C** (sin síntomas): "salud óptima", "salud general", "paciente sano"... significan lo mismo, pero con palabras distintas.
+
+Hay **dos problemas distintos** mezclados:
+
+| Problema | Ejemplo | Qué lo arregla |
+|----------------------------|-----------------------------------|-------------------------|
+| **Variabilidad de forma**: el sentido es el mismo, pero las palabras cambian | Caso C: tres frases para decir "sano" | Estructurar el output |
+| **Falta de conocimiento o de fundamento**: el modelo inventa o responde con datos desactualizados | Una política interna que el modelo nunca vio | RAG (darle la información) |
+
+Y una regla de fondo: **un LLM predice la palabra más probable, no consulta hechos**. Todas las técnicas de esta guía son formas de acotar esa libertad.
+
+# Nivel 1: pedir mejor (prompting)
+
+Es lo más barato y suele dar la mayor mejora inicial.
+
+| Técnica | Qué es | Ejemplo |
+|--------------------|----------------------------|-------------------------|
+| **Dar rol y contexto** | Decir quién es y para qué se usa la respuesta | "Eres un analista de riesgo. La respuesta la leerá un gerente." |
+| **Instrucciones precisas** | Reemplazar lo vago por lo verificable | En vez de "resume", "resume en 3 viñetas de máximo 15 palabras" |
+| **Ejemplos en el prompt** (*few-shot*) | Mostrar 2 o 3 casos resueltos como modelo | "Entrada: ... → Salida: ..." |
+| **Permitir "no sé"** | Dar una salida legítima para cuando falta información | "Si el dato no está, responde `no_disponible`." |
+| **Bajar la temperatura** | Parámetro que controla cuánto "arriesga" el modelo al elegir palabras | Temperatura 0 a 0,2 para tareas de clasificación |
+
+> **Ojo con la temperatura:** bajarla reduce la variabilidad, pero **no la elimina** ni hace que el modelo acierte más. Solo lo vuelve más consistente, incluso en sus errores.
+
+# Nivel 2: estructurar el output
+
+## La idea
+
+En vez de aceptar texto libre, **le pedimos al modelo que responda con un formato fijo**, normalmente JSON, con campos y valores permitidos. Así la respuesta se puede contar, filtrar y validar con un programa.
+
+## Aplicado al caso C
+
+Texto libre (lo que vimos en clase):
+
+```
+"El paciente presenta un estado de salud óptimo."
+"Paciente sano, sin hallazgos relevantes."
+"Salud general conservada."
+```
+
+Con output estructurado, el prompt dice:
+
+```
+Responde solo con un JSON con esta forma:
+{
+  "diagnostico": "sano" | "infeccion_viral" | "neumonia" | "otro",
+  "confianza": "alta" | "media" | "baja",
+  "justificacion": "máximo 20 palabras"
+}
+```
+
+Y las respuestas pasan a verse así:
+
+```json
+{"diagnostico": "sano", "confianza": "alta", "justificacion": "Sin síntomas ni signos vitales alterados."}
+```
+
+Ahora las **100 consultas caen en 4 categorías cerradas**, y la barra de "otras variantes" desaparece: se puede **medir** cuántas veces el modelo dice cada cosa.
+
+## Qué ganamos y qué no
+
+| Lo que mejora | Lo que NO mejora |
+|------------------------------------|------------------------------------|
+| Consistencia de **forma**: mismas categorías, mismo formato | Que la categoría elegida sea **correcta** |
+| Se puede **validar** automáticamente (¿vino un valor permitido?) | Que el modelo no se invente un dato dentro del formato |
+| Se puede **integrar** con otros sistemas (planillas, bases, flujos) | El sesgo ni la falta de conocimiento |
+| Se puede **medir** la variabilidad real | |
+
+> **Estructurar es ordenar la respuesta, no garantizar que sea verdadera.** Un JSON perfectamente válido puede contener un diagnóstico equivocado.
+
+## Cómo hacerlo en la práctica
+
+1. **Con el prompt:** describir el formato y los valores permitidos (lo más simple, sirve en cualquier chat).
+2. **Con la herramienta:** muchas APIs ofrecen "modo JSON" o "salida estructurada" con un esquema, que obliga al modelo a respetarlo.
+3. **Con una validación posterior:** el programa revisa el JSON; si no cumple, reintenta o lo marca para revisión humana.
+
+# Nivel 3: medir la variabilidad, no adivinarla
+
+Ya sabemos que una sola respuesta no basta. Con salida estructurada podemos:
+
+- **Repetir la consulta varias veces** (por ejemplo, 5) y quedarnos con la respuesta más frecuente (*votación*).
+- **Usar el acuerdo como señal:** si 5 de 5 dicen "neumonía", hay más confianza; si se reparten 2-2-1, **se deriva a una persona**.
+- **Armar un set de prueba**: 30 a 50 casos con la respuesta esperada, definida por expertos. Cada vez que se cambia el prompt o el modelo, se vuelve a correr y se mide el porcentaje de acierto.
+
+Es la misma lógica del **test de humo** de la sesión, pero repetible y con números.
+
+# Nivel 4: RAG, darle al modelo la información
+
+## El problema que resuelve
+
+El modelo solo sabe lo que vio al entrenarse. No conoce los **documentos de tu empresa**, tus políticas ni lo ocurrido después de su fecha de corte. Cuando no sabe, **igual responde** con seguridad: esa es la causa de las "alucinaciones".
+
+## La idea, con una analogía
+
+Es la diferencia entre un **examen de memoria** y un **examen con libro abierto**:
+
+- **Sin RAG:** el modelo responde de memoria.
+- **Con RAG:** antes de responder, el sistema **busca en tus documentos** los párrafos relevantes y se los entrega junto con la pregunta, con la instrucción de responder **solo** con esa información.
+
+*RAG* significa *Retrieval-Augmented Generation*: generación aumentada por recuperación.
+
+## Cómo funciona
+
+```{mermaid}
+flowchart TB
+    A[Documentos de la empresa] --> B[Fragmentos en un índice de búsqueda]
+    D[Pregunta del usuario] --> E[Buscar los fragmentos relevantes]
+    B --> E
+    E --> F[LLM recibe pregunta + fragmentos]
+    F --> G[Respuesta con fuentes citadas]
+```
+
+1. **Preparación (una vez):** los documentos se dividen en fragmentos y se indexan, de modo que se puedan buscar **por significado**, no solo por palabra exacta.
+2. **Recuperación (en cada pregunta):** el sistema encuentra los 3 a 5 fragmentos más relacionados con la pregunta.
+3. **Generación:** el modelo recibe la pregunta y esos fragmentos, y responde apoyándose en ellos.
+4. **Citas:** la respuesta indica de qué documento y sección salió, para poder verificarla.
+
+## Ejemplo
+
+Pregunta de un ejecutivo: *"¿Cuántos días de plazo tiene un cliente para pedir un reembolso?"*
+
+| | Sin RAG | Con RAG |
+|---------------|--------------------------|--------------------------------|
+| **Respuesta** | "Normalmente 30 días." (genérica, probablemente inventada) | "10 días hábiles desde la compra (Política de Reembolsos v3, sección 2.1)." |
+| **Verificable** | No | Sí: se abre el documento citado |
+
+: Ejemplo ilustrativo con una política ficticia.
+
+## Qué ganamos y qué no
+
+| Lo que mejora | Lo que sigue siendo riesgo |
+|-------------------------------|----------------------------------|
+| Respuestas basadas en **tus datos** | Si el documento está **desactualizado o es incorrecto**, la respuesta también |
+| Menos invención, y con **fuentes** | Si la búsqueda trae el fragmento equivocado, el modelo responde bien... sobre el texto equivocado |
+| Se actualiza **cambiando documentos**, sin reentrenar el modelo | Los documentos pueden contener **datos sensibles**: hay que definir quién ve qué |
+| | El modelo aún puede interpretar mal lo que lee |
+
+> **RAG traslada el problema de calidad desde el modelo hacia los documentos.** Los 4 Enemigos Silenciosos siguen aplicando: calidad de datos, histórico, representación.
+
+## Cuándo conviene RAG
+
+- Hay conocimiento **propio y cambiante** (políticas, contratos, manuales, normativa).
+- Se necesita **trazabilidad**: saber de dónde salió cada respuesta.
+- Los documentos están **ordenados y vigentes**. Si no lo están, ese es el primer proyecto.
+
+# Resumen: ¿qué técnica usar?
+
+| Si el problema es... | Técnica | Esfuerzo |
+|---------------------------|---------------------------|-----------------|
+| Respuestas vagas o mal enfocadas | Mejor prompt: rol, ejemplos, "no sé" | Bajo |
+| Las mismas ideas con distintas palabras, difícil de contar o integrar | **Output estructurado** (JSON con valores cerrados) | Bajo a medio |
+| No sé si puedo confiar en una respuesta | **Repetir y medir** el acuerdo, más un set de prueba | Medio |
+| El modelo no conoce mis datos o inventa | **RAG** con documentos vigentes y citas | Medio a alto |
+| Decisión de alto impacto | **Revisión humana** de los casos dudosos | Depende del volumen |
+
+Las técnicas **se combinan**: un buen sistema suele pedir un JSON, apoyarse en RAG para el contenido, repetir cuando hay dudas y derivar a una persona cuando no hay acuerdo.
+
+# Preguntas del líder antes de aprobar un proyecto con LLM
+
+1. ¿Qué formato tiene la salida y quién la valida?
+2. ¿Probaron la **misma consulta varias veces**? ¿Qué porcentaje de acuerdo hubo?
+3. ¿Con qué **casos de prueba** miden la calidad, y quién definió la respuesta correcta?
+4. ¿De qué **documentos** sale la información y quién los mantiene actualizados?
+5. ¿Qué pasa cuando el modelo **no está seguro**? ¿Hay revisión humana?

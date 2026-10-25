@@ -51,36 +51,36 @@ library(knitr)
 
 Al terminar podrán:
 
-1. Distinguir **dato, información y decisión**
-2. Explicar **qué es un modelo de IA**, cómo aprende y qué significa "95% de precisión"
-3. Reconocer los **4 Enemigos Silenciosos** de un proyecto de IA
-4. Hacer **cinco preguntas** antes de aprobar un proyecto
-5. Probar un modelo con **casos obvios**, sin programar
+1.  Distinguir **dato, información y decisión**
+2.  Explicar **qué es un modelo de IA**, cómo aprende y qué significa "95% de precisión"
+3.  Reconocer los **4 Enemigos Silenciosos** de un proyecto de IA
+4.  Hacer **cinco preguntas** antes de aprobar un proyecto
+5.  Probar un modelo con **casos obvios**, sin programar
 
 ## Ruta de la sesión
 
 | Bloque | Pregunta que responde | Tiempo |
-|----------|----------------------|------|
-| **1. Datos y decisiones** | ¿Qué es un dato y cómo se vuelve decisión? | ~40 min |
-| **2. De los datos a la IA** | ¿Cómo aprende un modelo y qué puede fallar? | ~50 min |
-| **3. Riesgos y gobernanza** | ¿Cómo me aseguro de que no falle? | ~65 min |
+|-----------------|---------------------------------------|----------------|
+| **1. Datos y decisiones** | ¿Qué es un dato y cómo se vuelve decisión? | \~40 min |
+| **2. De los datos a la IA** | ¿Cómo aprende un modelo y qué puede fallar? | \~50 min |
+| **3. Riesgos y gobernanza** | ¿Cómo me aseguro de que no falle? | \~65 min |
 
 Incluye las actividades. Más 5 min de apertura, 10 de pausa y 10 de margen.
 
 ::: notes
-Estimación de abajo hacia arriba (2 a 4 min por slide según tipo): apertura 5, Bloque 1 = 37, Bloque 2 = 49, Bloque 3 = 66, total de contenido ~158 min. Con 10 min de pausa y ~10 de margen se llega a 180. No está medido en un ensayo: cronometrar una pasada completa antes de la clase.
+Estimación de abajo hacia arriba (2 a 4 min por slide según tipo): apertura 5, Bloque 1 = 37, Bloque 2 = 49, Bloque 3 = 66, total de contenido \~158 min. Con 10 min de pausa y \~10 de margen se llega a 180. No está medido en un ensayo: cronometrar una pasada completa antes de la clase.
 
-Si el grupo va lento (según el sondeo): recortar en el Bloque 3 "Los enemigos se combinan" y "Una conversación modelo" (~4,5 min) y acortar "Los modelos se equivocan" en el Bloque 2. Si el grupo va rápido, ampliar la discusión de los chequeos.
+Si el grupo va lento (según el sondeo): recortar en el Bloque 3 "Los enemigos se combinan" y "Una conversación modelo" (\~4,5 min) y acortar "Los modelos se equivocan" en el Bloque 2. Si el grupo va rápido, ampliar la discusión de los chequeos.
 :::
 
 ## Sondeo rápido: ¿desde dónde partimos? (2 min)
 
 Levanten la mano si…
 
-1. han trabajado con planillas o bases de más de 1.000 filas
-2. pueden explicar qué es un modelo de *machine learning*
-3. han usado ChatGPT, Mistral u otro asistente en su trabajo
-4. han participado en un proyecto de IA
+1.  han trabajado con planillas o bases de más de 1.000 filas
+2.  pueden explicar qué es un modelo de *machine learning*
+3.  han usado ChatGPT, Mistral u otro asistente en su trabajo
+4.  han participado en un proyecto de IA
 
 ::: notes
 Calibrar el ritmo: si menos de un tercio levanta la mano en 2 y 4, dedicar más tiempo al Bloque 2 (modelo, entrenar y probar) y acortar el Bloque 3. Si la mayoría levanta la mano en todas, abreviar el Bloque 1.
@@ -90,8 +90,8 @@ Calibrar el ritmo: si menos de un tercio levanta la mano en 2 y 4, dedicar más 
 
 ## Dato, información, decisión
 
-| | Qué es | Ejemplo |
-|--------|------------|----------------|
+|   | Qué es | Ejemplo |
+|------------------|------------------------|-------------------------------|
 | **Dato** | Un registro suelto | "Venta de \$4.200 el martes" |
 | **Información** | Dato con contexto | "Las ventas cayeron 12% vs. el mes pasado" |
 | **Decisión** | Acción a partir de la información | "Reponer inventario en la sucursal norte" |
@@ -100,13 +100,14 @@ Calibrar el ritmo: si menos de un tercio levanta la mano en 2 y 4, dedicar más 
 
 ## Tipos de datos y de dónde vienen
 
-::: {.columns}
+::::: columns
 ::: {.column width="50%"}
 **Según su forma**
 
 - **Estructurados:** tablas (ventas, clientes, transacciones)
 - **No estructurados:** textos, correos, imágenes, audio
 :::
+
 ::: {.column width="50%"}
 **Según su origen**
 
@@ -114,15 +115,15 @@ Calibrar el ritmo: si menos de un tercio levanta la mano en 2 y 4, dedicar más 
 - **Externos:** mercado, clima, datos públicos
 - **Generados por usuarios:** clics, reseñas, uso de la app
 :::
-:::
+:::::
 
 ## Anatomía de un dataset
 
 | Cliente | Edad | Ingreso | Deudas | ¿Pagó el crédito? |
-|-----|----|-------|-----|-------------|
-| 1 | 34 | \$1,2 M | 0 | Sí |
-| 2 | 51 | \$0,8 M | 2 | No |
-| 3 | 28 | \$1,5 M | 1 | Sí |
+|---------|------|---------|--------|-------------------|
+| 1       | 34   | \$1,2 M | 0      | Sí                |
+| 2       | 51   | \$0,8 M | 2      | No                |
+| 3       | 28   | \$1,5 M | 1      | Sí                |
 
 - **Fila:** un caso (un cliente)
 - **Columna:** una variable que describe el caso
@@ -144,7 +145,7 @@ Un resumen puede **esconder** a quienes no aparecen en los datos. Lo veremos en 
 ## Tres niveles de decisión
 
 | Nivel | Ejemplo | Frecuencia | Tipo de dato |
-|--------|--------------|--------|-------------|
+|----------------|---------------------|----------------|--------------------|
 | **Operativa** | Aprobar un crédito pequeño | Miles al día | Detalle por caso |
 | **Táctica** | Ajustar precios del trimestre | Mensual | Resumen por segmento |
 | **Estratégica** | Entrar a un mercado nuevo | Anual | Tendencias, escenarios |
@@ -170,8 +171,8 @@ Después del monitoreo, el ciclo **vuelve a empezar**. Un error en cualquier eta
 
 ## Más datos no es mejor dato
 
-| | Qué datos tiene | Resultado |
-|---|---|---|
+|   | Qué datos tiene | Resultado |
+|------------------------|------------------------|------------------------|
 | **Netflix** | Ratings, tiempo visto, horario, país (claros) | Recomendaciones precisas |
 | **YouTube** | Miles de millones de vistas (clics accidentales, clickbait) | Recomendaciones más genéricas |
 | **Spotify** | Qué escuchas, a qué hora, si saltas, si repites | Recomendaciones por contexto |
@@ -182,14 +183,14 @@ Después del monitoreo, el ciclo **vuelve a empezar**. Un error en cualquier eta
 
 En parejas, elijan **una decisión** de su organización y respondan:
 
-1. ¿Qué decisión querrían mejorar con datos?
-2. ¿Qué datos la informarían? ¿Dónde están hoy?
-3. ¿Quién **no** aparece en esos datos?
-4. ¿En qué etapa del ciclo de vida creen que hay más problemas?
+1.  ¿Qué decisión querrían mejorar con datos?
+2.  ¿Qué datos la informarían? ¿Dónde están hoy?
+3.  ¿Quién **no** aparece en esos datos?
+4.  ¿En qué etapa del ciclo de vida creen que hay más problemas?
 
 ## Chequeo rápido
 
-::: {.incremental}
+::: incremental
 - Si una venta de \$4.200 es un dato, ¿qué sería la información?
 - ¿Por qué la IA se usa más en decisiones operativas que estratégicas?
 - Si hay un error en la **captura**, ¿qué etapas posteriores afecta?
@@ -204,10 +205,10 @@ Respuestas: (1) la información es "las ventas cayeron 12% vs. el mes pasado". (
 
 ## IA frente al software tradicional
 
-| | Software tradicional | IA (machine learning) |
-|--------|--------------|--------------|
+|   | Software tradicional | IA (machine learning) |
+|------------------|---------------------------|---------------------------|
 | **Cómo se crea** | Alguien escribe las reglas | El sistema **aprende** las reglas desde ejemplos |
-| **Ejemplo** | "Si ingreso < X, rechazar" | Aprende de 100.000 créditos pasados qué patrones anticipan el impago |
+| **Ejemplo** | "Si ingreso \< X, rechazar" | Aprende de 100.000 créditos pasados qué patrones anticipan el impago |
 | **Si los datos son malos** | Sigue las reglas igual | Aprende **malos patrones** |
 
 ## Qué es un modelo
@@ -222,7 +223,7 @@ Un **modelo** recibe las variables de un caso y devuelve una **predicción**.
 ## Tres tareas típicas
 
 | Tarea | Pregunta que responde | Ejemplo |
-|--------|-----------------|-----------------|
+|-----------------|----------------------------|----------------------------|
 | **Clasificar** | ¿A qué grupo pertenece? | ¿Fraude o no? ¿El cliente se va? |
 | **Estimar un número** | ¿Cuánto? | Demanda del mes, precio de una propiedad |
 | **Generar** | Crear algo nuevo | Texto, imágenes, resúmenes (ChatGPT, Mistral) |
@@ -259,8 +260,8 @@ Después pasa a **producción**: opera con casos reales y toma decisiones de ver
 
 Ningún modelo acierta siempre. Detecta fraude:
 
-| | Dijo "fraude" | Dijo "legítima" |
-|----------|-------------------|-------------------|
+|   | Dijo "fraude" | Dijo "legítima" |
+|----|----|----|
 | **Era fraude** | Acierto | **Falso negativo:** el fraude pasa |
 | **Era legítima** | **Falso positivo:** cliente bloqueado | Acierto |
 
@@ -297,16 +298,16 @@ Antes de actuar sobre un patrón, pregunten: **¿qué más podría explicarlo?**
 
 **Ejemplo:** asistente de IA que resume diagnósticos médicos.
 
-1. Preparen 3 casos claros: gripe típica, neumonía grave, paciente sano
-2. Pídanle sin ejemplos previos (*zero-shot*): "El diagnóstico probable es: \_\_\_"
-3. Comparen con lo esperado
+1.  Preparen 3 casos claros: gripe típica, neumonía grave, paciente sano
+2.  Pídanle sin ejemplos previos (*zero-shot*): "El diagnóstico probable es: \_\_\_"
+3.  Comparen con lo esperado
 
 Si falla en lo **obvio**, no apruebe el proyecto. Si acierta, recién ahí miren los casos difíciles.
 
 ## El test de humo en otras industrias
 
 | Industria | Caso obvio a probar | Alerta |
-|-------|----------------|-------------|
+|-----------------|------------------------------|-------------------------|
 | **Crédito** | Cliente sin deudas y con buenos ingresos | Lo rechaza |
 | **RR.HH.** | Currículum excelente para el cargo | Lo descarta |
 | **Retail** | Cliente que compró cámara | Recomienda algo sin relación |
@@ -319,7 +320,7 @@ En parejas, abran el chat de IA que usen habitualmente y pregunten por cada caso
 *"¿Cuál es el diagnóstico más probable? Responde en una línea e indica qué tan seguro estás."*
 
 | Caso | Datos |
-|----|----------------------------|
+|--------------|----------------------------------------------------------|
 | **A** | 25 años, 2 días con tos seca, fiebre 38°C, dolor muscular |
 | **B** | 70 años, fiebre alta, dificultad respiratoria severa, saturación 86% |
 | **C** | 30 años, sin síntomas, control de rutina |
@@ -340,7 +341,7 @@ Mostrar el gráfico y pedir que lo lean antes de interpretarlo: mismos casos A, 
 
 ## Cómo leer el gráfico
 
-::: {.incremental}
+::: incremental
 - **A (tos seca, fiebre):** 70 dicen "infección viral respiratoria"; el resto, variantes de gripe.
 - **B (saturación 86%):** 98 de 100 dicen neumonía, con distinta redacción.
 - **C (sin síntomas):** "salud óptima", "salud general", "paciente sano"... dicen lo mismo con palabras distintas.
@@ -353,7 +354,7 @@ Son los mismos casos A, B y C de la práctica. Resultado de una simulación educ
 
 ## Chequeo rápido
 
-::: {.incremental}
+::: incremental
 - ¿En qué se diferencia una regla escrita a mano de lo que aprende un modelo?
 - ¿Por qué un LLM puede inventar un dato con total seguridad?
 - En detección de fraude, ¿qué error cuesta más: el falso positivo o el negativo?
@@ -379,7 +380,7 @@ Respuestas: (1) La regla la escribe una persona; el modelo la infiere de ejemplo
 Cuatro **Enemigos Silenciosos**, cada uno aparece en una etapa distinta:
 
 | Enemigo | Etapa | Qué pasa |
-|---------|------|----------------|
+|--------------------|-----------------|-----------------------------------|
 | **1. Representación** | Captura | Falta un grupo en los datos |
 | **2. Histórico** | Captura | Los datos copian decisiones injustas del pasado |
 | **3. Calidad** | Limpieza | Datos incompletos, viejos o contradictorios |
@@ -424,12 +425,12 @@ Modelo del Estado que asigna a cada niño un **puntaje de riesgo** para prioriza
 
 **Qué es:** datos incompletos, incorrectos, desactualizados o contradictorios.
 
-| Problema | Ejemplo |
-|---|---|
-| **Incompleto** | 30% de las edades vacías en el CRM |
-| **Incorrecto** | Mismo cliente duplicado con edades distintas |
-| **Desactualizado** | Dirección de 2015 |
-| **Contradictorio** | "Estado: activo" con "fecha de baja: 2020" |
+| Problema           | Ejemplo                                      |
+|--------------------|----------------------------------------------|
+| **Incompleto**     | 30% de las edades vacías en el CRM           |
+| **Incorrecto**     | Mismo cliente duplicado con edades distintas |
+| **Desactualizado** | Dirección de 2015                            |
+| **Contradictorio** | "Estado: activo" con "fecha de baja: 2020"   |
 
 **Cómo detectarlo:** revisar a mano 100 registros al azar. Si menos de 95 están correctos, hay un problema.
 
@@ -457,19 +458,19 @@ Resultado: el modelo **rechaza injustamente** a un segmento y nadie lo nota hast
 
 ## Chequeo: ¿qué enemigo es?
 
-1. "Funciona perfecto con clientes de Santiago, pero falla en regiones."
-2. "Lo entrenamos con las aprobaciones de los últimos 10 años."
-3. "Acierta 100% en las pruebas, pero falla el primer día real."
-4. "El 30% de los ingresos está en blanco."
+1.  "Funciona perfecto con clientes de Santiago, pero falla en regiones."
+2.  "Lo entrenamos con las aprobaciones de los últimos 10 años."
+3.  "Acierta 100% en las pruebas, pero falla el primer día real."
+4.  "El 30% de los ingresos está en blanco."
 
-::: {.fragment}
+::: fragment
 **Respuestas:** 1 Representación · 2 Histórico · 3 Leakage · 4 Calidad
 :::
 
 ## Las 5 preguntas del líder
 
-| # | Pregunta | Enemigo que detecta |
-|-|--------------------|------------|
+| \# | Pregunta | Enemigo que detecta |
+|--------------|--------------------------------------|---------------------|
 | 1 | ¿Quién está representado en estos datos? | Representación |
 | 2 | ¿Las decisiones del pasado fueron justas? | Histórico |
 | 3 | ¿Toda esta información existirá al momento de decidir? | Leakage |
@@ -479,7 +480,7 @@ Resultado: el modelo **rechaza injustamente** a un segmento y nadie lo nota hast
 ## Cuando la respuesta es evasiva
 
 | Si el equipo dice… | Ustedes preguntan… |
-|---|---|
+|----|----|
 | "Tenemos suficientes datos" | "Muéstrenme el desglose por segmento" |
 | "Funciona muy bien" | "¿Para quiénes? ¿Y para los grupos pequeños?" |
 | "Los datos están limpios" | "¿Cómo lo validaron? ¿Cuántas horas?" |
@@ -501,7 +502,7 @@ Resultado: el modelo **rechaza injustamente** a un segmento y nadie lo nota hast
 ## ¿Apruebo el proyecto?
 
 | Resultado de las 5 preguntas | Decisión |
-|---|---|
+|------------------------------------|------------------------------------|
 | Todas con respuesta clara y verificable | **Aprobar** |
 | Alguna con problema **y** plan concreto con fecha | **Aprobar con plan** |
 | Alguna sin respuesta o con riesgo evidente | **Detener** hasta resolverla |
@@ -528,7 +529,7 @@ Un banco quiere automatizar créditos de consumo:
 - Datos sólo de sucursales de Santiago
 - No hay plan de monitoreo
 
-::: {.fragment}
+::: fragment
 **Detener hasta resolver.** El 99% sugiere *leakage*; 2015–2020 sugiere sesgo *histórico*; sólo Santiago, falta de *representación*; sin monitoreo, la pregunta 5 queda sin respuesta.
 :::
 
@@ -553,10 +554,10 @@ Preparación previa (no mostrar en pantalla): instalar y probar `vibe` con el pr
 
 No necesitan programar. Sí necesitan:
 
-1. **Preguntar** sin temor a parecer ignorantes
-2. **Exigir** verificación, no promesas
-3. **Pedir** monitoreo antes de lanzar
-4. **Detener** un proyecto con riesgo evidente
+1.  **Preguntar** sin temor a parecer ignorantes
+2.  **Exigir** verificación, no promesas
+3.  **Pedir** monitoreo antes de lanzar
+4.  **Detener** un proyecto con riesgo evidente
 
 > Si un modelo falla y afecta a clientes o empleados, la responsabilidad es de quien aprobó.
 
@@ -571,16 +572,16 @@ No necesitan programar. Sí necesitan:
 
 ## Glosario
 
-| Término | Significado simple |
-|--------|--------------------|
-| **Dataset** | Tabla: filas son casos, columnas son datos de cada caso |
-| **Modelo** | Programa que aprende patrones desde ejemplos |
-| **Entrenamiento** | Etapa en que el modelo aprende de los datos |
-| **Producción** | El modelo funcionando con casos reales |
-| **Sesgo** | Favorecer o perjudicar a un grupo sin razón válida |
-| **Leakage** | Usar información que no existirá al decidir |
-| **Monitoreo** | Vigilar que el modelo siga funcionando bien |
-| **Reentrenar** | Volver a enseñarle al modelo con datos nuevos |
+| Término           | Significado simple                                      |
+|---------------------|---------------------------------------------------|
+| **Dataset**       | Tabla: filas son casos, columnas son datos de cada caso |
+| **Modelo**        | Programa que aprende patrones desde ejemplos            |
+| **Entrenamiento** | Etapa en que el modelo aprende de los datos             |
+| **Producción**    | El modelo funcionando con casos reales                  |
+| **Sesgo**         | Favorecer o perjudicar a un grupo sin razón válida      |
+| **Leakage**       | Usar información que no existirá al decidir             |
+| **Monitoreo**     | Vigilar que el modelo siga funcionando bien             |
+| **Reentrenar**    | Volver a enseñarle al modelo con datos nuevos           |
 
 ## Lecturas recomendadas
 
